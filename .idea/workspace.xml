@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/fuel/app/classes/model/adresse.php" line="59" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="" />
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
     <list id="bc3bfbb1-711a-454e-9ba2-3c36509334bd" name="Failed commit: Default (2)" comment="Migrations de données." />
     <list id="88d7aec6-4765-4da8-80b6-13b2c24cb892" name="Failed commit: Default (3)" comment="Ajout des documents Pdf" />
@@ -67,7 +64,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="238" selection-end="238" vertical-scroll-proportion="0.43333334" vertical-offset="0" max-vertical-offset="600">
+            <state line="17" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.56666666" vertical-offset="0" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
@@ -761,7 +758,11 @@
       <created>1385325630190</created>
       <updated>1385325630190</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Init Dépôt">
+      <created>1385326138373</created>
+      <updated>1385326138373</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1036,7 +1037,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="238" selection-end="238" vertical-scroll-proportion="0.43333334" vertical-offset="0" max-vertical-offset="600">
+        <state line="17" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.56666666" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
