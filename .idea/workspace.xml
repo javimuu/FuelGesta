@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/fuel/app/classes/model/adresse.php" line="59" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="" />
+    <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
+    <list id="bc3bfbb1-711a-454e-9ba2-3c36509334bd" name="Failed commit: Default (2)" comment="Migrations de données." />
+    <list id="88d7aec6-4765-4da8-80b6-13b2c24cb892" name="Failed commit: Default (3)" comment="Ajout des documents Pdf" />
+    <ignored path="FuelGesta.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="FuelGesta" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4780">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/config/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="32" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="780">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fuel/app/config/development/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="8" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.7835951" vertical-offset="1011" max-vertical-offset="1700">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gesta.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/gesta.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="183" column="4" selection-start="2952" selection-end="2952" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="9820">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/controller/welcome.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="9" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="access.db" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/access.db">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".project" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.project">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".buildpath" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.buildpath">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/views/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3120">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/liste_agrement.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/fin/formation.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/contrat/classes/controller/contrat.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/fin_formation.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/type/pays.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/ajouter.php" />
+        <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/validation.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_situation.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_diplome.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/liste_contrat.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/type/contrat.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/modifier.php" />
+        <option value="$PROJECT_DIR$/fuel/app/config/session.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/gesta.css" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/controller/welcome.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
+    <option name="y" value="27" />
+    <option name="width" value="1602" />
+    <option name="height" value="874" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+          <State>
+            <id>Type compatibilityPHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpParamsInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="development" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="164" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="181" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="169" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$USER_HOME$/dumps/data/daily/gesta7/gesta7_2013-11-19_21h28m.Tuesday.sql.gz" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="186" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1096" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1094" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="185" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="179" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="reference.settingsdialog.textmate.bundles" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PublishConfig" serverName="Gesta" serverId="c434a6a1-90bc-4f52-9678-79f8af767967">
+    <servers>
+      <server id="c434a6a1-90bc-4f52-9678-79f8af767967">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fuel/app/classes/model/type" />
+      <recent name="$PROJECT_DIR$/fuel/app/modules/administration/views/administration" />
+      <recent name="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf" />
+      <recent name="$PROJECT_DIR$/fuel/app/vendor/maitrepylos" />
+      <recent name="$PROJECT_DIR$/fuel/app/classes/model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/xml" />
+      <recent name="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf" />
+      <recent name="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/fin" />
+      <recent name="$PROJECT_DIR$/fuel/app/classes/model/valider" />
+      <recent name="$PROJECT_DIR$/fuel/packages/pdf/vendor/phptopdf" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Query Language Console.Default">
+    <configuration default="false" name="Default" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console" temporary="true">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="b6696137-3b5b-496a-9330-3cf003459f86" server_name="Gesta">
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Query Language Console.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="VISIBILITY_SORTER" />
+  </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">$USER_HOME$/.subversion_IDEA</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="" />
+      <changelist id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
+      <changelist id="bc3bfbb1-711a-454e-9ba2-3c36509334bd" name="Failed commit: Default (2)" comment="Première RC &#10;" />
+      <changelist id="88d7aec6-4765-4da8-80b6-13b2c24cb892" name="Failed commit: Default (3)" comment="Ajout des documents Pdf" />
+      <created>1339786290930</created>
+      <updated>1339786290930</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Modification du 16 juin">
+      <created>1339863339529</created>
+      <updated>1339863339529</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Modification du 28 juin">
+      <created>1340910995951</created>
+      <updated>1340910995952</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modification du 29 juin">
+      <created>1340971877952</created>
+      <updated>1340971877952</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modification du 29 juin">
+      <created>1341592828879</created>
+      <updated>1341592828879</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Modification du 5 Juillet">
+      <created>1341592934980</created>
+      <updated>1341592934980</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Ajout du tableau le 8 juillet">
+      <created>1341749828436</created>
+      <updated>1341749828436</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Finalisation des tableaux et insertion des heures.">
+      <created>1343742675320</created>
+      <updated>1343742675320</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Installation package Fpdf">
+      <created>1344936964562</created>
+      <updated>1344936964562</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Installation SplFixedArray">
+      <created>1344970283176</created>
+      <updated>1344970283176</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Mise à jour base de données">
+      <created>1345452739160</created>
+      <updated>1345452739160</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Mise à jour pour récupération">
+      <created>1345484886427</created>
+      <updated>1345484886427</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Mise à jour pour reprise de Anne-Lise">
+      <created>1345749796869</created>
+      <updated>1345749796869</updated>
+    </task>
+    <task id="LOCAL-00013" summary="De nouveau fichier non pusché">
+      <created>1345750608470</created>
+      <updated>1345750608470</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Push valide heures">
+      <created>1346009098257</created>
+      <updated>1346009098257</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Push du 28/08/2012">
+      <created>1346179146503</created>
+      <updated>1346179146503</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Gestion heure en test.&#10;">
+      <created>1346259869434</created>
+      <updated>1346259869434</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Gestion heure en test la suite.&#10;">
+      <created>1346421537828</created>
+      <updated>1346421537828</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Mise à jour de 02 09 2012&#10;">
+      <created>1346587286407</created>
+      <updated>1346587286407</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Modification suite à l'installation de Bootstrap Twitter&#10;">
+      <created>1346684396505</created>
+      <updated>1346684396505</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Modification suite à l'installation de Bootstrap Twitter&#10;">
+      <created>1346696889413</created>
+      <updated>1346696889413</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Première RC &#10;">
+      <created>1347466005396</created>
+      <updated>1347466005396</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Modification premier test François 12/09/2012">
+      <created>1347467774944</created>
+      <updated>1347467774944</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Migration de données.">
+      <created>1348106170666</created>
+      <updated>1348106170666</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Modification Tableau pour rester sur la date de modification et non la date du jour">
+      <created>1365537271358</created>
+      <updated>1365537271358</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Modification demandé par le client ce 10/04/2013">
+      <created>1365617842456</created>
+      <updated>1365617842456</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Modification le 10/04/2013 notamment la gestion des groupes/model pour correspndre au champs de la db">
+      <created>1365714980912</created>
+      <updated>1365714980912</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Mise à jour du 13/04/2013">
+      <created>1365887439085</created>
+      <updated>1365887439085</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Mise à jour du 14/04/2013">
+      <created>1365966715509</created>
+      <updated>1365966715509</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Mise à jour du 20/04/2013">
+      <created>1366458489838</created>
+      <updated>1366458489838</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Modificaton prestation 21042013">
+      <created>1366549358908</created>
+      <updated>1366549358908</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Modificaton prestation 21042013">
+      <created>1366549437726</created>
+      <updated>1366549437726</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Modificaton prestation 21042013(2)">
+      <created>1366557289303</created>
+      <updated>1366557289303</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Modificaton prestation 21042013(3)">
+      <created>1366570637968</created>
+      <updated>1366570637968</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Modificaton  02052013">
+      <created>1367493791165</created>
+      <updated>1367493791165</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Comit contrat 03052013">
+      <created>1367609518042</created>
+      <updated>1367609518043</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Tache 81">
+      <created>1367763952920</created>
+      <updated>1367763952920</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Commit 05/05/2013(2)">
+      <created>1367784197392</created>
+      <updated>1367784197392</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Commit 12/05/2013 MaitrePylos">
+      <created>1368362406281</created>
+      <updated>1368362406281</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Commit 12/05/2013 MaitrePylos (2)">
+      <created>1368385330724</created>
+      <updated>1368385330724</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Commit 13/05/2013 MaitrePylos (1)">
+      <created>1368430209462</created>
+      <updated>1368430209462</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Commit 13/05/2013 MaitrePylos (2) - Supression code Cedefop">
+      <created>1368434761584</created>
+      <updated>1368434761584</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Commit 13/05/2013 MaitrePylos (3) - Modification des redirection lors de la connexion">
+      <created>1368444971415</created>
+      <updated>1368444971415</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Commit 13/05/2013 MaitrePylos (4) - StatExcel">
+      <created>1368449361885</created>
+      <updated>1368449361885</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Commit 13/05/2013 MaitrePylos (5) - DateFinContratPrevul">
+      <created>1368461719033</created>
+      <updated>1368461719033</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Commit 13/05/2013 MaitrePylos (6)">
+      <created>1368471963546</created>
+      <updated>1368471963546</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Commit 13/05/2013 MaitrePylos (6) - Effet de bord Contrat">
+      <created>1368473418778</created>
+      <updated>1368473418778</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Commit 20/05/2013 MaitrePylos (6) - Fin de Contrat">
+      <created>1369038665801</created>
+      <updated>1369038665801</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Commit 20/05/2013 MaitrePylos (6) - Fin de Formation">
+      <created>1369046164247</created>
+      <updated>1369046164247</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Commit 21/05/2013 MaitrePylos (1) - Mise à jour des underscores">
+      <created>1369126041643</created>
+      <updated>1369126041643</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Commit 24/05/2013 MaitrePylos (1) - Passage après mise à jour de la DB. Mise à jour des position à générer automatiquement.">
+      <created>1369403875372</created>
+      <updated>1369403875372</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Commit 24/05/2013 MaitrePylos () - Passage après mise à jour de la DB. Mise à jour des position à générer automatiquement.">
+      <created>1369420803165</created>
+      <updated>1369420803165</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Commit 26/05/2013 MaitrePylos () - Passage après mise à jour de la DB. Mise à jour des position à générer automatiquement.">
+      <created>1369568662187</created>
+      <updated>1369568662187</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Commit 28/05/2013 MaitrePylos () - L2">
+      <created>1369771606509</created>
+      <updated>1369771606509</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Commit 31/05/2013 MaitrePylos () - Bouton Formateurs">
+      <created>1369986321886</created>
+      <updated>1369986321886</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Commit 10/06/2013 MaitrePylos () - Ajouts tables Filiere-localisation-agréments">
+      <created>1370890607570</created>
+      <updated>1370890607570</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Commit 11/06/2013 MaitrePylos () - Supression agrement model centre">
+      <created>1370976046996</created>
+      <updated>1370976046996</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Commit 11/06/2013 MaitrePylos () - Changement titre dans centre">
+      <created>1370976434937</created>
+      <updated>1370976434937</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Commit 15/06/2013 MaitrePylos fin_formation document">
+      <created>1371280645606</created>
+      <updated>1371280645606</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Commit 15/06/2013 MaitrePylos Mis à jour DB">
+      <created>1371280925134</created>
+      <updated>1371280925134</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Commit 19/06/2013 MaitrePylos Mis à jour">
+      <created>1371676009167</created>
+      <updated>1371676009167</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Commit 20/06/2013 MaitrePylos Mis à jour">
+      <created>1371758603766</created>
+      <updated>1371758603766</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Commit 23/06/2013 Between sur vérification date pour les contrats">
+      <created>1372015994419</created>
+      <updated>1372015994419</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Commit 23/06/2013 Between sur vérification date pour les contrats">
+      <created>1372016002893</created>
+      <updated>1372016002893</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Commit 27/06/2013 Lise à jour">
+      <created>1372366573020</created>
+      <updated>1372366573020</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Commit 27/06/2013 Mise à jour modifier fin de formation">
+      <created>1372367763566</created>
+      <updated>1372367763566</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Commit 29/06/2013 Mise à jour modifier fin de formation pour Anne-Lise">
+      <created>1372492510635</created>
+      <updated>1372492510635</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Commit 08/07/2013 Mise à jour suite Flyspray">
+      <created>1373308695173</created>
+      <updated>1373308695173</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Commit 10/07/2013 Mise à jour test commit">
+      <created>1373440911608</created>
+      <updated>1373440911608</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Commit 24/07/2013 Mise à jour.">
+      <created>1374668381509</created>
+      <updated>1374668381509</updated>
+    </task>
+    <task id="LOCAL-00070" summary=" Commit 24/07/2013 Mise à jour 2.">
+      <created>1374693728587</created>
+      <updated>1374693728588</updated>
+    </task>
+    <task id="LOCAL-00071" summary=" Commit 19/08/2013 Mise à jour.">
+      <created>1376928398274</created>
+      <updated>1376928398274</updated>
+    </task>
+    <task id="LOCAL-00072" summary=" Commit 23/08/2013 Mise à jour.">
+      <created>1377273015584</created>
+      <updated>1377273015584</updated>
+    </task>
+    <task id="LOCAL-00073" summary=" Commit 28/08/2013 Mise à jour.">
+      <created>1377713257115</created>
+      <updated>1377713257115</updated>
+    </task>
+    <task id="LOCAL-00074" summary=" Commit 03/09/2013 Mise à jour.">
+      <created>1378214032158</created>
+      <updated>1378214032158</updated>
+    </task>
+    <task id="LOCAL-00075" summary=" Commit 03/09/2013 Mise à jour(2).">
+      <created>1378215396429</created>
+      <updated>1378215396429</updated>
+    </task>
+    <task id="LOCAL-00076" summary=" Commit 19/09/2013 Mise à jour.">
+      <created>1379689688250</created>
+      <updated>1379689688250</updated>
+    </task>
+    <task id="LOCAL-00077" summary=" Commit 19/09/2013 Mise à jour.">
+      <created>1379855321203</created>
+      <updated>1379855321203</updated>
+    </task>
+    <task id="LOCAL-00078" summary=" Commit 08/10/2013 Intégration données Gesta1 dans Gesta3.">
+      <created>1381266261624</created>
+      <updated>1381266261624</updated>
+    </task>
+    <task id="LOCAL-00079" summary=" Commit 20/10/2013 Mise à jour suite intégration Gesta1-&gt;Gesta3.">
+      <created>1382293976077</created>
+      <updated>1382293976077</updated>
+    </task>
+    <task id="LOCAL-00080" summary=" Commit 20/10/2013 Mise à jour trimestrielle.">
+      <created>1382299973738</created>
+      <updated>1382299973738</updated>
+    </task>
+    <task id="LOCAL-00081" summary=" Commit 22/10/2013 Modification trimestrielle.">
+      <created>1382468453855</created>
+      <updated>1382468453855</updated>
+    </task>
+    <task id="LOCAL-00082" summary=" Commit 22/10/2013 correction de flyspray.">
+      <created>1382470873611</created>
+      <updated>1382470873611</updated>
+    </task>
+    <task id="LOCAL-00083" summary=" Commit 22/10/2013 correction de flyspray 2.">
+      <created>1382472103157</created>
+      <updated>1382472103157</updated>
+    </task>
+    <task id="LOCAL-00084" summary=" Commit 24/10/2013 correction de flyspray.">
+      <created>1382594739214</created>
+      <updated>1382594739214</updated>
+    </task>
+    <task id="LOCAL-00085" summary=" Commit 25/10/2013 correction de flyspray.">
+      <created>1382644704898</created>
+      <updated>1382644704898</updated>
+    </task>
+    <task id="LOCAL-00086" summary=" Commit 29/10/2013 correction de flyspray.">
+      <created>1382987526856</created>
+      <updated>1382987526856</updated>
+    </task>
+    <task id="LOCAL-00087" summary=" Commit 29/10/2013 correction de flyspray.">
+      <created>1383078203929</created>
+      <updated>1383078203929</updated>
+    </task>
+    <task id="LOCAL-00088" summary=" Commit 04/11/2013 correction de flyspray.">
+      <created>1383594519104</created>
+      <updated>1383594519104</updated>
+    </task>
+    <task id="LOCAL-00089" summary=" Commit 05/11/2013 Fiche de prestation">
+      <created>1383686715393</created>
+      <updated>1383686715393</updated>
+    </task>
+    <task id="LOCAL-00090" summary=" Commit 05/11/2013 Fiche de prestation">
+      <created>1383857180760</created>
+      <updated>1383857180760</updated>
+    </task>
+    <task id="LOCAL-00091" summary=" Commit 15/11/2013">
+      <created>1384506000004</created>
+      <updated>1384506000004</updated>
+    </task>
+    <task id="LOCAL-00092" summary=" Commit 15/11/2013 (2)">
+      <created>1384529933769</created>
+      <updated>1384529933769</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Commit Git Pikacode">
+      <created>1384799978989</created>
+      <updated>1384799978989</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Commit Git Pikacode">
+      <created>1384891859630</created>
+      <updated>1384891859630</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Commit Git Pikacode">
+      <created>1384891893698</created>
+      <updated>1384891893698</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Commit Git Pikacode">
+      <created>1384891953230</created>
+      <updated>1384891953230</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="27" width="1602" height="874" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70290637" sideWeight="0.4903475" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35456887" sideWeight="0.9046961" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09530387" sideWeight="0.505148" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25080732" sideWeight="0.4929215" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.21846712" sideWeight="0.67545074" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28808865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32823366" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.21846712" sideWeight="0.67545074" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70290637" sideWeight="0.4903475" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28808865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25623268" sideWeight="0.505148" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25080732" sideWeight="0.4929215" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32823366" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243824" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30952382" sideWeight="0.7119114" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Commit 29/06/2013 Mise à jour modifier fin de formation pour Anne-Lise" />
+    <MESSAGE value="Commit 08/07/2013 Mise à jour suite Flyspray" />
+    <MESSAGE value="Commit 10/07/2013 Mise à jour test commit" />
+    <MESSAGE value="Commit 24/07/2013 Mise à jour." />
+    <MESSAGE value=" Commit 24/07/2013 Mise à jour 2." />
+    <MESSAGE value=" Commit 19/08/2013 Mise à jour." />
+    <MESSAGE value=" Commit 23/08/2013 Mise à jour." />
+    <MESSAGE value=" Commit 28/08/2013 Mise à jour." />
+    <MESSAGE value=" Commit 03/09/2013 Mise à jour." />
+    <MESSAGE value=" Commit 03/09/2013 Mise à jour(2)." />
+    <MESSAGE value=" Commit 19/09/2013 Mise à jour." />
+    <MESSAGE value=" Commit 08/10/2013 Intégration données Gesta1 dans Gesta3." />
+    <MESSAGE value=" Commit 20/10/2013 Mise à jour suite intégration Gesta1-&gt;Gesta3." />
+    <MESSAGE value=" Commit 20/10/2013 Mise à jour trimestrielle." />
+    <MESSAGE value=" Commit 22/10/2013 Modification trimestrielle." />
+    <MESSAGE value=" Commit 22/10/2013 correction de flyspray." />
+    <MESSAGE value=" Commit 22/10/2013 correction de flyspray 2." />
+    <MESSAGE value=" Commit 24/10/2013 correction de flyspray." />
+    <MESSAGE value=" Commit 25/10/2013 correction de flyspray." />
+    <MESSAGE value=" Commit 29/10/2013 correction de flyspray." />
+    <MESSAGE value=" Commit 04/11/2013 correction de flyspray." />
+    <MESSAGE value=" Commit 05/11/2013 Fiche de prestation" />
+    <MESSAGE value=" Commit 15/11/2013" />
+    <MESSAGE value=" Commit 15/11/2013 (2)" />
+    <MESSAGE value="Commit Git Pikacode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Git Pikacode" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/fuel/core/classes/validation.php</url>
+          <line>946</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php</url>
+          <line>235</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/fuel/app/classes/model/adresse.php</url>
+          <line>64</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/fuel/app/classes/model/heures.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/l1.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/debug.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../test.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
+    </breakpoint-manager>
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="FuelGesta" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="FuelGesta" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fuel/core/classes/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/core/classes/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/core/classes/session/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.0" vertical-offset="1060" max-vertical-offset="6060" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="30" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="640" max-vertical-offset="2260" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="205" column="29" selection-start="3023" selection-end="3029" vertical-scroll-proportion="0.0" vertical-offset="3900" max-vertical-offset="9760" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/views/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/gesta.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="4" selection-start="2952" selection-end="2952" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="9820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/controller/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="9" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.buildpath">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="759">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="787">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/dumps/data/daily/gesta7/gesta7_2013-11-19_21h28m.Tuesday.sql.gz">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="49" selection-start="2804" selection-end="2804" vertical-scroll-proportion="-1.3659794" vertical-offset="1620" max-vertical-offset="57640" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/config/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="32" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/config/development/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="8" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.7835951" vertical-offset="1011" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

@@ -1,0 +1,6 @@
+/nbproject/private/
+/fuel/app/config/development
+/fuel/app/config/production
+/fuel/app/logs
+./idea/
+/fuel/app/config/repository.php

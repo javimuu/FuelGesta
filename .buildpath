@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="fuel/packages/oil"/>
+	<buildpathentry kind="src" path="fuel/core"/>
+	<buildpathentry kind="src" path="ovh"/>
+	<buildpathentry kind="lib" path="php_excel-snap-20111201-5.3-ts.zip.zip"/>
+	<buildpathentry kind="lib" path="fuel.zip"/>
+	<buildpathentry kind="src" path="fuel/packages/orm"/>
+	<buildpathentry kind="src" path="fuel/app"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="src" path="fuel/packages/email"/>
+	<buildpathentry kind="src" path="fuel/packages/auth"/>
+	<buildpathentry kind="src" path="fuel/packages/parser"/>
+	<buildpathentry kind="src" path="fuel/packages/pdf"/>
+	<buildpathentry kind="src" path="public"/>
+</buildpath>
