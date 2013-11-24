@@ -13,5 +13,5 @@ Cette application est écrite en PHP/MySQL/FuelPHP/DBAL(Doctrine)
 ##Development Team
 
 * Gérard Ernaelsten (MaitrePylos) - Lead Developer ([http://formatux.be](http://formatux))
-Tararata
+
 
