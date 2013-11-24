@@ -1,0 +1,1 @@
+<h2>Statuts à l'entrée</h2>

@@ -1,0 +1,1 @@
+<h2>Niveaux de diplôme et types d'enseignement</h2>

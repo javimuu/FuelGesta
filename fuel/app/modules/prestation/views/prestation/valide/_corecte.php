@@ -1,0 +1,11 @@
+<p><b>Nous sommes dans une situation correcte concernant les heures, vous pouvez valider !.</b></p>
+<p><b>si les contrats du stagiaire prévoient un nombre d'heures par semaine inférieur à celui du groupe, veuillez adapter le nombre d'heures à prester pour ce mois pour ce stagiaire</b>
+</p>
+
+<?php // echo Html::anchor('prestation/valider/'.$id.'/'.$heure_ajouter.'/'.$date->format('Y-m-d'), '<span class="add">Valider</span>',
+//    array('class' => 'button')) ?>
+<?php // echo Html::anchor('prestation/modifier_participant', '<span class="delete">Annuler</span>',
+//    array('class' => 'button')) ?>
+
+<a class="btn btn-success" href="<?php echo \Fuel\Core\Uri::create('prestation/valider/'.$id.'/'.$heure_ajouter.'/'.$date->format('Y-m-d')) ?>"><i class="icon-thumbs-up icon-white"></i> Valider</a>
+<a class="btn btn-danger" href="<?php echo \Fuel\Core\Uri::create('prestation/modifier_participant') ?>"><i class="icon-thumbs-down icon-white"></i> Annuler</a>
