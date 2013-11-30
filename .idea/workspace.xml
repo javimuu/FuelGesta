@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/fuel/app/classes/model/adresse.php" line="59" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="" />
+    <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_signaletique.php" afterPath="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_signaletique.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" afterPath="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
     <list id="bc3bfbb1-711a-454e-9ba2-3c36509334bd" name="Failed commit: Default (2)" comment="Migrations de données." />
     <list id="88d7aec6-4765-4da8-80b6-13b2c24cb892" name="Failed commit: Default (3)" comment="Ajout des documents Pdf" />
@@ -34,97 +38,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/config/config.php">
+      <file leaf-file-name="ajouter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/ajouter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4780">
+            <state line="291" column="153" selection-start="10577" selection-end="10582" vertical-scroll-proportion="0.0" vertical-offset="5820" max-vertical-offset="8960">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/config/db.php">
+      <file leaf-file-name="modifier.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/views/prestation/modifier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="32" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="780">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="620">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/config/development/db.php">
+      <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="8" selection-start="2007" selection-end="2007" vertical-scroll-proportion="-15.4827585" vertical-offset="1011" max-vertical-offset="1700">
+            <state line="178" column="0" selection-start="6006" selection-end="6006" vertical-scroll-proportion="0.0" vertical-offset="3560" max-vertical-offset="19860">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="_form_choisir.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/gesta/views/gesta/_form_choisir.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.56666666" vertical-offset="0" max-vertical-offset="600">
+            <state line="33" column="34" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1300">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gesta.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/gesta.css">
+      <file leaf-file-name="choisir.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/gesta/views/gesta/choisir.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="4" selection-start="2952" selection-end="2952" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="9820">
+            <state line="0" column="0" selection-start="0" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/classes/controller/welcome.php">
+      <file leaf-file-name="template.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fuel/app/views/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="9" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1200">
+            <state line="66" column="40" selection-start="2452" selection-end="2468" vertical-scroll-proportion="0.91808873" vertical-offset="682" max-vertical-offset="3020">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="access.db" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/access.db">
+      <file leaf-file-name="_form_edit_signaletique.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_signaletique.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+            <state line="167" column="0" selection-start="8812" selection-end="8812" vertical-scroll-proportion="0.0" vertical-offset="3340" max-vertical-offset="3580">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="_form_add.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="240">
+            <state line="3" column="17" selection-start="0" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1820">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".project" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.project">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="statistique.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/statistique/classes/controller/statistique.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
+            <state line="590" column="0" selection-start="24541" selection-end="24731" vertical-scroll-proportion="0.0" vertical-offset="11800" max-vertical-offset="12700">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".buildpath" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.buildpath">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="gesta.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/gesta/classes/controller/gesta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+            <state line="35" column="20" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1660">
               <folding />
             </state>
           </provider>
@@ -136,6 +134,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Push.Settings">
+    <option name="myUpdateMethod" value="REBASE" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,14 +153,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fuel/app/modules/contrat/classes/controller/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/fin_formation.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/type/pays.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/ajouter.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/validation.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_situation.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_diplome.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/liste_contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/type/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/modifier.php" />
@@ -168,6 +167,8 @@
         <option value="$PROJECT_DIR$/public/assets/css/gesta.css" />
         <option value="$PROJECT_DIR$/fuel/app/classes/controller/welcome.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_signaletique.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" />
       </list>
     </option>
   </component>
@@ -244,7 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGestaClone" />
+              <option name="myItemId" value="FuelGesta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -762,7 +763,11 @@
       <created>1385326138373</created>
       <updated>1385326138373</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Init Dépôt">
+      <created>1385326246643</created>
+      <updated>1385326246644</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -787,18 +792,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1602" height="874" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32823366" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70290637" sideWeight="0.4903475" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35971686" sideWeight="0.9044321" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16216215" sideWeight="0.9406077" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09556787" sideWeight="0.505148" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.059392266" sideWeight="0.505148" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25080732" sideWeight="0.4929215" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -808,6 +812,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28808865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32823366" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -934,110 +939,102 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fuel/core/classes/model.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/gesta.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528" />
+        <state line="183" column="4" selection-start="2952" selection-end="2952" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="9820" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/core/classes/session/db.php">
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.0" vertical-offset="1060" max-vertical-offset="6060" />
+        <state line="2544" column="57" selection-start="97469" selection-end="97469" vertical-scroll-proportion="0.0" vertical-offset="50880" max-vertical-offset="54740" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/config/session.php">
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/centres.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="30" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="640" max-vertical-offset="2260" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/modifier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="29" selection-start="3023" selection-end="3029" vertical-scroll-proportion="0.0" vertical-offset="3900" max-vertical-offset="9760" />
+        <state line="197" column="152" selection-start="7412" selection-end="7412" vertical-scroll-proportion="0.0" vertical-offset="3940" max-vertical-offset="7580" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/views/prestation/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="840" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/views/prestation/fiche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="76" selection-start="3880" selection-end="3880" vertical-scroll-proportion="0.0" vertical-offset="2240" max-vertical-offset="5120" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/views/prestation/modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/ajouter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="291" column="153" selection-start="10577" selection-end="10582" vertical-scroll-proportion="0.0" vertical-offset="5820" max-vertical-offset="8960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/gesta/classes/controller/gesta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="20" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="0" selection-start="6006" selection-end="6006" vertical-scroll-proportion="0.0" vertical-offset="3560" max-vertical-offset="19860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/gesta/views/gesta/_form_choisir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="34" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/gesta/views/gesta/choisir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_signaletique.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="0" selection-start="8812" selection-end="8812" vertical-scroll-proportion="0.0" vertical-offset="3340" max-vertical-offset="3580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="0" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/statistique/classes/controller/statistique.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="590" column="0" selection-start="24541" selection-end="24731" vertical-scroll-proportion="0.0" vertical-offset="11800" max-vertical-offset="12700">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/views/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/gesta.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="4" selection-start="2952" selection-end="2952" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="9820">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/classes/controller/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="9" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.buildpath">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="759">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/access.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="787">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/dumps/data/daily/gesta7/gesta7_2013-11-19_21h28m.Tuesday.sql.gz">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="49" selection-start="2804" selection-end="2804" vertical-scroll-proportion="-1.3659794" vertical-offset="1620" max-vertical-offset="57640" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/config/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/config/development/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="8" selection-start="2007" selection-end="2007" vertical-scroll-proportion="-15.4827585" vertical-offset="1011" max-vertical-offset="1700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.56666666" vertical-offset="0" max-vertical-offset="600">
+        <state line="66" column="40" selection-start="2452" selection-end="2468" vertical-scroll-proportion="0.91808873" vertical-offset="682" max-vertical-offset="3020">
           <folding />
         </state>
       </provider>

@@ -2542,7 +2542,7 @@ class Controller_Administration extends \Controller_Main
                 \Response::redirect($this->view_dir . 'liste_filiere');
             }
 
-            $message[] = 'La filière a bien été supprimé.';
+            $message[] = 'La filière a bien été supprimée';
             \Session::set_flash('success', $message);
         } else {
             $message[] = 'Impossible de supprimer la filière';

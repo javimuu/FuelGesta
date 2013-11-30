@@ -163,6 +163,7 @@
 </table>
 
 <script type="text/javascript">
+
 $(document).ready(function()
 {
     var date_string = $('#form_d_date_naissance').val();
