@@ -104,17 +104,8 @@
             <tr>
                 <td>
                     <?php
-                    echo Form::label('Remarque');
-                    echo Form::input('t_remarque', Input::post('t_remarque', isset($contrat) ? $contrat->t_remarque : ''))
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Frais de dépl.(F70Bis)');
-                    echo Form::input('f_frais_deplacement', Input::post('f_frais_deplacement', isset($contrat) ? $contrat->f_frais_deplacement : '0'),array('title'=> "montant par jour, utilisé dans les états de prestation transmis au Forem, pour les contrats F70bis"));
-                    echo '€';
+                    echo Form::label('Situation Sociale à l\'entrée');
+                    echo Form::select('t_situation_sociale', Input::post('t_situation_sociale', isset($contrat) ? $contrat->t_situation_sociale : ''), $statut);
                     ?>
                 </td>
             </tr>
@@ -125,6 +116,97 @@
                     echo Form::input('t_duree_innoccupation', Input::post('t_duree_innoccupation', isset($contrat) ? $contrat->t_duree_innoccupation : '0'))
                     ?><br/>
                     En mois (nombres entier).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Dispense de l\'Onem');
+                    echo Form::select('b_dispense_onem', Input::post('b_dispense_onem', isset($contrat) ? $contrat->b_dispense_onem : ''), array('2' => 'Non', '1' => 'Oui'));
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Date demande à l\'Onem');
+                    echo Form::input('d_date_demande_onem', Input::post('d_date_demande_onem', isset($contrat) ? $contrat->d_date_demande_onem : ''), array('class' => 'jour'))
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Connaissance EFT');
+                    echo Form::input('t_connaissance_eft', Input::post('t_connaissance_eft', isset($contrat) ? $contrat->t_connaissance_eft : ''))
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Remarque');
+                    echo Form::input('t_remarque', Input::post('t_remarque', isset($contrat) ? $contrat->t_remarque : ''))
+                    ?>
+                </td>
+            </tr>
+
+
+                <td>
+                    <?php
+                    echo Form::label('Dérogation RW nécessaire ?');
+                    echo Form::select('b_derogation_rw', Input::post('b_derogation_rw', isset($contrat) ? $contrat->b_derogation_rw : ''), array('2' => 'Non', '1' => 'Oui'), array('id' => 'b_derogation_rw'));
+                    ?>
+                </td>
+            </tr>
+
+
+        </table>
+    </td>
+    <td>
+        <table class="form-right">
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Tarif Horaire');
+                    echo Form::input('f_tarif_horaire', Input::post('f_tarif_horaire', isset($contrat) ? $contrat->f_tarif_horaire : '1'));
+                    echo '€';
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Abonnement(EFT)');
+                    echo Form::input('t_abonnement', Input::post('t_abonnement', isset($contrat) ? $contrat->t_abonnement : '0'), array('title' => "montant mensuel, utilisé dans les calculs de déplacement, pour les contrats EFT"));
+                    echo '€';
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Frais de dépl.(F70Bis)');
+                    echo Form::input('f_frais_deplacement', Input::post('f_frais_deplacement', isset($contrat) ? $contrat->f_frais_deplacement : '0'), array('title' => "montant par jour, utilisé dans les états de prestation transmis au Forem, pour les contrats F70bis"));
+                    echo '€';
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Passé professionnel');
+                    echo Form::input('t_passe_professionnel', Input::post('t_passe_professionnel', isset($contrat) ? $contrat->t_passe_professionnel : ''))
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    echo Form::label('Ressource');
+                    echo Form::input('t_ressource', Input::post('t_ressource', isset($contrat) ? $contrat->t_ressource : ''))
+                    ?>
                 </td>
             </tr>
             <tr>
@@ -145,60 +227,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <?php
-                    echo Form::label('Dispense de l\'Onem');
-                    echo Form::select('b_dispense_onem', Input::post('b_dispense_onem', isset($contrat) ? $contrat->b_dispense_onem : ''), array('2' => 'Non', '1' => 'Oui'));
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Date demande à l\'Onem');
-                    echo Form::input('d_date_demande_onem', Input::post('d_date_demande_onem', isset($contrat) ? $contrat->d_date_demande_onem : ''), array('class' => 'jour'))
-                    ?>
-                </td>
-            </tr>
 
-        </table>
-    </td>
-    <td>
-        <table class="form-right">
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Dérogation RW nécessaire ?');
-                    echo Form::select('b_derogation_rw', Input::post('b_derogation_rw', isset($contrat) ? $contrat->b_derogation_rw : ''), array('2' => 'Non', '1' => 'Oui'), array('id' => 'b_derogation_rw'));
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Abonnement(EFT)');
-                    echo Form::input('t_abonnement', Input::post('t_abonnement', isset($contrat) ? $contrat->t_abonnement : '0'), array('title' => "montant mensuel, utilisé dans les calculs de déplacement, pour les contrats EFT"));
-                    echo '€';
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Tarif Horaire');
-                    echo Form::input('f_tarif_horaire', Input::post('f_tarif_horaire', isset($contrat) ? $contrat->f_tarif_horaire : '1'));
-                    echo '€';
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Situation Sociale à l\'entrée');
-                    echo Form::select('t_situation_sociale', Input::post('t_situation_sociale', isset($contrat) ? $contrat->t_situation_sociale : ''), $statut);
-                    ?>
-                </td>
-            </tr>
 
             <tr>
                 <td>
@@ -232,29 +261,9 @@
                     ?>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Passé professionnel');
-                    echo Form::input('t_passe_professionnel', Input::post('t_passe_professionnel', isset($contrat) ? $contrat->t_passe_professionnel : ''))
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Ressource');
-                    echo Form::input('t_ressource', Input::post('t_ressource', isset($contrat) ? $contrat->t_ressource : ''))
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo Form::label('Connaissance EFT');
-                    echo Form::input('t_connaissance_eft', Input::post('t_connaissance_eft', isset($contrat) ? $contrat->t_connaissance_eft : ''))
-                    ?>
-                </td>
+
+
+
             <tr>
                 <td>
 

@@ -351,7 +351,8 @@ class Model_My_Document extends \Maitrepylos\db
                             )
                 AND
                 adresse.t_courrier = 1
-                AND id_groupe = ? ";
+                AND id_groupe = ?
+                ORDER BY p.t_nom";
 
         $req = $this->_db->prepare($sql);
         $req->execute(array(
@@ -361,6 +362,37 @@ class Model_My_Document extends \Maitrepylos\db
             $date_fin->format('Y-m-d'),
             (int)$groupe));
         return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    /**
+     * Requête permettnt de voir les participant qui pose soucis
+     */
+    public function getVerifC98(){
+
+
+        $sql = "SELECT
+                p.t_nom,
+                t_prenom,
+                t_registre_national,
+                t_organisme_paiement,
+                id_participant,
+                t_nom_rue,
+                t_bte,
+                t_code_postal,
+                t_commune
+                FROM
+                participant p
+                INNER JOIN adresse ON p.id_participant = adresse.participant_id
+                INNER JOIN contrat ON p.id_participant = contrat.participant_id
+                INNER JOIN groupe ON groupe.id_groupe = contrat.groupe_id
+                WHERE adresse.t_courrier = 1";
+
+        $r = $this->_db->prepare($sql);
+        $r->execute();
+        return $r->fetchAll(PDO::FETCH_ASSOC);
+
+
     }
 
     public function get_filiere()

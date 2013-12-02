@@ -2,6 +2,7 @@
 
 namespace Prestation;
 
+use Fuel\Core\Input;
 use Fuel\Core\Session;
 
 class Controller_Prestation extends \Controller_Main
@@ -184,7 +185,9 @@ class Controller_Prestation extends \Controller_Main
             $this->data['modifieur']->date1 = $form['date'][0] ;
             $this->data['modifieur']->date2 = $form['date'][1] ;
             $this->data['modifieur']->motif = $form['motif'] ;
-            $this->data['modifieur']->heuresprester = $form['heuresprester'] ;
+            $this->data['modifieur']->heuresprester = \Input::post('heuresprester') ;
+
+            \Session::set('formdata',null);
         }
 
 
@@ -295,11 +298,6 @@ class Controller_Prestation extends \Controller_Main
                      * Transformation de l'heure en secondes
                      */
                     $heuresprester = $time->StringToTime($form_data['heuresprester']);
-
-
-
-
-
 
                     /**
                      * Séparation du motif et du Schéma

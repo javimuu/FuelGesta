@@ -1,6 +1,8 @@
 <?php
 
 namespace Statistique;
+use Fuel\Core\Debug;
+
 /**
  *Gestion des liens de modification d'un participant.
  */
@@ -332,6 +334,12 @@ class Controller_Statistique extends \Controller_Main
 
             for ($i = 0; $i < $countContrat; $i++) {
                 /**
+                 * Recherche motif fin de contrat
+                 */
+
+                $formData['filiere'][$filieres['t_nom']][$i]['type_fin_contrat'] = $db->getFinFormation($formData['filiere'][$filieres['t_nom']][$i]['id_contrat']);
+
+                /**
                  * Calcul des heures éffectuées l'année précédente
                  */
 
@@ -587,6 +595,7 @@ class Controller_Statistique extends \Controller_Main
         $formData['annexe1'][1]->setSize(24);
 
         \Maitrepylos\Excel\L3excel::excel($formData);
+       // Debug::dump($formData);
 
 
         $this->template->title = 'Gestion des documents';

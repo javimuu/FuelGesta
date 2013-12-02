@@ -28,7 +28,7 @@ class Model_Type_Pays extends Model
     {
         $query = \DB::select()->from('type_pays')->order_by('t_nom')->execute();
         $result = $query->as_array('t_nom');
-        $types = array();
+        $types = array(''=>'');
         foreach ($result as $nom)
         {
             $types[$nom['t_nom']] = $nom['t_nom'];

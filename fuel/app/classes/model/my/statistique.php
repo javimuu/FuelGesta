@@ -551,6 +551,17 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
     }
 
+    /**
+     * Récupération des fin de formations
+     */
+
+    public function getFinFormation($idContrat){
+
+        $sql  = "SELECT t_fin_formation_suite FROM formation WHERE contrat_id = ?";
+        $r = $this->_db->prepare($sql);
+        $r->execute(array($idContrat));
+        return $r->fetch(PDO::FETCH_ASSOC);
+    }
 
 
 }

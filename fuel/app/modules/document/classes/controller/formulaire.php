@@ -79,6 +79,8 @@ class Controller_Formulaire extends \Controller_Main
                 $nom_centre = \Input::post('centre');
                 $groupe = \Input::post('groupe');
 
+
+
             }
 
 
@@ -125,6 +127,11 @@ class Controller_Formulaire extends \Controller_Main
                 \Session::set_flash('error', $message);
 
             }
+        }
+
+        if($formulaire == 2){
+            $db = new \Model_My_Document();
+            $this->data['verif'] = $db->getVerifC98();
         }
 
         $this->data['participants'] = $participants;

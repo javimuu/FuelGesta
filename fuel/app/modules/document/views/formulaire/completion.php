@@ -36,7 +36,10 @@
         </div>
         <?php echo Form::hidden('idparticipant', ''); ?>
     </div>
-    <?php if ($formulaire == 2): ?>
+    <?php if ($formulaire == 2):
+
+
+        ?>
         Si vous laissez le champ "nom" vide, cela générera l'ensemble des C98, selon les paramètres ci-dessous !
     <div class="control-group">
         <?php echo Form::label('Localisation', 'centre', array('class' => 'control-label')); ?>
@@ -73,5 +76,36 @@
     <button type="submit" class="btn btn-success">Suivant</button>
 </div>
 <?php echo Form::close(); ?>
+
+<?php if(!empty($verif)): ?>
+<table class="table table-top table-striped">
+    <tr>
+        <th colspan="3">Participant(s) dont l'information est incomplète </th>
+    </tr>
+    <tr>
+    <th>Nom </th>
+    <th>Registre nationale</th>
+    <th>Organisme de payement</th>
+    <th>Adresse</th>
+    </tr>
+
+    <?php foreach($verif as $value): ?>
+        <tr>
+        <?php if($value['t_registre_national'] == null || $value['t_organisme_paiement'] == null || $value['t_nom_rue'] == null ) : ?>
+            <td><?php echo Html::anchor('participant/modifier/'.$value['id_participant'],$value['t_nom'].' '.$value['t_prenom']) ?></td>
+            <td><?php echo ($value['t_registre_national'] == null)?'X':'' ?></td>
+            <td><?php echo ($value['t_organisme_paiement'] == null)?'X':'' ?></td>
+            <td><?php echo ($value['t_nom_rue'] == null)?'X':'' ?></td>
+
+        <?php endif; ?>
+        </tr>
+    <?php endforeach; ?>
+
+
+</table>
+<?php endif; ?>
+
+
+
 <p><?php echo Html::anchor('document', '<i class="icon-step-backward"></i> Retour', array('class' => 'btn pull-right')); ?></p>
 <div class="clear"></div>
