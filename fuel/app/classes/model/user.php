@@ -47,7 +47,7 @@ class Model_User extends \Orm\Model
     public static function get_users()
     {
 
-        $query = \DB::select('id', 'username')->from('users')->execute();
+        $query = \DB::select('id', 'username')->from('users')->where('is_actif',1)->execute();
         return $query;
 
     }

@@ -1,4 +1,4 @@
-<h2><?php $intitule ?></h2>
+<h2><?php echo $intitule ?></h2>
 
 
 <?php echo Form::open(array('class' => 'form-horizontal')); ?>

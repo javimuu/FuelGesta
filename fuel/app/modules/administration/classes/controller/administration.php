@@ -461,7 +461,11 @@ class Controller_Administration extends \Controller_Main
 
 
         // On récupère la liste des users pour permettre de choisir le responsable
-        $users = \Model_User::find('all');
+        $users = \Model_User::find('all', array(
+            'where' => array(
+                array('is_actif', 1),
+            )
+        ));
 
         $select_users = array();
 
@@ -2373,6 +2377,7 @@ class Controller_Administration extends \Controller_Main
         $users = \Model_User::get_users();
 
         foreach ($users->as_array() as $value) {
+
             $user[$value['id']] = $value['username'];
         }
 
@@ -2724,7 +2729,6 @@ class Controller_Administration extends \Controller_Main
         $this->template->content = \View::forge($this->view_dir . 'liste_contrat', $this->data);
 
     }
-
 
 }
 

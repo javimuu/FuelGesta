@@ -448,11 +448,10 @@ class Model_My_Statistique extends \Maitrepylos\db {
                 ON h.contrat_id = c.id_contrat
                 INNER JOIN groupe g
                 ON g.id_groupe = c.groupe_id
-                INNER JOIN filiere f
-                ON f.id_filiere = g.filiere_id
                 WHERE EXTRACT(YEAR_MONTH FROM h.d_date) = ?
                 AND h.t_schema IN ($schema)
-                AND f.id_filiere = ? ";
+                AND g.filiere_id = ?
+                 ";
 
         $r = $this->_db->prepare($sql);
         $r->execute(array($extract,$idFiliere));
