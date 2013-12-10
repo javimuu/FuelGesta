@@ -1,7 +1,7 @@
 <script>
     $(function () {
         $('.jour').datepicker({
-            dateFormat: 'dd/mm/yy',
+            dateFormat: 'dd-mm-yy',
             selectOtherMonths: true,
             changeMonth: true,
             changeYear: true,
@@ -49,7 +49,9 @@
     <?php echo Form::open(array('action' => 'tableau/', 'class' => 'inline')); ?>
     <?php echo Form::hidden('change', $pre); ?>
     <?php echo Form::submit('submit_choix', 'Semaine précédente', array('class' => "btn btn-small btn-previous")); ?>
-    <?php echo Form::close(); ?>
+    <?php echo Form::close();
+
+    ?>
 
     <?php echo Form::open(array('action' => 'tableau/', 'class' => 'inline')); ?>
 

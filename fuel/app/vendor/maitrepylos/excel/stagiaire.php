@@ -396,11 +396,15 @@ class Stagiaire
             }
 
 
-            $sheet->setCellValueByColumnAndRow(14, $cellule, $date_affiche);
-            $sheet->setCellValueByColumnAndRow(15, $cellule, $data[$i]['eft'] / (24 * 3600) * 0.9);
-            $sheet->setCellValueByColumnAndRow(16, $cellule, $data[$i]['gratuit'] / (24 * 3600) * 0.9);
-            $sheet->setCellValueByColumnAndRow(17, $cellule, $data[$i]['payant'] / (24 * 3600) * 0.9);
-            $sheet->setCellValueByColumnAndRow(18, $cellule, $data[$i]['stage'] / (24 * 3600) * 0.9);
+//            $sheet->setCellValueByColumnAndRow(14, $cellule, $date_affiche);
+//            $sheet->setCellValueByColumnAndRow(15, $cellule, $data[$i]['eft'] / (24 * 3600) * 0.9);
+//            $sheet->setCellValueByColumnAndRow(16, $cellule, $data[$i]['gratuit'] / (24 * 3600) * 0.9);
+//            $sheet->setCellValueByColumnAndRow(17, $cellule, $data[$i]['payant'] / (24 * 3600) * 0.9);
+//            $sheet->setCellValueByColumnAndRow(18, $cellule, $data[$i]['stage'] / (24 * 3600) * 0.9);
+            $sheet->setCellValueByColumnAndRow(15, $cellule, $data[$i]['eft'] / (24 * 3600));
+            $sheet->setCellValueByColumnAndRow(16, $cellule, $data[$i]['gratuit'] / (24 * 3600));
+            $sheet->setCellValueByColumnAndRow(17, $cellule, $data[$i]['payant'] / (24 * 3600));
+            $sheet->setCellValueByColumnAndRow(18, $cellule, $data[$i]['stage'] / (24 * 3600));
 
             $suiviSocial =
                 ($data[$i]['eft'] + $data[$i]['gratuit'] + $data[$i]['payant'] + $data[$i]['stage']) / (24 * 3600);

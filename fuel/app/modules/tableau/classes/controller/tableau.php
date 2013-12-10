@@ -39,10 +39,9 @@ class Controller_Tableau extends \Controller_Main
 
         if (\Input::post('change')) {
 
-            $c = explode('/', \Input::post('change'));
+            $c = explode('-', \Input::post('change'));
 
             $lundi->setDate($c[2], $c[1], $c[0]);
-
 
         }
         /**
@@ -76,7 +75,18 @@ class Controller_Tableau extends \Controller_Main
          */
         $semaine = $lundi->format('W');
         $annee = $lundi->format('Y');
+
+        /**
+         * Gestion spécifique au dernier jours de l'année
+         * Exemple le 31-12-2013 donne la première semaine de l'année, du coup si on ne change pas d'année, on se retrouve
+         * à la première semaine de l'année en cours au lieu de passé en 2014.
+         */
+        $newYear  = date('Y', strtotime('+7 days', strtotime($lundi->format('Y-m-d'))));
+        ($newYear == ($annee+1))?$annee++:$annee;
+
+
         $lundi->setISOdate($annee, $semaine);
+
 
         /**
          * Création des dates de toutes la semaines iterator_to_array permet de créer un tableau
@@ -89,6 +99,8 @@ class Controller_Tableau extends \Controller_Main
 
         $semaine_next = clone $lundi;
         $semaine_next->add(new \DateInterval('P7D'));
+
+
         /**
          * Semaine précédente
          */
@@ -135,8 +147,8 @@ class Controller_Tableau extends \Controller_Main
 
         $this->data['date'] = $dateTableau;
         $this->data['groupe'] = $groupe;
-        $this->data['next'] = $semaine_next->format('d/m/Y');
-        $this->data['pre'] = $semaine_pre->format('d/m/Y');
+        $this->data['next'] = $semaine_next->format('d-m-Y');
+        $this->data['pre'] = $semaine_pre->format('d-m-Y');
         //\Maitrepylos\Debug::dump(\Input::post('action'));
         $this->template->title = $this->title;
 

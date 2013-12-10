@@ -297,6 +297,14 @@ echo '%';
                 <tr>
                     <td>
                         <?php
+                        echo Form::label('Date de la demande RW');
+                        echo Form::input('d_date_demande_derogation_rw', Input::post('d_date_demande_derogation_rw', isset($contrat) ? $contrat->d_date_demande_derogation_rw : ''), array('class' => 'jour'))
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <?php
                         echo Form::label('Réponse RW reçue');
                         echo Form::select('b_necessaire', Input::post('b_necessaire', isset($contrat) ? $contrat->b_necessaire : ''), array('2' => 'Non', '1' => 'Oui'), array('id' => 'b_necessaire'));
                         ?>
@@ -305,16 +313,8 @@ echo '%';
                 <tr>
                     <td>
                         <?php
-                        echo Form::label('Date de la demande');
-                        echo Form::input('d_date_demande_derogation_rw', Input::post('d_date_demande_derogation_rw', isset($contrat) ? $contrat->d_date_demande_derogation_rw : ''), array('class' => 'jour'))
-                        ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <?php
-                        echo Form::label('Réponse du Forem');
-                        echo Form::select('b_reponse_forem', Input::post('b_reponse_forem', isset($contrat) ? $contrat->b_reponse_forem : ''), array('2' => 'Non', '1' => 'Oui'));
+                        echo Form::label('Décision dérogation RW');
+                        echo Form::select('b_reponse_rw', Input::post('b_reponse_rw', isset($contrat) ? $contrat->b_reponse_rw : ''), array('2' => 'Non', '1' => 'Oui'));
                         ?>
                     </td>
                 </tr>
@@ -334,8 +334,8 @@ echo '%';
                 <tr>
                     <td>
                         <?php
-                        echo Form::label('Décision dérogation RW');
-                        echo Form::select('b_reponse_rw', Input::post('b_reponse_rw', isset($contrat) ? $contrat->b_reponse_rw : ''), array('2' => 'Non', '1' => 'Oui'));
+                        echo Form::label('Réponse du Forem');
+                        echo Form::select('b_reponse_forem', Input::post('b_reponse_forem', isset($contrat) ? $contrat->b_reponse_forem : ''), array('2' => 'Non', '1' => 'Oui'));
                         ?>
                     </td>
                 </tr>

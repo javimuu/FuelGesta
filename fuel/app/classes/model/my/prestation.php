@@ -99,19 +99,17 @@ class Model_My_Prestation extends \Maitrepylos\Db {
                   ON tc.id_type_contrat = c.type_contrat_id
 
 
-            WHERE (
-            c.d_date_debut_contrat BETWEEN ? AND ?
-            OR  c.d_date_fin_contrat_prevu   BETWEEN ? AND ?
-            )
+            WHERE
+             c.d_date_debut_contrat  <= ?
+            AND  c.d_date_fin_contrat_prevu >= ?
+
             AND c.participant_id = ?
             AND p.annee = ? ";
 
         $req = $this->_db->prepare($sql);
         $req->execute(array(
-            $date->format('Y-m-d'),
             $dateFin->format('Y-m-d'),
             $date->format('Y-m-d'),
-            $dateFin->format('Y-m-d'),
             $idParticipant,
             $date->format('Y')
         ));
@@ -498,7 +496,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
 
     public function update_ajout_deplacement($euro, $id, \Datetime $date) {
 
-        $sql = 'UPDATE ajout_deplacemement SET i_sommes = ? WHERE t_mois = ? AND participant_id = ?';
+        $sql = 'UPDATE ajout_deplacement SET i_sommes = ? WHERE t_mois = ? AND participant_id = ?';
         $req = $this->_db->prepare($sql);
         $req->execute(array($euro, $date->format('Y-m-d'), $id));
         // return $req->fetchAll(PDO::FETCH_ASSOC);

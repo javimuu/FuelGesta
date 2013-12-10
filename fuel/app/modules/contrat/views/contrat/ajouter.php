@@ -148,6 +148,7 @@ $mois = date('m');
 
 <div class="toggler-c"  id="contrat">
 
+
 <?php echo Form::open(array('class' => 'form-horizontal')); ?>
 
 <fieldset>
@@ -199,43 +200,18 @@ $mois = date('m');
         <tr>
             <td>
                 <?php
-                echo Form::label('Remarque');
-                echo Form::input('t_remarque', Input::post('t_remarque', isset($contrat) ? $contrat->t_remarque : ''))
+                echo Form::label('Situation Sociale à l\'entrée');
+                echo Form::select('t_situation_sociale', Input::post('t_situation_sociale', isset($contrat) ? $contrat->t_situation_sociale : ''), $statut);
                 ?>
             </td>
         </tr>
         <tr>
             <td>
                 <?php
-                echo Form::label('Frais de dépl.(F70Bis)');
-                echo Form::input('f_frais_deplacement', Input::post('f_frais_deplacement', isset($contrat) ? $contrat->f_frais_deplacement : '0'), array('title' => "montant par jour, utilisé dans les états de prestation transmis au Forem, pour les contrats F70bis"));
-                echo '€';
-                ?>
-            </td>
-        </tr>
-            <td>
-                <?php
-                echo Form::label('Durée Innocupation');
+                echo Form::label('Durée Inoccupation');
                 echo Form::input('t_duree_innoccupation', Input::post('t_duree_innoccupation', isset($contrat) ? $contrat->t_duree_innoccupation : '0'))
                 ?><br/>
                 En mois (nombres entier).
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php
-                echo Form::label('Avertissement 1');
-                echo Form::input('d_avertissement1', Input::post('d_avertissement1', isset($contrat) ? $contrat->d_avertissement1 : ''), array('class' => 'jour'))
-                ?>
-            </td>
-        </tr>
-        <tr>
-        <tr>
-            <td>
-                <?php
-                echo Form::label('Motif Avertissement 1');
-                echo Form::input('t_motif_avertissement1', Input::post('t_motif_avertissement1', isset($contrat) ? $contrat->t_motif_avertissement1 : ''))
-                ?>
             </td>
         </tr>
         <tr>
@@ -249,33 +225,42 @@ $mois = date('m');
         <tr>
             <td>
                 <?php
-                echo Form::label('Date demande de l\'Onem');
+                echo Form::label('Date demande à l\'Onem');
                 echo Form::input('d_date_demande_onem', Input::post('d_date_demande_onem', isset($contrat) ? $contrat->d_date_demande_onem : ''), array('class' => 'jour'))
                 ?>
             </td>
         </tr>
+        <tr>
+            <td>
+                <?php
+                echo Form::label('Connaissance EFT');
+                echo Form::input('t_connaissance_eft', Input::post('t_connaissance_eft', isset($contrat) ? $contrat->t_connaissance_eft : ''))
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php
+                echo Form::label('Remarque');
+                echo Form::input('t_remarque', Input::post('t_remarque', isset($contrat) ? $contrat->t_remarque : ''))
+                ?>
+            </td>
+        </tr>
+
+
+        <td>
+            <?php
+            echo Form::label('Dérogation RW nécessaire ?');
+            echo Form::select('b_derogation_rw', Input::post('b_derogation_rw', isset($contrat) ? $contrat->b_derogation_rw : ''), array('2' => 'Non', '1' => 'Oui'), array('id' => 'b_derogation_rw'));
+            ?>
+        </td>
+        </tr>
+
 
     </table>
 </td>
 <td>
     <table class="form-right">
-        <tr>
-            <td>
-                <?php
-                echo Form::label('La dérogation RW est nécessaire ?');
-                echo Form::select('b_derogation_rw', Input::post('b_derogation_rw', isset($contrat) ? $contrat->b_derogation_rw : ''), array('2' => 'Non', '1' => 'Oui'), array('id' => 'b_derogation_rw'));
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php
-                echo Form::label('Abonnement(EFT)');
-                echo Form::input('t_abonnement', Input::post('t_abonnement', isset($contrat) ? $contrat->t_abonnement : '0'),array('title'=> "montant mensuel, utilisé dans les calculs de déplacement, pour les contrats EFT"));
-                echo '€';
-                ?>
-            </td>
-        </tr>
         <tr>
             <td>
                 <?php
@@ -285,44 +270,22 @@ $mois = date('m');
                 ?>
             </td>
         </tr>
-        <tr>
-            <td>
-                <?php
-                echo Form::label('Situation Sociale à l\'entrée');
-                echo Form::select('t_situation_sociale', Input::post('t_situation_sociale', isset($contrat) ? $contrat->t_situation_sociale : ''), $statut);
-                ?>
-            </td>
-        </tr>
 
         <tr>
             <td>
                 <?php
-                echo Form::label('Avertissement 2');
-                echo Form::input('d_avertissement2', Input::post('d_avertissement2', isset($contrat) ? $contrat->d_avertissement2 : ''), array('class' => 'jour'))
+                echo Form::label('Abonnement(EFT)');
+                echo Form::input('t_abonnement', Input::post('t_abonnement', isset($contrat) ? $contrat->t_abonnement : '0'), array('title' => "montant mensuel, utilisé dans les calculs de déplacement, pour les contrats EFT"));
+                echo '€';
                 ?>
             </td>
         </tr>
         <tr>
             <td>
                 <?php
-                echo Form::label('Motif Avertissement 2');
-                echo Form::input('t_motif_avertissement2', Input::post('t_motif_avertissement2', isset($contrat) ? $contrat->t_motif_avertissement2 : ''))
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php
-                echo Form::label('Avertissement 3');
-                echo Form::input('d_avertissement3', Input::post('d_avertissement3', isset($contrat) ? $contrat->d_avertissement3 : ''), array('class' => 'jour'))
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php
-                echo Form::label('Motif Avertissement 3');
-                echo Form::input('t_motif_avertissement3', Input::post('t_motif_avertissement3', isset($contrat) ? $contrat->t_motif_avertissement3 : ''))
+                echo Form::label('Frais de dépl.(F70Bis)');
+                echo Form::input('f_frais_deplacement', Input::post('f_frais_deplacement', isset($contrat) ? $contrat->f_frais_deplacement : '0'), array('title' => "montant par jour, utilisé dans les états de prestation transmis au Forem, pour les contrats F70bis"));
+                echo '€';
                 ?>
             </td>
         </tr>
@@ -345,10 +308,57 @@ $mois = date('m');
         <tr>
             <td>
                 <?php
-                echo Form::label('Connaissance EFT');
-                echo Form::input('t_connaissance_eft', Input::post('t_connaissance_eft', isset($contrat) ? $contrat->t_connaissance_eft : ''))
+                echo Form::label('Date avertissement 1');
+                echo Form::input('d_avertissement1', Input::post('d_avertissement1', isset($contrat) ? $contrat->d_avertissement1 : ''), array('class' => 'jour'))
                 ?>
             </td>
+        </tr>
+        <tr>
+        <tr>
+            <td>
+                <?php
+                echo Form::label('Motif Avertissement 1');
+                echo Form::input('t_motif_avertissement1', Input::post('t_motif_avertissement1', isset($contrat) ? $contrat->t_motif_avertissement1 : ''))
+                ?>
+            </td>
+        </tr>
+        <tr>
+
+
+        <tr>
+            <td>
+                <?php
+                echo Form::label('Date avertissement 2');
+                echo Form::input('d_avertissement2', Input::post('d_avertissement2', isset($contrat) ? $contrat->d_avertissement2 : ''), array('class' => 'jour'))
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php
+                echo Form::label('Motif Avertissement 2');
+                echo Form::input('t_motif_avertissement2', Input::post('t_motif_avertissement2', isset($contrat) ? $contrat->t_motif_avertissement2 : ''))
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php
+                echo Form::label('Date avertissement 3');
+                echo Form::input('d_avertissement3', Input::post('d_avertissement3', isset($contrat) ? $contrat->d_avertissement3 : ''), array('class' => 'jour'))
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php
+                echo Form::label('Motif Avertissement 3');
+                echo Form::input('t_motif_avertissement3', Input::post('t_motif_avertissement3', isset($contrat) ? $contrat->t_motif_avertissement3 : ''))
+                ?>
+            </td>
+        </tr>
+
+
         <tr>
             <td>
 
@@ -382,6 +392,14 @@ echo '%';
                 <tr>
                     <td>
                         <?php
+                        echo Form::label('Date de la demande RW');
+                        echo Form::input('d_date_demande_derogation_rw', Input::post('d_date_demande_derogation_rw', isset($contrat) ? $contrat->d_date_demande_derogation_rw : ''), array('class' => 'jour'))
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <?php
                         echo Form::label('Réponse RW reçue');
                         echo Form::select('b_necessaire', Input::post('b_necessaire', isset($contrat) ? $contrat->b_necessaire : ''), array('2' => 'Non', '1' => 'Oui'), array('id' => 'b_necessaire'));
                         ?>
@@ -390,16 +408,8 @@ echo '%';
                 <tr>
                     <td>
                         <?php
-                        echo Form::label('Date de la demande');
-                        echo Form::input('d_date_demande_derogation_rw', Input::post('d_date_demande_derogation_rw', isset($contrat) ? $contrat->d_date_demande_derogation_rw : ''), array('class' => 'jour'))
-                        ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <?php
-                        echo Form::label('Réponse du Forem');
-                        echo Form::select('b_reponse_forem', Input::post('b_reponse_forem', isset($contrat) ? $contrat->b_reponse_forem : ''), array('2' => 'Non', '1' => 'Oui'));
+                        echo Form::label('Décision dérogation RW');
+                        echo Form::select('b_reponse_rw', Input::post('b_reponse_rw', isset($contrat) ? $contrat->b_reponse_rw : ''), array('2' => 'Non', '1' => 'Oui'));
                         ?>
                     </td>
                 </tr>
@@ -419,8 +429,8 @@ echo '%';
                 <tr>
                     <td>
                         <?php
-                        echo Form::label('Décision dérogation RW');
-                        echo Form::select('b_reponse_rw', Input::post('b_reponse_rw', isset($contrat) ? $contrat->b_reponse_rw : ''), array('2' => 'Non', '1' => 'Oui'));
+                        echo Form::label('Réponse du Forem');
+                        echo Form::select('b_reponse_forem', Input::post('b_reponse_forem', isset($contrat) ? $contrat->b_reponse_forem : ''), array('2' => 'Non', '1' => 'Oui'));
                         ?>
                     </td>
                 </tr>

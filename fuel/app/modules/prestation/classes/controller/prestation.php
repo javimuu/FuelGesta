@@ -654,7 +654,7 @@ class Controller_Prestation extends \Controller_Main
         if (\Input::method() == 'POST') {
             (\Input::post('supplement') == "") ? $euro = 0 : $euro = \Input::Post('supplement');
 
-            if ($db->get_ajout_deplacement($id, $date)) {
+            if ($db->getAjoutDeplacement($id, $date)) {
                 $db->update_ajout_deplacement($euro, $id, $date);
             } else {
                 $db->ajout_deplacement($euro, $id, $date);
