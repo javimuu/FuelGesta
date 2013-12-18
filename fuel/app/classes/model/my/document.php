@@ -368,7 +368,7 @@ class Model_My_Document extends \Maitrepylos\db
     /**
      * Requête permettnt de voir les participant qui pose soucis
      */
-    public function getVerifC98(){
+    public function getVerifC98(\DateTime $date){
 
 
         $sql = "SELECT
@@ -383,13 +383,16 @@ class Model_My_Document extends \Maitrepylos\db
                 t_commune
                 FROM
                 participant p
-                INNER JOIN adresse ON p.id_participant = adresse.participant_id
-                INNER JOIN contrat ON p.id_participant = contrat.participant_id
-                INNER JOIN groupe ON groupe.id_groupe = contrat.groupe_id
-                WHERE adresse.t_courrier = 1";
+                LEFT OUTER JOIN adresse ON p.id_participant = adresse.participant_id
+                LEFT OUTER JOIN contrat ON p.id_participant = contrat.participant_id
+                LEFT OUTER   JOIN groupe ON groupe.id_groupe = contrat.groupe_id
+                WHERE adresse.t_courrier = 1
+                AND contrat.d_date_debut_contrat < ?
+				AND contrat.d_date_fin_contrat_prevu > ?
+                ORDER BY t_nom";
 
         $r = $this->_db->prepare($sql);
-        $r->execute();
+        $r->execute(array($date->format('Y-m-t'),$date->format('Y-m-d')));
         return $r->fetchAll(PDO::FETCH_ASSOC);
 
 

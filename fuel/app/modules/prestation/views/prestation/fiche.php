@@ -157,8 +157,10 @@ $date = \Session::get('date_prestation');
         <?php echo Form::open(array('action' => 'prestation/ajout_deplacement', 'class' => 'form_heures right')); ?>
 
         <?php echo Form::label('Supplément de déplacement', 'supplement'); ?>
-        <?php echo Form::input('supplement', '', array('size' => '5')) ?>€
+        <?php echo Form::input('supplement', $supplement , array('size' => '5')) ?>€
         <?php echo Form::submit('submit_choix', 'Suivant', array('class' => 'btn btn-success btn-mini')); ?>
+
+
 
         <?php echo Form::close(); ?>
     </div>

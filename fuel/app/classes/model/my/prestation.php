@@ -835,6 +835,18 @@ class Model_My_Prestation extends \Maitrepylos\Db {
         return $heure_total[0]['i_secondes'];
     }
 
+
+    public function validateAjoutDeplacement($factory = 'suplement'){
+
+        $val = Validation::forge($factory);
+        $val->add_callable('\Maitrepylos\Validation');
+
+        $val->add_field('supplement', 'Supplément', 'numeric');
+        $val->set_message('numeric', 'Le champ :label doit-être numérique.');
+
+        return $val;
+    }
+
 }
 
 ?>

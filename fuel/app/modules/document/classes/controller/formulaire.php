@@ -131,7 +131,12 @@ class Controller_Formulaire extends \Controller_Main
 
         if($formulaire == 2){
             $db = new \Model_My_Document();
-            $this->data['verif'] = $db->getVerifC98();
+
+                $date = new \DateTime();
+                $date->setDate($date->format('Y'),$date->format('m'),'01');
+
+
+            $this->data['verif'] = $db->getVerifC98($date);
         }
 
         $this->data['participants'] = $participants;

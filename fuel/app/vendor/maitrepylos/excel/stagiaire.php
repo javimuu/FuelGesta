@@ -117,9 +117,9 @@ class Stagiaire
         // $sheet->duplicateStyle($bordure, 'X6:Y6');
         $sheet->duplicateStyle($bordure, 'B7:E7');
         $sheet->duplicateStyle($bordure, 'B11');
-        $sheet->duplicateStyle($bordure, 'V9:W61');
-        $sheet->duplicateStyle($bordure, 'B12:U61');
-        //  $sheet->duplicateStyle($bordure, 'AG12:AG61');
+        $sheet->duplicateStyle($bordure, 'V9:W100');
+        $sheet->duplicateStyle($bordure, 'B12:U100');
+        //  $sheet->duplicateStyle($bordure, 'AG12:AG100');
         $sheet->duplicateStyle($bordure, 'O9:P9');
         $sheet->duplicateStyle($bordure, 'U10');
 
@@ -225,45 +225,45 @@ class Stagiaire
 //            'top'=>array(
 //            'style'=>PHPExcel_Style_Border::BORDER_THIN),
 //            'bottom'=>array(
-//            'style'=>PHPExcel_Style_Border::BORDER_THIN))), 'AH12:AH61');
+//            'style'=>PHPExcel_Style_Border::BORDER_THIN))), 'AH12:AH100');
 
         //code spécifique de date et calcul d'heures
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '@')), 'B12:D61');
+                'code' => '@')), 'B12:D100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '@')), 'G12:G61');
+                'code' => '@')), 'G12:G100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '00')), 'H12:H61');
+                'code' => '00')), 'H12:H100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '@')), 'I12:I61');
+                'code' => '@')), 'I12:I100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => 'd/mm/yyyy')), 'J12:J61');
+                'code' => 'd/mm/yyyy')), 'J12:J100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '00')), 'K12:L61');
+                'code' => '00')), 'K12:L100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '@')), 'M12:M61');
+                'code' => '@')), 'M12:M100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => 'd/mm/yyyy')), 'N12:O61');
+                'code' => 'd/mm/yyyy')), 'N12:O100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => 'd/mm/yyyy')), 'F12:F61');
+                'code' => 'd/mm/yyyy')), 'F12:F100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '[H]:MM')), 'P12:U61');
+                'code' => '[H]:MM')), 'P12:U100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '@')), 'V12:V61');
+                'code' => '@')), 'V12:V100');
         $sheet->duplicateStyleArray(array(
             'numberformat' => array(
-                'code' => '[H]:MM')), 'W12:W61');
+                'code' => '[H]:MM')), 'W12:W100');
 
 
         $sheet->setCellValue('H1', 'Recensement annuel des stagiaires en formation');

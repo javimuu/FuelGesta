@@ -41,7 +41,7 @@ class Controller_Prestation extends \Controller_Main
             'where' => array(
                 'b_is_actif' => 1
             ),
-            'order_by'=> array('t_nom'=> 'asc')
+            'order_by' => array('t_nom' => 'asc')
         ));
         $annees = \Model_Heures_Prestation::find('all', array('order_by' => 'annee'));
 
@@ -69,8 +69,7 @@ class Controller_Prestation extends \Controller_Main
                 \Session::set('nom', $form_data['nom']);
                 \Session::set('idparticipant', \Input::post('idparticipant'));
 
-                if($form_data['idparticipant'] == '' )
-                {
+                if ($form_data['idparticipant'] == '') {
                     $message[] = 'Impossible de trouver le participant.';
                     \Session::set_flash('error', $message);
                     \Response::redirect('/prestation');
@@ -132,7 +131,6 @@ class Controller_Prestation extends \Controller_Main
         $date->setDate($form_data['annee'], $form_data['mois'], '01');
 
 
-
         //on Vérifie que l'on peut introduire des heures
         $prestation_db = new \Model_My_Prestation();
         if ($prestation_db->verif_contrat($form_data['idparticipant'], $date) === false) {
@@ -140,8 +138,8 @@ class Controller_Prestation extends \Controller_Main
             \Session::set_flash('error', $msg);
             \Response::redirect('prestation/modifier_participant/');
         }
-       // \Session::set('nom', $form_data['nom']);
-       // \Session::set('idparticipant', \Input::post('idparticipant'));
+        // \Session::set('nom', $form_data['nom']);
+        // \Session::set('idparticipant', \Input::post('idparticipant'));
         \Session::set('date_prestation', $date);
 
 
@@ -152,11 +150,11 @@ class Controller_Prestation extends \Controller_Main
      * Function permettant l'affichage de prestation au départ de la fiche de signalétique
      */
 
-    public function action_change_participant_fiche($nom,$id_participant,$annee,$mois)
+    public function action_change_participant_fiche($nom, $id_participant, $annee, $mois)
     {
 
         \Session::set('nom', $nom);
-        \Session::set('idparticipant',$id_participant);
+        \Session::set('idparticipant', $id_participant);
         /**
          *
          * Création de la date du mois que l'on va travailler et mise en session de celle-ci
@@ -180,14 +178,14 @@ class Controller_Prestation extends \Controller_Main
         /**
          * partie de code pour récupérer les informations du modifieurs en cas d'erreur.
          */
-        if(\Session::get('formdata')){
+        if (\Session::get('formdata')) {
             $form = \Session::get('formdata');
-            $this->data['modifieur']->date1 = $form['date'][0] ;
-            $this->data['modifieur']->date2 = $form['date'][1] ;
-            $this->data['modifieur']->motif = $form['motif'] ;
-            $this->data['modifieur']->heuresprester = \Input::post('heuresprester') ;
+            $this->data['modifieur']->date1 = $form['date'][0];
+            $this->data['modifieur']->date2 = $form['date'][1];
+            $this->data['modifieur']->motif = $form['motif'];
+            $this->data['modifieur']->heuresprester = \Input::post('heuresprester');
 
-            \Session::set('formdata',null);
+            \Session::set('formdata', null);
         }
 
 
@@ -204,7 +202,6 @@ class Controller_Prestation extends \Controller_Main
         $db = new \Model_My_Prestation();
 
 
-
         /**
          * Récupération des heures du participant à prester.
          */
@@ -214,8 +211,8 @@ class Controller_Prestation extends \Controller_Main
             $this->data['heure_prester'] = $msg;
             $this->_message[] = $msg;
         }
-        
-     
+
+
         /**
          * Récupération des heures déjà prestées
          */
@@ -231,7 +228,7 @@ class Controller_Prestation extends \Controller_Main
          * Affichage des heures en boni ou négatif.
          */
         //$total_heures_recup = $db->total_hours_recovery($id_participant, $date);
-        $total_heures_recup = $db->getHourRecup($id_participant,$date);
+        $total_heures_recup = $db->getHourRecup($id_participant, $date);
 
 
         /**
@@ -241,7 +238,7 @@ class Controller_Prestation extends \Controller_Main
             'where' => array(
                 'b_is_actif' => 1
             ),
-            'order_by'=>array('t_nom'=>'asc')
+            'order_by' => array('t_nom' => 'asc')
         ));
 
         /**
@@ -311,16 +308,16 @@ class Controller_Prestation extends \Controller_Main
                         $date_insertion = \DateTime::createFromFormat('Y-m-d', $date->format('Y-m') . '-' . $range[$i]);
 
                         //Si on modifie les heures, il faut d'abords les supprimer
-                        if (\Input::post('action') == 0 || (int)$heuresprester == 0 ) {
+                        if (\Input::post('action') == 0 || (int)$heuresprester == 0) {
                             $db->delete_heure($id_participant, $date_insertion->format('Y-m-d'));
-                            if((int)$heuresprester == 0){
+                            if ((int)$heuresprester == 0) {
                                 $this->_message[] = 'Suppression des heures pour la date  ' . $date_insertion->format('d-m-Y');
                                 continue;
                             }
                         }
 
                         if ($db->insertion_heures_prestation($id_participant
-                            , $date_insertion, $form_data['t_typecontrat'], $heuresprester, $nom, $schema) === false
+                                , $date_insertion, $form_data['t_typecontrat'], $heuresprester, $nom, $schema) === false
                         ) {
                             $this->_message[] = 'Pas de contrat en date du ' . $date_insertion->format('d-m-Y');
                         } else {
@@ -329,7 +326,6 @@ class Controller_Prestation extends \Controller_Main
                     }
 
                 } else {
-
 
 
                     $this->_message[] = $val->show_errors();
@@ -347,7 +343,7 @@ class Controller_Prestation extends \Controller_Main
 
                 \Session::set_flash('error', $this->_message);
             }
-            \Session::set('formdata',$form_data);
+            \Session::set('formdata', $form_data);
             \Response::redirect('prestation/modifier_participant/');
 
 
@@ -357,6 +353,7 @@ class Controller_Prestation extends \Controller_Main
          * Changement de participant, mettre les années
          */
         $this->data['annee'] = \Model_Heures_Prestation::getAnnee();
+        $this->data['supplement'] = $db->getAjoutDeplacement($id_participant, $date);
 
         $this->template->title = 'Gestion des heures';
         $this->template->content = \View::forge('prestation/fiche', $this->data);
@@ -392,7 +389,7 @@ class Controller_Prestation extends \Controller_Main
                 /**
                  * Si on veut supprimer des heures fixer.
                  */
-                if($participant !=NULL && $form_data['i_heures']=='00:00'){
+                if ($participant != NULL && $form_data['i_heures'] == '00:00') {
 
                     $participant->delete();
                     $message[] = 'Les heures fixée on été supprimée !';
@@ -458,7 +455,7 @@ class Controller_Prestation extends \Controller_Main
         $val->add_callable('\Maitrepylos\Validation');
         $val->add_field('heuresprester', 'Heures', 'required|bland_hour|min_hour');
         $val->set_message('bland_hour', 'Le champ :label doit-être sous forme 00:00');
-        $val->set_message('min_hour', 'Le champ :label ne peux être inférieur à '.
+        $val->set_message('min_hour', 'Le champ :label ne peux être inférieur à ' .
             \Maitrepylos\Config::getMinTime());
 
         return $val;
@@ -525,7 +522,7 @@ class Controller_Prestation extends \Controller_Main
                 } else {
 
                     $sub_heures = bcsub((int)$heure_db[0]['i_secondes'], (int)$heure);
-                    $db->update_hours($form_data['id_heures'], $sub_heures, $heure_db[0]['t_motif'],$heure_db[0]['t_schema'], $form_data['t_typecontrat'], 1);
+                    $db->update_hours($form_data['id_heures'], $sub_heures, $heure_db[0]['t_motif'], $heure_db[0]['t_schema'], $form_data['t_typecontrat'], 1);
                     $db->insertHeures($date, $heure, $nom, $schema, $id, $form_data['t_typecontrat']);
                     \Response::redirect('prestation/formateur/' . $id . '/' . $date);
 
@@ -617,7 +614,6 @@ class Controller_Prestation extends \Controller_Main
         $this->data['id'] = $id;
 
 
-
         $this->data['participant'] = \Session::get('nom');
         $this->template->title = 'Modification des heures inséré par les formateur .';
         $this->template->content = \View::forge('prestation/ajout', $this->data);
@@ -652,32 +648,40 @@ class Controller_Prestation extends \Controller_Main
 
 
         if (\Input::method() == 'POST') {
-            (\Input::post('supplement') == "") ? $euro = 0 : $euro = \Input::Post('supplement');
 
-            if ($db->getAjoutDeplacement($id, $date)) {
-                $db->update_ajout_deplacement($euro, $id, $date);
+            $val = $db->validateAjoutDeplacement();
+
+            if ($val->run()) {
+                (\Input::post('supplement') == "") ? $euro = 0 : $euro = \Input::Post('supplement');
+
+                if ($db->getAjoutDeplacement($id, $date)) {
+                    $db->update_ajout_deplacement($euro, $id, $date);
+                } else {
+                    $db->ajout_deplacement($euro, $id, $date);
+                }
+                $message[] = 'Déplacemement Ajouté';
+                \Session::set_flash('success', $message);
+
             } else {
-                $db->ajout_deplacement($euro, $id, $date);
+                $message[] = $val->show_errors();
+                \Session::set_flash('error', $message);
             }
         }
 
-
-        $message[] = 'Déplacemement Ajouté';
-        \Session::set_flash('success', $message);
         \Response::redirect('prestation/modifier_participant/');
     }
 
 
     public function template_heure($id_participant)
     {
-         $date = \Session::get('date_prestation');
+        $date = \Session::get('date_prestation');
 
         /**
          * Mise en place du template pour la gestions des heures du partiicpant.
          */
         //$motifs = \Cranberry\MyXML::getActivites();
 
-        $motifs = \Model_Activite::find('all',array('order_by'=>array('i_position'=>'asc')));
+        $motifs = \Model_Activite::find('all', array('order_by' => array('i_position' => 'asc')));
 
         $select_motifs = array();
         foreach ($motifs as $value) {
@@ -689,10 +693,10 @@ class Controller_Prestation extends \Controller_Main
 
 
         $select_contrats = array();
-        $contrats = $db->select_contrat($id_participant,$date);
+        $contrats = $db->select_contrat($id_participant, $date);
 
         foreach ($contrats as $value) {
-            $select_contrats[$value['id_contrat']] = $value['t_nom'].'-'.$value['t_type_contrat'];
+            $select_contrats[$value['id_contrat']] = $value['t_nom'] . '-' . $value['t_type_contrat'];
         }
 
         $tab = array(
@@ -718,7 +722,7 @@ class Controller_Prestation extends \Controller_Main
         $heure_a_ajouter = 0;
         $array = array();
 
-        if($db->verifie_formateur($id,$date_prestation) == false){
+        if ($db->verifie_formateur($id, $date_prestation) == false) {
 
             $message[] = 'Il reste des heures formateurs non validé !';
             \Session::set_flash('error', $message);
@@ -795,8 +799,7 @@ class Controller_Prestation extends \Controller_Main
         if ($absent->getSize() === 0) {
             unset($absent);
             $absent[0] = array('i_secondes' => 0);
-        }
-        ;
+        };
 
         //compte le nombre d'itération afin de faire une boucle pour mettre le résultat au standard choisi
         $count = count($recupere_situation_mois);
@@ -878,7 +881,7 @@ class Controller_Prestation extends \Controller_Main
         for ($i = 0; $i < $count; $i++) {
 
             $recupere_situation_mois[$i]['pourcentage'] = round(($recupere_situation_mois[$i]['i_secondes']
-                / $heure_a_prester) * 100, 3);
+                    / $heure_a_prester) * 100, 3);
             $recupere_situation_mois[$i]['i_secondes'] = $time->TimeToString($recupere_situation_mois[$i]['i_secondes']);
             $pourcentage = $pourcentage + $recupere_situation_mois[$i]['pourcentage'];
 
