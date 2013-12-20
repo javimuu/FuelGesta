@@ -419,6 +419,8 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
         $sql = "SELECT c.id_contrat,c.d_date_debut_contrat,c.d_date_fin_contrat_prevu,c.d_date_fin_contrat,g.id_groupe,f.id_filiere,c.participant_id,i_code_cedefop
                 FROM contrat c
+                INNER JOIN type_contrat tc
+                ON c.type_contrat_id = tc.id_type_contrat
                 INNER JOIN groupe g
                 ON g.id_groupe = c.groupe_id
                 INNER JOIN filiere f
@@ -426,6 +428,7 @@ class Model_My_Statistique extends \Maitrepylos\db {
                 WHERE c.d_date_debut_contrat <= ?
                 AND c.d_date_fin_contrat_prevu >= ?
                 AND f.id_filiere = ?
+                AND tc.subside_id = 1
                 ORDER BY g.id_groupe,c.participant_id";
 
         $r = $this->_db->prepare($sql);
@@ -444,6 +447,8 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
         $sql = "SELECT SUM(h.i_secondes) AS iSum
                 FROM contrat c
+                INNER JOIN type_contrat tc
+                ON c.type_contrat_id = tc.id_type_contrat
                 INNER JOIN heures h
                 ON h.contrat_id = c.id_contrat
                 INNER JOIN groupe g
@@ -451,6 +456,7 @@ class Model_My_Statistique extends \Maitrepylos\db {
                 WHERE EXTRACT(YEAR_MONTH FROM h.d_date) = ?
                 AND h.t_schema IN ($schema)
                 AND g.filiere_id = ?
+                AND tc.subside_id = 1
                  ";
 
         $r = $this->_db->prepare($sql);

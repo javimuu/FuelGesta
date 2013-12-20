@@ -119,7 +119,7 @@ Convent.');
 
         $cellule = 25;
         foreach($data['mois'] AS $key=>$value) {
-            $cellule++;
+
             $mois = \Maitrepylos\Utils::mois($key);
             $sheet->setCellValueByColumnAndRow(0, $cellule, strtoupper($mois));
 //            //$sheet->setCellValueByColumnAndRowExplicit(1,$cellule,$heures[$i]->eft,PHPExcel_Cell_DataType::TYPE_NUMERIC);
@@ -129,6 +129,7 @@ Convent.');
             $sheet->setCellValueByColumnAndRow(3, $cellule, $value['payant'] / (24 * 3600));
             $sheet->setCellValueByColumnAndRow(4, $cellule, $value['stage'] / (24 * 3600));
             $sheet->setCellValueByColumnAndRow(5, $cellule, $value['assimile'] / (24 * 3600));
+            $cellule++;
 
         }
         $sheet->duplicateStyleArray(array(

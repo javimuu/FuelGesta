@@ -135,6 +135,19 @@ $date = \Session::get('date_prestation');
                 <?php echo Html::anchor('prestation/est_valide_formateur', '<i class="icon-user icon-white"></i>Valider les heures formateurs',
                     array('class' => 'btn btn-info')) ?>
             </div>
+    </div>
+    <div class="span4">
+
+        <?php echo Form::open(array('action' => 'prestation/ajout_deplacement', 'class' => 'form_heures right')); ?>
+
+        <?php echo Form::label('Supplément de déplacement', 'supplement'); ?>
+        <?php echo Form::input('supplement', $supplement, array('size' => '5')) ?>€
+        <?php echo Form::submit('submit_choix', 'Suivant', array('class' => 'btn btn-success btn-mini')); ?>
+
+
+
+        <?php echo Form::close(); ?>
+    </div>
         <?php else: ?>
             <div>
                 <h2>Le mois a &eacute;t&eacute; valid&eacute;.</h2>
@@ -148,22 +161,12 @@ $date = \Session::get('date_prestation');
                     array('class' => 'btn btn-info')) ?>
 
             </div>
+</div>
 
         <?php endif; ?>
-    </div>
-
-    <div class="span4">
-
-        <?php echo Form::open(array('action' => 'prestation/ajout_deplacement', 'class' => 'form_heures right')); ?>
-
-        <?php echo Form::label('Supplément de déplacement', 'supplement'); ?>
-        <?php echo Form::input('supplement', $supplement , array('size' => '5')) ?>€
-        <?php echo Form::submit('submit_choix', 'Suivant', array('class' => 'btn btn-success btn-mini')); ?>
 
 
 
-        <?php echo Form::close(); ?>
-    </div>
 </div>
 
 <h3 class="space">Heures prestées ce mois</h3>
@@ -237,12 +240,17 @@ foreach ($prester as $value):
         ?>
         <td><?php echo $value[0]['dateFormater'] ?></td>
         <td style="color: <?php echo $color ?>"><b><?php echo $value[0]['i_secondes'] ?></b></td>
+
+        <?php if($control == 0):?>
         <td style="text-align: center">
             <?php if ($value[0]['i_secondes'] !== '00:00:00') {
                 echo Html::anchor('prestation/supprimer/' . $value[0]['participant_id'] . '/' . $value[0]['d_date'], '<i class="icon-remove-sign icon-white"></i>'
                     , array('onclick' => "return confirm('Etes-vous sûr de vouloir supprimer ces heures ?')", 'class' => "btn btn-mini btn-danger"));
             }
             ?></td>
+    <?php else: ?>
+    <td style="text-align: center"></td>
+    <?php endif; ?>
     </tr>
     <?php $i++ ?>
 <?php endforeach; ?>

@@ -332,6 +332,13 @@ class Controller_Statistique extends \Controller_Main
 
             $countContrat = count($formData['filiere'][$filieres['t_nom']]);
 
+
+            //si une filière ne comprend aucun contart alors on ne l'affiche pas.
+            if($countContrat == 0){
+                unset($formData['filiere'][$filieres['t_nom']]);
+                continue;
+            }
+
             for ($i = 0; $i < $countContrat; $i++) {
                 /**
                  * Recherche motif fin de contrat
@@ -368,6 +375,8 @@ class Controller_Statistique extends \Controller_Main
                  * Formation de la date pour l'extraire sur l'année et le mois
                  */
                 $extract = $date->format('Y'). str_pad($ii, 2, 0, STR_PAD_LEFT);
+
+
 
 
                 $formData['filiere'][$filieres['t_nom']]['mois'][$ii]['eft'] = $db->getHeuresTotalFiliere($extract, $filieres['id_filiere'], "'+'");
