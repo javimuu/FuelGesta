@@ -83,7 +83,7 @@ $date = \Session::get('date_prestation');
     <thead>
     <tr>
         <th>Heures à effectuer ce mois (en fonction de son temps de travail)</th>
-        <th>Heures prestées ce mois</th>
+        <th>Heures justifié ce mois</th>
         <th>Heures à prester/récupérer</th>
     </tr>
     </thead>

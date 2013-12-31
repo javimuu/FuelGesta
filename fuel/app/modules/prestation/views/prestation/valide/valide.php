@@ -42,21 +42,43 @@
 <?php
 $message = '';
 if ($situation === 1):?>
-    <p>R&eacute;sum&eacute; du mois : <?php echo 'Prest&eacute; : ' . $total_heures_prester . ' - A Prester '
-        . $resume['heure_a_pretser'] . ', Il reste encore à introduire :' . $resume['resultat'] ?>
-    <?php echo render('prestation/valide/_incorecte'); ?>
-<?php elseif ($situation === 2): ?>
-    <p>R&eacute;sum&eacute; du mois : <?php echo 'Prest&eacute; : ' . $total_heures_prester . ' - A Prester '
-            . $resume['heure_a_pretser'] . ' = ' . $resume['resultat'] ?></p>
-    <?php echo render('prestation/valide/_incoherente') ?>
-<?php elseif ($situation === 3): ?>
-    <?php if (((int)$total_heures_prester) > ((int)$resume['heure_a_pretser'])) {
-        $message = 'heures supplémentaires : ';
+
+    <?php
+    if($recup){
+
+        $resume['resultat'] = 'Il existe des heures de récupération ( '.$recup.') qui n\'aurait pas du être prise';
+    }else{
+        $resume['resultat'] =  'Il reste encore à introduire :' . $resume['resultat'];
     }
     ?>
 
     <p>R&eacute;sum&eacute; du mois : <?php echo 'Prest&eacute; : ' . $total_heures_prester . ' - A Prester '
-            . $resume['heure_a_pretser'] . ' = ' . $message . $resume['resultat'] ?></p>
+        . $resume['heure_a_prester'] .', '.$resume['resultat'] ?>
+    <?php echo render('prestation/valide/_incorecte'); ?>
+
+
+
+<?php elseif ($situation === 2): ?>
+    <p>R&eacute;sum&eacute; du mois : <?php echo 'Prest&eacute; : ' . $total_heures_prester . ' - A Prester '
+            . $resume['heure_a_prester'] . ' = ' . $resume['resultat'] ?></p>
+    <?php echo render('prestation/valide/_incoherente') ?>
+
+
+<?php elseif ($situation === 3): ?>
+
+    <?php
+    $messageRecup = null;
+    if (((int)$totalHeuresPresterMoinsRecup) > ((int)$resume['heure_a_prester'])) {
+        $message = 'heures supplémentaires : ';
+    }
+
+    if($recup){
+        $messageRecup = '(moins les heures de récup '.$recup.')';
+    }
+    ?>
+
+    <p>R&eacute;sum&eacute; du mois : <?php echo 'Prest&eacute; : ' . $totalHeurePresterNoRecup .$messageRecup. '  - A Prester '
+            . $resume['heure_a_prester'] . ' = ' . $message . $resume['resultat'] ?></p>
     <?php echo render('prestation/valide/_corecte') ?>
 <?php endif; ?>
 

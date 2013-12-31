@@ -326,7 +326,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
         $sql = "
             SELECT SUM(i_secondes) as fullTime FROM heures
             WHERE d_date BETWEEN ? AND ?
-            AND t_schema IN ('+','@','=','$','#','%','-','/')
+            AND t_schema IN ('+','@','=','$','#','%','/','-')
             AND participant_id = ?";
 
         $req = $this->_db->prepare($sql);
@@ -344,58 +344,84 @@ class Model_My_Prestation extends \Maitrepylos\Db {
         }
     }
 
+    public function total_hours_month_noRecup(\DateTime $date, $id_participant)
+    {
+        $time = new \Maitrepylos\Timetosec();
+
+        $sql = "
+            SELECT SUM(i_secondes) as fullTime FROM heures
+            WHERE d_date BETWEEN ? AND ?
+            AND t_schema IN ('+','@','=','$','#','%','/')
+            AND participant_id = ?";
+
+        $req = $this->_db->prepare($sql);
+        $req->execute(array($date->format('Y-m-d'), $date->format('Y-m') . '-' . $date->format('t')
+        , $id_participant));
+        $result = $req->fetchAll(PDO::FETCH_ASSOC);
+
+        if ($result[0]['fullTime'] == NULL) {
+            return '00:00';
+        } else {
+            return $time->TimeToString($result[0]['fullTime']);
+        }
+    }
+
     public function total_hours_recovery($id_participant, \DateTime $date) {
 
         //j'ai mal géré, remplacé par $this->getHourRecup();
         // je laisse la focntion pour accèssibilité, le temps de vérifier les effets de bords éventuelle.
-        $var = $this->getHourRecup($id_participant, $date);
-        return $var;
+      //  $var = $this->getHourRecup($id_participant, $date);
+      //  return $var;
 
 
 
-//        $total_heures_a_prester = NULL;
-//        $time = new \Maitrepylos\Timetosec();
-//
-//        /**
-//         * Récupération de la date du premier contrat
-//         */
-//        $sql = "SELECT MIN(d_date_debut_contrat) as datecontrat
-//                FROM contrat
-//                WHERE participant = ? ";
-//        $resutl = $this->_db->fetchAll($sql, array($id_participant));
-//
-//        //pour s'assurer qu'on obtient une date commençant par le premier du mois
-//        list($year, $month, $day) = explode('-', $resutl[0]['datecontrat']);
-//
-//        $date_contrat = \DateTime::createFromFormat('Y-m-d', $year . '-' . $month . '-01');
-//        $date_requete_sql = \DateTime::createFromFormat('Y-m-d', $date_contrat->format('Y-m-d'));
-//        /**
-//         * Calcul le nombre de mois depuis la première signature de contrat
-//         * Ce qui va nous permettre de boucler pour calculer le nombres d'heures que le stagiaire à du prester
-//         */
-//        $nombres_mois = \Maitrepylos\Date::nbMois($date, $date_contrat);
-//
-//        for ($i = 0; $i < $nombres_mois; $i++) {
-//            if ($i != 0) {
-//                $date_requete_sql->add(new \DateInterval('P' . $i . 'M'));
-//            }
-//
-//            $model_heure = new \Model_Heures_Participant();
-//            $heure_a_prester = $model_heure->hour_prester($id_participant, $date_requete_sql);
-//
-//            if ($heure_a_prester != NULL) {
-//                $total_heures_a_prester += $time->StringToTime($heure_a_prester);
-//            }
-//
-//            $heure_deja_prester = $this->total_hours_month($date_requete_sql, $id_participant);
-//            $sql = "SELECT ((?) - (?)) AS solde ";
-//            $solde = $this->_db->fetchAll($sql, array($total_heures_a_prester, $time->StringToTime($heure_deja_prester)));
-//            $total_heures_a_prester = $solde[0]['solde'];
-//
-//            $date_requete_sql = \DateTime::createFromFormat('Y-m-d', $date_contrat->format('Y-m-d'));
-//        }
-//
-//        return $time->TimeToString($total_heures_a_prester);
+        $total_heures_a_prester = NULL;
+        $time = new \Maitrepylos\Timetosec();
+
+        /**
+         * Récupération de la date du premier contrat
+         */
+        $sql = "SELECT MIN(d_date_debut_contrat) as datecontrat
+                FROM contrat
+                WHERE participant_id = ? ";
+        $r = $this->_db->prepare($sql);
+        $r->execute(array($id_participant));
+        $resutl = $r->fetchAll(PDO::FETCH_ASSOC);
+
+        //pour s'assurer qu'on obtient une date commençant par le premier du mois
+        list($year, $month, $day) = explode('-', $resutl[0]['datecontrat']);
+
+        $date_contrat = \DateTime::createFromFormat('Y-m-d', $year . '-' . $month . '-01');
+        $date_requete_sql = \DateTime::createFromFormat('Y-m-d', $date_contrat->format('Y-m-d'));
+        /**
+         * Calcul le nombre de mois depuis la première signature de contrat
+         * Ce qui va nous permettre de boucler pour calculer le nombres d'heures que le stagiaire à du prester
+         */
+        $nombres_mois = \Maitrepylos\Date::nbMois($date, $date_contrat);
+
+        for ($i = 0; $i < $nombres_mois; $i++) {
+            if ($i != 0) {
+                $date_requete_sql->add(new \DateInterval('P' . $i . 'M'));
+            }
+
+            $model_heure = new \Model_Heures_Participant();
+            $heure_a_prester = $model_heure->hour_prester($id_participant, $date_requete_sql);
+
+            if ($heure_a_prester != NULL) {
+                $total_heures_a_prester += $time->StringToTime($heure_a_prester);
+            }
+
+            $heure_deja_prester = $this->total_hours_month($date_requete_sql, $id_participant);
+            $sql = "SELECT ((?) - (?)) AS solde ";
+            $r = $this->_db->prepare($sql);
+            $r->execute(array($total_heures_a_prester, $time->StringToTime($heure_deja_prester)));
+            $solde = $r->fetchAll(PDO::FETCH_ASSOC);
+            $total_heures_a_prester = $solde[0]['solde'];
+
+            $date_requete_sql = \DateTime::createFromFormat('Y-m-d', $date_contrat->format('Y-m-d'));
+        }
+
+        return $time->TimeToString($total_heures_a_prester);
     }
 
     public function get_details($id, $date) {
@@ -716,7 +742,8 @@ class Model_My_Prestation extends \Maitrepylos\Db {
      * attention je viens de faire une changement au départ la ligne suivante est AND heures_schema IN ('-','*')
      */
     public function total_heures_recup($id, \DateTime $date_debut, \Datetime $date) {
-        $date_fin = \DateTime::createFromFormat('Y-m-d', $date->format('Y-m-') . $date->format('t'));
+        $dateFin = \DateTime::createFromFormat('Y-m-d', $date->format('Y-m-t'));
+
         $sql = "
             SELECT SUM(i_secondes) as i_secondes
             FROM heures
@@ -725,8 +752,29 @@ class Model_My_Prestation extends \Maitrepylos\Db {
             AND participant_id = ?
             ";
         $req = $this->_db->prepare($sql);
-        $req->execute(array($date_debut->format('Y-m-d'), $date_fin->format('Y-m-d'), $id));
+        $req->execute(array($date_debut->format('Y-m-d'), $dateFin->format('Y-m-d'), $id));
         return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Fonction retournant le nombres de secondes de récupérations sur un mois donné.
+     * @param $id
+     * @param Datetime $date
+     * @return number
+     */
+    public function getHeuresRecupMois($id, \Datetime $date)
+    {
+
+        $sql = "
+            SELECT SUM(i_secondes) as i_secondes
+            FROM heures
+            WHERE d_date BETWEEN ? AND ?
+            AND t_schema IN ('-')
+            AND participant_id = ?
+            ";
+        $req = $this->_db->prepare($sql);
+        $req->execute(array($date->format('Y-m-01'), $date->format('Y-m-t'), $id));
+        return $req->fetch(PDO::FETCH_ASSOC);
     }
 
     /**
@@ -737,6 +785,8 @@ class Model_My_Prestation extends \Maitrepylos\Db {
      * @param String $date2
      * @return array
      * pour le momemnt j'ai ajouté '-' et c'est bon, je tente en enlevant '*'
+     * 29-12-2013 , j'ai enlevé de nouveau le schéma '-' car il ne le prenait pas en compte dans la calul
+     * des heures à prester/récupérer.
      */
     public function total_full_heures_mois($id, \DateTime $date_debut, \DateTime $date_fin) {
         $date_fin_last_day = \DateTime::createFromFormat('Y-m-d', $date_fin->format('Y-m-t'));
@@ -744,7 +794,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
         $sql = "
             SELECT SUM(i_secondes) as i_secondes FROM heures
             WHERE d_date BETWEEN ? AND ?
-            AND t_schema IN ('+','@','=','$','#','/','%','-')
+            AND t_schema IN ('+','@','=','$','#','/','%')
             AND participant_id = ? ";
         $req = $this->_db->prepare($sql);
         $req->execute(array($date_debut->format('Y-m-d'), $date_fin_last_day->format('Y-m-d'), $id));
@@ -787,7 +837,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
         /**
          * On calcule le nombres de mois entre la date du premier contrat et maintenant
          */
-        $nombres_mois = \Maitrepylos\date::nbMois($date, $date_boucle);
+        $nombres_mois = \Maitrepylos\date::nbMois($date, $date_boucle) ;
 
 
 

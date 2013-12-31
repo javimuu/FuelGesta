@@ -2,6 +2,7 @@
 
 namespace Prestation;
 
+use Fuel\Core\Debug;
 use Fuel\Core\Input;
 use Fuel\Core\Session;
 
@@ -193,6 +194,7 @@ class Controller_Prestation extends \Controller_Main
          * @object objet Datetime créer à la selection du participant.
          */
         $date = \Session::get('date_prestation');
+        // Debug::dump($date);
 
         $id_participant = \Session::get('idparticipant');
 
@@ -709,6 +711,11 @@ class Controller_Prestation extends \Controller_Main
     }
 
 
+    /**
+     * Fonction permettant de valider un mois.
+     * au 31/12/2013, je viens de modifier cette fonction pour prendre en compte les récup dans les calculs
+     * A revoir et simplifier.
+     */
     public function action_est_valide()
     {
 
@@ -828,21 +835,57 @@ class Controller_Prestation extends \Controller_Main
 
         $total_mois = $db->total_hours_month($date_prestation, $id);
 
+        /**
+         * dans le principe nous comptons les heures de récup comme des heures justifiès,
+         * mais dans les faits les heures de récups doivent être décomptés des calculs pour ne pas être pris
+         * dans un total positif.
+         * (en effet une heure de récup doit être décomptés du total des heures a prester/effectuer, mais additionné dans les heures effectuée)
+         */
+        $totalMoisNoRecup = $time->StringToTime($db->total_hours_month_noRecup($date_prestation, $id));
+        $recup = $db->getHeuresRecupMois($id, $date_prestation);
+
+
         $heure_a_prester = $time->StringToTime($heure_a_prester);
         $mois_no_string = $time->StringToTime($total_mois);
 
-        if (($mois_no_string - $heure_a_prester) < 0) {
+
+//        if (($mois_no_string - $heure_a_prester) < 0) {
+//
+//
+//            if ((($mois_no_string + $absent[0]['i_secondes']) - $heure_a_prester) < 0) {
+//
+//                $situation = 1;
+//
+//            } elseif ((($mois_no_string + $absent[0]['i_secondes']) - $heure_a_prester) > 0) {
+//                //dans la situation présente, si nous compenssons avec le total des heures d'absences, le participant
+//                //se retrouveras avec des heures supplémentaires, ce qui n'est pas l'effet rechercher
+//
+//                $somme_total = ($total_mois + $absent[0]['i_secondes']) - $heure_a_prester;
+//                $heure_a_ajouter = $absent[0]['i_secondes'] - $somme_total;
+//                $situation = 2;
+//            } else {
+//
+//                $heure_a_ajouter = $absent[0]['i_secondes'];
+//                $situation = 3;
+//
+//            }
 
 
-            if ((($mois_no_string + $absent[0]['i_secondes']) - $heure_a_prester) < 0) {
+        $heuresReel = $totalMoisNoRecup - $recup['i_secondes'];
+        // Debug::dump(bcsub($heuresReel,(int)$heure_a_prester));
+
+        if (($heuresReel - (int)$heure_a_prester) < 0) {
+
+
+            if ((($heuresReel + $absent[0]['i_secondes']) - $heure_a_prester) <= 0) {
 
                 $situation = 1;
 
-            } elseif ((($mois_no_string + $absent[0]['i_secondes']) - $heure_a_prester) > 0) {
+            } elseif ((($heuresReel + $absent[0]['i_secondes']) - $heure_a_prester) > 0) {
                 //dans la situation présente, si nous compenssons avec le total des heures d'absences, le participant
                 //se retrouveras avec des heures supplémentaires, ce qui n'est pas l'effet rechercher
 
-                $somme_total = ($total_mois + $absent[0]['i_secondes']) - $heure_a_prester;
+                $somme_total = ($heuresReel + $absent[0]['i_secondes']) - $heure_a_prester;
                 $heure_a_ajouter = $absent[0]['i_secondes'] - $somme_total;
                 $situation = 2;
             } else {
@@ -861,17 +904,28 @@ class Controller_Prestation extends \Controller_Main
          * Calcul pour afficher le résumé du mois
          */
 
-        $resume['resultat'] = $time->TimeToString($heure_a_prester - $mois_no_string);
+
+        $resume['resultat'] = $heure_a_prester - $heuresReel;
+        // Debug::dump($resume['resultat']);
         /**
          * juste pour que l'affichage soit correcte.
          */
-        if ($heure_a_prester < $mois_no_string) {
-            $resume['resultat'] = $time->TimeToString($mois_no_string - $heure_a_prester);
+        //if ($heure_a_prester < $totalMoisNoRecup) {
+        if ($heure_a_prester < $heuresReel) {
+
+            $resume['resultat'] = $time->TimeToString($heuresReel - $heure_a_prester);
+
+//            if($recup['i_secondes'] > 0){
+//                $resume['resultat'] = $time->TimeToString(($totalMoisNoRecup - $recup['i_secondes']) - $heure_a_prester);
+//            }
+
+        } else {
+            $resume['resultat'] = $time->TimeToString($resume['resultat']);
         }
-        if ($heure_a_prester === $mois_no_string) {
+        if ($heure_a_prester === $heuresReel) {
             $resume['resultat'] = 0;
         }
-        $resume['heure_a_pretser'] = $time->TimeToString($heure_a_prester);
+        $resume['heure_a_prester'] = $time->TimeToString($heure_a_prester);
 
 
         /**
@@ -893,10 +947,15 @@ class Controller_Prestation extends \Controller_Main
         $this->template->set_global('id', $id);
         $this->template->set_global('date', $date_prestation);
         $this->template->set_global('nom', \Session::get('nom'));
-        $this->template->set_global('total_heures_prester', $total_mois);
+        //$this->template->set_global('total_heures_prester', $total_mois);
+        $this->template->set_global('total_heures_prester', $time->TimeToString($totalMoisNoRecup));
+        $this->template->set_global('totalHeuresPresterMoinsRecup', $time->TimeToString($totalMoisNoRecup - $recup['i_secondes']));
         $this->template->set_global('total_pourcentage', $pourcentage);
         $this->template->set_global('tableau', $recupere_situation_mois);
         $this->template->set_global('situation', $situation);
+        $this->template->set_global('recup', $time->TimeToString($recup['i_secondes']));
+        $this->template->set_global('totalHeurePresterNoRecup', $time->TimeToString($totalMoisNoRecup));
+        $this->template->set_global('reel', $heuresReel);
 
         $this->template->title = 'Validation des documents';
         $this->template->content = \View::forge('prestation/valide/valide');
