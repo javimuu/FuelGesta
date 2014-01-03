@@ -93,7 +93,7 @@ class Paye
 //            //$pdf->Cell(20, 5, utf8_decode('TOTAL'), 1);
 //            //$pdf->Cell(140, 5, utf8_decode($heure[0]->fulltime), 1, '', 'C');
 //            //$pdf->Text(25, $y + 20, 'soit : ' . $heure[0]->fulltime . utf8_decode(' Heures à ') . $formData[$z]['salaire'][0]->ren_tarif_horaire . ' euro/H pour un total de ' . $formData[$z]['salaire'][0]->total . utf8_decode(' euro'));
-                $pdf->Text(25, $y + 5, utf8_decode('(H)eures de présences = H*P :	' . $time->TimeToString($formData[$z]['totalHeuresMois'][0]['fulltime'])));
+                $pdf->Text(25, $y + 5, utf8_decode('(H)eures de présences =  :	' . $time->TimeToString($formData[$z]['totalHeuresMois'][0]['fulltime'])));
             $pdf->Text(25, $y + 8, utf8_decode('Heures supplémentaires :		' . $time->TimeToString($formData[$z]['heureRecup'])));
                 $pdf->Text(25, $y + 11, utf8_decode('Heures absences justifiées :		' . $time->TimeToString($formData[$z]['heure_justifier']['fulltime'])));
                 $pdf->Text(25, $y + 14, utf8_decode('Heures absences non justifiées :		' . $time->TimeToString($formData[$z]['heure_non_justifier'][0]['fulltime'])));

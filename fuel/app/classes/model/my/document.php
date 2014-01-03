@@ -453,11 +453,23 @@ class Model_My_Document extends \Maitrepylos\db
     public function calculHeuresMoisStatL2($place_holder,$array, $schema, \DateTime $date)
     {
         $array[] = $date->format('Y-m-d');
-        $sql = 'SELECT SUM(i_secondes) AS iSum ';
-        $sql .= 'FROM heures h ';
-        $sql .= 'WHERE participant_id IN ('.$place_holder.') ';
-        $sql .= 'AND t_schema IN (' . $schema . ') ';
-        $sql .= 'AND d_date  = ? ';
+//        $sql = 'SELECT SUM(i_secondes) AS iSum ';
+//        $sql .= 'FROM heures h ';
+//        $sql .= 'WHERE participant_id IN ('.$place_holder.') ';
+//        $sql .= 'AND t_schema IN (' . $schema . ') ';
+//        $sql .= 'AND d_date  = ? ';
+
+
+        $sql  ='SELECT SUM(h.i_secondes) AS iSum ';
+        $sql .='FROM heures h ';
+        $sql .='INNER JOIN contrat c ';
+        $sql .='ON h . contrat_id = c . id_contrat ';
+        $sql .='INNER JOIN type_contrat tc ';
+        $sql .='ON c . type_contrat_id = tc . id_type_contrat ';
+        $sql .='WHERE h.participant_id IN ('.$place_holder.') ';
+        $sql .='AND h.d_date = ? ';
+        $sql .='AND h . t_schema IN ('.$schema.') ';
+        $sql .='AND tc . subside_id = 1';
 
         $req = $this->_db->prepare($sql);
         $req->execute($array);

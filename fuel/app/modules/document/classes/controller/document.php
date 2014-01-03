@@ -1,6 +1,7 @@
 <?php
 
 namespace Document;
+use Fuel\Core\Debug;
 
 /**
  * Controller gérant toute la partie "Participant".

@@ -110,11 +110,22 @@ class Model_My_Statistique extends \Maitrepylos\db {
      */
     public function calculHeuresMoisStat($id_participant, $schema, \DateTime $date) {
 
-        $sql = "SELECT SUM(i_secondes) AS iSum
-                FROM heures
-                    WHERE participant_id = ?
-                AND EXTRACT(YEAR_MONTH FROM d_date) = ?
-                AND t_schema IN ($schema)";
+//        $sql = "SELECT SUM(i_secondes) AS iSum
+//                FROM heures
+//                    WHERE participant_id = ?
+//                AND EXTRACT(YEAR_MONTH FROM d_date) = ?
+//                AND t_schema IN ($schema)";
+
+        $sql = 'SELECT SUM(h.i_secondes) AS iSum ';
+        $sql .= 'FROM heures h ';
+        $sql .= 'INNER JOIN contrat c ';
+        $sql .= 'ON h . contrat_id = c . id_contrat ';
+        $sql .= 'INNER JOIN type_contrat tc ';
+        $sql .= 'ON c . type_contrat_id = tc . id_type_contrat ';
+        $sql .= 'WHERE h.participant_id = ? ';
+        $sql .= 'AND EXTRACT(YEAR_MONTH FROM d_date) = ? ';
+        $sql .= 'AND h . t_schema IN (' . $schema . ') ';
+        $sql .= 'AND tc . subside_id = 1';
         $result = $this->_db->prepare($sql);
         $result->execute(array($id_participant, $date->format('Ym')));
         return $result->fetchAll(PDO::FETCH_ASSOC);
