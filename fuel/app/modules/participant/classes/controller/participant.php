@@ -304,7 +304,7 @@ class Controller_Participant extends \Controller_Main
 
 
         $types_enseignement = \Model_Type_Enseignement::find('all', array('order_by' => array('t_nom' => 'ASC'), 'related' => array('enseignements' => array('order_by' => array('i_position' => 'ASC')))));
-        $types = array('' => '');
+        $types = array('' => '','null'=>'Néant');
         $diplomes = array('' => '');
 
         foreach ($types_enseignement as $type_enseignement) {
