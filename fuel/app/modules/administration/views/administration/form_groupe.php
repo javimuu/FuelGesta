@@ -33,6 +33,37 @@
     </div>
     
 </fieldset>
+<fieldset>
+    <legend>Gestionnaire du groupe</legend>
+    <div>
+
+        <table class="table table-striped" >
+            <tr>
+                <?php foreach($gestionnaire as $key=>$value):
+                    $true = false;
+                    if($value[1] == 1){
+
+                        $true = true;
+                    }
+
+                    ?>
+
+
+                <td>
+                <?php
+                echo '<b>'.$value[0].'</b>';
+                echo Form::checkbox('gestion[]',$key,$true);
+                ?>
+                </td>
+                <?php endforeach ?>
+
+            </tr>
+        </table>
+
+
+
+    </div>
+</fieldset>
 
 <fieldset>
 

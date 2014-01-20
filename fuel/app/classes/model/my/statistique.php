@@ -120,12 +120,10 @@ class Model_My_Statistique extends \Maitrepylos\db {
         $sql .= 'FROM heures h ';
         $sql .= 'INNER JOIN contrat c ';
         $sql .= 'ON h . contrat_id = c . id_contrat ';
-        $sql .= 'INNER JOIN type_contrat tc ';
-        $sql .= 'ON c . type_contrat_id = tc . id_type_contrat ';
         $sql .= 'WHERE h.participant_id = ? ';
         $sql .= 'AND EXTRACT(YEAR_MONTH FROM d_date) = ? ';
         $sql .= 'AND h . t_schema IN (' . $schema . ') ';
-        $sql .= 'AND tc . subside_id = 1';
+        $sql .= 'AND h . subside = 1';
         $result = $this->_db->prepare($sql);
         $result->execute(array($id_participant, $date->format('Ym')));
         return $result->fetchAll(PDO::FETCH_ASSOC);
@@ -458,8 +456,6 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
         $sql = "SELECT SUM(h.i_secondes) AS iSum
                 FROM contrat c
-                INNER JOIN type_contrat tc
-                ON c.type_contrat_id = tc.id_type_contrat
                 INNER JOIN heures h
                 ON h.contrat_id = c.id_contrat
                 INNER JOIN groupe g
@@ -467,7 +463,7 @@ class Model_My_Statistique extends \Maitrepylos\db {
                 WHERE EXTRACT(YEAR_MONTH FROM h.d_date) = ?
                 AND h.t_schema IN ($schema)
                 AND g.filiere_id = ?
-                AND tc.subside_id = 1
+                AND h.subside = 1
                  ";
 
         $r = $this->_db->prepare($sql);

@@ -111,9 +111,12 @@ class Controller_Tableau extends \Controller_Main
         $dbTableau = new \Model_My_Tableau();
 
         //Récupération des groupes que le formateur gère.
-        // $groupe = $dbTableau->getGroupe(\Session::get('id_login'));
-        //pour l'instant on donne accès a tout le monde, quand il faudra revenir en arrière passer la fonction ligne 96
-        $groupe = $dbTableau->getGroupe();
+         $groupe = $dbTableau->getGroupe(\Session::get('id_login'));
+        /**
+         * Au 20/01/2014, nous avons mis en place la gestion des groupes
+         * pour l'instant on donne accès a tout le monde, quand il faudra revenir en arrière passer la fonction ligne 96
+        //$groupe = $dbTableau->getGroupe();
+         */
 
         $countGroupe = count($groupe);
 

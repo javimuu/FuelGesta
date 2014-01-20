@@ -322,6 +322,18 @@ class Controller_Administration extends \Controller_Main
 
                 // On sauvegarde
                 if ($groupe->save()) {
+
+                    //si le groupe est créé on crée les gestionnaires, pour la gestions de sheures au niveau tableau.
+                    $gestion = \Input::post('gestion');
+
+                    foreach($gestion as $value){
+                        $new = new \Model_Users_Groupe();
+                        $new->users_id = $value;
+                        $new->groupe_id = $groupe->id_groupe;
+                        $new->save();
+                    }
+
+
                     $message[] = 'Le groupe a bien été créé.';
                     \Session::set_flash('success', $message);
                     \Response::redirect($this->view_dir . 'liste_groupes');
@@ -360,6 +372,15 @@ class Controller_Administration extends \Controller_Main
             $select_users[$value->id] = $value->username;
         }
 
+        $gestionnaire = \Model_Users_Groupe::getGestionnaireAffiche();
+
+        $gestion_users = array();
+
+        foreach ($gestionnaire as $value) {
+            $gestion_users[$value->id][] = $value->username;
+            $gestion_users[$value->id][] = $value->coche;
+        }
+
 //        //on récupère le nom des centres dans le fichier xml
 //        $path = Asset::find_file('coordonnees.xml', 'xml');
 //        $xml = simplexml_load_file($path);
@@ -382,6 +403,7 @@ class Controller_Administration extends \Controller_Main
         $this->data['action'] = 'Ajouter';
         $this->data['centre'] = $select_lieu;
         $this->data['users'] = $select_users;
+        $this->data['gestionnaire'] = $gestion_users;
         $this->data['filiere'] = $filiere;
         $this->template->content = \View::forge($this->view_dir . 'form_groupe', $this->data);
     }
@@ -396,6 +418,7 @@ class Controller_Administration extends \Controller_Main
 
         $groupe = \Model_Groupe::find($id);
         $time = new \Maitrepylos\Timetosec();
+
 
         if (\Input::method() == 'POST') {
 
@@ -423,7 +446,22 @@ class Controller_Administration extends \Controller_Main
 
                 // On sauvegarde
                 if ($groupe->save()) {
-                    $message[] = 'Le groupe a bien été créé.';
+
+                    //on supprime les gestionnaires
+
+                    $gestionnaire = new \Model_Users_Groupe();
+                    $gestionnaire->delete_gestionnaire($id);
+                    //on les recrées
+                    $gestion = \Input::post('gestion');
+
+                    foreach ($gestion as $value) {
+                        $new = new \Model_Users_Groupe();
+                        $new->users_id = $value;
+                        $new->groupe_id = $groupe->id_groupe;
+                        $new->save();
+                    }
+
+                    $message[] = 'Le groupe a bien été modifié.';
                     \Session::set_flash('success', $message);
                     \Response::redirect($this->view_dir . 'liste_groupes');
                 } else {
@@ -473,6 +511,16 @@ class Controller_Administration extends \Controller_Main
             $select_users[$value->id] = $value->username;
         }
 
+        $gestionnaire = \Model_Users_Groupe::getGestionnaireAffiche($id);
+
+
+        $gestion_users = array();
+
+        foreach ($gestionnaire as $value) {
+            $gestion_users[$value->id][] = $value->username;
+            $gestion_users[$value->id][] = $value->coche;
+        }
+
 //        //on récupère le nom des centres dans le fichier xml
 //        $path = Asset::find_file('coordonnees.xml', 'xml');
 //        $xml = simplexml_load_file($path);
@@ -493,6 +541,7 @@ class Controller_Administration extends \Controller_Main
 
         $this->data['centre'] = $select_lieu;
         $this->data['users'] = $select_users;
+        $this->data['gestionnaire'] = $gestion_users;
         $this->data['groupe'] = $groupe;
         $this->data['filiere'] = $filiere;
         $this->data['action'] = 'Modifier';
@@ -508,6 +557,14 @@ class Controller_Administration extends \Controller_Main
     public function action_supprimer_groupe($id = NULL)
     {
         if ($groupe = \Model_Groupe::find($id)) {
+
+            //supression des gestionnaires
+            $gestionnaire = new \Model_Users_Groupe();
+
+            $gestionnaire->delete_gestionnaire($id);
+
+
+            //supression du groupe;
             $groupe->delete();
 
             $message[] = 'Le groupe a bien été supprimé.';
@@ -518,6 +575,8 @@ class Controller_Administration extends \Controller_Main
         }
 
         \Response::redirect($this->view_dir . 'liste_groupes');
+//        $this->template->title = 'Administration - Gestion des fins de formation';
+//        $this->template->content = \View::forge('test');
     }
 
     /**

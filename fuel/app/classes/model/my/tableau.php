@@ -9,26 +9,31 @@ class Model_My_Tableau extends \Maitrepylos\db
     {
         parent::__construct();
     }
-//
-//    public function getGroupe($login)
-//    {
-//        $sql = "SELECT g.id_groupe,g.t_nom
-//                FROM groupe g
-//                WHERE login = $login";
-//        $result = $this->_db->fetchAll($sql, array($login));
-//        return $result;
-//
-//    }
-    public function getGroupe()
+
+    public function getGroupe($login)
     {
         $sql = "SELECT g.id_groupe,g.t_nom
-                FROM groupe g";
+                FROM groupe g
+                WHERE login_id = ?
+                OR g.id_groupe IN (
+								SELECT groupe_id FROM users_groupe
+								WHERE users_id = ?)";
         $req = $this->_db->prepare($sql);
-        $req->execute();
+        $req->execute(array($login, $login));
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
         return $result;
 
     }
+//    public function getGroupe()
+//    {
+//        $sql = "SELECT g.id_groupe,g.t_nom
+//                FROM groupe g";
+//        $req = $this->_db->prepare($sql);
+//        $req->execute();
+//        $result = $req->fetchAll(PDO::FETCH_ASSOC);
+//        return $result;
+//
+//    }
 
     /**
      * Méthode permettant de récuperer les participant pour les tableaux

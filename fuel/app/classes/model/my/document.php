@@ -554,7 +554,8 @@ class Model_My_Document extends \Maitrepylos\db
             AND h.t_schema IN ('+','@','$','-')
             AND c.d_date_fin_contrat_prevu >= ?
             AND c.d_date_debut_contrat<= ?
-            AND p.id_participant = ? ";
+            AND p.id_participant = ?
+            AND h.subside = 4";
         $req = $this->_db->prepare($sql);
         $req->execute(array(
             $groupe,
@@ -586,6 +587,7 @@ class Model_My_Document extends \Maitrepylos\db
             AND c.d_date_fin_contrat_prevu >= ?
             AND c.d_date_debut_contrat<= ?
             AND p.id_participant = ?
+            AND h.subside = 4
             GROUP BY p.id_participant";
 
         $req = $this->_db->prepare($sql);
@@ -623,6 +625,7 @@ class Model_My_Document extends \Maitrepylos\db
             AND c.d_date_fin_contrat_prevu >= ?
             AND c.d_date_debut_contrat<= ?
             AND p.id_participant NOT IN ($id)
+            AND h.subside = 4
             GROUP BY p.id_participant";
 
         $req = $this->_db->prepare($sql);
