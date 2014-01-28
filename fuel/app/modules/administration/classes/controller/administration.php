@@ -326,7 +326,7 @@ class Controller_Administration extends \Controller_Main
                     //si le groupe est créé on crée les gestionnaires, pour la gestions de sheures au niveau tableau.
                     $gestion = \Input::post('gestion');
 
-                    foreach($gestion as $value){
+                    foreach ($gestion as $value) {
                         $new = new \Model_Users_Groupe();
                         $new->users_id = $value;
                         $new->groupe_id = $groupe->id_groupe;
@@ -1928,6 +1928,184 @@ class Controller_Administration extends \Controller_Main
         }
 
         \Response::redirect($this->view_dir . 'liste_types_formation');
+    }
+
+    public function action_liste_types_connaissance()
+    {
+        $this->template->title = 'Administration - Gestion des types de connaissance de l\'Eft';
+
+        $types = \Model_Type_Connaissance::find('all');
+
+        $this->data['types'] = $types;
+        $this->template->content = \View::forge($this->view_dir . 'types_connaisssance', $this->data);
+    }
+
+    public function action_ajouter_type_connaissance()
+    {
+        $this->template->title = 'Administration des types de connaissance';
+
+        if (\Input::method() == 'POST') {
+            $val = \Model_Type_Statut::validate('edit');
+
+            if ($val->run()) {
+                $type = new \Model_Type_Connaissance();
+                $type->add_activite(\Input::post('t_nom'));
+
+                    $message[] = "Le type de statut a bien été ajouté.";
+                    \Session::set_flash('success', $message);
+                    \Response::redirect($this->view_dir . 'liste_types_connaissance');
+
+            } else // si la validation a échoué
+            {
+                $message[] = $val->show_errors();
+                \Session::set_flash('error', $message);
+            }
+        }
+
+        $this->data['action'] = 'Ajouter';
+        $this->template->content = \View::forge($this->view_dir . 'form_type_connaissance', $this->data);
+    }
+
+    public function action_supprimer_type_connaissance($id)
+    {
+        is_null($id) and \Response::redirect($this->view_dir . 'liste_types_connaissance');
+
+        if ($type = \Model_Type_Connaissance::find($id)) {
+            $type->delete();
+
+            $message[] = 'Le type de connaissance eft a bien été supprimé.';
+            \Session::set_flash('success', $message);
+        } else {
+            $message[] = 'Impossible de supprimer le type de connaissance eft';
+            \Session::set_flash('error', $message);
+        }
+
+        \Response::redirect($this->view_dir . 'liste_types_connaissance');
+    }
+
+    public function action_modifier_type_connaissance($id)
+    {
+        is_null($id) and \Response::redirect($this->view_dir . 'liste_types_connaissance');
+
+        $this->template->title = 'Administration - Gestion des types de connaissance';
+
+        $type = \Model_Type_Connaissance::find($id);
+
+        if (\Input::method() == 'POST') {
+            $val = \Model_Type_Connaissance::validate('edit');
+
+            if ($val->run()) {
+                $type->t_nom = \Input::post('t_nom');
+
+                // On save si c'est bon
+                if ($type and $type->save()) {
+                    $message[] = "Le type de connaissance a bien été mis à jour.";
+                    \Session::set_flash('success', $message);
+                    \Response::redirect($this->view_dir . 'liste_types_connaissance');
+                } else // sinon on affiche les erreurs
+                {
+                    $message[] = 'Impossible de sauver le type de connaissance.';
+                    \Session::set_flash('error', $message);
+                }
+            } else // si la validation a échoué
+            {
+                $message[] = $val->show_errors();
+                \Session::set_flash('error', $message);
+            }
+        }
+
+        $this->data['action'] = 'Modifier';
+        $this->data['type'] = $type;
+        $this->template->content = \View::forge($this->view_dir . 'form_type_connaissance', $this->data);
+    }
+
+    public function action_liste_types_ressource()
+    {
+        $this->template->title = 'Administration - Gestion des types de ressource';
+
+        $types = \Model_Type_Ressource::find('all');
+
+        $this->data['types'] = $types;
+        $this->template->content = \View::forge($this->view_dir . 'types_ressource', $this->data);
+    }
+
+    public function action_ajouter_type_ressource()
+    {
+        $this->template->title = 'Administration des types de ressource';
+
+        if (\Input::method() == 'POST') {
+            $val = \Model_Type_Statut::validate('edit');
+
+            if ($val->run()) {
+                $type = new \Model_Type_Ressource();
+                // On save si c'est bon
+                $type->add_activite(\Input::post('t_nom'));
+                $message[] = "Le type de ressource a bien été ajouté.";
+                \Session::set_flash('success', $message);
+                \Response::redirect($this->view_dir . 'liste_types_ressource');
+
+            } else // si la validation a échoué
+            {
+                $message[] = $val->show_errors();
+                \Session::set_flash('error', $message);
+            }
+        }
+
+        $this->data['action'] = 'Ajouter';
+        $this->template->content = \View::forge($this->view_dir . 'form_type_ressource', $this->data);
+    }
+
+    public function action_supprimer_type_ressource($id)
+    {
+        is_null($id) and \Response::redirect($this->view_dir . 'liste_types_ressource');
+
+        if ($type = \Model_Type_Ressource::find($id)) {
+            $type->delete();
+
+            $message[] = 'Le type de ressource a bien été supprimé.';
+            \Session::set_flash('success', $message);
+        } else {
+            $message[] = 'Impossible de supprimer le type de ressource';
+            \Session::set_flash('error', $message);
+        }
+
+        \Response::redirect($this->view_dir . 'liste_types_ressource');
+    }
+
+    public function action_modifier_type_ressource($id)
+    {
+        is_null($id) and \Response::redirect($this->view_dir . 'liste_types_ressource');
+
+        $this->template->title = 'Administration - Gestion des types de ressource';
+
+        $type = \Model_Type_Ressource::find($id);
+
+        if (\Input::method() == 'POST') {
+            $val = \Model_Type_Ressource::validate('edit');
+
+            if ($val->run()) {
+                $type->t_nom = \Input::post('t_nom');
+
+                // On save si c'est bon
+                if ($type and $type->save()) {
+                    $message[] = "Le type de ressource a bien été mis à jour.";
+                    \Session::set_flash('success', $message);
+                    \Response::redirect($this->view_dir . 'liste_types_ressource');
+                } else // sinon on affiche les erreurs
+                {
+                    $message[] = 'Impossible de sauver le type de ressource.';
+                    \Session::set_flash('error', $message);
+                }
+            } else // si la validation a échoué
+            {
+                $message[] = $val->show_errors();
+                \Session::set_flash('error', $message);
+            }
+        }
+
+        $this->data['action'] = 'Modifier';
+        $this->data['type'] = $type;
+        $this->template->content = \View::forge($this->view_dir . 'form_type_ressource', $this->data);
     }
 
     public function action_liste_types_statut()

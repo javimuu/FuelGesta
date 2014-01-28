@@ -147,6 +147,8 @@ class Controller_Contrat extends \Controller_Main
             $this->data['viewcontrat'][$i]['seconde'] = $db_contrat->getHourContrat($this->data['viewcontrat'][$i]['id_contrat']);
         }
 
+        $this->data['connaissance'] = \Model_Type_Connaissance::getAsSelect();
+        $this->data['ressource'] = \Model_Type_Ressource::getAsSelect();
         $this->data['total'] = $db_contrat->getHourContratFull($id);
        // $this->template->set_global('viewcontrat', $db_contrat->getContrat($id));
         $this->data['statut'] = \Model_My_Contrat::get_statut_entree();
@@ -317,6 +319,8 @@ class Controller_Contrat extends \Controller_Main
         $contrat->d_date_demande_onem = \MaitrePylos\date::db_to_date($contrat->d_date_demande_onem);
         $contrat->d_date_reponse_onem = \MaitrePylos\date::db_to_date($contrat->d_date_reponse_onem);
 
+        $this->data['connaissance'] = \Model_Type_Connaissance::getAsSelect();
+        $this->data['ressource'] = \Model_Type_Ressource::getAsSelect();
         $this->data['contrat'] = $contrat;
         $this->data['statut'] = \Model_My_Contrat::get_statut_entree();
         $this->data['participant'] = $participant;

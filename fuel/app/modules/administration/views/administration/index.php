@@ -43,6 +43,8 @@
                     <li><?php echo Html::anchor($view_dir . 'liste_enseignements', "Niveau diplômes et types d'études") ?></li>
                     <li><?php echo Html::anchor($view_dir . 'liste_fins_formation', 'Classement des types et motifs de sortie') ?></li>
                     <li><?php echo Html::anchor($view_dir . 'liste_types_formation', 'Type et motif de sortie') ?></li>
+                    <li><?php echo Html::anchor($view_dir . 'liste_types_connaissance', 'Connaissance EFT') ?></li>
+                    <li><?php echo Html::anchor($view_dir . 'liste_types_ressource', 'Resource') ?></li>
                 </ul>
             </div>
     </li>

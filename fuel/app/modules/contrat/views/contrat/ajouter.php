@@ -234,7 +234,7 @@ $mois = date('m');
             <td>
                 <?php
                 echo Form::label('Connaissance EFT');
-                echo Form::input('t_connaissance_eft', Input::post('t_connaissance_eft', isset($contrat) ? $contrat->t_connaissance_eft : ''))
+                echo Form::select('t_connaissance_eft', Input::post('t_connaissance_eft', isset($contrat) ? $contrat->t_connaissance_eft : ''),$connaissance)
                 ?>
             </td>
         </tr>
@@ -301,7 +301,7 @@ $mois = date('m');
             <td>
                 <?php
                 echo Form::label('Ressource');
-                echo Form::input('t_ressource', Input::post('t_ressource', isset($contrat) ? $contrat->t_ressource : ''))
+                echo Form::select('t_ressource', Input::post('t_ressource', isset($contrat) ? $contrat->t_ressource : ''),$ressource)
                 ?>
             </td>
         </tr>

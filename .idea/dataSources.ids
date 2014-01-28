@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="24e785bc-6b65-40d5-9b08-956b4564294c">
-    <extra-name-characters>#@</extra-name-characters>
-    <identifier-quote-string>`</identifier-quote-string>
-    <synchronize>true</synchronize>
-    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-    <jdbc-url>jdbc:mysql://localhost:3306/gesta7</jdbc-url>
-    <user-name>root</user-name>
-    <user-password>dfc8dfc5dfc4dfc0dfc5dfdfdfd8</user-password>
-    <libraries>
-      <library>
-        <url>jar://$PROJECT_DIR$/../FuelGesta-1.4/mysql-connector-java-5.1.22-bin.jar!/</url>
-      </library>
-      <library>
-        <url>file://$PROJECT_DIR$/../FuelGesta-1.4/mysql-connector-license.txt</url>
-      </library>
-    </libraries>
+  <data-source source="LOCAL" name="Data Source" uuid="24e785bc-6b65-40d5-9b08-956b4564294c">
+    <database-info product="MySQL" version="5.5.34-MariaDB-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <schema name="" catalog="alpha5000"/>
     <schema name="" catalog="auth"/>
     <schema name="" catalog="avosoft"/>
@@ -7055,7 +7045,7 @@
       <primary-key name="PRIMARY" columns="id_adresse"/>
       <foreign-key name="adresse_ibfk_1" columns="participant_id" ref-table="participant" ref-schema="" ref-catalog="gesta7" ref-columns="id_participant" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="adresse_ibfk_2" columns="contact_id" ref-table="contact" ref-schema="" ref-catalog="gesta7" ref-columns="id_contact" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="fk_adresse" table="liste_attente" schema="" catalog="gesta7" columns="adresse_id"/>
+      <exported-key name="liste_attente_ibfk_1" table="liste_attente" schema="" catalog="gesta7" columns="adresse_id"/>
       <exported-key name="localisation_ibfk_1" table="localisation" schema="" catalog="gesta7" columns="adresse_id"/>
       <exported-key name="societe_ibfk_1" table="societe" schema="" catalog="gesta7" columns="adresse_id"/>
       <exported-key name="stage_ibfk_1" table="stage" schema="" catalog="gesta7" columns="lieu_stage_id"/>
@@ -7069,9 +7059,9 @@
       <column name="centre_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="users_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_agrement"/>
-      <foreign-key name="fk_agrement_centre1" columns="centre_id" ref-table="centre" ref-schema="" ref-catalog="gesta7" ref-columns="id_centre" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="fk_agrement_users1" columns="users_id" ref-table="users" ref-schema="" ref-catalog="gesta7" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="fk_filiere_agrement1" table="filiere" schema="" catalog="gesta7" columns="agrement_id"/>
+      <foreign-key name="agrement_ibfk_1" columns="centre_id" ref-table="centre" ref-schema="" ref-catalog="gesta7" ref-columns="id_centre" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="agrement_ibfk_2" columns="users_id" ref-table="users" ref-schema="" ref-catalog="gesta7" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="filiere_ibfk_1" table="filiere" schema="" catalog="gesta7" columns="agrement_id"/>
       <index name="fk_agrement_centre1_idx" unique="false" columns="centre_id"/>
       <index name="fk_agrement_users1_idx" unique="false" columns="users_id"/>
     </table>
@@ -7104,7 +7094,7 @@
       <column name="t_secretaire" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="i_position" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_centre"/>
-      <exported-key name="fk_agrement_centre1" table="agrement" schema="" catalog="gesta7" columns="centre_id"/>
+      <exported-key name="agrement_ibfk_1" table="agrement" schema="" catalog="gesta7" columns="centre_id"/>
     </table>
     <table name="checklist" schema="" catalog="gesta7" type="TABLE">
       <column name="id_checklist" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -7174,14 +7164,15 @@
       <column name="b_reponse_rw" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
       <column name="d_date_demande_forem" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
       <column name="b_reponse_forem" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="t_moyen_transport" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
       <column name="b_necessaire" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
       <column name="groupe_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="participant_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="type_contrat_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_contrat"/>
-      <foreign-key name="contrat_ibfk_1" columns="groupe_id" ref-table="groupe" ref-schema="" ref-catalog="gesta7" ref-columns="id_groupe" update-rule="0" delete-rule="0" deferrability="2"/>
       <foreign-key name="contrat_ibfk_2" columns="participant_id" ref-table="participant" ref-schema="" ref-catalog="gesta7" ref-columns="id_participant" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="contrat_ibfk_3" columns="type_contrat_id" ref-table="type_contrat" ref-schema="" ref-catalog="gesta7" ref-columns="id_type_contrat" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="contrat_ibfk_4" columns="groupe_id" ref-table="groupe" ref-schema="" ref-catalog="gesta7" ref-columns="id_groupe" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="fiche_defraiement_ibfk_1" table="fiche_defraiement" schema="" catalog="gesta7" columns="contrat_id"/>
       <exported-key name="formation_ibfk_1" table="formation" schema="" catalog="gesta7" columns="contrat_id"/>
       <exported-key name="heures_ibfk_1" table="heures" schema="" catalog="gesta7" columns="contrat_id"/>
@@ -7223,8 +7214,8 @@
       <column name="i_code_cedefop" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
       <column name="agrement_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_filiere"/>
-      <foreign-key name="fk_filiere_agrement1" columns="agrement_id" ref-table="agrement" ref-schema="" ref-catalog="gesta7" ref-columns="id_agrement" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="fk_groupe_filiere1" table="groupe" schema="" catalog="gesta7" columns="filiere_id"/>
+      <foreign-key name="filiere_ibfk_1" columns="agrement_id" ref-table="agrement" ref-schema="" ref-catalog="gesta7" ref-columns="id_agrement" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="groupe_ibfk_1" table="groupe" schema="" catalog="gesta7" columns="filiere_id"/>
       <index name="fk_filiere_agrement1_idx" unique="false" columns="agrement_id"/>
     </table>
     <table name="fin_formation" schema="" catalog="gesta7" type="TABLE">
@@ -7264,12 +7255,13 @@
       <column name="filiere_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="localisation_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_groupe"/>
-      <foreign-key name="fk_groupe_filiere1" columns="filiere_id" ref-table="filiere" ref-schema="" ref-catalog="gesta7" ref-columns="id_filiere" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="fk_groupe_localisation1" columns="localisation_id" ref-table="localisation" ref-schema="" ref-catalog="gesta7" ref-columns="id_localisation" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="groupe_ibfk_1" columns="login_id" ref-table="users" ref-schema="" ref-catalog="gesta7" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="contrat_ibfk_1" table="contrat" schema="" catalog="gesta7" columns="groupe_id"/>
+      <foreign-key name="groupe_ibfk_1" columns="filiere_id" ref-table="filiere" ref-schema="" ref-catalog="gesta7" ref-columns="id_filiere" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="groupe_ibfk_2" columns="localisation_id" ref-table="localisation" ref-schema="" ref-catalog="gesta7" ref-columns="id_localisation" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="groupe_ibfk_3" columns="login_id" ref-table="users" ref-schema="" ref-catalog="gesta7" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="contrat_ibfk_4" table="contrat" schema="" catalog="gesta7" columns="groupe_id"/>
       <exported-key name="heures_prestations_ibfk_1" table="heures_prestations" schema="" catalog="gesta7" columns="groupe_id"/>
-      <exported-key name="fk_groupe" table="liste_attente" schema="" catalog="gesta7" columns="groupe_id"/>
+      <exported-key name="liste_attente_ibfk_2" table="liste_attente" schema="" catalog="gesta7" columns="groupe_id"/>
+      <exported-key name="fk_groupe" table="users_groupe" schema="" catalog="gesta7" columns="groupe_id"/>
       <index name="fk_groupe_login1" unique="false" columns="login_id"/>
       <index name="fk_groupe_filiere1_idx" unique="false" columns="filiere_id"/>
       <index name="fk_groupe_localisation1_idx" unique="false" columns="localisation_id"/>
@@ -7347,8 +7339,10 @@
       <column name="groupe_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="b_is_actif" sqlType="TINYINT" length="3" precision="0" nullable="false" jdbcType="-6" def="MQ=="/>
       <primary-key name="PRIMARY" columns="id_liste_attente"/>
-      <foreign-key name="fk_adresse" columns="adresse_id" ref-table="adresse" ref-schema="" ref-catalog="gesta7" ref-columns="id_adresse" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="fk_groupe" columns="groupe_id" ref-table="groupe" ref-schema="" ref-catalog="gesta7" ref-columns="id_groupe" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="liste_attente_ibfk_1" columns="adresse_id" ref-table="adresse" ref-schema="" ref-catalog="gesta7" ref-columns="id_adresse" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="liste_attente_ibfk_2" columns="groupe_id" ref-table="groupe" ref-schema="" ref-catalog="gesta7" ref-columns="id_groupe" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_adresse" unique="false" columns="adresse_id"/>
+      <index name="fk_groupe" unique="false" columns="groupe_id"/>
     </table>
     <table name="localisation" schema="" catalog="gesta7" type="TABLE">
       <column name="id_localisation" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -7356,7 +7350,7 @@
       <column name="adresse_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_localisation"/>
       <foreign-key name="localisation_ibfk_1" columns="adresse_id" ref-table="adresse" ref-schema="" ref-catalog="gesta7" ref-columns="id_adresse" update-rule="0" delete-rule="0" deferrability="2"/>
-      <exported-key name="fk_groupe_localisation1" table="groupe" schema="" catalog="gesta7" columns="localisation_id"/>
+      <exported-key name="groupe_ibfk_2" table="groupe" schema="" catalog="gesta7" columns="localisation_id"/>
       <index name="fk_localisation_adresse1" unique="false" columns="adresse_id"/>
     </table>
     <table name="migration" schema="" catalog="gesta7" type="TABLE">
@@ -7385,7 +7379,6 @@
       <column name="t_mutuelle" sqlType="VARCHAR" length="50" precision="0" nullable="true" jdbcType="12"/>
       <column name="t_organisme_paiement" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="t_permis" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
-      <column name="t_moyen_transport" sqlType="VARCHAR" length="50" precision="0" nullable="true" jdbcType="12"/>
       <column name="i_frais_stagiaire" sqlType="FLOAT" length="12" precision="0" nullable="true" jdbcType="7"/>
       <column name="d_date_inscription_onem" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
       <column name="d_date_fin_stage_onem" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
@@ -7403,7 +7396,7 @@
       <column name="d_date_permis_theorique" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
       <column name="t_email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="t_children" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="b_is_actif" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6" def="MQ=="/>
+      <column name="b_is_actif" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" def="MQ=="/>
       <primary-key name="PRIMARY" columns="id_participant"/>
       <exported-key name="adresse_ibfk_1" table="adresse" schema="" catalog="gesta7" columns="participant_id"/>
       <exported-key name="ajout_deplacement_ibfk_1" table="ajout_deplacement" schema="" catalog="gesta7" columns="participant_id"/>
@@ -7441,6 +7434,17 @@
       <column name="time_partenaire_stage" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="time_total_stage" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="compteur_stage" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="sessions" schema="" catalog="gesta7" type="TABLE">
+      <column name="session_id" sqlType="VARCHAR" length="40" precision="0" nullable="false" jdbcType="12"/>
+      <column name="previous_id" sqlType="VARCHAR" length="40" precision="0" nullable="false" jdbcType="12"/>
+      <column name="user_agent" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="ip_hash" sqlType="CHAR" length="32" precision="0" nullable="false" jdbcType="1"/>
+      <column name="created" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="updated" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="payload" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="session_id"/>
+      <index name="previous_id" unique="true" columns="previous_id"/>
     </table>
     <table name="societe" schema="" catalog="gesta7" type="TABLE">
       <column name="id_societe" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -7500,7 +7504,7 @@
     <table name="type_cedefop" schema="" catalog="gesta7" type="TABLE">
       <column name="id_cedefop" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="t_nom" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="i_code" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="i_code" sqlType="VARCHAR" length="11" precision="0" nullable="false" jdbcType="12"/>
       <column name="i_position" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_cedefop"/>
     </table>
@@ -7529,6 +7533,18 @@
       <primary-key name="PRIMARY" columns="id_type_formation"/>
       <exported-key name="fin_formation_ibfk_1" table="fin_formation" schema="" catalog="gesta7" columns="type_formation_id"/>
     </table>
+    <table name="type_pays" schema="" catalog="gesta7" type="TABLE">
+      <column name="id_pays" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="t_nom" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="t_valeur" sqlType="VARCHAR" length="15" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id_pays"/>
+    </table>
+    <table name="type_ressource" schema="" catalog="gesta7" type="TABLE">
+      <column name="id_type_ressource" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="t_nom" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="i_position" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id_type_ressource"/>
+    </table>
     <table name="type_statut" schema="" catalog="gesta7" type="TABLE">
       <column name="id_type_statut" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="t_nom" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
@@ -7550,11 +7566,20 @@
       <column name="t_acl" sqlType="VARCHAR" length="50" precision="0" nullable="true" jdbcType="12"/>
       <column name="i_access" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6" def="MQ=="/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="fk_agrement_users1" table="agrement" schema="" catalog="gesta7" columns="users_id"/>
+      <exported-key name="agrement_ibfk_2" table="agrement" schema="" catalog="gesta7" columns="users_id"/>
       <exported-key name="fiche_defraiement_ibfk_2" table="fiche_defraiement" schema="" catalog="gesta7" columns="login_id"/>
-      <exported-key name="groupe_ibfk_1" table="groupe" schema="" catalog="gesta7" columns="login_id"/>
+      <exported-key name="groupe_ibfk_3" table="groupe" schema="" catalog="gesta7" columns="login_id"/>
       <exported-key name="heures_ibfk_2" table="heures" schema="" catalog="gesta7" columns="login_id"/>
       <exported-key name="stage_ibfk_3" table="stage" schema="" catalog="gesta7" columns="responsable_interne_id"/>
+      <exported-key name="fk_users" table="users_groupe" schema="" catalog="gesta7" columns="users_id"/>
+    </table>
+    <table name="users_groupe" schema="" catalog="gesta7" type="TABLE">
+      <column name="id_users_groupe" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="users_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="groupe_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id_users_groupe"/>
+      <foreign-key name="fk_groupe" columns="groupe_id" ref-table="groupe" ref-schema="" ref-catalog="gesta7" ref-columns="id_groupe" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_users" columns="users_id" ref-table="users" ref-schema="" ref-catalog="gesta7" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="valider_heure" schema="" catalog="gesta7" type="TABLE">
       <column name="id_valider_heure" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
