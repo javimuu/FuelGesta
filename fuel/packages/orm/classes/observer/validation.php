@@ -1,9 +1,11 @@
 <?php
 /**
+ * Fuel
+ *
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -153,7 +155,7 @@ class Observer_Validation extends Observer
 						array_unshift($args, $rule);
 					}
 
-					call_user_func_array(array($field, 'add_rule'), $args);
+					call_fuel_func_array(array($field, 'add_rule'), $args);
 				}
 			}
 		}
@@ -175,6 +177,30 @@ class Observer_Validation extends Observer
 	 * @throws  ValidationFailed
 	 */
 	public function before_save(Model $obj)
+	{
+		$this->validate($obj);
+	}
+
+	/**
+	 * Execute before inserting the row in the database
+	 *
+	 * @param   Model	the model object to validate
+	 *
+	 * @throws  ValidationFailed
+	 */
+	public function before_insert(Model $obj)
+	{
+		$this->validate($obj);
+	}
+
+	/**
+	 * Execute before updating the row in the database
+	 *
+	 * @param   Model	the model object to validate
+	 *
+	 * @throws  ValidationFailed
+	 */
+	public function before_update(Model $obj)
 	{
 		$this->validate($obj);
 	}

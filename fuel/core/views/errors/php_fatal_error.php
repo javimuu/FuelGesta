@@ -34,7 +34,7 @@
 	<div id="wrapper">
 		<h1><?php echo $severity; ?>!</h1>
 
-		<p class="intro"><?php echo $type; ?> [ <?php echo $severity; ?> ]: <?php echo $message; ?></p>
+		<p class="intro"><?php echo $type; ?> [ <?php echo $severity; ?> ]:<br /><?php echo $message; ?></p>
 
 		<h2 class="first"><?php echo $filepath; ?> @ line <?php echo $error_line; ?></h2>
 
@@ -85,8 +85,13 @@
 <?php endif; ?>
 
 <?php if ( ! empty($contents)): ?>
-		<h2>Prior Contents (<a href="#" onclick="javascript:fuel_toggle('prior_contents');return false;">show</a>)</h2>
-		<pre id="prior_contents" class="fuel_debug_source" style="display: none;"><?php echo e($contents); ?></pre>
+	<h2>Prior Contents (<a href="#" onclick="javascript:fuel_toggle('prior_contents');return false;">show</a>)</h2>
+	<?php if (\Config::get('errors.render_prior', false) == true): ?>
+		<div id="prior_contents" class="fuel_debug_source" style="display: none;"><?php echo $contents ?></div>
+	<?php endif; ?>
+	<?php if (\Config::get('errors.render_prior', false) == false): ?>
+		<pre id="prior_contents" class="fuel_debug_source" style="display: none;"><?php echo e($contents) ?></pre>
+	<?php endif; ?>
 <?php endif; ?>
 
 		<p class="footer">

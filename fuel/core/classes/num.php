@@ -3,7 +3,7 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.6
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -124,7 +124,7 @@ class Num
 			'TB' => 1099511627776,  // pow( 1024, 4)
 			'GB' => 1073741824,     // pow( 1024, 3)
 			'MB' => 1048576,        // pow( 1024, 2)
-			'kB' => 1024,           // pow( 1024, 1)
+			'KB' => 1024,           // pow( 1024, 1)
 			'B ' => 1,              // pow( 1024, 0)
 		);
 

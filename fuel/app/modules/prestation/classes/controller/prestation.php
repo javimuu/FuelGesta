@@ -246,7 +246,7 @@ class Controller_Prestation extends \Controller_Main
         /**
          *  On vérifie que les heures ne sont pas valider
          */
-        $control = \Model_Valider_Heure::find()->where(array(
+        $control = \Model_Valider_Heure::query()->where(array(
             'participant_id' => $id_participant,
             't_mois' => $date->format('Y-m-d')
         ))->get_one();
@@ -374,7 +374,7 @@ class Controller_Prestation extends \Controller_Main
         $time = new \Maitrepylos\Timetosec();
 
         // On recupère les infos liées à ce participant pour cette date dans la db
-        $participant = \Model_Heures_Fixer::find()->where(array(
+        $participant = \Model_Heures_Fixer::query()->where(array(
             'participant_id' => $id,
             'd_date' => $date->format('Y-m-d')
         ))->get_one();
@@ -784,7 +784,7 @@ class Controller_Prestation extends \Controller_Main
         // A l'inverse si nous validons un mois, alors que d'autres mois supérieur à la date sont validé,
         //cela risque de ne plus correspondre, donc nous dévalidons l'entièrté des prestations validés.
 
-        $verifie_superieur_date = \Model_Valider_Heure::find()->where(array(
+        $verifie_superieur_date = \Model_Valider_Heure::query()->where(array(
             'participant_id' => $id,
             array('t_mois', '>', $date_prestation->format('Y-m-d'))
         ))->get();
@@ -1000,7 +1000,7 @@ class Controller_Prestation extends \Controller_Main
     {
         $date = \Session::get('date_prestation');
         $id_participant = \Session::get('idparticipant');
-        $valide = \Model_Valider_Heure::find()->where(array(
+        $valide = \Model_Valider_Heure::query()->where(array(
             'participant_id' => $id_participant,
             't_mois' => $date->format('Y-m-d')
         ));
@@ -1016,7 +1016,7 @@ class Controller_Prestation extends \Controller_Main
         if ($count == 1) {
             $date = \Session::get('date_prestation');
             $id = \Session::get('idparticipant');
-            $verifie = \Model_Valider_Heure::find()->where(array(
+            $verifie = \Model_Valider_Heure::query()->where(array(
                 'participant_id' => $id,
                 array('t_mois', '>', $date->format('Y-m-d'))
             ));

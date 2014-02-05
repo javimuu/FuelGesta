@@ -3,7 +3,7 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -19,6 +19,11 @@ abstract class Controller
 	 * @var  Request  The current Request object
 	 */
 	public $request;
+
+	/**
+	 * @var  Integer  The default response status
+	 */
+	public $response_status = 200;
 
 	/**
 	 * Sets the controller request object.
@@ -43,7 +48,7 @@ abstract class Controller
 		// Make sure the $response is a Response object
 		if ( ! $response instanceof Response)
 		{
-			$response = \Response::forge($response);
+			$response = \Response::forge($response, $this->response_status);
 		}
 
 		return $response;

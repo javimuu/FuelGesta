@@ -1,9 +1,11 @@
 <?php
 /**
+ * Fuel
+ *
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -170,18 +172,20 @@ CONF;
 			$action_str .= '
 	public function action_'.$action.'()
 	{
+		$data["subnav"] = array(\''.$action.'\'=> \'active\' );
 		$this->template->title = \'' . \Inflector::humanize($name) .' &raquo; ' . \Inflector::humanize($action) . '\';
-		$this->template->content = View::forge(\''.$filename.'/' . $action .'\');
+		$this->template->content = View::forge(\''.$filename.'/' . $action .'\', $data);
 	}'.PHP_EOL;
 		}
 
 		$extends = \Cli::option('extends', 'Controller_Template');
+		$prefix = \Config::get('controller_prefix', 'Controller_');
 
 		// Build Controller
 		$controller = <<<CONTROLLER
 <?php
 
-class Controller_{$class_name} extends {$extends}
+class {$prefix}{$class_name} extends {$extends}
 {
 {$action_str}
 }
@@ -333,6 +337,16 @@ MODEL;
 				$time_type = (\Cli::option('mysql-timestamp')) ? 'timestamp' : 'int';
 
 				$timestamp_properties = array($created_at.':'.$time_type.':null[1]', $updated_at.':'.$time_type.':null[1]');
+
+				if ( \Cli::option('soft-delete'))
+				{
+					$deleted_at = \Cli::option('deleted-at', 'deleted_at');
+					is_string($deleted_at) or $deleted_at = 'deleted_at';
+					$properties .= "\n\t\t'".$deleted_at."',";
+
+					$timestamp_properties = array_merge($timestamp_properties, array($deleted_at.':'.$time_type.':null[1]'));
+				}
+
 				$args = array_merge($args, $timestamp_properties);
 			}
 
@@ -382,14 +396,60 @@ CONTENTS;
 			'mysql_timestamp' => $mysql_timestamp,$created_at
 		),
 		'Orm\Observer_UpdatedAt' => array(
-			'events' => array('before_save'),
+			'events' => array('before_update'),
 			'mysql_timestamp' => $mysql_timestamp,$updated_at
 		),
 	);
 CONTENTS;
+
+				if ( \Cli::option('soft-delete'))
+				{
+					if(($deleted_at = \Cli::option('deleted-at')) and is_string($updated_at))
+					{
+						$deleted_at = <<<CONTENTS
+
+		'deleted_field' => '{$deleted_at}',
+CONTENTS;
+					}
+					else
+					{
+						$deleted_at = '';
+					}
+
+					$contents .= <<<CONTENTS
+
+
+	protected static \$_soft_delete = array(
+		'mysql_timestamp' => $mysql_timestamp,$deleted_at
+	);
+CONTENTS;
+
+				}
+
 			}
 
-			$model = <<<MODEL
+			$contents .= <<<CONTENTS
+
+	protected static \$_table_name = '{$plural}';
+
+CONTENTS;
+
+			$model = '';
+			if ( \Cli::option('soft-delete'))
+			{
+				$model .= <<<MODEL
+<?php
+
+class Model_{$class_name} extends \Orm\Model_Soft
+{
+{$contents}
+}
+
+MODEL;
+			}
+			else
+			{
+				$model .= <<<MODEL
 <?php
 
 class Model_{$class_name} extends \Orm\Model
@@ -398,6 +458,7 @@ class Model_{$class_name} extends \Orm\Model
 }
 
 MODEL;
+			}
 		}
 
 		// Build the model
@@ -434,9 +495,15 @@ MODEL;
 		is_dir($view_dir) or static::$create_folders[] = $view_dir;
 
 		// Add the default template if it doesnt exist
-		if ( ! file_exists($app_template = APPPATH.'views/template.php'))
+		if ( ! is_file($app_template = APPPATH.'views/template.php'))
 		{
 			static::create($app_template, file_get_contents(\Package::exists('oil').'views/scaffolding/template.php'), 'view');
+		}
+
+		$subnav = '';
+		foreach($args as $nav_item)
+		{
+			$subnav .= "\t<li class='<?php echo Arr::get(\$subnav, \"{$nav_item}\" ); ?>'><?php echo Html::anchor('{$controller}/{$nav_item}','".\Inflector::humanize($nav_item)."');?></li>\n";
 		}
 
 		foreach ($args as $action)
@@ -444,6 +511,9 @@ MODEL;
 			$view_title = \Cli::option('with-viewmodel') ? '<?php echo $content; ?>' : \Inflector::humanize($action);
 
 			$view = <<<VIEW
+<ul class="nav nav-pills">
+{$subnav}
+</ul>
 <p>{$view_title}</p>
 VIEW;
 
@@ -466,9 +536,30 @@ VIEW;
 		}
 
 		// Check if a migration with this name already exists
-		if (($duplicates = glob(APPPATH."migrations/*_{$migration_name}*")) === false)
+		$migrations = new \GlobIterator(APPPATH."migrations/*_{$migration_name}*");
+		try
 		{
-			throw new Exception("Unable to read existing migrations. Do you have an 'open_basedir' defined?");
+			$duplicates = array();
+			foreach($migrations as $migration)
+			{
+				// check if it's really a duplicate
+				$part = explode('_', basename($migration->getFilename(), '.php'),2);
+				if ($part[1] != $migration_name)
+				{
+					$part = substr($part[1], strlen($migration_name)+1);
+					if ( ! is_numeric($part))
+					{
+						// not a numbered suffix, but the same base classname
+						continue;
+					}
+				}
+
+				$duplicates[] = $migration->getPathname();
+			}
+		}
+		catch (\LogicException $e)
+		{
+			throw new Exception("Unable to read existing migrations. Path does not exist, or you may have an 'open_basedir' defined");
 		}
 
 		if (count($duplicates) > 0)
@@ -547,7 +638,7 @@ VIEW;
 					$subjects = array(
 					 implode('_', array_slice($matches, array_search('in', $matches)+1)),
 					 implode('_', array_slice($matches, 0, array_search('to', $matches))),
-					 implode('_', array_slice($matches, array_search('to', $matches)+1, array_search('in', $matches)-2))
+					 implode('_', array_slice($matches, array_search('to', $matches)+1, array_search('in', $matches)-array_search('to', $matches)-1))
 				  );
 				}
 
@@ -563,13 +654,14 @@ VIEW;
 				// create_{table} or drop_{table} (with underscores in table name)
 				else if (count($matches) !== 0)
 				{
-					$name = str_replace(array('create_', 'add_', '_to_'), array('create-', 'add-', '-to-'), $migration_name);
+					$name = str_replace(array('create_', 'add_', 'drop_', '_to_'), array('create-', 'add-', 'drop-', '-to-'), $migration_name);
 
-    				if (preg_match('/^(create|add)\-([a-z0-9\_]*)(\-to\-)?([a-z0-9\_]*)?$/i', $name, $deep_matches))
+    				if (preg_match('/^(create|drop|add)\-([a-z0-9\_]*)(\-to\-)?([a-z0-9\_]*)?$/i', $name, $deep_matches))
     				{
     					switch ($deep_matches[1])
     					{
     						case 'create' :
+    						case 'drop' :
     							$subjects = array(false, $deep_matches[2]);
     						break;
 
@@ -601,7 +693,7 @@ VIEW;
 						$field_array['name'] = array_shift($parts);
 						foreach ($parts as $part_i => $part)
 						{
-							preg_match('/([a-z0-9_-]+)(?:\[([0-9a-z\,\s]+)\])?/i', $part, $part_matches);
+							preg_match('/([a-z0-9_-]+)(?:\[([0-9a-z_\-\,\s]+)\])?/i', $part, $part_matches);
 							array_shift($part_matches);
 
 							if (count($part_matches) < 1)
@@ -705,6 +797,13 @@ VIEW;
 		// Build the migration
 		list($up, $down)=$migration;
 
+		// If we don't have any, bail out
+		if (empty($up) and empty($down))
+		{
+			throw new \Exception('No migration could be generated. Please verify your command syntax.');
+			exit;
+		}
+
 		$migration_name = ucfirst(strtolower($migration_name));
 
 		$migration = <<<MIGRATION
@@ -777,7 +876,7 @@ MIGRATION;
 	 *
 	 * @return string
 	 */
-	public static function '.$action.'($args = NULL)
+	public function '.$action.'($args = NULL)
 	{
 		echo "\n===========================================";
 		echo "\nRunning task ['.\Inflector::humanize($name).':'. \Inflector::humanize($action) . ']";
@@ -806,7 +905,7 @@ MIGRATION;
 	 *
 	 * @return string
 	 */
-	public static function run($args = NULL)
+	public function run($args = NULL)
 	{
 		echo "\n===========================================";
 		echo "\nRunning DEFAULT task ['.\Inflector::humanize($name).':'. \Inflector::humanize($action) . ']";
@@ -844,7 +943,7 @@ CONTROLLER;
 	{
 		$output = <<<HELP
 Usage:
-  php oil [g|generate] [controller|model|migration|scaffold|views] [options]
+  php oil [g|generate] [config|controller|views|model|migration|scaffold|admin|task|package] [options]
 
 Runtime options:
   -f, [--force]    # Overwrite files that already exist
@@ -863,10 +962,12 @@ Examples:
   php oil g scaffold <modelname> [<fieldname1>:<type1> |<fieldname2>:<type2> |..]
   php oil g scaffold/template_subfolder <modelname> [<fieldname1>:<type1> |<fieldname2>:<type2> |..]
   php oil g config <filename> [<key1>:<value1> |<key2>:<value2> |..]
+  php oil g task <taskname> [<cmd1> |<cmd2> |..]
+  php oil g package <packagename>
 
 Note that the next two lines are equivalent:
   php oil g scaffold <modelname> ...
-  php oil g scaffold/crud <modelname> ...
+  php oil g scaffold/orm <modelname> ...
 
 Documentation:
   http://docs.fuelphp.com/packages/oil/generate.html
@@ -876,13 +977,370 @@ HELP;
 	}
 
 
+	public static function package($args, $build = true)
+	{
+		$name       = str_replace(array('/', '_', '-'), '', \Str::lower(array_shift($args)));
+		$class_name = ucfirst($name);
+		$vcs        = \Cli::option('vcs', \Cli::option('v', false));
+		$path       = \Cli::option('path', \Cli::option('p', PKGPATH));
+		$drivers    = \Cli::option('drivers', \Cli::option('d', ''));
+
+		if (empty($name))
+		{
+			throw new \Exception('No package name has been provided.');
+		}
+
+		if ( ! in_array($path, \Config::get('package_paths')) and ! in_array(realpath($path), \Config::get('package_paths')) )
+		{
+			throw new \Exception('Given path is not a valid package path.');
+		}
+
+		\Str::ends_with($path, DS) or $path .= DS;
+		$path .= $name . DS;
+
+		if (is_dir($path))
+		{
+			throw new \Exception('Package already exists.');
+		}
+
+		if ($vcs)
+		{
+			$output = <<<COMPOSER
+{
+	"name": "fuel/{$name}",
+	"type": "fuel-package",
+	"description": "{$class_name} package",
+	"keywords": [""],
+	"homepage": "http://fuelphp.com",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "AUTHOR",
+			"email": "AUTHOR@example.com"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	},
+	"extra": {
+		"installer-name": "{$name}"
+	}
+}
+
+COMPOSER;
+
+			static::create($path . 'composer.json', $output);
+
+			$output = <<<README
+# {$class_name} package
+Here comes some description
+
+README;
+
+			static::create($path . 'README.md', $output);
+		}
+
+		if ( ! empty($drivers))
+		{
+			$drivers === true or $drivers = explode(',', $drivers);
+
+			$output = <<<CLASS
+<?php
+
+namespace {$class_name};
+
+class {$class_name}Exception extends \FuelException {}
+
+class {$class_name}
+{
+	/**
+	 * loaded instance
+	 */
+	protected static \$_instance = null;
+
+	/**
+	 * array of loaded instances
+	 */
+	protected static \$_instances = array();
+
+	/**
+	 * Default config
+	 * @var array
+	 */
+	protected static \$_defaults = array();
+
+	/**
+	 * Init
+	 */
+	public static function _init()
+	{
+		\Config::load('{$name}', true);
+	}
+
+	/**
+	 * {$class_name} driver forge.
+	 *
+	 * @param	string			\$instance		Instance name
+	 * @param	array			\$config		Extra config array
+	 * @return  {$class_name} instance
+	 */
+	public static function forge(\$instance = 'default', \$config = array())
+	{
+		is_array(\$config) or \$config = array('driver' => \$config);
+
+		\$config = \Arr::merge(static::\$_defaults, \Config::get('{$name}', array()), \$config);
+
+		\$class = '\\{$class_name}\\{$class_name}_' . ucfirst(strtolower(\$config['driver']));
+
+		if( ! class_exists(\$class, true))
+		{
+			throw new \FuelException('Could not find {$class_name} driver: ' . ucfirst(strtolower(\$config['driver']));
+		}
+
+		\$driver = new \$class(\$config);
+
+		static::\$_instances[\$instance] = \$driver;
+
+		return \$driver;
+	}
+
+	/**
+	 * Return a specific driver, or the default instance (is created if necessary)
+	 *
+	 * @param   string  \$instance
+	 * @return  {$class_name} instance
+	 */
+	public static function instance(\$instance = null)
+	{
+		if (\$instance !== null)
+		{
+			if ( ! array_key_exists(\$instance, static::\$_instances))
+			{
+				return false;
+			}
+
+			return static::\$_instances[\$instance];
+		}
+
+		if (static::\$_instance === null)
+		{
+			static::\$_instance = static::forge();
+		}
+
+		return static::\$_instance;
+	}
+}
+
+CLASS;
+
+			static::create($path . 'classes' . DS . $name . '.php', $output);
+
+
+			$output = <<<DRIVER
+<?php
+
+namespace {$class_name};
+
+abstract class {$class_name}_Driver
+{
+	/**
+	* Driver config
+	* @var array
+	*/
+	protected \$config = array();
+
+	/**
+	* Driver constructor
+	*
+	* @param array \$config driver config
+	*/
+	public function __construct(array \$config = array())
+	{
+		\$this->config = \$config;
+	}
+
+	/**
+	* Get a driver config setting.
+	*
+	* @param string \$key the config key
+	* @param mixed  \$default the default value
+	* @return mixed the config setting value
+	*/
+	public function get_config(\$key, \$default = null)
+	{
+		return \Arr::get(\$this->config, \$key, \$default);
+	}
+
+	/**
+	* Set a driver config setting.
+	*
+	* @param string \$key the config key
+	* @param mixed \$value the new config value
+	* @return object \$this for chaining
+	*/
+	public function set_config(\$key, \$value)
+	{
+		\Arr::set(\$this->config, \$key, \$value);
+
+		return \$this;
+	}
+}
+
+DRIVER;
+
+			static::create($path . 'classes' . DS . $name . DS . 'driver.php', $output);
+
+			$bootstrap =  "\n\t'{$class_name}\\\\{$class_name}_Driver' => __DIR__ . '/classes/{$name}/driver.php',";
+			if (is_array($drivers))
+			{
+				foreach ($drivers as $driver)
+				{
+					$driver = \Str::lower($driver);
+					$driver_name = ucfirst($driver);
+					$output = <<<CLASS
+<?php
+
+namespace {$class_name};
+
+class {$class_name}_{$driver_name}  extends {$class_name}_Driver
+{
+	/**
+	* Driver specific functions
+	*/
+}
+
+CLASS;
+					$bootstrap .= "\n\t'{$class_name}\\\\{$class_name}_{$driver_name}' => __DIR__ . '/classes/{$name}/{$driver}.php',";
+					static::create($path . 'classes' . DS . $name . DS . $driver . '.php', $output);
+				}
+			}
+		}
+		else
+		{
+			$output = <<<CLASS
+<?php
+
+namespace {$class_name};
+
+class {$class_name}Exception extends \FuelException {}
+
+class {$class_name}
+{
+	/**
+	 * Default config
+	 * @var array
+	 */
+	protected static \$_defaults = array();
+
+	/**
+	* Driver config
+	* @var array
+	*/
+	protected \$config = array();
+
+	/**
+	 * Init
+	 */
+	public static function _init()
+	{
+		\Config::load('{$name}', true);
+	}
+
+	/**
+	 * {$class_name} driver forge.
+	 *
+	 * @param	array			\$config		Config array
+	 * @return  {$class_name}
+	 */
+	public static function forge(\$config = array())
+	{
+		\$config = \Arr::merge(static::\$_defaults, \Config::get('{$name}', array()), \$config);
+
+		\$class = new static(\$config);
+
+		return \$class;
+	}
+
+	/**
+	* Driver constructor
+	*
+	* @param array \$config driver config
+	*/
+	public function __construct(array \$config = array())
+	{
+		\$this->config = \$config;
+	}
+
+	/**
+	* Get a config setting.
+	*
+	* @param string \$key the config key
+	* @param mixed  \$default the default value
+	* @return mixed the config setting value
+	*/
+	public function get_config(\$key, \$default = null)
+	{
+		return \Arr::get(\$this->config, \$key, \$default);
+	}
+
+	/**
+	* Set a config setting.
+	*
+	* @param string \$key the config key
+	* @param mixed \$value the new config value
+	* @return object \$this for chaining
+	*/
+	public function set_config(\$key, \$value)
+	{
+		\Arr::set(\$this->config, \$key, \$value);
+
+		return \$this;
+	}
+}
+
+CLASS;
+
+			static::create($path . 'classes' . DS . $name . '.php', $output);
+
+			$bootstrap = "";
+		}
+
+			$output = <<<CONFIG
+<?php
+
+return array(
+
+);
+
+CONFIG;
+
+			static::create($path . 'config' . DS . $name . '.php', $output);
+
+		$output = <<<CLASS
+<?php
+
+Autoloader::add_core_namespace('{$class_name}');
+
+Autoloader::add_classes(array(
+	'{$class_name}\\\\{$class_name}' => __DIR__ . '/classes/{$name}.php',
+	'{$class_name}\\\\{$class_name}Exception' => __DIR__ . '/classes/{$name}.php',
+{$bootstrap}
+));
+
+CLASS;
+		static::create($path . 'bootstrap.php', $output);
+
+		$build and static::build();
+	}
+
+
 	public static function create($filepath, $contents, $type = 'file')
 	{
 		$directory = dirname($filepath);
 		is_dir($directory) or static::$create_folders[] = $directory;
 
 		// Check if a file exists then work out how to react
-		if (file_exists($filepath))
+		if (is_file($filepath))
 		{
 			// Don't override a file
 			if (\Cli::option('s', \Cli::option('skip')) === true)
@@ -948,19 +1406,32 @@ HELP;
 
 	private static function _find_migration_number()
 	{
-		$glob = glob(APPPATH .'migrations/*_*.php');
-		list($last) = explode('_', basename(end($glob)));
+		$files = new \GlobIterator(APPPATH .'migrations/*_*.php');
+		try
+		{
+			$migrations = array();
+			foreach($files as $file)
+			{
+				$migrations[] = $file->getPathname();
+			}
+			sort($migrations);
+			list($last) = explode('_', basename(end($migrations)));
+		}
+		catch (\LogicException $e)
+		{
+			throw new Exception("Unable to read existing migrations. Path does not exist, or you may have an 'open_basedir' defined");
+		}
 
 		return str_pad($last + 1, 3, '0', STR_PAD_LEFT);
 	}
 
 	private static function _update_current_version($version)
 	{
-		if (file_exists($app_path = APPPATH.'config'.DS.'migrations.php'))
+		if (is_file($app_path = APPPATH.'config'.DS.'migrations.php'))
 		{
 			$contents = file_get_contents($app_path);
 		}
-		elseif (file_exists($core_path = COREPATH.'config'.DS.'migrations.php'))
+		elseif (is_file($core_path = COREPATH.'config'.DS.'migrations.php'))
 		{
 			$contents = file_get_contents($core_path);
 		}

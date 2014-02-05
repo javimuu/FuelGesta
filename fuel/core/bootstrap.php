@@ -3,7 +3,7 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -25,6 +25,16 @@ require COREPATH.'base.php';
 define('MBSTRING', function_exists('mb_get_info'));
 
 /**
+ * Load the Composer autoloader if present
+ */
+defined('VENDORPATH') or define('VENDORPATH', realpath(COREPATH.'..'.DS.'vendor').DS);
+if ( ! is_file(VENDORPATH.'autoload.php'))
+{
+	die('Composer is not installed. Please run "php composer.phar update" in the root to install Composer');
+}
+require VENDORPATH.'autoload.php';
+
+/**
  * Register all the error/shutdown handlers
  */
 register_shutdown_function(function ()
@@ -32,9 +42,27 @@ register_shutdown_function(function ()
 	// reset the autoloader
 	\Autoloader::_reset();
 
-	// Fire off the shutdown events
-	Event::shutdown();
+	// make sure we're having an output filter so we can display errors
+	// occuring before the main config file is loaded
+	\Config::get('security.output_filter', null) or \Config::set('security.output_filter', 'Security::htmlentities');
 
+	try
+	{
+		// fire any app shutdown events
+		\Event::instance()->trigger('shutdown', '', 'none', true);
+
+		// fire any framework shutdown events
+		\Event::instance()->trigger('fuel-shutdown', '', 'none', true);
+	}
+	catch (\Exception $e)
+	{
+		if (\Fuel::$is_cli)
+		{
+			\Cli::error("Error: ".$e->getMessage()." in ".$e->getFile()." on ".$e->getLine());
+			\Cli::beep();
+			exit(1);
+		}
+	}
 	return \Error::shutdown_handler();
 });
 
@@ -43,6 +71,14 @@ set_exception_handler(function (\Exception $e)
 	// reset the autoloader
 	\Autoloader::_reset();
 
+	// deal with PHP bugs #42098/#54054
+	if ( ! class_exists('Error'))
+	{
+		include COREPATH.'classes/error.php';
+		class_alias('\Fuel\Core\Error', 'Error');
+		class_alias('\Fuel\Core\PhpErrorException', 'PhpErrorException');
+	}
+
 	return \Error::exception_handler($e);
 });
 
@@ -50,6 +86,14 @@ set_error_handler(function ($severity, $message, $filepath, $line)
 {
 	// reset the autoloader
 	\Autoloader::_reset();
+
+	// deal with PHP bugs #42098/#54054
+	if ( ! class_exists('Error'))
+	{
+		include COREPATH.'classes/error.php';
+		class_alias('\Fuel\Core\Error', 'Error');
+		class_alias('\Fuel\Core\PhpErrorException', 'PhpErrorException');
+	}
 
 	return \Error::error_handler($severity, $message, $filepath, $line);
 });
@@ -83,6 +127,7 @@ function setup_autoloader()
 
 		'Fuel\\Core\\Config'               => COREPATH.'classes/config.php',
 		'Fuel\\Core\\ConfigException'      => COREPATH.'classes/config.php',
+		'Fuel\\Core\\Config_Db'            => COREPATH.'classes/config/db.php',
 		'Fuel\\Core\\Config_File'          => COREPATH.'classes/config/file.php',
 		'Fuel\\Core\\Config_Ini'           => COREPATH.'classes/config/ini.php',
 		'Fuel\\Core\\Config_Json'          => COREPATH.'classes/config/json.php',
@@ -176,12 +221,15 @@ function setup_autoloader()
 
 		'Fuel\\Core\\Lang'               => COREPATH.'classes/lang.php',
 		'Fuel\\Core\\LangException'      => COREPATH.'classes/lang.php',
+		'Fuel\\Core\\Lang_Db'            => COREPATH.'classes/lang/db.php',
 		'Fuel\\Core\\Lang_File'          => COREPATH.'classes/lang/file.php',
 		'Fuel\\Core\\Lang_Ini'           => COREPATH.'classes/lang/ini.php',
 		'Fuel\\Core\\Lang_Json'          => COREPATH.'classes/lang/json.php',
 		'Fuel\\Core\\Lang_Interface'     => COREPATH.'classes/lang/interface.php',
 		'Fuel\\Core\\Lang_Php'           => COREPATH.'classes/lang/php.php',
 		'Fuel\\Core\\Lang_Yml'           => COREPATH.'classes/lang/yml.php',
+
+		'Fuel\\Core\\Log'                => COREPATH.'classes/log.php',
 
 		'Fuel\\Core\\Markdown'   => COREPATH.'classes/markdown.php',
 
@@ -193,8 +241,8 @@ function setup_autoloader()
 		'Fuel\\Core\\Module'                    => COREPATH.'classes/module.php',
 		'Fuel\\Core\\ModuleNotFoundException'   => COREPATH.'classes/module.php',
 
-		'Fuel\\Core\\Mongo_Db'           => COREPATH.'classes/mongo/db.php',
-		'Fuel\\Core\\Mongo_DbException'  => COREPATH.'classes/mongo/db.php',
+		'Fuel\\Core\\Mongo_Db'                => COREPATH.'classes/mongo/db.php',
+		'Fuel\\Core\\Mongo_DbException'       => COREPATH.'classes/mongo/db.php',
 
 		'Fuel\\Core\\Output'               => COREPATH.'classes/output.php',
 
@@ -212,15 +260,18 @@ function setup_autoloader()
 		'Fuel\\Core\\Request_Curl'            => COREPATH.'classes/request/curl.php',
 		'Fuel\\Core\\Request_Soap'            => COREPATH.'classes/request/soap.php',
 
-		'Fuel\\Core\\Redis'                   => COREPATH.'classes/redis.php',
-		'Fuel\\Core\\RedisException'          => COREPATH.'classes/redis.php',
+		'Fuel\\Core\\Redis_Db'                => COREPATH.'classes/redis/db.php',
+		'Fuel\\Core\\RedisException'          => COREPATH.'classes/redis/db.php',
 
 		'Fuel\\Core\\Response'  => COREPATH.'classes/response.php',
 
 		'Fuel\\Core\\Route'     => COREPATH.'classes/route.php',
 		'Fuel\\Core\\Router'    => COREPATH.'classes/router.php',
 
-		'Fuel\\Core\\Security'  => COREPATH.'classes/security.php',
+		'Fuel\\Core\\Sanitization'       => COREPATH.'classes/sanitization.php',
+
+		'Fuel\\Core\\Security'           => COREPATH.'classes/security.php',
+		'Fuel\\Core\\SecurityException'  => COREPATH.'classes/security.php',
 
 		'Fuel\\Core\\Session'            => COREPATH.'classes/session.php',
 		'Fuel\\Core\\Session_Driver'     => COREPATH.'classes/session/driver.php',

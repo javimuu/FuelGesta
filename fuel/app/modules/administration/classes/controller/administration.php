@@ -1797,7 +1797,7 @@ class Controller_Administration extends \Controller_Main
          * @Remarque pour respecter les foreigns key on doit faire la vérification que le codecedefop n'est pas utiliser
          * il faut suivre le framework pour faire la getion d'erreur, qui actuellemnt n'est pas clair au niveau de l'ORM
          */
-        $filiere = \Model_Filiere::find()->where('i_code_cedefop', '=', $type_cedefop->i_code);
+        $filiere = \Model_Filiere::query()->where('i_code_cedefop', '=', $type_cedefop->i_code);
 
         if ($filiere->count() != 0) {
 

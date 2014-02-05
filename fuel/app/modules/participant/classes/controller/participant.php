@@ -77,7 +77,7 @@ class Controller_Participant extends \Controller_Main
                 // Auquel cas, on propose de le réactiver
                 if ($reactivate) {
                     // On recupère les infos liées à ce participant dans la db
-                    $participant = \Model_Participant::find()->where(array(
+                    $participant = \Model_Participant::query()->where(array(
                         't_nom' => $nom,
                         't_prenom' => $prenom,
                         'd_date_naissance' => $dob
@@ -185,7 +185,7 @@ class Controller_Participant extends \Controller_Main
 
         // on vérifie si le participant possède déjà une adresse par défaut
         // sinon, on ajoute la checkbox, si oui on ne la met pas
-        $alreadyDefault = \Model_Adresse::find()->where(array('t_courrier' => 1, 'participant_id' => $id))->get();
+        $alreadyDefault = \Model_Adresse::query()->where(array('t_courrier' => 1, 'participant_id' => $id))->get();
 
         // Validation
         $val = \Model_Participant::validate('edit');

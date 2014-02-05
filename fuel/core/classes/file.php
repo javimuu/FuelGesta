@@ -3,7 +3,7 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -120,7 +120,7 @@ class File
 		{
 			throw new \InvalidPathException('Invalid basepath: "'.$basepath.'", cannot create file at this location.');
 		}
-		elseif (file_exists($new_file))
+		elseif (is_file($new_file))
 		{
 			throw new \FileAccessException('File: "'.$new_file.'" already exists, cannot be created.');
 		}
@@ -144,21 +144,45 @@ class File
 	public static function create_dir($basepath, $name, $chmod = null, $area = null)
 	{
 		$basepath	= rtrim(static::instance($area)->get_path($basepath), '\\/').DS;
-		$new_dir	= static::instance($area)->get_path($basepath.$name);
+		$new_dir	= static::instance($area)->get_path($basepath.trim($name,'\\/'));
 		is_null($chmod) and $chmod = \Config::get('file.chmod.folders', 0777);
 
 		if ( ! is_dir($basepath) or ! is_writable($basepath))
 		{
 			throw new \InvalidPathException('Invalid basepath: "'.$basepath.'", cannot create directory at this location.');
 		}
-		elseif (file_exists($new_dir))
+		elseif (is_dir($new_dir))
 		{
 			throw new \FileAccessException('Directory: "'.$new_dir.'" exists already, cannot be created.');
 		}
 
-		$recursive = (strpos($name, '/') !== false or strpos($name, '\\') !== false);
+		// unify the path separators, and get the part we need to add to the basepath
+		$new_dir = substr(str_replace(array('\\', '/'), DS, $new_dir), strlen($basepath));
 
-		return mkdir($new_dir, $chmod, $recursive);
+		// recursively create the directory. we can't use mkdir permissions or recursive
+		// due to the fact that mkdir is restricted by the current users umask
+		$basepath = rtrim($basepath, DS);
+		foreach (explode(DS, $new_dir) as $dir)
+		{
+			$basepath .= DS.$dir;
+			if ( ! is_dir($basepath))
+			{
+				try
+				{
+					if ( ! mkdir($basepath))
+					{
+						return false;
+					}
+					chmod($basepath, $chmod);
+				}
+				catch (\PHPErrorException $e)
+				{
+					return false;
+				}
+			}
+		}
+
+		return true;
 	}
 
 	/**
@@ -173,7 +197,7 @@ class File
 	{
 		$path = static::instance($area)->get_path($path);
 
-		if( ! file_exists($path) or ! is_file($path))
+		if ( ! is_file($path))
 		{
 			throw new \InvalidPathException('Cannot read file: "'.$path.'", file does not exists.');
 		}
@@ -343,7 +367,7 @@ class File
 		$basepath  = rtrim(static::instance($area)->get_path($basepath), '\\/').DS;
 		$new_file  = static::instance($area)->get_path($basepath.$name);
 
-		if ( ! file_exists($new_file))
+		if ( ! is_file($new_file))
 		{
 			throw new \FileAccessException('File: "'.$new_file.'" does not exist, cannot be appended.');
 		}
@@ -689,15 +713,13 @@ class File
 	 */
 	public static function close_file($resource, $area = null)
 	{
-		fclose($resource);
-
 		// If locks aren't used, don't unlock
-		if ( ! static::instance($area)->use_locks())
+		if ( static::instance($area)->use_locks())
 		{
-			return;
+			flock($resource, LOCK_UN);
 		}
 
-		flock($resource, LOCK_UN);
+		fclose($resource);
 	}
 
 	/**
@@ -723,7 +745,7 @@ class File
 			'time_modified' => '',
 		);
 
-		if ( ! $info['realpath'] = static::instance($area)->get_path($path) or ! file_exists($info['realpath']))
+		if ( ! $info['realpath'] = static::instance($area)->get_path($path) or ! is_file($info['realpath']))
 		{
 			throw new \InvalidPathException('Filename given is not a valid file.');
 		}
@@ -768,7 +790,7 @@ class File
 		empty($mime) or $info['mimetype'] = $mime;
 		empty($name) or $info['basename'] = $name;
 
-		\Event::register('shutdown', function () use($info, $area, $class) {
+		\Event::register('fuel-shutdown', function () use($info, $area, $class) {
 
 			if ( ! $file = call_user_func(array($class, 'open_file'), @fopen($info['realpath'], 'rb'), LOCK_SH, $area))
 			{

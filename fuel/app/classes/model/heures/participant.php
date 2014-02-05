@@ -44,7 +44,7 @@ class Model_Heures_Participant extends \Maitrepylos\db
          *  Vérifier si les heures de son contrat sont fixe ou non
          */
         // On recupère les infos liées à ce participant pour cette date dans la db
-        $participant = \Model_Heures_Fixer::find()->where(array(
+        $participant = \Model_Heures_Fixer::query()->where(array(
             'participant_id' => $id,
             'd_date' => $date->format('Y-m-d')
         ))->get_one();

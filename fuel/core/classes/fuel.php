@@ -3,7 +3,7 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -29,7 +29,7 @@ class Fuel
 	/**
 	 * @var  string  The version of Fuel
 	 */
-	const VERSION = '1.5';
+	const VERSION = '1.7.1';
 
 	/**
 	 * @var  string  constant used for when in testing mode
@@ -49,7 +49,7 @@ class Fuel
 	/**
 	 * @var  string  constant used for when testing the app in a staging env.
 	 */
-	const STAGE = 'stage';
+	const STAGING = 'staging';
 
 	/**
 	 * @var  int  No logging
@@ -127,6 +127,10 @@ class Fuel
 			throw new \FuelException("You can't initialize Fuel more than once.");
 		}
 
+		// BC FIX FOR APPLICATIONS <= 1.6.1, makes Redis_Db available as Redis,
+		// like it was in versions before 1.7
+		class_exists('Redis', false) or class_alias('Redis_Db', 'Redis');
+
 		static::$_paths = array(APPPATH, COREPATH);
 
 		// Is Fuel running on the command line?
@@ -135,7 +139,7 @@ class Fuel
 		\Config::load($config);
 
 		// Start up output buffering
-		ob_start(\Config::get('ob_callback', null));
+		static::$is_cli or ob_start(\Config::get('ob_callback', null));
 
 		if (\Config::get('caching', false))
 		{
@@ -146,8 +150,16 @@ class Fuel
 		static::$profiling and \Profiler::init();
 
 		// set a default timezone if one is defined
-		static::$timezone = \Config::get('default_timezone') ?: date_default_timezone_get();
-		date_default_timezone_set(static::$timezone);
+		try
+		{
+			static::$timezone = \Config::get('default_timezone') ?: date_default_timezone_get();
+			date_default_timezone_set(static::$timezone);
+		}
+		catch (\Exception $e)
+		{
+			date_default_timezone_set('UTC');
+			throw new \PHPErrorException($e->getMessage());
+		}
 
 		static::$encoding = \Config::get('encoding', static::$encoding);
 		MBSTRING and mb_internal_encoding(static::$encoding);
@@ -165,7 +177,7 @@ class Fuel
 		// Run Input Filtering
 		\Security::clean_input();
 
-		\Event::register('shutdown', 'Fuel::finish');
+		\Event::register('fuel-shutdown', 'Fuel::finish');
 
 		// Always load classes, config & language set in always_load.php config
 		static::always_load();
@@ -206,7 +218,7 @@ class Fuel
 			\Finder::instance()->write_cache('FuelFileFinder');
 		}
 
-		if (static::$profiling)
+		if (static::$profiling and ! static::$is_cli and ! \Input::is_ajax())
 		{
 			// Grab the output buffer and flush it, we will rebuffer later
 			$output = ob_get_clean();
@@ -256,7 +268,8 @@ class Fuel
 		}
 		if (\Input::server('script_name'))
 		{
-			$base_url .= str_replace('\\', '/', dirname(\Input::server('script_name')));
+			$common = get_common_path(array(\Input::server('request_uri'), \Input::server('script_name')));
+			$base_url .= $common;
 		}
 
 		// Add a slash if it is missing and return it
@@ -291,9 +304,9 @@ class Fuel
 		{
 			foreach ($array['classes'] as $class)
 			{
-				if ( ! class_exists($class = ucfirst($class)))
+				if ( ! class_exists($class = \Str::ucwords($class)))
 				{
-					throw new \FuelException('Always load class does not exist. Unable to load: '.$class);
+					throw new \FuelException('Class '.$class.' defined in your "always_load" config could not be loaded.');
 				}
 			}
 		}

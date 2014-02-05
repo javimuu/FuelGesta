@@ -3,7 +3,7 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.5
+ * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2013 Fuel Development Team
@@ -300,9 +300,12 @@ class Form_Instance
 			if ( ! is_array($checked))
 			{
 				// If it's true, then go for it
-				if (is_bool($checked) and $checked === true)
+				if (is_bool($checked))
 				{
-					$attributes['checked'] = 'checked';
+					if($checked === true)
+					{
+						$attributes['checked'] = 'checked';
+					}
 				}
 
 				// Otherwise, if the string/number/whatever matches then do it
@@ -342,9 +345,12 @@ class Form_Instance
 			if ( ! is_array($checked))
 			{
 				// If it's true, then go for it
-				if (is_bool($checked) and $checked === true)
+				if (is_bool($checked))
 				{
-					$attributes['checked'] = 'checked';
+					if($checked === true)
+					{
+						$attributes['checked'] = 'checked';
+					}
 				}
 
 				// Otherwise, if the string/number/whatever matches then do it
@@ -472,8 +478,7 @@ class Form_Instance
 			$attributes['name'] = (string) $field;
 			$attributes['value'] = (string) $value;
 		}
-
-		$value = empty($attributes['value']) ? '' : $attributes['value'];
+		$value = is_scalar($attributes['value']) ? $attributes['value'] : '';
 		unset($attributes['value']);
 
 		if ($this->get_config('prep_value', true) && empty($attributes['dont_prep']))
@@ -509,16 +514,17 @@ class Form_Instance
 
 			if ( ! isset($attributes['selected']))
 			{
-				$attributes['selected'] = ! isset($attributes['value']) ? null : $attributes['value'];
+				$attributes['selected'] = ! isset($attributes['value']) ? (isset($attributes['default']) ? $attributes['default'] : null) : $attributes['value'];
 			}
 		}
 		else
 		{
 			$attributes['name'] = (string) $field;
-			$attributes['selected'] = $values;
+			$attributes['selected'] = ($values === null or $values === array()) ? (isset($attributes['default']) ? $attributes['default'] : $values) : $values;
 			$attributes['options'] = $options;
 		}
 		unset($attributes['value']);
+		unset($attributes['default']);
 
 		if ( ! isset($attributes['options']) || ! is_array($attributes['options']))
 		{
@@ -547,11 +553,12 @@ class Form_Instance
 				{
 					$optgroup = $listoptions($val, $selected, $level + 1);
 					$optgroup .= str_repeat("\t", $level);
-					$input .= str_repeat("\t", $level).html_tag('optgroup', array('label' => $key , 'style' => 'text-indent: '.(10*($level-1)).'px;'), $optgroup).PHP_EOL;
+					$input .= str_repeat("\t", $level).html_tag('optgroup', array('label' => $key , 'style' => 'text-indent: '.(20+10*($level-1)).'px;'), $optgroup).PHP_EOL;
 				}
 				else
 				{
-					$opt_attr = array('value' => $key, 'style' => 'text-indent: '.(10*($level-1)).'px;');
+					$opt_attr = array('value' => $key);
+					$level > 1 and $opt_attr['style'] = 'text-indent: '.(10*($level-1)).'px;';
 					(in_array((string)$key, $selected, true)) && $opt_attr[] = 'selected';
 					$input .= str_repeat("\t", $level);
 					$opt_attr['value'] = ($current_obj->get_config('prep_value', true) && empty($attributes['dont_prep'])) ?
@@ -602,7 +609,7 @@ class Form_Instance
 
 		if (empty($attributes['for']) and $this->get_config('auto_id', false) == true)
 		{
-			$attributes['for'] = $this->get_config('auto_id_prefix', 'form_').$id;
+			empty($id) or $attributes['for'] = $this->get_config('auto_id_prefix', 'form_').$id;
 		}
 
 		unset($attributes['label']);
