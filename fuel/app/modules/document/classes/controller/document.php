@@ -237,6 +237,7 @@ class Controller_Document extends \Controller_Main
         $this->template->title = 'Gestion des documents';
         $this->template->content = \View::forge('test');
 
+
     }
 
 

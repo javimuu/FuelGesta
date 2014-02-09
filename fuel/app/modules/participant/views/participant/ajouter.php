@@ -42,7 +42,7 @@
                 <div class="control-group">
                     <?php echo Form::label('Date de naissance', 'd_date_naissance', array('class' => 'control-label')); ?>
                     <div class="controls">
-                    <?php echo Form::input('d_date_naissance', Input::post('d_date_naissance', isset($participant) ? $participant->d_date_naissance : ''), array('placeholder' => 'dd-mm-yyyy')); ?>
+                    <?php echo Form::input('d_date_naissance', Input::post('d_date_naissance', isset($participant) ? $participant->d_date_naissance : ''), array('placeholder' => 'dd/mm/yyyy')); ?>
                     </div>
                 </div>
                 <div class="control-group">

@@ -8,7 +8,7 @@
 <script type="text/javascript">
 function getAge(dateString) 
 {
-    dateString = dateString.split('-');
+    dateString = dateString.split('/');
     dateString = dateString[2]+","+dateString[1]+","+dateString[0];
     var today = new Date();
     var birthDate = new Date(dateString);

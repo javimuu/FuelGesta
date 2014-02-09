@@ -116,12 +116,20 @@ class MyValidation
         \Validation::active()->set_message('compteBancaire', 'Le compte bancaire doit comporter 12 chiffres.');
         if($val != null || !empty($val))
         {
+            //si on insère un ancien numéro de compte
             $compte = \Cranberry\MySanitarization::filterDigits($val);
             $nbr = strlen($compte);
-            if ($nbr != 12) {
-                return false;
+            if ($nbr == 12) {
+                return true;
             }
-            return true;
+            //si on tente d'insérer un compte Iban
+            $iban = new \Maitrepylos\Iban\Iban($val);
+            if($iban->Verify()){
+                return true;
+
+            }
+            \Validation::active()->set_message('compteBancaire', 'Le compte bancaire Iban s\'écrit BExxxxxxxxxxxxxx (14 chiffres).');
+            return false;
         }
         else
         {

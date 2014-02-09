@@ -376,8 +376,8 @@ class Controller_Contrat extends \Controller_Main
 
 
             $formation->d_date_fin_formation = $date[1]->format('Y-m-d');
-            $formation->t_fin_formation_suite = Input::post('t_fin_formation');
-           // $formation->t_fin_formation_suite = Input::post('t_fin_formation_suite');
+          //  $formation->t_fin_formation_suite = Input::post('t_fin_formation');
+            $formation->t_fin_formation_suite = Input::post('t_fin_formation_suite');
             $formation->contrat_id = $id;
             $formation->save();
 
@@ -401,7 +401,7 @@ class Controller_Contrat extends \Controller_Main
 
 
         $this->data['participant'] = \Model_Participant::find($id_participant);
-        $this->data['id'] = $id;
+        $this->data['id_contrat'] = $id;
         $this->data['select_formation'] = $select_formation;
         $this->data['select_suite_formation'] = $select_suite_formation;
         $this->template->title = 'Fin de formation/Contrat';

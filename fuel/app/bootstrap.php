@@ -21,6 +21,7 @@ Autoloader::add_namespace('Cranberry',APPPATH.'vendor/Cranberry/',true);
 Autoloader::add_namespace('Doctrine',APPPATH.'vendor/Doctrine/',true);
 
 
+
 // Register the autoloader
 Autoloader::register();
 

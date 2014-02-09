@@ -37,5 +37,5 @@
 </div>
 
 <?php echo Form::close() ?>
-<p><?php echo Html::anchor('contrat/modifier/'.$id_contrat.'/'. $participant->id_participant, '<i class="icon-step-backward"></i> Retour', array('class' => 'btn pull-right')); ?></p>
+<p><?php echo Html::anchor('contrat/modifier/'.$id_contrat.'/'. $participant->id_participant , '<i class="icon-step-backward"></i> Retour', array('class' => 'btn pull-right')); ?></p>
 <div class="clear"></div>

@@ -32,25 +32,22 @@
     <div class="control-group">
         <?php echo Form::label('Nom', 'nom', array('class' => 'control-label')); ?>
         <div class="controls">
-        <?php echo Form::input('nom', ''); ?>
+        <?php echo Form::input('nom', ''); ?>Facultatif
         </div>
         <?php echo Form::hidden('idparticipant', ''); ?>
     </div>
-    <?php if ($formulaire == 2):
-
-
-        ?>
-        Si vous laissez le champ "nom" vide, cela générera l'ensemble des C98, selon les paramètres ci-dessous !
+    <?php if ($formulaire == 2): ?>
+        Généartion du/des document(s) C98 en fonction d'un <b>seul</b> choix facultatif.
     <div class="control-group">
         <?php echo Form::label('Localisation', 'centre', array('class' => 'control-label')); ?>
         <div class="controls">
-        <?php echo Form::select('centre','', array('','Localisation'=>$centre)) ?>
+        <?php echo Form::select('centre','', array('','Localisation'=>$centre)) ?>Facultatif
         </div>
     </div>
     <div class="control-group">
         <?php echo Form::label('Groupe', 'groupe', array('class' => 'control-label')); ?>
         <div class="controls">
-            <?php echo Form::select('groupe', '', array('','Groupe'=>$groupe)) ?>
+            <?php echo Form::select('groupe', '', array('','Groupe'=>$groupe)) ?>Facultatif
         </div>
     </div>
     <?php endif; ?>
@@ -58,14 +55,14 @@
     <div class="control-group">
         <?php echo Form::label('Mois', 'mois', array('class' => 'control-label')); ?>
         <div class="controls">
-            <?php echo Form::select('mois','', $mois) ?>
+            <?php echo Form::select('mois','', $mois) ?>Obligatoire
         </div>
     </div>
 
     <div class="control-group">
         <?php echo Form::label('Année', 'annee', array('class' => 'control-label')); ?>
         <div class="controls">
-        <?php echo Form::select('annee', date('Y'), $annees) ?>
+        <?php echo Form::select('annee', date('Y'), $annees) ?>Obligatoire
         </div>
     </div>
 

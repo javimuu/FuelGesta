@@ -288,7 +288,7 @@ class Model_My_Document extends \Maitrepylos\db
     public function getC98FullLocalisation($localisation, \DateTime $date)
     {
 
-        $date_fin = \DateTime::createFromFormat('Y-m-d', $date->format('Y-m-') . $date->format('t'));
+        $date_fin = \DateTime::createFromFormat('Y-m-d', $date->format('Y-m-t'));
 
         $sql = "SELECT
                 p.t_nom,
@@ -306,19 +306,16 @@ class Model_My_Document extends \Maitrepylos\db
                 INNER JOIN contrat ON p.id_participant = contrat.participant_id
                 INNER JOIN groupe ON groupe.id_groupe = contrat.groupe_id
                 WHERE
-                   (d_date_debut_contrat BETWEEN ? AND ?
-                            OR  d_date_fin_contrat_prevu   BETWEEN ? AND ?
-                            )
+                   d_date_debut_contrat <=  ?
+                    AND d_date_fin_contrat_prevu   >= ?
                 AND
                 adresse.t_courrier = 1
                 AND localisation_id = ? ";
 
         $req = $this->_db->prepare($sql);
         $req->execute(array(
-            $date->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
             $date->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
             (int)$localisation));
         return $req->fetchAll(PDO::FETCH_ASSOC);
 
@@ -345,10 +342,9 @@ class Model_My_Document extends \Maitrepylos\db
                 INNER JOIN adresse ON p.id_participant = adresse.participant_id
                 INNER JOIN contrat ON p.id_participant = contrat.participant_id
                 INNER JOIN groupe ON groupe.id_groupe = contrat.groupe_id
-                WHERE
-                   (d_date_debut_contrat BETWEEN ? AND ?
-                            OR  d_date_fin_contrat_prevu   BETWEEN ? AND ?
-                            )
+                 WHERE
+                   d_date_debut_contrat <= ?
+                    AND d_date_fin_contrat_prevu   >=?
                 AND
                 adresse.t_courrier = 1
                 AND id_groupe = ?
@@ -356,10 +352,8 @@ class Model_My_Document extends \Maitrepylos\db
 
         $req = $this->_db->prepare($sql);
         $req->execute(array(
-            $date->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
             $date->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
             (int)$groupe));
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -387,8 +381,8 @@ class Model_My_Document extends \Maitrepylos\db
                 LEFT OUTER JOIN contrat ON p.id_participant = contrat.participant_id
                 LEFT OUTER   JOIN groupe ON groupe.id_groupe = contrat.groupe_id
                 WHERE adresse.t_courrier = 1
-                AND contrat.d_date_debut_contrat < ?
-				AND contrat.d_date_fin_contrat_prevu > ?
+                AND contrat.d_date_debut_contrat <= ?
+				AND contrat.d_date_fin_contrat_prevu >= ?
                 ORDER BY t_nom";
 
         $r = $this->_db->prepare($sql);
