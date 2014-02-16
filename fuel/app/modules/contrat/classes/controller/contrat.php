@@ -44,9 +44,10 @@ class Controller_Contrat extends \Controller_Main
         $db_contrat = new \Model_My_Contrat();
 
 
-        if (Input::method() == 'POST') {
+        if (\Input::method() == 'POST') {
             //On récupère les heures du contrat de travail
             $heures = \Model_Contrat::getTempTravail(\Input::post('type_contrat'));
+            //var_dump($heures);
             $val = \Model_Contrat::validate('create_contrat');
             //on vérifie que l'on ne dépasse pas 100% de travail sur plusieurs contrat
             $true = true;
@@ -58,12 +59,13 @@ class Controller_Contrat extends \Controller_Main
                 $b = $db_contrat->verifContrat($id, \Input::post('d_date_debut_contrat'), $i);
                 //144000 = à 40heures en secondes.
 
-                if (($b[0]['somme'] + (int)$heures) > 144000) {
+                if (($b[0]['somme'] + (int)$heures[0]['i_heures']) > 144000) {
                     $a[] = $b[0]['jour'];
                     $true = false;
+
                 }
             }
-            if (!$true) {
+            if ($true === false) {
                 $message[] = '<ul><li>Vous dépassez les 40h semaines entre ces deux périodes '
                     . \MaitrePylos\date::db_to_date(current($a)) . ' et ' . \MaitrePylos\date::db_to_date(end($a)) . '</li></ul>';
             }
@@ -159,6 +161,7 @@ class Controller_Contrat extends \Controller_Main
 
 
         $this->template->content = \View::forge('contrat/ajouter', $this->data);
+
     }
 
     public function action_supprimer($id, $id_participant)

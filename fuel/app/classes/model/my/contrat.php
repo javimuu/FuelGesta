@@ -74,13 +74,13 @@ class Model_My_Contrat extends \Maitrepylos\db
     public function getJoursTravail($date_fin_contrat, $date_debut_contrat)
     {
 
-        list($day, $month, $year) = explode('/', $date_fin_contrat);
-        $date_fin_contrat = new \DateTime();
-        $date_fin_contrat->setDate($year, $month, $day);
+        //list($day, $month, $year) = explode('/', $date_fin_contrat);
+        $date_fin_contrat = \DateTime::createFromFormat('d/m/Y',$date_fin_contrat);
+        //$date_fin_contrat->setDate($year, $month, $day);
 
-        list($day, $month, $year) = explode('/', $date_debut_contrat);
-        $date_debut_contrat = new \DateTime();
-        $date_debut_contrat->setDate($year, $month, $day);
+       // list($day, $month, $year) = explode('/', $date_debut_contrat);
+        $date_debut_contrat =  \DateTime::createFromFormat('d/m/Y',$date_debut_contrat);
+        //$date_debut_contrat->setDate($year, $month, $day);
 
         $sql = "SELECT DATEDIFF(?,?) AS jour ;";
         $req = $this->_db->prepare($sql);
@@ -109,7 +109,7 @@ class Model_My_Contrat extends \Maitrepylos\db
                 FROM contrat
                     WHERE participant_id = ?
                 AND d_date_debut_contrat <= DATE_ADD(?, INTERVAL ? DAY)
-                AND d_date_fin_contrat >= DATE_ADD(?, INTERVAL ? DAY) ";
+                AND d_date_fin_contrat_prevu >= DATE_ADD(?, INTERVAL ? DAY) ";
 
         $req = $this->_db->prepare($sql);
         $req->execute(array($date, $jour, $id, $date, $jour, $date, $jour));
@@ -163,6 +163,7 @@ class Model_My_Contrat extends \Maitrepylos\db
                 WHERE participant_id = ?
                 AND groupe_id != ?
                 AND  d_date_debut_contrat BETWEEN ? AND ?
+                AND d_date_fin_contrat IS NULL
                 UNION
                 SELECT 0  ";
         $req = $this->_db->prepare($sql);

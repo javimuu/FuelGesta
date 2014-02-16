@@ -60,19 +60,19 @@ class Controller_Participant extends \Controller_Main
             $val = \Model_Participant::validate_add('create_participant');
 
             // Transformation de la date de naissance
-            $dob = (\Input::post('d_date_naissance') != NULL) ? date('Y/m/d', strtotime(\Input::post('d_date_naissance'))) : NULL;
+            $dob = (\Input::post('d_date_naissance') != NULL) ? \DateTime::createFromFormat('d/m/Y', \Input::post('d_date_naissance')) : NULL;
             // Transformation du nom
             $nom = strtoupper(\Cranberry\MySanitarization::filterAlpha(\Cranberry\MySanitarization::stripAccents(\Input::post('t_nom'))));
             // Transformation du prenom
             $prenom = \Cranberry\MySanitarization::ucFirstAndToLower(\Cranberry\MySanitarization::filterAlpha(\Input::post('t_prenom')));
 
             // On vérifie si ce membre existe déjà, en se basant sur les nom, prénom et date de naissance (participants actifs)
-            $exists = \Model_Participant::exists($nom, $prenom, $dob, 1);
+            $exists = \Model_Participant::exists($nom, $prenom, $dob->format('Y-m-d'), 1);
 
             // si la validation ne renvoie aucune erreur et si le participant n'existe pas
             if ($val->run() and !$exists) {
                 // On vérifie si ce participant n'avait pas été "supprimé"
-                $reactivate = \Model_Participant::exists($nom, $prenom, $dob, 0);
+                $reactivate = \Model_Participant::exists($nom, $prenom, $dob->format('Y-m-d'), 0);
 
                 // Auquel cas, on propose de le réactiver
                 if ($reactivate) {
@@ -80,7 +80,7 @@ class Controller_Participant extends \Controller_Main
                     $participant = \Model_Participant::query()->where(array(
                         't_nom' => $nom,
                         't_prenom' => $prenom,
-                        'd_date_naissance' => $dob
+                        'd_date_naissance' => $dob->format('Y-m-d')
                     ))->get_one();
 
                     // Et on redirige le tout
@@ -93,7 +93,7 @@ class Controller_Participant extends \Controller_Main
                         't_prenom' => $prenom,
                         't_nationalite' => \Input::post('t_nationalite'),
                         't_lieu_naissance' => \Cranberry\MySanitarization::ucFirstAndToLower(\Input::post('t_lieu_naissance')),
-                        'd_date_naissance' => $dob,
+                        'd_date_naissance' => $dob->format('Y-m-d'),
                         't_sexe' => \Input::post('t_sexe'),
                         't_gsm' => \Input::post('t_gsm'),
                         't_gsm2' => \Input::post('t_gsm2'),

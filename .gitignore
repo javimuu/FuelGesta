@@ -4,4 +4,4 @@
 /fuel/app/logs
 ./idea/
 /fuel/app/config/repository.php
-./access.db
+./db_saved.db

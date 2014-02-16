@@ -6,7 +6,7 @@
 </p>
 <p>
     Pro. <?php
-    if (in_array('urgence', $contact->t_cb_type)) {
+    if (in_array('pro', $contact->t_cb_type)) {
         echo Form::checkbox('t_cb_type[]', 'pro', array('checked' => 'checked'));
     } else {
         echo Form::checkbox('t_cb_type[]', 'pro');
@@ -63,3 +63,6 @@
     <button type="submit" class="btn btn-success">Modifier le contact</button>
 </div>
 <?php echo Form::close(); ?>
+
+<p><?php echo Html::anchor('participant/modifier/' . $contact->participant_id, '<i class="icon-step-backward"></i> Retour', array('class' => 'btn pull-right')); ?></p>
+<div class="clear"></div>

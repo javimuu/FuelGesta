@@ -10,11 +10,10 @@
             <th>Heures</th>
             <th>Actif</th>
             <th>Payement</th>
-            <th>R&eacute;gion Walonne</th>
+            <th>R&eacute;gion Wallonne</th>
             <th class="actions"></th>
         </tr>
-        </table>
-    <table class="table table-top table-striped" id="table_type_contrat">
+
         <?php
         $time = new \Maitrepylos\Timetosec();
         foreach ($types as $type):

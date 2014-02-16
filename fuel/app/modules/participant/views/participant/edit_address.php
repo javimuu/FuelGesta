@@ -1,4 +1,4 @@
-<h1>Modifier une adresse</h1> 
+<h1>Modifier une adresse</h1>
 <?php echo Form::open($view_dir . 'modifier_adresse/'.$adresse->id_adresse); ?>
 <p>
     <?php echo Form::label('Rue', 't_nom_rue'); ?>
@@ -8,7 +8,7 @@
     <?php echo Form::label('Bte', 't_bte'); ?>
     <?php echo Form::input('t_bte', Input::post('t_bte', isset($adresse) ? $adresse->t_bte : '')); ?>
 </p>
-<p>
+<p >
     <?php echo Form::label('CP', 't_code_postal'); ?>
     <?php echo Form::input('t_code_postal', Input::post('t_code_postal', isset($adresse) ? $adresse->t_code_postal : '')); ?>
 </p>
@@ -32,3 +32,6 @@
     <button type="submit" class="btn btn-success">Modifier l'adresse</button>
 </div>
 <?php echo Form::close(); ?>
+
+<p><?php echo Html::anchor('participant/modifier/'.$adresse->participant_id, '<i class="icon-step-backward"></i> Retour', array('class' => 'btn pull-right')); ?></p>
+<div class="clear"></div>
