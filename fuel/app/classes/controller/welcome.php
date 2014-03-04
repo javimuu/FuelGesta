@@ -20,8 +20,7 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
-        $iban = new \Maitrepylos\Iban\Iban('BE23250004074691');
-        var_dump($iban->Verify());
+        $word = new \Maitrepylos\Word\Contrat();
 
 
 		return Response::forge(View::forge('welcome/index'));

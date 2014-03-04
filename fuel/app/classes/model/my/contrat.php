@@ -360,6 +360,22 @@ class Model_My_Contrat extends \Maitrepylos\db
     }
 
 
+    public static function getImpressionContrat($contrat){
+
+        $pdo = \Maitrepylos\Db::getPdo();
+        $sql = "SELECT *
+        FROM contrat c
+        INNER JOIN participant p
+        ON p.id_participant = c.participant_id
+        WHERE c.id_contrat = ?";
+
+        $r = $pdo->prepare($sql);
+        $r->execute(array($contrat));
+        return $r->fetch(\PDO::FETCH_ASSOC);
+
+    }
+
+
 }
 
 ?>

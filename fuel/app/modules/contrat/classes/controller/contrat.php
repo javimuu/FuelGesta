@@ -504,5 +504,21 @@ class Controller_Contrat extends \Controller_Main
         $this->template->content = \View::forge('test');
     }
 
+    public function action_impression_contrat($contrat){
+
+       // $data = \Model_My_Contrat::getImpressionContrat($contrat);
+       // $data['toto'] = 'toto';
+
+        //\Debug::dump($data);
+
+        $doc = new \Maitrepylos\Word\Contrat($contrat);
+
+        //$this->template->title = 'Fin de formation/Contrat';
+        //$this->template->content = \View::forge('test');
+
+
+
+    }
+
 
 }

@@ -17,6 +17,7 @@ Autoloader::add_classes(array(
 
 Autoloader::add_namespace('Maitrepylos',APPPATH.'vendor/maitrepylos/');
 Autoloader::add_namespace('Excel',APPPATH.'vendor/excel/',true);
+Autoloader::add_namespace('Word',APPPATH.'vendor/word/',true);
 Autoloader::add_namespace('Cranberry',APPPATH.'vendor/Cranberry/',true);
 Autoloader::add_namespace('Doctrine',APPPATH.'vendor/Doctrine/',true);
 

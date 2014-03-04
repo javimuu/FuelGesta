@@ -98,6 +98,7 @@ $mois = date('m');
             <th>Temps de travail</th>
             <th>Groupe</th>
             <th>Remarque</th>
+            <th>Impression du contrat </th>
             <th>Heures prestées</th>
             <th>Modification/Supression</th>
             <th>Fin de contrat</th>
@@ -112,6 +113,8 @@ $mois = date('m');
                 <td><?php echo $time->TimeToString($value['i_temps_travail']) ?> H</td>
                 <td><?php echo $value['t_nom'] ?></td>
                 <td><?php echo $value['t_remarque'] ?></td>
+                <td><?php echo Html::anchor('contrat/impression_contrat/' . $value['id_contrat'] , '<i class="icon-print"></i>', array('title' => 'Impression')); ?></td>
+
                 <td><?php echo $time->TimeToString($value['seconde']) ?></td>
                 <td class="text-center"><?php echo Html::anchor('contrat/modifier/' . $value['id_contrat'] . '/' . $id_participant, Asset::img('edit.png'), array('title' => 'Modification')) ?>
                     <?php echo Html::anchor('contrat/supprimer/' . $value['id_contrat'] . '/' . $id_participant, Asset::img('remove.png'), array('onclick' => "return confirm('Etes-vous sûr de vouloir supprimer ce contrat ?')", 'title' => 'Supression')) ?></td>
@@ -126,6 +129,7 @@ $mois = date('m');
             </tr>
         <?php endforeach; ?>
         <tr>
+            <th></th>
             <th></th>
             <th></th>
             <th></th>
