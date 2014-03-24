@@ -55,7 +55,7 @@
     <div class="control-group">
         <?php echo Form::label('Mois', 'mois', array('class' => 'control-label')); ?>
         <div class="controls">
-            <?php echo Form::select('mois','', $mois) ?>Obligatoire
+            <?php echo Form::select('mois',date('M'), $mois) ?>Obligatoire
         </div>
     </div>
 
@@ -71,6 +71,7 @@
 
 <div class="form-actions">
     <button type="submit" class="btn btn-success">Suivant</button>
+
 </div>
 <?php echo Form::close(); ?>
 

@@ -87,21 +87,21 @@ class Model_Participant extends Orm\Model
 
         $val->add_field('t_nom', 'Nom', 'required|max_length[50]');
         $val->add_field('t_prenom', 'Prénom', 'required|max_length[50]');
-        $val->add_field('t_registre_national', 'Registre national', 'required|registreNational');
-        $val->add_field('t_compte_bancaire', 'Compte bancaire', 'compteBancaire|required');
-        $val->add_field('t_gsm', 'GSM', 'exact_length[10]|valid_string[numeric]|required');
+        $val->add_field('t_registre_national', 'Registre national', 'registreNational');
+        $val->add_field('t_compte_bancaire', 'Compte bancaire', 'compteBancaire');
+        $val->add_field('t_gsm', 'GSM', 'exact_length[10]|valid_string[numeric]');
         $val->add_field('t_gsm2', 'GSM', 'exact_length[10]|valid_string[numeric]');
         $val->add_field('t_organisme_paiement_phone', 'Téléphone de l\'orgasnime', 'exact_length[9]|valid_string[numeric]');
         $val->add_field('t_taille', 'Taille', 'max_length[3]|valid_string[numeric]');
         $val->add_field('d_date_naissance', 'Date de naissance', 'required|checkdate|isMajeur');
-        $val->add_field('t_sexe', 'Sexe', 'required');
-        $val->add_field('t_diplome', 'Diplome', 'required');
-        $val->add_field('t_type_etude', 'Type enseignement', 'required');
-        $val->add_field('t_annee_etude', 'Annee étude', 'required');
-        $val->add_field('t_etat_civil', 'Etat Civil', 'required');
+        //$val->add_field('t_sexe', 'Sexe', 'required');
+        //$val->add_field('t_diplome', 'Diplome', 'required');
+        //$val->add_field('t_type_etude', 'Type enseignement', 'required');
+        //$val->add_field('t_annee_etude', 'Annee étude', 'required');
+        //$val->add_field('t_etat_civil', 'Etat Civil', 'required');
         $val->add_field('t_email', 'Email', 'valid_email');
         $val->add_field('t_children', 'Enfants à charge', 'childrenData');
-        $val->add_field('t_lieu_naissance', 'Lieu de naisance', 'required');
+        //$val->add_field('t_lieu_naissance', 'Lieu de naisance', 'required');
         $val->add_field('i_frais_stagiaire', 'Frais stagiaire', 'numeric');
         $val->add_field('i_identification_bob', 'Identification Bob', 'numeric');
 
@@ -127,7 +127,7 @@ class Model_Participant extends Orm\Model
         $val->add_field('t_gsm', 'GSM', 'exact_length[10]|valid_string[numeric]');
         $val->add_field('t_gsm2', 'GSM', 'exact_length[10]|valid_string[numeric]');
         $val->add_field('d_date_naissance', 'Date de naissance', 'required|checkdate|isMajeur');
-        $val->add_field('t_sexe', 'Sexe', 'required');
+        //$val->add_field('t_sexe', 'Sexe', 'required');
 
         $val->set_message('required', 'Veuillez remplir le champ :label.');
         $val->set_message('min_length', 'Le champ :label doit faire au moins :param:1 caractères.');

@@ -38,9 +38,9 @@ class Controller_Formulaire extends \Controller_Main
         $annees = \Model_Heures_Prestation::find('all', array('order_by' => 'annee'));
 
         $mois = array();
-        $mois[0] = date('m');
+        //$mois[0] = date('m');
         for ($i = 1; $i < 13; $i++) {
-            $mois[$i] = str_pad($i, 2, "0", STR_PAD_LEFT);
+            $mois[str_pad($i, 2, "0", STR_PAD_LEFT)] = str_pad($i, 2, "0", STR_PAD_LEFT);
         }
 
         $select_annees = array();
@@ -118,7 +118,9 @@ class Controller_Formulaire extends \Controller_Main
 
                     }
                 } else {
+
                     \Response::redirect('document/c98/' . $date->format('Y-m-d') . '/' . $nom_centre . '/' . $groupe . '/' . $id);
+                   // echo 'document/c98/' . $date->format('Y-m-d') . '/' . $nom_centre . '/' . $groupe . '/' . $id;
                 }
 
 

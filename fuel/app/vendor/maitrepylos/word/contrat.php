@@ -77,7 +77,7 @@ class Contrat
         } else {
             header("Cache-Control: public");
             header("Content-Description: File Transfer");
-            header("Content-Disposition: attachment; filename=$file");
+            header("Content-Disposition: attachment; filename=".$data['t_nom'].'_'.$data['t_prenom'].'.doc'."");
             header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
             header("Content-Transfer-Encoding: binary");
 

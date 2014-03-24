@@ -63,11 +63,11 @@ class c98
             $pdf->SetXY(15, 43);
             $pdf->Cell('', '', 'NN :' . $row['t_registre_national']);
             $pdf->SetXY(70, 43);
-            $pdf->Cell('', '', 'Nom: ' . $row['t_nom'] . ' ' . utf8_decode('Prénom:') . utf8_decode($row['t_prenom']));
+            $pdf->Cell('', '', 'Nom: ' . utf8_decode($row['t_nom']) . ' ' . utf8_decode('Prénom:') . utf8_decode($row['t_prenom']));
             $pdf->SetXY(70, 46);
-            $pdf->Cell('', '', 'Rue: ' . $row['t_nom_rue'] . ' ' . 'Bte: ' . $row['t_bte']);
+            $pdf->Cell('', '', 'Rue: ' . utf8_decode($row['t_nom_rue']) . ' ' . 'Bte: ' . $row['t_bte']);
             $pdf->SetXY(70, 49);
-            $pdf->Cell('', '', $row['t_code_postal'] . ' ' . $row['t_commune']);
+            $pdf->Cell('', '', $row['t_code_postal'] . ' ' . utf8_decode($row['t_commune']));
             $pdf->SetXY(15, 57);
             $pdf->Cell('', '', utf8_decode('organisme de paiement: ') . $row['t_organisme_paiement']);
             /**

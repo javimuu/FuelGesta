@@ -44,7 +44,7 @@
                     <li><?php echo Html::anchor($view_dir . 'liste_fins_formation', 'Classement des types et motifs de sortie') ?></li>
                     <li><?php echo Html::anchor($view_dir . 'liste_types_formation', 'Type et motif de sortie') ?></li>
                     <li><?php echo Html::anchor($view_dir . 'liste_types_connaissance', 'Connaissance EFT') ?></li>
-                    <li><?php echo Html::anchor($view_dir . 'liste_types_ressource', 'Resource') ?></li>
+                    <li><?php echo Html::anchor($view_dir . 'liste_types_ressource', 'Ressource') ?></li>
                 </ul>
             </div>
     </li>

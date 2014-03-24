@@ -158,7 +158,7 @@ class Controller_Document extends \Controller_Main
                 //Si le contrat permet de gérer le salaire du stagiaire.
                 if ($formData[$i]['i_paye'] == 1) {
 
-                    $totalHeuresMois = $formData[$i]['totalHeuresMois'][0]['fulltime'] + $formData[$i]['heureRecup'];
+                    $totalHeuresMois = $formData[$i]['totalHeuresMois'][0]['fulltime'];
                     $formData[$i]['salaire'] = $db->salaire($formData[$i]['heures'], $totalHeuresMois, $formData[$i]['f_tarif_horaire']);
                 }
 
@@ -174,12 +174,13 @@ class Controller_Document extends \Controller_Main
                 //$form_data[$i]['heure_recup'] = $db_prestation->getHourRecup($id, $date_prestation);
             }
 
-             //  \Debug::dump($formData);
+              // \Debug::dump($heure_recup);
 
 
             \Maitrepylos\Pdf\Paye::pdf($formData, $nombresContrat);
             $this->template->title = 'Gestion des documents';
             $this->template->content = \View::forge('test');
+
 
 
         }
@@ -202,7 +203,7 @@ class Controller_Document extends \Controller_Main
 
         $centre = \Model_Centre::find('first');
 
-        if ($id != NULL) {
+        if ($id != NULL && $groupe == 0 && $nom_centre == 0) {
             /**
              * On vérifie que l'on dispose d'une adresse !
              */

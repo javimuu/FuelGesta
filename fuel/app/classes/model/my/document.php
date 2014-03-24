@@ -146,7 +146,7 @@ class Model_My_Document extends \Maitrepylos\db
     /**
      * @method total_heure_mois
      * @see Methode qui calcul le nombres d'heures total, a facturer.
-     * les heures de récup ne sont plus pris en compte.
+     * les heures de récup sont prise en compte.
      * @param $id : indentifications du participant
      * @param $annee année du calcul
      * @param $mois mois du calcul
@@ -161,7 +161,7 @@ class Model_My_Document extends \Maitrepylos\db
                     WHERE participant_id = ?
                     AND t_schema
                     IN (
-                    '+', '@', '=', '$'
+                    '+', '@', '=', '$','-'
                     )
                     AND EXTRACT(
                     YEAR_MONTH FROM d_date ) = ?
