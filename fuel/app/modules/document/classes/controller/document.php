@@ -174,7 +174,7 @@ class Controller_Document extends \Controller_Main
                 //$form_data[$i]['heure_recup'] = $db_prestation->getHourRecup($id, $date_prestation);
             }
 
-              // \Debug::dump($heure_recup);
+            //   \Debug::dump($formData);
 
 
             \Maitrepylos\Pdf\Paye::pdf($formData, $nombresContrat);

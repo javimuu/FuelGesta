@@ -19,7 +19,7 @@
     $(function(){
         $('.dp,#form_d_date_permis_theorique,#form_d_fin_etude,#form_d_date_inscription_onem,#form_d_date_fin_stage_onem,#form_d_date_inscription_forem,#form_d_date_expiration_carte_sejour,#form_d_date_examen_medical').datepicker({
             yearRange: '-100:+10'
-        }).attr("readonly","readonly");
+        });
     });
     
 

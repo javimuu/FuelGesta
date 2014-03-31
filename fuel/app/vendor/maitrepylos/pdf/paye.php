@@ -106,15 +106,21 @@ class Paye
                 $pdf->SetFont('Arial', '', 10);
 //            if ($formData[$z]['deplacement'][0]->f70bis == null)
 //            {
-                $pdf->Text(25, $y + 25, utf8_decode('(A)bonnement :' . $formData[$z]['t_abonnement'] . ' euro'));
+                if($formData[$z]['t_moyen_transport']==='TEC') {
+                    $pdf->Text(25, $y + 25, utf8_decode('(A)bonnement :' . $formData[$z]['t_abonnement'] . ' euro'));
+                    $pdf->Text(140, $y + 40, utf8_decode('Total (A/j)*N :' . $formData[$z]['deplacement'] . ' euro'));
+                }else{
+                    $pdf->Text(25, $y + 25, utf8_decode('(A)montant journalier :' . $formData[$z]['t_abonnement'] . ' euro'));
+                    $pdf->Text(140, $y + 40, utf8_decode('Total A*j:' . $formData[$z]['deplacement'] . ' euro'));
+                }
                 $pdf->Text(25, $y + 28, utf8_decode('(N)ombres de jours prévus :' . $formData[$z]['jours'] . ' jours'));
                 //$pdf->Text(25, $y + 31, utf8_decode('Nombres de (j)ours de présences :' . $formData[$z]['contrat'][0]['jours'] . ' jours'));
                 $pdf->Text(25, $y + 31, utf8_decode('Nombres de (j)ours de présences :' . $formData[$z]['nombresPrestations'] . ' jours'));
 //                $pdf->Text(25, $y + 35, utf8_decode('(P)articipation EFT : 100 %'));
-                $pdf->Text(25, $y + 40, utf8_decode('Total (A/j)*N :' . $formData[$z]['deplacement'] . ' euro'));
-                $pdf->SetFont('Arial', 'B', 10);
+                //$pdf->Text(140, $y + 40, utf8_decode('Total (A/j)*N :' . $formData[$z]['deplacement'] . ' euro'));
+                $pdf->SetFont('Arial', '', 10);
 //                $pdf->Text(140, $y + 40, utf8_decode('Déplacement : ') . $formData[$z]['deplacement'][0]->somme . utf8_decode(' euro'));
-                $pdf->Text(140, $y + 43, utf8_decode('Ajout déplacement : ') . $formData[$z]['ajoutDeplacemement'] . utf8_decode(' euro'));
+                $pdf->Text(140, $y + 45, utf8_decode('Ajout déplacement : ') . $formData[$z]['ajoutDeplacemement'] . utf8_decode(' euro'));
                 $somme = $formData[$z]['deplacement'] + $formData[$z]['salaire'] + $formData[$z]['ajoutDeplacemement'];
 //            } else
 //            {

@@ -506,6 +506,9 @@ class Model_My_Document extends \Maitrepylos\db
 
     public function idEtatPretsation($groupe, \DateTime $date_debut, \DateTime $date_fin)
     {
+        //lignes supprimer pour améliorations du systèmes
+        //   AND c . d_date_fin_contrat_prevu >= ?
+        //   AND c . d_date_debut_contrat <= ?
         $sql = "SELECT h.participant_id
                FROM heures h
                INNER JOIN contrat c
@@ -513,8 +516,6 @@ class Model_My_Document extends \Maitrepylos\db
                AND c.groupe_id = ?
                WHERE h.d_date BETWEEN ? AND ?
                AND h.t_schema IN ('+','@','$','-','=')
-               AND c.d_date_fin_contrat_prevu >= ?
-               AND c.d_date_debut_contrat<= ?
 
                GROUP BY h.participant_id ";
 
@@ -522,10 +523,15 @@ class Model_My_Document extends \Maitrepylos\db
         $req->execute(array(
             $groupe,
             $date_debut->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
-            $date_debut->format('Y-m-d')
+            $date_fin->format('Y-m-d')
         ));
+//        $req->execute(array(
+//            $groupe,
+//            $date_debut->format('Y-m-d'),
+//            $date_fin->format('Y-m-d'),
+//            $date_fin->format('Y-m-d'),
+//            $date_debut->format('Y-m-d')
+//        ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 
