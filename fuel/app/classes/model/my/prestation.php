@@ -726,7 +726,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
         $date_fin->setDate($date->format('Y'), $date->format('m'), $date->format('t'));
         $sql = "SELECT SUM(i_secondes) as fullTime FROM heures
                 WHERE d_date <= ?
-                AND t_schema IN ('+', '@', '=', '-', '$')
+                AND t_schema IN ('+', '@', '=', '$')
                 AND participant_id = ?";
 
         $req = $this->_db->prepare($sql);

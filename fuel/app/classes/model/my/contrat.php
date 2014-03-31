@@ -330,13 +330,18 @@ class Model_My_Contrat extends \Maitrepylos\db
         return true;
     }
 
+    /**
+     * @param $idContrat
+     * @return mixed
+     * Ne pas tenir compte des heures de récup
+     */
     public static function getHourContrat($idContrat){
 
         $pdo = \Maitrepylos\Db::getPdo();
         $sql = "SELECT SUM(i_secondes) as seconde
                 FROM heures
                 WHERE contrat_id = ?
-                AND t_schema IN ('+', '@', '=', '-', '$')";
+                AND t_schema IN ('+', '@', '=', '$')";
 
         $r = $pdo->prepare($sql);
         $r->execute(array($idContrat));
@@ -348,7 +353,7 @@ class Model_My_Contrat extends \Maitrepylos\db
     /**
      * @param $idParticipant
      * @return mixed
-     * Ajout des heures de récup
+     * ne pas tenir compte des heures de récup
      */
     public static function getHourContratFull($idParticipant){
 
@@ -356,7 +361,7 @@ class Model_My_Contrat extends \Maitrepylos\db
         $sql = "SELECT SUM(i_secondes) as seconde
                 FROM heures
                 WHERE participant_id = ?
-                AND t_schema IN ('+', '@', '=', '-', '$')";
+                AND t_schema IN ('+', '@', '=', '$')";
 
         $r = $pdo->prepare($sql);
         $r->execute(array($idParticipant));
