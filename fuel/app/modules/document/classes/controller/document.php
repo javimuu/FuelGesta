@@ -1,6 +1,7 @@
 <?php
 
 namespace Document;
+
 use Fuel\Core\Debug;
 
 /**
@@ -149,8 +150,18 @@ class Controller_Document extends \Controller_Main
 
                 } else {
 
-                    $formData[$i]['deplacement'] = $dbPrestation->getDeplacement($formData[$i]['jours'],
-                        $formData[$i]['nombresPrestations'], $formData[$i]['id_contrat']);
+                    if ($formData[$i]['jours'] <= $formData[$i]['nombresPrestations']) {
+
+                        $formData[$i]['deplacement'] = $formData[$i]['t_abonnement'];
+                    } else {
+                        $division = $formData[$i]['t_abonnement'] / $formData[$i]['jours'];
+                        $formData[$i]['deplacement'] = $division * $formData[$i]['nombresPrestations'];
+                    }
+
+//                    $formData[$i]['deplacement'] = $dbPrestation->getDeplacement($formData[$i]['jours'],
+//                       $formData[$i]['nombresPrestations'], $formData[$i]['id_contrat']);
+
+                    // $formData[$i]['deplacement'] = 234;
 
                 }
 
@@ -159,7 +170,8 @@ class Controller_Document extends \Controller_Main
                 if ($formData[$i]['i_paye'] == 1) {
 
                     $totalHeuresMois = $formData[$i]['totalHeuresMois'][0]['fulltime'];
-                    $formData[$i]['salaire'] = $db->salaire($formData[$i]['heures'], $totalHeuresMois, $formData[$i]['f_tarif_horaire']);
+                    //$formData[$i]['salaire'] = $db->salaire($formData[$i]['heures'], $totalHeuresMois, $formData[$i]['f_tarif_horaire']);
+                    $formData[$i]['salaire'] = $db->salaire($totalHeuresMois, $formData[$i]['max_heure'], $formData[$i]['f_tarif_horaire']);
                 }
 
 
@@ -174,13 +186,12 @@ class Controller_Document extends \Controller_Main
                 //$form_data[$i]['heure_recup'] = $db_prestation->getHourRecup($id, $date_prestation);
             }
 
-            //   \Debug::dump($formData);
+          //  \Debug::dump($formData);
 
 
-            \Maitrepylos\Pdf\Paye::pdf($formData, $nombresContrat);
+              \Maitrepylos\Pdf\Paye::pdf($formData, $nombresContrat);
             $this->template->title = 'Gestion des documents';
             $this->template->content = \View::forge('test');
-
 
 
         }

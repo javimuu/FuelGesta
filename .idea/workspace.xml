@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/vatlist_2013.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit.php" afterPath="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/contact.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" afterPath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/paye.php" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/paye.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php" afterPath="$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
@@ -39,79 +39,52 @@
       <file leaf-file-name="prestation.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="4180">
-              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.24545455" vertical-offset="2898" max-vertical-offset="5540">
+              <caret line="697" column="17" selection-start-line="697" selection-start-column="17" selection-end-line="697" selection-end-column="17" />
               <folding>
                 <element signature="n#verif_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+                <element signature="e#2144#2350#0" expanded="true" />
+                <element signature="n#getContratFull#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+                <element signature="n#getDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+                <element signature="n#getHeureTotalFormation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
                 <element signature="n#getHourRecup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <marker date="1395692641317" expanded="true" signature="691:941" placeholder="SELECT count..." />
-                <marker date="1395692641317" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
-                <marker date="1395692641317" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
-                <marker date="1395692641317" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
-                <marker date="1395692641317" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
-                <marker date="1395692641317" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
-                <marker date="1395692641317" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
-                <marker date="1395692641317" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
-                <marker date="1395692641317" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
-                <marker date="1395692641317" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
-                <marker date="1395692641317" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
-                <marker date="1395692641317" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
-                <marker date="1395692641317" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
-                <marker date="1395692641317" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
-                <marker date="1395692641317" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
-                <marker date="1395692641317" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
-                <marker date="1395692641317" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
-                <marker date="1395692641317" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
-                <marker date="1395692641317" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
-                <marker date="1395692641317" expanded="true" signature="24436:24571" placeholder="SELECT (IF(?..contrat..." />
-                <marker date="1395692641317" expanded="true" signature="25232:25409" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="26066:26236" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="26710:26880" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="27742:27924" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1395692641317" expanded="true" signature="28727:28844" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="691:941" placeholder="SELECT count..." />
+                <marker date="1396282333200" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
+                <marker date="1396282333200" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
+                <marker date="1396282333200" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
+                <marker date="1396282333200" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
+                <marker date="1396282333200" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
+                <marker date="1396282333200" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
+                <marker date="1396282333200" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
+                <marker date="1396282333200" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
+                <marker date="1396282333200" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
+                <marker date="1396282333200" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
+                <marker date="1396282333200" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
+                <marker date="1396282333200" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
+                <marker date="1396282333200" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
+                <marker date="1396282333200" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
+                <marker date="1396282333200" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
+                <marker date="1396282333200" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
+                <marker date="1396282333200" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
+                <marker date="1396282333200" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
+                <marker date="1396282333200" expanded="true" signature="24454:24590" placeholder="SELECT (IF(?..contrat..." />
+                <marker date="1396282333200" expanded="true" signature="25247:25424" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="26081:26251" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="26725:26895" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="27757:27939" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1396282333200" expanded="true" signature="28742:28859" placeholder="SELECT MIN(d..contrat..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form_add.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="2184">
-              <caret line="3" column="48" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form_edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="5376">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formulaire.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6480" max-vertical-offset="7512">
-              <caret line="270" column="20" selection-start-line="270" selection-start-column="20" selection-end-line="270" selection-end-column="20" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -119,19 +92,12 @@
       <file leaf-file-name="document.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="11688" max-vertical-offset="15816">
-              <caret line="487" column="28" selection-start-line="487" selection-start-column="28" selection-end-line="487" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="984">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-5.1578946" vertical-offset="2726" max-vertical-offset="3760">
+              <caret line="191" column="12" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="12" />
+              <folding>
+                <element signature="e#3161#3353#0" expanded="true" />
+                <element signature="e#4877#4950#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,9 +105,31 @@
       <file leaf-file-name="document.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="12192" max-vertical-offset="17544">
-              <caret line="508" column="57" selection-start-line="508" selection-start-column="57" selection-end-line="508" selection-end-column="57" />
+            <state vertical-scroll-proportion="6.8421054" vertical-offset="1590" max-vertical-offset="8940">
+              <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
               <folding>
+                <element signature="n#getParticipant#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#1945#2164#0" expanded="true" />
+                <element signature="n#heuresMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#2681#2908#0" expanded="true" />
+                <element signature="n#getHeuresAEffectuer#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#3350#3636#0" expanded="true" />
+                <element signature="e#4360#4673#0" expanded="true" />
+                <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#5335#5579#0" expanded="true" />
+                <element signature="n#totalHeureMoisJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#6240#6488#0" expanded="true" />
+                <element signature="n#totalHeureMoisNonJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#7048#7378#0" expanded="true" />
+                <element signature="n#nombreParticipantEntreDeuxDate#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#13598#13849#0" expanded="true" />
+                <element signature="n#calculHeuresMoisStatL2#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#nombreAnnee#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#idEtatPretsation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationFormation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationStage#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationMaladie#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#nombresPrestations#0;n#Model_My_Document#0;n#!!top" expanded="true" />
                 <marker date="1396019486928" expanded="true" signature="280:393" placeholder="SELECT t_nom..participant..." />
                 <marker date="1396019486928" expanded="true" signature="673:1039" placeholder="SELECT g.t_n..contrat..." />
                 <marker date="1396019486928" expanded="true" signature="2261:2507" placeholder="SELECT i_sec..heures..." />
@@ -166,11 +154,61 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="participant.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/participant.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1600" max-vertical-offset="3080">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/type/contact.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="860">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/contact.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1460">
+              <caret line="42" column="69" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="participant.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="9340" max-vertical-offset="13260">
+              <caret line="467" column="60" selection-start-line="467" selection-start-column="60" selection-end-line="467" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/views/prestation/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1536">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1280">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adresse.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/adresse.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="2000">
+              <caret line="63" column="79" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -179,18 +217,8 @@
       <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2136" max-vertical-offset="25272">
-              <caret line="89" column="46" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form_edit_diplome.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit_diplome.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1464">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="21060">
+              <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -218,7 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/alphabetique.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/partials/_titre_types_connaissance.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_connaissance.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/types_ressource.php" />
@@ -246,14 +273,12 @@
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/edit_address.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/edit_contact.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/ajouter.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/types_contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/bootstrap.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/word/Template.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/controller/welcome.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/ajouter.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/contrat.php" />
-        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/classes/controller/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/word/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/index.php" />
@@ -263,12 +288,15 @@
         <option value="$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/completion.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php" />
         <option value="$PROJECT_DIR$/fuel/app/config/development/db.php" />
-        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/vatlist_2013.xml" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/paye.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/contact.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
       </list>
     </option>
   </component>
@@ -330,7 +358,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -425,15 +452,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prestation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prestation" />
+              <option name="myItemId" value="document" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,7 +478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prestation" />
+              <option name="myItemId" value="document" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -493,12 +512,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller_Document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1061,7 +1145,11 @@
       <created>1395693203232</created>
       <updated>1395693203232</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Modification suivant mise en Prod&#10;">
+      <created>1396245707765</created>
+      <updated>1396245707765</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1086,30 +1174,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="27" width="1608" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70039946" sideWeight="0.48973042" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5346598" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30457935" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35237485" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30359435" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70039946" sideWeight="0.5096277" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947807" sideWeight="0.4929215" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.21846712" sideWeight="0.67545074" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.21846712" sideWeight="0.67545074" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889196" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1127,7 +1215,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value=" Commit 22/10/2013 correction de flyspray." />
     <MESSAGE value=" Commit 22/10/2013 correction de flyspray 2." />
     <MESSAGE value=" Commit 24/10/2013 correction de flyspray." />
     <MESSAGE value=" Commit 25/10/2013 correction de flyspray." />
@@ -1152,7 +1239,8 @@
     <MESSAGE value="Remarques Flyspray&#10;" />
     <MESSAGE value="Mise en prod.&#10;" />
     <MESSAGE value="Modification C98&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification C98&#10;" />
+    <MESSAGE value="Modification suivant mise en Prod&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification suivant mise en Prod&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1193,7 +1281,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php</url>
-          <line>808</line>
+          <line>809</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1207,7 +1295,7 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -1227,39 +1315,10 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fuel/app/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="940">
-          <caret line="13" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/ajouter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2280" max-vertical-offset="9240">
-          <caret line="114" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/contrat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1840" max-vertical-offset="2020">
-          <caret line="92" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/classes/controller/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1260">
           <caret line="22" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7460" max-vertical-offset="7760">
-          <caret line="373" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1275,13 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="909">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/contrat/classes/controller/contrat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10160" max-vertical-offset="10600">
-          <caret line="508" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1341,25 +1393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="13180">
-          <caret line="59" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/c98.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="5340">
           <caret line="69" column="92" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/participant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2820" max-vertical-offset="3080">
-          <caret line="141" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1521,7 +1558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="940" max-vertical-offset="1820">
           <caret line="3" column="48" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1529,7 +1565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1537,7 +1572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="4480">
           <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1553,23 +1587,124 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="907">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/contrat/classes/controller/contrat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="10600">
+          <caret line="153" column="58" selection-start-line="153" selection-start-column="58" selection-end-line="153" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9740" max-vertical-offset="13180">
-          <caret line="487" column="28" selection-start-line="487" selection-start-column="28" selection-end-line="487" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="6860" max-vertical-offset="7880">
+          <caret line="343" column="29" selection-start-line="343" selection-start-column="29" selection-end-line="343" selection-end-column="29" />
+          <folding>
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..contrat..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..contrat..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..type_contrat..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="UPDATE type_..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT id_ty..type_statut..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT t_nom..statut_entree..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT count..heures..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT count..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT count..heures..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT count..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396270841342" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..contrat..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/participant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1600" max-vertical-offset="3080">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/type/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="860">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/adresse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="2000">
+          <caret line="63" column="79" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9340" max-vertical-offset="13260">
+          <caret line="467" column="60" selection-start-line="467" selection-start-column="60" selection-end-line="467" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1460">
+          <caret line="42" column="69" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/views/prestation/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="907">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="21060">
+          <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10160" max-vertical-offset="14620">
-          <caret line="508" column="57" selection-start-line="508" selection-start-column="57" selection-end-line="508" selection-end-column="57" />
+        <state vertical-scroll-proportion="6.8421054" vertical-offset="1590" max-vertical-offset="8940">
+          <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
           <folding>
+            <element signature="n#getParticipant#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#1945#2164#0" expanded="true" />
+            <element signature="n#heuresMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#2681#2908#0" expanded="true" />
+            <element signature="n#getHeuresAEffectuer#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#3350#3636#0" expanded="true" />
+            <element signature="e#4360#4673#0" expanded="true" />
+            <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#5335#5579#0" expanded="true" />
+            <element signature="n#totalHeureMoisJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#6240#6488#0" expanded="true" />
+            <element signature="n#totalHeureMoisNonJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#7048#7378#0" expanded="true" />
+            <element signature="n#nombreParticipantEntreDeuxDate#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#13598#13849#0" expanded="true" />
+            <element signature="n#calculHeuresMoisStatL2#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#nombreAnnee#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#idEtatPretsation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationFormation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationStage#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationMaladie#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#nombresPrestations#0;n#Model_My_Document#0;n#!!top" expanded="true" />
             <marker date="1396019486928" expanded="true" signature="280:393" placeholder="SELECT t_nom..participant..." />
             <marker date="1396019486928" expanded="true" signature="673:1039" placeholder="SELECT g.t_n..contrat..." />
             <marker date="1396019486928" expanded="true" signature="2261:2507" placeholder="SELECT i_sec..heures..." />
@@ -1593,66 +1728,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/views/prestation/index.php">
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="907">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="21060">
-          <caret line="89" column="46" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="-5.1578946" vertical-offset="2726" max-vertical-offset="3760">
+          <caret line="191" column="12" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="12" />
+          <folding>
+            <element signature="e#3161#3353#0" expanded="true" />
+            <element signature="e#4877#4950#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="4180">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.24545455" vertical-offset="2898" max-vertical-offset="5540">
+          <caret line="697" column="17" selection-start-line="697" selection-start-column="17" selection-end-line="697" selection-end-column="17" />
           <folding>
             <element signature="n#verif_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="e#2144#2350#0" expanded="true" />
+            <element signature="n#getContratFull#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="n#getDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="n#getHeureTotalFormation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
             <element signature="n#getHourRecup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <marker date="1395692641317" expanded="true" signature="691:941" placeholder="SELECT count..." />
-            <marker date="1395692641317" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
-            <marker date="1395692641317" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
-            <marker date="1395692641317" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
-            <marker date="1395692641317" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
-            <marker date="1395692641317" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
-            <marker date="1395692641317" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
-            <marker date="1395692641317" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
-            <marker date="1395692641317" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
-            <marker date="1395692641317" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
-            <marker date="1395692641317" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
-            <marker date="1395692641317" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
-            <marker date="1395692641317" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
-            <marker date="1395692641317" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
-            <marker date="1395692641317" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
-            <marker date="1395692641317" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
-            <marker date="1395692641317" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
-            <marker date="1395692641317" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
-            <marker date="1395692641317" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
-            <marker date="1395692641317" expanded="true" signature="24436:24571" placeholder="SELECT (IF(?..contrat..." />
-            <marker date="1395692641317" expanded="true" signature="25232:25409" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="26066:26236" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="26710:26880" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="27742:27924" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1395692641317" expanded="true" signature="28727:28844" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="691:941" placeholder="SELECT count..." />
+            <marker date="1396282333200" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
+            <marker date="1396282333200" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
+            <marker date="1396282333200" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
+            <marker date="1396282333200" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
+            <marker date="1396282333200" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
+            <marker date="1396282333200" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
+            <marker date="1396282333200" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
+            <marker date="1396282333200" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
+            <marker date="1396282333200" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
+            <marker date="1396282333200" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
+            <marker date="1396282333200" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
+            <marker date="1396282333200" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
+            <marker date="1396282333200" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
+            <marker date="1396282333200" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
+            <marker date="1396282333200" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
+            <marker date="1396282333200" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
+            <marker date="1396282333200" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
+            <marker date="1396282333200" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
+            <marker date="1396282333200" expanded="true" signature="24454:24590" placeholder="SELECT (IF(?..contrat..." />
+            <marker date="1396282333200" expanded="true" signature="25247:25424" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="26081:26251" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="26725:26895" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="27757:27939" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1396282333200" expanded="true" signature="28742:28859" placeholder="SELECT MIN(d..contrat..." />
           </folding>
         </state>
       </provider>

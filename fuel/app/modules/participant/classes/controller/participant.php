@@ -455,6 +455,8 @@ class Controller_Participant extends \Controller_Main
      * Ajouter un contact à un participant.
      *
      * @param type $id
+     *
+     * 31/03/2014  supression de la vérification de l'adresse
      */
     public function action_ajouter_contact($id = NULL)
     {
@@ -463,11 +465,13 @@ class Controller_Participant extends \Controller_Main
         if (\Input::method() == 'POST') {
             // Validation du contact
             $val = \Model_Contact::validate('create');
+            $val->add_field('t_telephone', 'Téléphone', 'required|numeric_between[9,10]');
+            $val->set_message('numeric_between', 'Le champ :label doit faire au moins :param:1 caractères et maximum :param:2.');
 
             // Validation de l'adresse liée au contact
-            $val_adresse = \Model_Adresse::validate('create_adresse');
+            //$val_adresse = \Model_Adresse::validate('create_adresse');
 
-            if ($val->run() & $val_adresse->run()) {
+            if ($val->run()){ //& $val_adresse->run()) {
                 $cb = \Input::post('t_cb_type');
                 if (!empty($cb))
                     $cb = implode(',', \Input::post('t_cb_type'));
@@ -510,7 +514,7 @@ class Controller_Participant extends \Controller_Main
                 }
             } else {
                 $message[] = $val->show_errors();
-                $message[] = $val_adresse->show_errors();
+                //$message[] = $val_adresse->show_errors();
 
                 \Session::set_flash('error', $message);
                 \Response::redirect($this->view_dir . 'modifier/' . $id . '#personne_contact');

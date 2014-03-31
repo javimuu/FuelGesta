@@ -40,7 +40,8 @@ class Model_Contact extends Orm\Model
     {
         $val = Validation::forge($factory);
         $val->add_field('t_nom', 'Nom', 'required|max_length[50]');
-        $val->add_field('t_prenom', 'Prénom', 'required|max_length[50]');
+        $val->add_field('t_type', 'Le type', 'required|max_length[50]');
+      //  $val->add_field('t_prenom', 'Prénom', 'required|max_length[50]');
 
         $val->set_message('required', 'Veuillez remplir le champ :label.');
         $val->set_message('min_length', 'Le champ :label doit faire au moins :param:1 caractères.');

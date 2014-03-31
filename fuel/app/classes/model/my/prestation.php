@@ -695,6 +695,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
     }
 
     /**
+     * @deprecied
      * Cette fonction permet de récupérer les frais de déplacememnt en fonction
      * des jours qui on été presté et des jours qui sont à prester.
      *
@@ -704,12 +705,12 @@ class Model_My_Prestation extends \Maitrepylos\Db {
      * @return array()
      */
     public function getDeplacement($prestation, $prester, $id_contrat) {
-        $sql = "SELECT (IF(? < ?,t_abonnement,ROUND((t_abonnement/?)* ?,2))) as total
+        $sql = "SELECT (IF(? <= ?,t_abonnement,ROUND((t_abonnement/?)* ?,2))) as total
                 FROM contrat
                 WHERE id_contrat = ?";
 
         $req = $this->_db->prepare($sql);
-        $req->execute(array((int) $prestation, (int) $prester, (int) $prestation, (int) $prester, $id_contrat));
+        $req->execute(array((int)$prestation, (int)$prester, (int)$prestation, (int)$prester, $id_contrat));
         $r = $req->fetch(PDO::FETCH_ASSOC);
         return $r['total'];
     }
