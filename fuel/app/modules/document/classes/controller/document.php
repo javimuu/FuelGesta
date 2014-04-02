@@ -155,7 +155,7 @@ class Controller_Document extends \Controller_Main
                         $formData[$i]['deplacement'] = $formData[$i]['t_abonnement'];
                     } else {
                         $division = $formData[$i]['t_abonnement'] / $formData[$i]['jours'];
-                        $formData[$i]['deplacement'] = $division * $formData[$i]['nombresPrestations'];
+                        $formData[$i]['deplacement'] = round($division * $formData[$i]['nombresPrestations'],2);
                     }
 
 //                    $formData[$i]['deplacement'] = $dbPrestation->getDeplacement($formData[$i]['jours'],

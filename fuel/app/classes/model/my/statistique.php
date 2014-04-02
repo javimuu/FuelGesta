@@ -477,6 +477,38 @@ class Model_My_Statistique extends \Maitrepylos\db {
     }
 
     /**
+     * Calcul le nombres d'heures éffectuè au total par les participant pour le fse par groupe
+     * @param $annee
+     * @param $idFiliere
+     * @param $schema
+     * @return int
+     */
+    public function getHeuresTotalFse($extract, $idgroupe, $schema)
+    {
+
+        $sql = "SELECT SUM(h.i_secondes) AS iSum
+                FROM contrat c
+                INNER JOIN heures h
+                ON h.contrat_id = c.id_contrat
+                INNER JOIN groupe g
+                ON g.id_groupe = c.groupe_id
+                WHERE EXTRACT(YEAR_MONTH FROM h.d_date) = ?
+                AND h.t_schema IN ($schema)
+                AND g.id_groupe = ?
+                AND h.subside = 1
+                 ";
+
+        $r = $this->_db->prepare($sql);
+        $r->execute(array($extract, $idgroupe));
+        $f = $r->fetch(PDO::FETCH_ASSOC);
+        if ($f['iSum'] == null) {
+            return 0;
+        }
+        return $f['iSum'];
+
+    }
+
+    /**
      * Calcule des heures par contrat pour le trimestrielle en fonction de l'année et des contrats
      * @param Datetime $annee
      * @param $idContrat
@@ -573,6 +605,47 @@ class Model_My_Statistique extends \Maitrepylos\db {
         $r = $this->_db->prepare($sql);
         $r->execute(array($idContrat));
         return $r->fetch(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Récupération de l'ensemble des contrats pour le fse de 'année demandé
+     * @param DateTime $date
+     * @param $idFilliere
+     * @return array
+     */
+    public function getContratFse(\DateTime $date, $idGroupe)
+    {
+
+        $finAnnee = clone $date;
+        $finAnnee->setDate($date->format('Y'), '12', '31');
+
+        $sql = "SELECT c.id_contrat,c.d_date_debut_contrat,c.d_date_fin_contrat_prevu,c.d_date_fin_contrat,g.id_groupe,f.id_filiere,c.participant_id,i_code_cedefop
+                FROM contrat c
+                INNER JOIN type_contrat tc
+                ON c.type_contrat_id = tc.id_type_contrat
+                INNER JOIN groupe g
+                ON g.id_groupe = c.groupe_id
+                INNER JOIN filiere f
+                ON f.id_filiere = g.filiere_id
+                WHERE c.d_date_debut_contrat <= ?
+                AND c.d_date_fin_contrat_prevu >= ?
+                AND g.id_groupe = ?
+                AND tc.subside_id = 1
+                ORDER BY g.id_groupe,c.participant_id";
+
+        $r = $this->_db->prepare($sql);
+        $r->execute(array($finAnnee->format('Y-m-d'), $date->format('Y-m-d'), $idGroupe));
+        return $r->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getAvertissememnt($id){
+
+        $sql = "SELECT d_avertissement1, d_avertissement2, d_avertissement3 FROM contrat WHERE participant_id = ?";
+
+        $r = $this->_db->prepare($sql);
+        $r->execute(array($id));
+        return $r->fetchAll(PDO::FETCH_ASSOC);
+
     }
 
 

@@ -205,7 +205,7 @@ $mois = date('m');
             <td>
                 <?php
                 echo Form::label('Situation Sociale à l\'entrée');
-                echo Form::select('t_situation_sociale', Input::post('t_situation_sociale', isset($contrat) ? $contrat->t_situation_sociale : ''), $statut);
+                echo Form::select('t_situation_sociale', Input::post('t_situation_sociale', isset($contrat) ? $contrat->t_situation_sociale : 'B10'), $statut);
                 ?>
             </td>
         </tr>

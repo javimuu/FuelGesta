@@ -310,6 +310,7 @@ class Model_My_Document extends \Maitrepylos\db
                     AND d_date_fin_contrat_prevu   >= ?
                 AND
                 adresse.t_courrier = 1
+                AND contrat.t_situation_sociale = 'B10'
                 AND localisation_id = ? ";
 
         $req = $this->_db->prepare($sql);
@@ -347,6 +348,7 @@ class Model_My_Document extends \Maitrepylos\db
                     AND d_date_fin_contrat_prevu   >=?
                 AND
                 adresse.t_courrier = 1
+                AND contrat.t_situation_sociale = 'B10'
                 AND id_groupe = ?
                 ORDER BY p.t_nom";
 
@@ -383,6 +385,7 @@ class Model_My_Document extends \Maitrepylos\db
                 WHERE adresse.t_courrier = 1
                 AND contrat.d_date_debut_contrat <= ?
 				AND contrat.d_date_fin_contrat_prevu >= ?
+				AND contrat.t_situation_sociale = 'B10'
                 ORDER BY t_nom";
 
         $r = $this->_db->prepare($sql);

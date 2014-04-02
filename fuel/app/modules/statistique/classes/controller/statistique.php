@@ -212,6 +212,8 @@ class Controller_Statistique extends \Controller_Main
                 $participant[$groupes['t_nom']][$a]['heures_social'] = $social[0]['fullTime'];
                 $total_social = $total_social + $social[0]['fullTime'];
 
+                $participant[$groupes['t_nom']][$a]['avertissement'] = $db->getAvertissememnt($id);
+
 
                 /**
                  * Calcul de pourcentage par rapport aux heures préstée
@@ -257,7 +259,7 @@ class Controller_Statistique extends \Controller_Main
 
 
         \Maitrepylos\Excel\Statexcel::excel($data, $participant);
-
+//Debug::dump($participant);
 
         $this->template->title = 'Gestion des documents';
         $this->template->content = \View::forge('test');
@@ -287,8 +289,8 @@ class Controller_Statistique extends \Controller_Main
         /**
          * Récupération des contrat par filière et par dérogation
          */
-        $formData['annexe1'][1] = $db->getCountContratFiliere($date);
-        $formData['annexe1'][2] = $db->getCountContratFiliereDerogation($date);
+        $formData['annexe1'][1] = $db->getCountContratgroupe($date);
+        $formData['annexe1'][2] = $db->getCountContratgroupeDerogation($date);
         $formData['xml'] = \Model_Centre::find('first');
 
         $count = count($formData['annexe1'][1]);
@@ -333,7 +335,7 @@ class Controller_Statistique extends \Controller_Main
             $countContrat = count($formData['filiere'][$filieres['t_nom']]);
 
 
-            //si une filière ne comprend aucun contart alors on ne l'affiche pas.
+            //si une filière ne comprend aucun contrat alors on ne l'affiche pas.
             if($countContrat == 0){
                 unset($formData['filiere'][$filieres['t_nom']]);
                 continue;
@@ -613,6 +615,92 @@ class Controller_Statistique extends \Controller_Main
     }
 
 
+    public function action_fse(){
+
+        $formData = \Input::post();
+
+        $date = new \DateTime();
+        $date->setDate((int)$formData['annee'], 01, 01);
+
+        $db = new \Model_My_Statistique();
+
+        $formData['contrat'] = $db->getGroupe($date);
+
+        foreach($formData['contrat'] as $groupe){
+
+            $formData['groupe'][$groupe['t_nom']] = $db->getContratFse($date,$groupe['id_groupe']);
+
+            $countContrat = count($formData['groupe'][$groupe['t_nom']]);
+
+
+            //si une filière ne comprend aucun contrat alors on ne l'affiche pas.
+            if ($countContrat == 0) {
+                unset($formData['groupe'][$groupe['t_nom']]);
+                continue;
+            }
+
+            for ($i = 0; $i < $countContrat; $i++) {
+                /**
+                 * Recherche motif fin de contrat
+                 */
+
+                $formData['groupe'][$groupe['t_nom']][$i]['type_fin_contrat'] = $db->getFinFormation($formData['groupe'][$groupe['t_nom']][$i]['id_contrat']);
+
+                /**
+                 * Calcul des heures éffectuées l'année précédente
+                 */
+
+                $formData['groupe'][$groupe['t_nom']][$i]['precedente'] =
+                    $db->getHeuresPrecedente($formData['groupe'][$groupe['t_nom']][$i]['participant_id'], $date, "'+','$','@','#','/','='");
+                /**
+                 * Récupération des informations du stagiaire
+                 */
+                $formData['groupe'][$groupe['t_nom']][$i]['signaletique'] =
+                    $db->participant($formData['groupe'][$groupe['t_nom']][$i]['participant_id'], $formData['groupe'][$groupe['t_nom']][$i]['id_contrat']);
+
+                /**
+                 * Calcule des heures de prestations pour l'année définie
+                 */
+                $formData['groupe'][$groupe['t_nom']][$i]['eft'] = $db->getHeuresTotalContrat($date, $formData['groupe'][$groupe['t_nom']][$i]['id_contrat'], "'+'");
+                $formData['groupe'][$groupe['t_nom']][$i]['gratuit'] = $db->getHeuresTotalContrat($date, $formData['groupe'][$groupe['t_nom']][$i]['id_contrat'], "'$','#'");
+                $formData['groupe'][$groupe['t_nom']][$i]['payant'] = $db->getHeuresTotalContrat($date, $formData['groupe'][$groupe['t_nom']][$i]['id_contrat'], "'@'");
+                $formData['groupe'][$groupe['t_nom']][$i]['stage'] = $db->getHeuresTotalContrat($date, $formData['groupe'][$groupe['t_nom']][$i]['id_contrat'], "'='");
+                $formData['groupe'][$groupe['t_nom']][$i]['assimile'] = $db->getHeuresTotalContrat($date, $formData['groupe'][$groupe['t_nom']][$i]['id_contrat'], "'/'");
+
+            }
+
+            for ($ii = 1; $ii < 13; $ii++) {
+
+                /**
+                 * Formation de la date pour l'extraire sur l'année et le mois
+                 */
+                $extract = $date->format('Y') . str_pad($ii, 2, 0, STR_PAD_LEFT);
+
+
+                $formData['groupe'][$groupe['t_nom']]['mois'][$ii]['eft'] = $db->getHeuresTotalFse($extract, $groupe['id_groupe'], "'+'");
+                $formData['groupe'][$groupe['t_nom']]['mois'][$ii]['gratuit'] = $db->getHeuresTotalFse($extract, $groupe['id_groupe'], "'$','#'");
+                $formData['groupe'][$groupe['t_nom']]['mois'][$ii]['payant'] = $db->getHeuresTotalFse($extract, $groupe['id_groupe'], "'@'");
+                $formData['groupe'][$groupe['t_nom']]['mois'][$ii]['stage'] = $db->getHeuresTotalFse($extract, $groupe['id_groupe'], "'='");
+                $formData['groupe'][$groupe['t_nom']]['mois'][$ii]['assimile'] = $db->getHeuresTotalFse($extract, $groupe['id_groupe'], "'/'");
+
+            }
+        }
+
+
+
+
+        \Maitrepylos\Excel\Fseexcel::excel($formData);
+      //   Debug::dump($formData);
+
+
+        $this->template->title = 'Gestion des documents';
+        $this->template->content = \View::forge('test');
+
+
+
+    }
+
+
     public function action_menu($id)
     {
         $annees = \Model_Heures_Prestation::find('all', array('order_by' => array('annee' => 'desc')));
@@ -624,8 +712,8 @@ class Controller_Statistique extends \Controller_Main
         }
 
 
-        $route = array(1 => 'statistique/stat/', 2 => 'statistique/l3/', 3 => 'statistique/trimestre/');
-        $title = array(1 => 'Statistiques de présence', 2 => 'Stat l3', 3 => 'Recensement annuel des stagiaires (xls)');
+        $route = array(1 => 'statistique/stat/', 2 => 'statistique/l3/', 3 => 'statistique/trimestre/', 4 => 'statistique/fse/');
+        $title = array(1 => 'Statistiques de présence', 2 => 'Stat l3', 3 => 'Recensement annuel des stagiaires (xls)', 4 => 'Recensement des stagiaires FSE (xls)');
         $agrement = \Model_agrement::find('all');
 
         foreach ($agrement as $value) {

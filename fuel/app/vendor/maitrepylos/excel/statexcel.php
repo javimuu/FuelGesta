@@ -98,6 +98,9 @@ class Statexcel
                 $sheet[$i]->setCellValueByColumnAndRow(11,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_social']));
                 $sheet[$i]->setCellValueByColumnAndRow(12,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['heures_mois']);
 
+
+              //  $sheet[$i]->setCellValueByColumnAndRow(12,($a+2),'toto');
+
             }
 
             $sheet[$i]->setCellValueByColumnAndRow(0,($a+3),'TOTAL');
@@ -114,6 +117,8 @@ class Statexcel
             $sheet[$i]->setCellValueByColumnAndRow(10,($a+3),
                 $filtre->TimeToString($groupe['total_social'][$data['groupe'][$i]['t_nom']]));
         }
+
+
 
 
         $workbook->affiche('Excel5','Stat'.date('Y-m-d-H:s'));

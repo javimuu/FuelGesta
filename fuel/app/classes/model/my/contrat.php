@@ -162,12 +162,13 @@ class Model_My_Contrat extends \Maitrepylos\db
                 FROM contrat
                 WHERE participant_id = ?
                 AND groupe_id != ?
-                AND  d_date_debut_contrat BETWEEN ? AND ?
+                AND (d_date_fin_contrat_prevu  BETWEEN ? AND ?
+				  OR (d_date_debut_contrat BETWEEN ? AND ? ))
                 AND d_date_fin_contrat IS NULL
                 UNION
                 SELECT 0  ";
         $req = $this->_db->prepare($sql);
-        $req->execute(array($id, $groupe, $date_debut->format('Y-m-d'), $date_fin->format('Y-m-d')));
+        $req->execute(array($id, $groupe, $date_debut->format('Y-m-d'), $date_fin->format('Y-m-d'),$date_debut->format('Y-m-d'), $date_fin->format('Y-m-d')));
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
         if ($result[0]['compteur'] > 0) {
             return false;
