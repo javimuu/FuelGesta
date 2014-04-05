@@ -27,6 +27,13 @@ class Timetosec {
      * @return String
      */
     public  function TimeToString($seconde){
+
+        //mise à jour suite problème de null dans les secondes.
+        if($seconde == 0){
+
+            return '00:00';
+        }
+
         if ($seconde==''){
             return null;
         }else{

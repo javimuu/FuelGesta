@@ -62,7 +62,7 @@ class Statexcel
             $sheet[$i]->getColumnDimension('M')->setAutoSize(true);
             $sheet[$i]->duplicateStyleArray(array(
                 'font'=>array(
-                    'bold'=>true)), 'A1:M1');
+                    'bold'=>true)), 'A1:Z1');
 
         }
 
@@ -97,6 +97,25 @@ class Statexcel
                 $sheet[$i]->setCellValueByColumnAndRow(10,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_conge']));
                 $sheet[$i]->setCellValueByColumnAndRow(11,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_social']));
                 $sheet[$i]->setCellValueByColumnAndRow(12,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['heures_mois']);
+                $zz = 13;
+                $col = 'N';
+                foreach($groupe[$data['groupe'][$i]['t_nom']][$a]['avertissement'] as $value){
+
+                    foreach($value as $avertissement){
+
+                        if($avertissement != null){
+                            $date = \DateTime::createFromFormat('Y-m-d',$avertissement);
+                            $sheet[$i]->getColumnDimension($col)->setAutoSize(true);
+                            $sheet[$i]->setCellValueByColumnAndRow($zz, 1, 'Avertissement');
+                            $sheet[$i]->setCellValueByColumnAndRow($zz, ($a + 2),$date->format('d-m-Y'));
+                            $zz++;
+                            $col++;
+                        }
+
+                    }
+
+
+                }
 
 
               //  $sheet[$i]->setCellValueByColumnAndRow(12,($a+2),'toto');

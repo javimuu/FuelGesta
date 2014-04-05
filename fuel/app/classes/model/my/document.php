@@ -552,13 +552,15 @@ class Model_My_Document extends \Maitrepylos\db
             ON h.participant_id = p.id_participant
             INNER JOIN contrat c
             ON c.id_contrat = h.contrat_id
+            INNER JOIN type_contrat tc
+            ON tc.id_type_contrat = c.type_contrat_id
             AND c.groupe_id = ?
             WHERE h.d_date BETWEEN ? AND ?
-            AND h.t_schema IN ('+','@','$','-')
+            AND h.t_schema IN ('+','@','$')
             AND c.d_date_fin_contrat_prevu >= ?
             AND c.d_date_debut_contrat<= ?
             AND p.id_participant = ?
-            AND h.subside = 4";
+            AND tc.subside_id = 4";
         $req = $this->_db->prepare($sql);
         $req->execute(array(
             $groupe,
@@ -585,12 +587,14 @@ class Model_My_Document extends \Maitrepylos\db
             ON h.participant_id = p.id_participant
             INNER JOIN contrat c
             ON c.id_contrat = h.contrat_id
+            INNER JOIN type_contrat tc
+            ON tc.id_type_contrat = c.type_contrat_id
             WHERE h.d_date BETWEEN ? AND ?
             AND h.t_schema IN ('=')
             AND c.d_date_fin_contrat_prevu >= ?
             AND c.d_date_debut_contrat<= ?
             AND p.id_participant = ?
-            AND h.subside = 4
+            AND tc.subside_id = 4
             GROUP BY p.id_participant";
 
         $req = $this->_db->prepare($sql);
@@ -622,13 +626,15 @@ class Model_My_Document extends \Maitrepylos\db
             ON h.participant_id = p.id_participant
             INNER JOIN contrat c
             ON c.id_contrat = h.contrat_id
+            INNER JOIN type_contrat tc
+            ON tc.id_type_contrat = c.type_contrat_id
             AND c.groupe_id = ?
             WHERE h.d_date BETWEEN ? AND ?
             AND h.t_schema NOT IN ('+','@','$','-','=','#')
             AND c.d_date_fin_contrat_prevu >= ?
             AND c.d_date_debut_contrat<= ?
             AND p.id_participant NOT IN ($id)
-            AND h.subside = 4
+            AND tc.subside_id = 4
             GROUP BY p.id_participant";
 
         $req = $this->_db->prepare($sql);

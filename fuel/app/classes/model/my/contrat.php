@@ -36,6 +36,7 @@ class Model_My_Contrat extends \Maitrepylos\db
         $sql .= " INNER JOIN type_contrat tc";
         $sql .= " ON c.type_contrat_id = tc.id_type_contrat";
         $sql .= " WHERE participant_id = ?";
+        $sql .= " ORDER BY c.d_date_debut_contrat";
 
         $req = $this->_db->prepare($sql);
         $req->execute(array($id));

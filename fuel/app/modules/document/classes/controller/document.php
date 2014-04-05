@@ -171,7 +171,7 @@ class Controller_Document extends \Controller_Main
 
                     $totalHeuresMois = $formData[$i]['totalHeuresMois'][0]['fulltime'];
                     //$formData[$i]['salaire'] = $db->salaire($formData[$i]['heures'], $totalHeuresMois, $formData[$i]['f_tarif_horaire']);
-                    $formData[$i]['salaire'] = $db->salaire($totalHeuresMois, $formData[$i]['max_heure'], $formData[$i]['f_tarif_horaire']);
+                    $formData[$i]['salaire'] = $db->salaire((int)$totalHeuresMois, (int)$formData[$i]['max_heure'], (int)$formData[$i]['f_tarif_horaire']);
                 }
 
 
@@ -549,7 +549,7 @@ class Controller_Document extends \Controller_Main
         $formData['rows'] = \SplFixedArray::fromArray($recup);
         $formData['rows']->setSize($formData['count'] * 11);
 
-
+   // \Debug::dump($formData);
         \Maitrepylos\Pdf\Etatprestation::pdf($formData);
 
         $this->template->title = 'Gestion des documents';
