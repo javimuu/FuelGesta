@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" afterPath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/statistique/views/statistique/index.php" afterPath="$PROJECT_DIR$/fuel/app/modules/statistique/views/statistique/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/paye.php" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/paye.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/timetosec.php" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/timetosec.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
@@ -101,7 +94,7 @@
       <file leaf-file-name="document.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14393939" vertical-offset="4505" max-vertical-offset="5480">
+            <state vertical-scroll-proportion="0.1443769" vertical-offset="4505" max-vertical-offset="5480">
               <caret line="647" column="48" selection-start-line="647" selection-start-column="48" selection-end-line="647" selection-end-column="48" />
               <folding>
                 <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
@@ -1258,7 +1251,11 @@
       <created>1396467966247</created>
       <updated>1396467966247</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Modification mise en prod le 03/04/2014&#10;">
+      <created>1396725574569</created>
+      <updated>1396725574569</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1285,6 +1282,7 @@
     <frame x="-4" y="27" width="1608" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70039946" sideWeight="0.48973042" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5346598" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1303,7 +1301,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889196" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1822,7 +1819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14393939" vertical-offset="4505" max-vertical-offset="5480">
+        <state vertical-scroll-proportion="0.1443769" vertical-offset="4505" max-vertical-offset="5480">
           <caret line="647" column="48" selection-start-line="647" selection-start-column="48" selection-end-line="647" selection-end-column="48" />
           <folding>
             <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
