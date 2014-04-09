@@ -31,19 +31,21 @@ class Statexcel
         for($i=0;$i<$count;$i++) {
 
 
-            $sheet[$i]->setCellValueByColumnAndRow(0,1,'NOM');
-            $sheet[$i]->setCellValueByColumnAndRow(1,1,'PRENOM');
-            $sheet[$i]->setCellValueByColumnAndRow(2,1,'DATE ENTREE');
-            $sheet[$i]->setCellValueByColumnAndRow(3,1,'Heures Eft-Rw');
-            $sheet[$i]->setCellValueByColumnAndRow(4,1,'Heures de présences');
-            $sheet[$i]->setCellValueByColumnAndRow(5,1,'% de présences');
-            $sheet[$i]->setCellValueByColumnAndRow(6,1,'Absence Justifiée');
-            $sheet[$i]->setCellValueByColumnAndRow(7,1,'% Absence Justifiée');
-            $sheet[$i]->setCellValueByColumnAndRow(8,1,'Absence non Justifiée');
-            $sheet[$i]->setCellValueByColumnAndRow(9,1,' % Absence non Justifiée');
-            $sheet[$i]->setCellValueByColumnAndRow(10,1,'Congé');
-            $sheet[$i]->setCellValueByColumnAndRow(11,1,'Suivi Social');
-            $sheet[$i]->setCellValueByColumnAndRow(12,1,'Mois de présence');
+            $sheet[$i]->setCellValueByColumnAndRow(0,1,'Nom');
+            $sheet[$i]->setCellValueByColumnAndRow(1,1,'Prénom');
+            $sheet[$i]->setCellValueByColumnAndRow(2,1,'Date Entrée');
+            $sheet[$i]->setCellValueByColumnAndRow(3,1,'Date Sortie prévu');
+            $sheet[$i]->setCellValueByColumnAndRow(4,1,'Type contrat');
+            $sheet[$i]->setCellValueByColumnAndRow(5,1,'Heures Eft-Rw');
+            $sheet[$i]->setCellValueByColumnAndRow(6,1,'Heures de présences');
+            $sheet[$i]->setCellValueByColumnAndRow(7,1,'% de présences');
+            $sheet[$i]->setCellValueByColumnAndRow(8,1,'Absence Justifiée');
+            $sheet[$i]->setCellValueByColumnAndRow(9,1,'% Absence Justifiée');
+            $sheet[$i]->setCellValueByColumnAndRow(10,1,'Absence non Justifiée');
+            $sheet[$i]->setCellValueByColumnAndRow(11,1,' % Absence non Justifiée');
+            $sheet[$i]->setCellValueByColumnAndRow(12,1,'Congé');
+            $sheet[$i]->setCellValueByColumnAndRow(13,1,'Suivi Social');
+            $sheet[$i]->setCellValueByColumnAndRow(14,1,'Mois de présence');
 
            // $sheet->getColumnDimension($i)->setAutoSize(true);
 
@@ -60,6 +62,8 @@ class Statexcel
             $sheet[$i]->getColumnDimension('K')->setAutoSize(true);
             $sheet[$i]->getColumnDimension('L')->setAutoSize(true);
             $sheet[$i]->getColumnDimension('M')->setAutoSize(true);
+            $sheet[$i]->getColumnDimension('N')->setAutoSize(true);
+            $sheet[$i]->getColumnDimension('O')->setAutoSize(true);
             $sheet[$i]->duplicateStyleArray(array(
                 'font'=>array(
                     'bold'=>true)), 'A1:Z1');
@@ -78,8 +82,10 @@ class Statexcel
 
             for($a=0;$a<$compteur;$a++) {
                 $sheet[$i]->setCellValueByColumnAndRow(0,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['t_nom']);
-                $sheet[$i]->setCellValueByColumnAndRow(1,($a+2),utf8_encode($groupe[$data['groupe'][$i]['t_nom']][$a]['t_prenom']));
+                $sheet[$i]->setCellValueByColumnAndRow(1,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['t_prenom']);
                 $sheet[$i]->setCellValueByColumnAndRow(2,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['d_date_debut_contrat']);
+                $sheet[$i]->setCellValueByColumnAndRow(3,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['d_date_fin_contrat_prevu']);
+                $sheet[$i]->setCellValueByColumnAndRow(4,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['type_contrat']['t_type_contrat']);
 
 
 //                $sheet[$i]->getStyleByColumnAndRow(3,($a+2))->getNumberFormat()->applyFromArray(
@@ -87,18 +93,18 @@ class Statexcel
 //                        'code' => \PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME3
 //                    )
 //                );
-                $sheet[$i]->setCellValueByColumnAndRow(3,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_eft_rw']));
-                $sheet[$i]->setCellValueByColumnAndRow(4,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_full']));
-                $sheet[$i]->setCellValueByColumnAndRow(5,($a+2),round($groupe[$data['groupe'][$i]['t_nom']][$a]['pourcent_present'],2).'%');
-                $sheet[$i]->setCellValueByColumnAndRow(6,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_absenceJ']));
-                $sheet[$i]->setCellValueByColumnAndRow(7,($a+2),round($groupe[$data['groupe'][$i]['t_nom']][$a]['pourcent_absentj'],2).'%');
-                $sheet[$i]->setCellValueByColumnAndRow(8,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_absenceNJ']));
-                $sheet[$i]->setCellValueByColumnAndRow(9,($a+2),round($groupe[$data['groupe'][$i]['t_nom']][$a]['pourcent_absentnj'],2).'%');
-                $sheet[$i]->setCellValueByColumnAndRow(10,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_conge']));
-                $sheet[$i]->setCellValueByColumnAndRow(11,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_social']));
-                $sheet[$i]->setCellValueByColumnAndRow(12,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['heures_mois']);
-                $zz = 13;
-                $col = 'N';
+                $sheet[$i]->setCellValueByColumnAndRow(5,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_eft_rw']));
+                $sheet[$i]->setCellValueByColumnAndRow(6,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_full']));
+                $sheet[$i]->setCellValueByColumnAndRow(7,($a+2),round($groupe[$data['groupe'][$i]['t_nom']][$a]['pourcent_present'],2).'%');
+                $sheet[$i]->setCellValueByColumnAndRow(8,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_absenceJ']));
+                $sheet[$i]->setCellValueByColumnAndRow(9,($a+2),round($groupe[$data['groupe'][$i]['t_nom']][$a]['pourcent_absentj'],2).'%');
+                $sheet[$i]->setCellValueByColumnAndRow(10,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_absenceNJ']));
+                $sheet[$i]->setCellValueByColumnAndRow(11,($a+2),round($groupe[$data['groupe'][$i]['t_nom']][$a]['pourcent_absentnj'],2).'%');
+                $sheet[$i]->setCellValueByColumnAndRow(12,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_conge']));
+                $sheet[$i]->setCellValueByColumnAndRow(13,($a+2),$filtre->TimeToString($groupe[$data['groupe'][$i]['t_nom']][$a]['heures_social']));
+                $sheet[$i]->setCellValueByColumnAndRow(14,($a+2),$groupe[$data['groupe'][$i]['t_nom']][$a]['heures_mois']);
+                $zz = 15;
+                $col = 'P';
                 foreach($groupe[$data['groupe'][$i]['t_nom']][$a]['avertissement'] as $value){
 
                     foreach($value as $avertissement){

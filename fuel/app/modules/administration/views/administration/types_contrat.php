@@ -4,13 +4,13 @@
     
     <a href="ajouter_type_contrat" class="btn btn-success pull-right"><i class="icon-white icon-plus"></i> Ajouter un type</a>
     
-    <table class="table table-top table-striped" >
+    <table class="table table-top table-striped" id="table_type_contrat" >
         <tr>
             <th>Nom</th>
             <th>Heures</th>
             <th>Actif</th>
             <th>Payement</th>
-            <th>R&eacute;gion Wallonne</th>
+            <th>Subside</th>
             <th class="actions"></th>
         </tr>
 

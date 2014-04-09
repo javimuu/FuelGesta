@@ -87,7 +87,8 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
     public function getIdParticipantContrat(\DateTime $date, $groupe) {
         $sql = "SELECT
-                p.id_participant as participant,p.t_nom,p.t_prenom,DATE_FORMAT(MIN(c.d_date_debut_contrat),'%d-%m-%Y') as d_date_debut_contrat
+                p.id_participant as participant,c.type_contrat_id,p.t_nom,p.t_prenom,DATE_FORMAT(MIN(c.d_date_debut_contrat),'%d-%m-%Y') as d_date_debut_contrat,
+                DATE_FORMAT(MAX(c.d_date_fin_contrat_prevu),'%d-%m-%Y') as d_date_fin_contrat_prevu
                  FROM participant p
                 INNER JOIN contrat c
                 ON p.id_participant = c.participant_id

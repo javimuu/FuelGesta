@@ -56,7 +56,11 @@ class Model_Contrat extends Orm\Model
         $val->add_field('f_frais_deplacement', 'Frais de déplacement', 'numeric');
         $val->add_field('t_moyen_transport', 'Moyen Transport', 'required');
         $val->add_field('t_duree_innoccupation', 'Durée innoccupation', 'numeric');
+        $val->add_field('d_avertissement1', 'Date avertissement', 'date_is_range['. \Input::post('d_date_debut_contrat') .',' . \Input::post('d_date_fin_contrat_prevu') . ']');
+        $val->add_field('d_avertissement2', 'Date avertissement', 'date_is_range['. \Input::post('d_date_debut_contrat') .',' . \Input::post('d_date_fin_contrat_prevu') . ']');
+        $val->add_field('d_avertissement3', 'Date avertissement', 'date_is_range['. \Input::post('d_date_debut_contrat') .',' . \Input::post('d_date_fin_contrat_prevu') . ']');
         $val->set_message('date_less', 'La :label ne peut être inférieure à la date de début de contrat');
+        $val->set_message('date_is_range', 'La :label doit-être comprise entre la date d\'entrée et de sortie');
         $val->set_message('eighteen_months_more', 'La :label ne peut être supérieure à 18 mois');
         $val->set_message('valid_string', 'Le :label doit-etre numérique');
         $val->set_message('numeric', 'Le :label doit-etre numérique');

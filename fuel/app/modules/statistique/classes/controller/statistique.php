@@ -185,6 +185,7 @@ class Controller_Statistique extends \Controller_Main
             for ($a = 0; $a < $compteur; $a++) {
 
                 $id = $participant[$groupes['t_nom']][$a]['participant'];
+                $participant[$groupes['t_nom']][$a]['type_contrat'] = \Model_Type_Contrat::find($participant[$groupes['t_nom']][$a]['type_contrat_id'])->to_array();
 
                 $date_premier_contrat = new \DateTime($db->firstContrat($id));
 

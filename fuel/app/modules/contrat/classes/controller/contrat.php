@@ -106,6 +106,9 @@ class Controller_Contrat extends \Controller_Main
                     "d_avertissement1" => $avertissement_1,
                     "d_avertissement2" => $avertissement_2,
                     "d_avertissement3" => $avertissement_3,
+                    't_motif_avertissement1' => Input::post('t_motif_avertissement1'),
+                    't_motif_avertissement2' => Input::post('t_motif_avertissement2'),
+                    't_motif_avertissement3' => Input::post('t_motif_avertissement3'),
                     "participant_id" => $id,
                     'b_necessaire' => Input::post('b_necessaire'),
                     't_moyen_transport' => Input::post('t_moyen_transport'),
@@ -127,9 +130,10 @@ class Controller_Contrat extends \Controller_Main
                     \Session::set_flash('success', $success);
                     \Response::redirect('contrat/ajouter/' . $id);
 
+
                 } else {
 
-                    \Session::set_flash('error', 'Erreur de base de données, merci de reccommencé !');
+                    \Session::set_flash('error', 'Erreur de base de données, merci de reccommencer !');
                     \Response::redirect('contrat/ajouter/' . $id);
                 }
             }
@@ -279,6 +283,9 @@ class Controller_Contrat extends \Controller_Main
                 $contrat->d_avertissement1 = $avertissement_1;
                 $contrat->d_avertissement2 = $avertissement_2;
                 $contrat->d_avertissement3 = $avertissement_3;
+                $contrat->t_motif_avertissement1 = Input::post('t_motif_avertissement1');
+                $contrat->t_motif_avertissement2 = Input::post('t_motif_avertissement2');
+                $contrat->t_motif_avertissement3 = Input::post('t_motif_avertissement3');
                 //$contrat->participant = $id;
                 $contrat->b_necessaire = Input::post('b_necessaire');
                 $contrat->t_moyen_transport = Input::post('t_moyen_transport');

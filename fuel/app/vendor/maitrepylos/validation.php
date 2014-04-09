@@ -172,7 +172,7 @@ class Validation
 
     }
 
-    function _validation_iban($iban)
+    public static function _validation_iban($iban)
     {
         /*Régles de validation par pays*/
         static $rules = array(
@@ -256,6 +256,41 @@ class Validation
         );
         /*On effectue la vérification finale*/
         return bcmod($check, 97) === '1';
+    }
+
+    /**
+     * Permet de savoir si une date est comprise dans un range de date.
+     * @param $startDate
+     * @param $endDate
+     * @param $todaysDate
+     * @return bool
+     */
+    public static function _validation_date_is_range($todaysDate,$startDate, $endDate)
+    {
+        if ($todaysDate == "" || $todaysDate === NULL) {
+
+            return true;
+        }
+
+        list($day, $month, $year) = explode('/', $startDate);
+        $startTimestamp = new \DateTime();
+        $startTimestamp->setDate($year, $month, $day);
+
+        list($day, $month, $year) = explode('/', $endDate);
+        $endTimestamp = new \DateTime();
+        $endTimestamp->setDate($year, $month, $day);
+
+        list($day, $month, $year) = explode('/', $todaysDate);
+        $todayTimestamp = new \DateTime();
+        $todayTimestamp->setDate($year, $month, $day);
+
+        if (($todayTimestamp >= $startTimestamp) && ($todayTimestamp <= $endTimestamp)) {
+
+            return true;
+        }
+
+        return false;
+
     }
 
 }
