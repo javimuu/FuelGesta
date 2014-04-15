@@ -229,7 +229,7 @@ class Controller_Prestation extends \Controller_Main
         /**
          * Affichage des heures en boni ou négatif.
          */
-        //$total_heures_recup = $db->total_hours_recovery($id_participant, $date);
+       // $total_heures_recup = $db->total_hours_recovery($id_participant, $date);
         $total_heures_recup = $db->getHourRecup($id_participant, $date);
 
 
@@ -871,7 +871,8 @@ class Controller_Prestation extends \Controller_Main
 //            }
 
 
-        $heuresReel = $totalMoisNoRecup - $recup['i_secondes'];
+        //Attention au départ ici il y avais moins.
+        $heuresReel = $totalMoisNoRecup + $recup['i_secondes'];
         // Debug::dump(bcsub($heuresReel,(int)$heure_a_prester));
 
         if (($heuresReel - (int)$heure_a_prester) < 0) {

@@ -880,10 +880,11 @@ class Model_My_Prestation extends \Maitrepylos\Db {
 
         $heure_effectuer_moins_heure_a_prester = $this->subTime($total_full_heures_mois, $heures_a_prester);
 
-        $heure_total = $this->subTime($heure_effectuer_moins_heure_a_prester[0]['i_secondes'], $total_heures_recup);
+      //  $heure_total = $this->subTime($heure_effectuer_moins_heure_a_prester[0]['i_secondes'], $total_heures_recup);
 
 
-        return $heure_total[0]['i_secondes'];
+        //return $heure_total[0]['i_secondes'];
+        return $heure_effectuer_moins_heure_a_prester[0]['i_secondes'];
     }
 
 

@@ -54,7 +54,7 @@
     <div class="control-group">
         <?php echo Form::label('Subside', 'subside_id', array('class' => 'control-label')) ?>
         <div class="controls">
-            <?php echo Form::select('subside_id', Input::post('subside_id'), $subside); ?>
+            <?php echo Form::select('subside_id', Input::post('subside_id', isset($contrat) ? $contrat->subside_id : ''), $subside); ?>
         </div>
     </div>
     

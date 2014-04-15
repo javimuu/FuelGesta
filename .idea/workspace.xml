@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php" afterPath="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" afterPath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
@@ -31,54 +35,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activites.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/activites.php">
+      <file leaf-file-name="prestation.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3940" max-vertical-offset="4240">
-              <caret line="197" column="12" selection-start-line="195" selection-start-column="0" selection-end-line="204" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="types_contrat.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/types_contrat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1200">
-              <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groupes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/groupes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="administration.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6100" max-vertical-offset="59560">
-              <caret line="305" column="68" selection-start-line="305" selection-start-column="68" selection-end-line="305" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySanitarization.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fuel/app/vendor/Cranberry/MySanitarization.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48126802" vertical-offset="126" max-vertical-offset="820">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.35431919" vertical-offset="8858" max-vertical-offset="11780">
+              <caret line="868" column="33" selection-start-line="868" selection-start-column="33" selection-end-line="868" selection-end-column="33" />
               <folding>
-                <element signature="e#1087#1280#0" expanded="true" />
-                <element signature="e#1417#1526#0" expanded="true" />
+                <element signature="e#938#4289#0" expanded="true" />
+                <element signature="e#5935#12881#0" expanded="true" />
+                <element signature="e#6581#6667#0" expanded="true" />
+                <element signature="e#6963#7039#0" expanded="true" />
+                <element signature="e#7369#7433#0" expanded="true" />
+                <element signature="e#7508#7579#0" expanded="true" />
+                <element signature="e#7667#7734#0" expanded="true" />
+                <element signature="e#28886#29154#0" expanded="true" />
+                <element signature="e#29568#29960#0" expanded="true" />
+                <element signature="e#34915#35298#0" expanded="true" />
+                <element signature="e#35434#35650#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.931034" vertical-offset="3433" max-vertical-offset="4340">
+              <caret line="886" column="71" selection-start-line="886" selection-start-column="71" selection-end-line="886" selection-end-column="71" />
+              <folding>
+                <element signature="n#getHeureTotalFormation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+                <element signature="n#total_heures_recup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+                <marker date="1397588468307" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="691:941" placeholder="SELECT count..." />
+                <marker date="1397588468307" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
+                <marker date="1397588468307" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
+                <marker date="1397588468307" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
+                <marker date="1397588468307" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
+                <marker date="1397588468307" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
+                <marker date="1397588468307" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
+                <marker date="1397588468307" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
+                <marker date="1397588468307" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
+                <marker date="1397588468307" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
+                <marker date="1397588468307" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
+                <marker date="1397588468307" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
+                <marker date="1397588468307" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
+                <marker date="1397588468307" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
+                <marker date="1397588468307" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
+                <marker date="1397588468307" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
+                <marker date="1397588468307" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
+                <marker date="1397588468307" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
+                <marker date="1397588468307" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
+                <marker date="1397588468307" expanded="true" signature="24454:24590" placeholder="SELECT (IF(?..contrat..." />
+                <marker date="1397588468307" expanded="true" signature="25247:25419" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="26076:26246" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="26720:26890" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="27752:27934" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397588468307" expanded="true" signature="28737:28854" placeholder="SELECT MIN(d..contrat..." />
               </folding>
             </state>
           </provider>
@@ -106,8 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/gestion/heure.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/modifier.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/iban/oophp-iban.php" />
@@ -138,7 +158,6 @@
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/classes/controller/participant.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/contact.php" />
-        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/stagiaire.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/fseexcel.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/ajouter.php" />
@@ -151,12 +170,15 @@
         <option value="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/my/statistique.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/statistique/classes/controller/statistique.php" />
-        <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/classes/controller/contrat.php" />
         <option value="$USER_HOME$/Sites/test.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/validation.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/types_contrat.php" />
+        <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
       </list>
     </option>
   </component>
@@ -363,6 +385,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maitrepylos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maitrepylos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="excel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -389,7 +467,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contrat" />
+              <option name="myItemId" value="prestation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -397,7 +475,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contrat" />
+              <option name="myItemId" value="prestation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,93 +501,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contrat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
+              <option name="myItemId" value="prestation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -521,11 +513,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="administration.php" />
+              <option name="myItemId" value="prestation.php" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller_Administration" />
+              <option name="myItemId" value="Controller_Prestation" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1196,16 +1188,15 @@
     <frame x="-4" y="27" width="1608" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70039946" sideWeight="0.48973042" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5346598" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30457935" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20218228" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20731707" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6993737" sideWeight="0.5096277" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6990679" sideWeight="0.5096277" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947807" sideWeight="0.4929215" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1215,6 +1206,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889196" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1467,28 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="21060">
-          <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0" vertical-offset="3261" max-vertical-offset="5540">
-          <caret line="728" column="46" selection-start-line="728" selection-start-column="46" selection-end-line="728" selection-end-column="46" />
-          <folding>
-            <element signature="n#verif_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="false" />
-            <element signature="e#2144#2350#0" expanded="false" />
-            <element signature="n#getContratFull#0;n#Model_My_Prestation#0;n#!!top" expanded="false" />
-            <element signature="e#24082#24364#0" expanded="false" />
-            <element signature="n#getDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="false" />
-            <element signature="n#getHourRecup#0;n#Model_My_Prestation#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/l3excel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.344828" vertical-offset="2337" max-vertical-offset="3060">
@@ -1538,18 +1508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/listestagiaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1360">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/timetosec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.206897" vertical-offset="180" max-vertical-offset="1260">
           <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1608,8 +1570,8 @@
         <state vertical-scroll-proportion="-11.75862" vertical-offset="119" max-vertical-offset="3260">
           <caret line="89" column="62" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
           <folding>
-            <element signature="n#firstContrat#0;n#Model_My_Statistique#0;n#!!top" expanded="true" />
-            <element signature="n#getAvertissememnt#0;n#Model_My_Statistique#0;n#!!top" expanded="true" />
+            <element signature="n#firstContrat#0;n#Model_My_Statistique#0;n#!!top" expanded="false" />
+            <element signature="n#getAvertissememnt#0;n#Model_My_Statistique#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1618,15 +1580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.37931" vertical-offset="1920" max-vertical-offset="3020">
           <caret line="261" column="8" selection-start-line="261" selection-start-column="8" selection-end-line="261" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.172413" vertical-offset="1057" max-vertical-offset="3120">
-          <caret line="87" column="141" selection-start-line="87" selection-start-column="141" selection-end-line="87" selection-end-column="141" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1663,14 +1616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.758621" vertical-offset="4051" max-vertical-offset="10040">
           <caret line="253" column="0" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
-          <folding>
-            <element signature="e#641#8080#0" expanded="true" />
-            <element signature="e#8086#8701#0" expanded="true" />
-            <element signature="e#18334#21049#0" expanded="true" />
-            <element signature="e#21374#23884#0" expanded="true" />
-            <element signature="e#23890#24610#0" expanded="true" />
-            <element signature="e#24616#24993#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1678,19 +1623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.172413" vertical-offset="2577" max-vertical-offset="3600">
           <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
-          <folding>
-            <element signature="e#681#926#0" expanded="true" />
-            <element signature="e#932#1081#0" expanded="true" />
-            <element signature="e#1086#1541#0" expanded="true" />
-            <element signature="e#1699#2212#0" expanded="true" />
-            <element signature="e#2316#2465#0" expanded="true" />
-            <element signature="e#2471#2586#0" expanded="true" />
-            <element signature="e#2591#2807#0" expanded="true" />
-            <element signature="e#2813#3141#0" expanded="true" />
-            <element signature="e#3147#3386#0" expanded="true" />
-            <element signature="e#3392#3719#0" expanded="true" />
-            <element signature="e#7436#7613#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1712,13 +1644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1460">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/add_contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="909">
@@ -1734,14 +1659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/types_contrat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1200">
-          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/groupes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
@@ -1750,21 +1667,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6100" max-vertical-offset="59560">
-          <caret line="305" column="68" selection-start-line="305" selection-start-column="68" selection-end-line="305" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/vendor/Cranberry/MySanitarization.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48126802" vertical-offset="126" max-vertical-offset="820">
+        <state vertical-scroll-proportion="0.66091955" vertical-offset="0" max-vertical-offset="820">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="e#1087#1280#0" expanded="true" />
             <element signature="e#1417#1526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/listestagiaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11713031" vertical-offset="60" max-vertical-offset="1360">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#101#2499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41434845" vertical-offset="1657" max-vertical-offset="3160">
+          <caret line="99" column="133" selection-start-line="99" selection-start-column="133" selection-end-line="99" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.52873564" vertical-offset="2188" max-vertical-offset="6940">
+          <caret line="988" column="20" selection-start-line="988" selection-start-column="20" selection-end-line="988" selection-end-column="20" />
+          <folding>
+            <element signature="e#36917#38982#0" expanded="true" />
+            <element signature="e#75713#77138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6734993" vertical-offset="660" max-vertical-offset="1460">
+          <caret line="56" column="114" selection-start-line="56" selection-start-column="114" selection-end-line="56" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/types_contrat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17569546" vertical-offset="0" max-vertical-offset="1100">
+          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.931034" vertical-offset="3433" max-vertical-offset="4340">
+          <caret line="886" column="71" selection-start-line="886" selection-start-column="71" selection-end-line="886" selection-end-column="71" />
+          <folding>
+            <element signature="n#getHeureTotalFormation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="n#total_heures_recup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <marker date="1397588468307" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="691:941" placeholder="SELECT count..." />
+            <marker date="1397588468307" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
+            <marker date="1397588468307" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
+            <marker date="1397588468307" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
+            <marker date="1397588468307" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
+            <marker date="1397588468307" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
+            <marker date="1397588468307" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
+            <marker date="1397588468307" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
+            <marker date="1397588468307" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
+            <marker date="1397588468307" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
+            <marker date="1397588468307" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
+            <marker date="1397588468307" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
+            <marker date="1397588468307" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
+            <marker date="1397588468307" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
+            <marker date="1397588468307" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
+            <marker date="1397588468307" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
+            <marker date="1397588468307" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
+            <marker date="1397588468307" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
+            <marker date="1397588468307" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
+            <marker date="1397588468307" expanded="true" signature="24454:24590" placeholder="SELECT (IF(?..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="25247:25419" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="26076:26246" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="26720:26890" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="27752:27934" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="28737:28854" placeholder="SELECT MIN(d..contrat..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35431919" vertical-offset="8858" max-vertical-offset="11780">
+          <caret line="868" column="33" selection-start-line="868" selection-start-column="33" selection-end-line="868" selection-end-column="33" />
+          <folding>
+            <element signature="e#938#4289#0" expanded="true" />
+            <element signature="e#5935#12881#0" expanded="true" />
+            <element signature="e#6581#6667#0" expanded="true" />
+            <element signature="e#6963#7039#0" expanded="true" />
+            <element signature="e#7369#7433#0" expanded="true" />
+            <element signature="e#7508#7579#0" expanded="true" />
+            <element signature="e#7667#7734#0" expanded="true" />
+            <element signature="e#28886#29154#0" expanded="true" />
+            <element signature="e#29568#29960#0" expanded="true" />
+            <element signature="e#34915#35298#0" expanded="true" />
+            <element signature="e#35434#35650#0" expanded="true" />
           </folding>
         </state>
       </provider>
