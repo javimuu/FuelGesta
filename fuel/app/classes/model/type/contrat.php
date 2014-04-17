@@ -13,7 +13,8 @@ class Model_Type_Contrat extends Model {
         'b_type_contrat_actif',
         'i_heures',
         'i_paye',
-        'subside_id'
+        'subside_id',
+        'i_forem'
     );
 
     public static function deleteContrat($id){

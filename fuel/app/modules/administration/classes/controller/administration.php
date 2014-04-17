@@ -946,13 +946,15 @@ class Controller_Administration extends \Controller_Main
                 $actif = \Input::post('b_type_contrat_actif');
                 $paye = \Input::post('i_paye');
                 $rw = \Input::post('subside');
+                $forem = \Input::post('i_forem');
 
                 $contrat = \Model_Type_Contrat::forge(array(
                     't_type_contrat' => \Input::post('t_type_contrat'),
                     'b_type_contrat_actif' => isset($actif) ? $actif : 0,
                     'i_heures' => $time->StringToTime(\Input::post('i_heures')),
                     'i_paye' => isset($paye) ? $paye : 0,
-                    'subside_id' => isset($rw) ? $rw : 2
+                    'subside_id' => isset($rw) ? $rw : 2,
+                    'i_forem' => isset($forem) ? $forem : 0
 
                 ));
 
@@ -1006,6 +1008,7 @@ class Controller_Administration extends \Controller_Main
                 $contrat->i_heures = $time->StringToTime(\Input::post('i_heures'));
                 $contrat->i_paye = \Input::post('i_paye');
                 $contrat->subside_id = \Input::post('subside_id');
+                $contrat->i_forem = \Input::post('i_forem');
 
                 if ($contrat and $contrat->save()) {
                     $message[] = 'Le type de contrat a bien été modifié.';

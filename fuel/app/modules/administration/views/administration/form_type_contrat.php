@@ -52,6 +52,22 @@
         </div>
     </div>
     <div class="control-group">
+        <?php echo Form::label('f70bis (administratif)', 'i_forem', array('class' => 'control-label')) ?>
+        <div class="controls">
+            <?php
+            if (isset($contrat)):
+                if ($contrat->i_forem == 1):
+                    echo Form::checkbox('i_forem', '1', array('checked' => 'checked'));
+                else:
+                    echo Form::checkbox('i_forem', '1');
+                endif;
+            else:
+                echo Form::checkbox('i_forem', '1');
+            endif;
+            ?>
+        </div>
+    </div>
+    <div class="control-group">
         <?php echo Form::label('Subside', 'subside_id', array('class' => 'control-label')) ?>
         <div class="controls">
             <?php echo Form::select('subside_id', Input::post('subside_id', isset($contrat) ? $contrat->subside_id : ''), $subside); ?>
