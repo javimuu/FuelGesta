@@ -6,8 +6,6 @@
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/gesta7</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfc8dfc5dfc4dfc0dfc5dfdfdfd8</user-password>
       <libraries>
         <library>
           <url>jar://$PROJECT_DIR$/../FuelGesta-1.4/mysql-connector-java-5.1.22-bin.jar!/</url>

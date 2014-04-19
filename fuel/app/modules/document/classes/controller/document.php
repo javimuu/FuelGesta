@@ -557,6 +557,82 @@ class Controller_Document extends \Controller_Main
 
     }
 
+    public function action_prestationForem()
+    {
+        $db = new \Model_My_Document();
+        $formData = \Input::post();
+        $groupe = \Model_Groupe::find($formData['groupe']);
+
+        $nom_centre = \SplFixedArray::fromArray(explode('-', $groupe['t_nom']));
+        $nom_centre->setSize(3);
+
+
+        $centre = \Model_Centre::find('first');
+        $formData['xml'] = $centre;
+
+        $date = \DateTime::createFromFormat('d-m-Y', $formData['date']);
+        $date2 = \DateTime::createFromFormat('d-m-Y', $formData['date2']);
+        $id = $db->idEtatPretsation($formData['groupe'], $date, $date2);
+
+        if ($id == null) {
+
+            $message[] = 'Nous ne disposons pas assez d\'information pour générer ce document.';
+            \Session::set_flash('error', $message);
+            \Response::redirect('document/formulaire/prestation');
+
+        }
+
+
+        $count_id = count($id);
+        $id_participant = '';
+        for ($i = 0; $i < $count_id; $i++) {
+            if (($i + 1) < $count_id) {
+                $id_participant = $id_participant . $id[$i]['participant_id'] . ',';
+            } else {
+                $id_participant = $id_participant . $id[$i]['participant_id'];
+            }
+        }
+
+        for ($i = 0; $i < $count_id; $i++) {
+            $formData['rows'][$i] = $db->ficheEtatPrestationFormationForem($formData['groupe'], $date, $date2, $id[$i]['participant_id']);
+            $rows = $db->ficheEtatPrestationStageForem($date, $date2, $id[$i]['participant_id']);
+            $formData['rows'][$i][0]['time_partenaire_stage'] = 0;
+            $formData['rows'][$i][0]['time_total_stage'] = 0;
+            $formData['rows'][$i][0]['compteur_stage'] = 0;
+            if ($rows != null) {
+                $formData['rows'][$i][0]['time_partenaire_stage'] = $rows[0]['time_partenaire_stage'];
+                $formData['rows'][$i][0]['time_total_stage'] = $rows[0]['time_total_stage'];
+                $formData['rows'][$i][0]['compteur_stage'] = $rows[0]['compteur_stage'];
+            }
+            if ($formData['rows'][$i][0]['t_registre_national'] == NULL) {
+                $formData['rows'][$i][0]['t_registre_national'] = $rows[0]['t_registre_national'];
+            }
+        }
+
+
+        $maladie = $db->ficheEtatPrestationMaladieForem($formData['groupe'], $date, $date2, $id_participant);
+        $count_maladie = count($maladie);
+        for ($i = 0; $i < $count_maladie; $i++) {
+            $formData['rows'][][] = $maladie[$i];
+        }
+
+        $formData['count'] = ceil((count($formData['rows'])) / 11);
+
+        $trie = new \Model_My_Alphabetique();
+
+        $recup = $trie->ordre_alphabetique($formData['rows']);
+        $formData['rows'] = NULL;
+        $formData['rows'] = \SplFixedArray::fromArray($recup);
+        $formData['rows']->setSize($formData['count'] * 11);
+
+        // \Debug::dump($formData);
+        \Maitrepylos\Pdf\Etatprestation::pdf($formData);
+
+        $this->template->title = 'Gestion des documents';
+        $this->template->content = \View::forge('test');
+
+    }
+
     public function action_liste()
     {
         $db = new \Model_My_Document();

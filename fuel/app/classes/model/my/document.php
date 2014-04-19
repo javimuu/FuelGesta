@@ -573,6 +573,41 @@ class Model_My_Document extends \Maitrepylos\db
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function ficheEtatPrestationFormationForem($groupe, \DateTime $date_debut, \DateTime $date_fin, $id)
+    {
+        $sql =
+            "
+            SELECT p.t_nom,p.t_prenom,p.t_registre_national,
+            COUNT(DISTINCT(h.d_date)) AS compteur_formation,
+            SUM(h.i_secondes) AS time_partenaire_formation,
+            SUM(h.i_secondes) AS time_total_formation,
+            ROUND((c.f_frais_deplacement * COUNT(DISTINCT(h.d_date))),2) AS deplacement
+            FROM participant p
+            INNER JOIN heures h
+            ON h.participant_id = p.id_participant
+            INNER JOIN contrat c
+            ON c.id_contrat = h.contrat_id
+            INNER JOIN type_contrat tc
+            ON tc.id_type_contrat = c.type_contrat_id
+            AND c.groupe_id = ?
+            WHERE h.d_date BETWEEN ? AND ?
+            AND h.t_schema IN ('+','@','$')
+            AND c.d_date_fin_contrat_prevu >= ?
+            AND c.d_date_debut_contrat<= ?
+            AND p.id_participant = ?
+           ";
+        $req = $this->_db->prepare($sql);
+        $req->execute(array(
+            $groupe,
+            $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
+            $date_debut->format('Y-m-d'),
+            $id
+        ));
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function ficheEtatPrestationStage(\DateTime $date_debut, \DateTime $date_fin, $id)
     {
         $sql =
@@ -595,6 +630,41 @@ class Model_My_Document extends \Maitrepylos\db
             AND c.d_date_debut_contrat<= ?
             AND p.id_participant = ?
             AND tc.subside_id = 4
+            GROUP BY p.id_participant";
+
+        $req = $this->_db->prepare($sql);
+        $req->execute(array(
+            $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
+            $date_debut->format('Y-m-d'),
+            $id
+        ));
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+    public function ficheEtatPrestationStageForem(\DateTime $date_debut, \DateTime $date_fin, $id)
+    {
+        $sql =
+            "
+            SELECT p.t_nom,p.t_prenom,p.t_registre_national,
+            COUNT(DISTINCT(h.d_date)) AS compteur_stage,
+            SUM(h.i_secondes) AS time_partenaire_stage,
+            SUM(h.i_secondes) AS time_total_stage,
+            ROUND((c.f_frais_deplacement * COUNT(DISTINCT(h.d_date))),2) AS deplacement
+            FROM participant p
+            INNER JOIN heures h
+            ON h.participant_id = p.id_participant
+            INNER JOIN contrat c
+            ON c.id_contrat = h.contrat_id
+            INNER JOIN type_contrat tc
+            ON tc.id_type_contrat = c.type_contrat_id
+            WHERE h.d_date BETWEEN ? AND ?
+            AND h.t_schema IN ('=')
+            AND c.d_date_fin_contrat_prevu >= ?
+            AND c.d_date_debut_contrat<= ?
+            AND p.id_participant = ?
             GROUP BY p.id_participant";
 
         $req = $this->_db->prepare($sql);
@@ -635,6 +705,45 @@ class Model_My_Document extends \Maitrepylos\db
             AND c.d_date_debut_contrat<= ?
             AND p.id_participant NOT IN ($id)
             AND tc.subside_id = 4
+            GROUP BY p.id_participant";
+
+        $req = $this->_db->prepare($sql);
+        $req->execute(array(
+            $groupe,
+            $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
+            $date_debut->format('Y-m-d')
+        ));
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+    public function ficheEtatPrestationMaladieForem($groupe, \DateTime $date_debut, \DateTime $date_fin, $id)
+    {
+        $sql =
+            "
+            SELECT p.t_nom,p.t_prenom,p.t_registre_national,
+            0 AS compteur_formation,
+            0 AS time_partenaire_formation,
+            0 AS time_total_formation,
+            0 AS deplacement,
+            0 AS compteur_stage,
+            0 AS time_partenaire_stage,
+            0 AS time_total_stage
+            FROM participant p
+            INNER JOIN heures h
+            ON h.participant_id = p.id_participant
+            INNER JOIN contrat c
+            ON c.id_contrat = h.contrat_id
+            INNER JOIN type_contrat tc
+            ON tc.id_type_contrat = c.type_contrat_id
+            AND c.groupe_id = ?
+            WHERE h.d_date BETWEEN ? AND ?
+            AND h.t_schema NOT IN ('+','@','$','-','=','#')
+            AND c.d_date_fin_contrat_prevu >= ?
+            AND c.d_date_debut_contrat<= ?
+            AND p.id_participant NOT IN ($id)
             GROUP BY p.id_participant";
 
         $req = $this->_db->prepare($sql);

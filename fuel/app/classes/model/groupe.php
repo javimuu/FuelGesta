@@ -71,6 +71,26 @@ class Model_Groupe extends Model
 
     }
 
+    public static function getNamesForem()
+    {
+        $result = array();
+        $sql = "
+        SELECT DISTINCT(id_groupe),t_nom FROM groupe g
+        INNER JOIN contrat  c
+        ON c.groupe_id = id_groupe
+        INNER JOIN type_contrat tc
+        ON tc.id_type_contrat = c.type_contrat_id
+        WHERE tc.i_forem = 1
+        ";
+        $contrat = DB::query($sql)->execute();
+        foreach ($contrat->as_array() as $value) {
+            $result[$value['id_groupe']] = $value['t_nom'];
+
+        }
+        return $result;
+
+    }
+
     public static function getName($groupe){
 
         $r =  DB::select('t_nom')->from('groupe')->where('id_groupe',$groupe)->execute();

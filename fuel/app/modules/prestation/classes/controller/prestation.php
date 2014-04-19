@@ -123,6 +123,7 @@ class Controller_Prestation extends \Controller_Main
         $this->template->content = \View::forge('prestation/index', $this->data);
     }
 
+
     public function action_change_participant()
     {
 
@@ -366,6 +367,9 @@ class Controller_Prestation extends \Controller_Main
 //        }
     }
 
+    /**
+     * @throws \Exception
+     */
     public function action_modifier()
     {
 

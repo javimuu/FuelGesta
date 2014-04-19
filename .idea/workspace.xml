@@ -5,42 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/comment-bright.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/comment-close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/comment.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/down-pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/environment.pickle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/file.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/index.doctree" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/objects.inv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/up-pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/.buildinfo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/basic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/conf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/doctools.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/genindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/index.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_sources/index.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/make.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/pygments.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/searchindex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/searchtools.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/sidebar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_static/websupport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" afterPath="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/type/contrat.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/type/contrat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php" afterPath="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doc/Sphinx/all-about-me.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestationForem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/environment.pickle" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/environment.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/index.doctree" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/index.doctree" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" afterPath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php" afterPath="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/groupe.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/groupe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/html/index.html" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/document/views/document/index.php" afterPath="$PROJECT_DIR$/fuel/app/modules/document/views/document/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/index.rst" afterPath="$PROJECT_DIR$/Doc/Sphinx/index.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_sources/index.txt" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_sources/index.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" afterPath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/html/searchindex.js" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/searchindex.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
@@ -48,6 +27,7 @@
     <list id="88d7aec6-4765-4da8-80b6-13b2c24cb892" name="Failed commit: Default (3)" comment="Ajout des documents Pdf" />
     <ignored path="FuelGesta.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,101 +47,180 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/document/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.275862" vertical-offset="0" max-vertical-offset="440">
+              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17360" max-vertical-offset="21080">
-              <caret line="868" column="33" selection-start-line="868" selection-start-column="33" selection-end-line="868" selection-end-column="33" />
+            <state vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="740">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="administration.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php">
+      <file leaf-file-name="prestationForem.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestationForem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="20200" max-vertical-offset="59620">
-              <caret line="1010" column="33" selection-start-line="1010" selection-start-column="33" selection-end-line="1010" selection-end-column="33" />
+            <state vertical-scroll-proportion="-4.137931" vertical-offset="0" max-vertical-offset="740">
+              <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.rst" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Doc/Sphinx/index.rst">
+      <file leaf-file-name="document.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77253217" vertical-offset="0" max-vertical-offset="840">
-              <caret line="18" column="7" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_type_contrat.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1280" max-vertical-offset="1780">
-              <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contrat.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/type/contrat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="1520">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.24242425" vertical-offset="12220" max-vertical-offset="14920">
+              <caret line="619" column="0" selection-start-line="619" selection-start-column="0" selection-end-line="619" selection-end-column="0" />
               <folding>
-                <marker date="1397739477342" expanded="true" signature="501:551" placeholder="DELETE FROM ..." />
-                <marker date="1397739477342" expanded="true" signature="745:1171" placeholder="SELECT p.id_..contrat..." />
+                <element signature="e#50#109#0#PHP" expanded="true" />
+                <element signature="e#230#478#0#PHP" expanded="true" />
+                <element signature="e#483#802#0#PHP" expanded="true" />
+                <element signature="e#809#994#0#PHP" expanded="true" />
+                <element signature="e#1000#1120#0#PHP" expanded="true" />
+                <element signature="e#1125#7407#0#PHP" expanded="true" />
+                <element signature="e#1422#1496#0#PHP" expanded="true" />
+                <element signature="e#2030#2089#0#PHP" expanded="true" />
+                <element signature="e#2313#2513#0#PHP" expanded="true" />
+                <element signature="e#2944#3018#0#PHP" expanded="true" />
+                <element signature="e#3161#3353#0#PHP" expanded="true" />
+                <element signature="e#4877#4950#0#PHP" expanded="true" />
+                <element signature="e#7414#7520#0#PHP" expanded="true" />
+                <element signature="e#7525#9215#0#PHP" expanded="true" />
+                <element signature="e#7876#7954#0#PHP" expanded="true" />
+                <element signature="e#9222#10918#0#PHP" expanded="true" />
+                <element signature="e#10924#15067#0#PHP" expanded="true" />
+                <element signature="e#11045#11108#0#PHP" expanded="true" />
+                <element signature="e#11264#11326#0#PHP" expanded="true" />
+                <element signature="e#11472#11520#0#PHP" expanded="true" />
+                <element signature="e#11637#11743#0#PHP" expanded="true" />
+                <element signature="e#11845#11924#0#PHP" expanded="true" />
+                <element signature="e#12169#12236#0#PHP" expanded="true" />
+                <element signature="e#12360#12447#0#PHP" expanded="true" />
+                <element signature="e#12646#12710#0#PHP" expanded="true" />
+                <element signature="e#12933#13020#0#PHP" expanded="true" />
+                <element signature="e#15073#15871#0#PHP" expanded="true" />
+                <element signature="e#15877#16766#0#PHP" expanded="true" />
+                <element signature="e#16772#19787#0#PHP" expanded="true" />
+                <element signature="e#22839#23795#0#PHP" expanded="true" />
+                <element signature="e#23801#24645#0#PHP" expanded="true" />
+                <element signature="e#24651#26018#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
+      <file leaf-file-name="document.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17720" max-vertical-offset="18200">
-              <caret line="886" column="71" selection-start-line="886" selection-start-column="71" selection-end-line="886" selection-end-column="71" />
+            <state vertical-scroll-proportion="-14.4827585" vertical-offset="14500" max-vertical-offset="16980">
+              <caret line="746" column="12" selection-start-line="746" selection-start-column="12" selection-end-line="746" selection-end-column="12" />
               <folding>
-                <marker date="1397588468307" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="691:941" placeholder="SELECT count..." />
-                <marker date="1397588468307" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
-                <marker date="1397588468307" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
-                <marker date="1397588468307" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
-                <marker date="1397588468307" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
-                <marker date="1397588468307" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
-                <marker date="1397588468307" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
-                <marker date="1397588468307" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
-                <marker date="1397588468307" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
-                <marker date="1397588468307" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
-                <marker date="1397588468307" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
-                <marker date="1397588468307" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
-                <marker date="1397588468307" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
-                <marker date="1397588468307" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
-                <marker date="1397588468307" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
-                <marker date="1397588468307" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
-                <marker date="1397588468307" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
-                <marker date="1397588468307" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
-                <marker date="1397588468307" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
-                <marker date="1397588468307" expanded="true" signature="24454:24590" placeholder="SELECT (IF(?..contrat..." />
-                <marker date="1397588468307" expanded="true" signature="25247:25419" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="26076:26246" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="26720:26890" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="27752:27934" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1397588468307" expanded="true" signature="28737:28854" placeholder="SELECT MIN(d..contrat..." />
+                <element signature="e#7#41#0#PHP" expanded="true" />
+                <element signature="e#98#138#0#PHP" expanded="true" />
+                <element signature="n#__construct#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#getParticipant#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#551#608#0#PHP" expanded="true" />
+                <element signature="n#getGroupe#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#1945#2164#0#PHP" expanded="true" />
+                <element signature="n#heuresMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#2681#2908#0#PHP" expanded="true" />
+                <element signature="n#getHeuresAEffectuer#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#3350#3636#0#PHP" expanded="true" />
+                <element signature="e#4360#4673#0#PHP" expanded="true" />
+                <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#5335#5579#0#PHP" expanded="true" />
+                <element signature="n#totalHeureMoisJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#6240#6488#0#PHP" expanded="true" />
+                <element signature="n#totalHeureMoisNonJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#7048#7378#0#PHP" expanded="true" />
+                <element signature="n#salaire#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#get_c98_solo#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#getC98FullLocalisation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#get_c98_full#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#11154#11230#0#PHP" expanded="true" />
+                <element signature="n#getVerifC98#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#get_filiere#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#12525#12573#0#PHP" expanded="true" />
+                <element signature="n#groupe_l1#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#nombreParticipantEntreDeuxDate#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#13754#14005#0#PHP" expanded="true" />
+                <element signature="n#calculHeuresMoisStatL2#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#fiche#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#15965#16166#0#PHP" expanded="true" />
+                <element signature="n#nombreAnnee#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#idEtatPretsation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationFormation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationFormationForem#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationStage#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationStageForem#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#ficheEtatPrestationMaladie#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#listeStagiaire#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#dateContrat#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="n#getAttestation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <element signature="e#27585#27720#0#PHP" expanded="true" />
+                <element signature="n#nombresPrestations#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+                <marker date="1397939233455" expanded="true" signature="280:393" placeholder="SELECT t_nom..participant..." />
+                <marker date="1397939233455" expanded="true" signature="673:1039" placeholder="SELECT g.t_n..contrat..." />
+                <marker date="1397939233455" expanded="true" signature="2261:2507" placeholder="SELECT i_sec..heures..." />
+                <marker date="1397939233455" expanded="true" signature="4778:5145" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397939233455" expanded="true" signature="5689:5958" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397939233455" expanded="true" signature="6601:6865" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1397939233455" expanded="true" signature="8031:8471" placeholder="SELECT t_nom..participant..." />
+                <marker date="1397939233455" expanded="true" signature="8789:9624" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="10053:10914" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="11299:12092" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="12386:12422" placeholder="SELECT id_fi..filiere..." />
+                <marker date="1397939233455" expanded="true" signature="16224:16299" placeholder="SELECT DISTI..heures_prestations..." />
+                <marker date="1397939233455" expanded="true" signature="16694:17006" placeholder="SELECT h.par..heures..." />
+                <marker date="1397939233455" expanded="true" signature="17645:18521" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="19023:19865" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="20361:21223" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="21693:22521" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="22997:23929" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="24414:25312" placeholder="SELECT p.t_n..participant..." />
+                <marker date="1397939233455" expanded="true" signature="26674:26789" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1397939233455" expanded="true" signature="27082:27408" placeholder="SELECT t_nom..participant..." />
+                <marker date="1397939233455" expanded="true" signature="27894:28101" placeholder="SELECT count..heures..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formulaire.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.103449" vertical-offset="2797" max-vertical-offset="3700">
+              <caret line="293" column="75" selection-start-line="293" selection-start-column="75" selection-end-line="293" selection-end-column="75" />
+              <folding>
+                <element signature="e#563#4786#0#PHP" expanded="true" />
+                <element signature="e#7912#8334#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groupe.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/groupe.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.965517" vertical-offset="1304" max-vertical-offset="2360">
+              <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+              <folding>
+                <element signature="n#getNames#0;n#Model_Groupe#0;n#!!top" expanded="true" />
+                <element signature="n#getName#0;n#Model_Groupe#0;n#!!top" expanded="true" />
+                <marker date="1397938783766" expanded="true" signature="1952:2177" placeholder="SELECT DISTI..groupe..." />
+                <marker date="1397938783766" expanded="true" signature="2966:3232" placeholder="SELECT g.id_..groupe..." />
+                <marker date="1397938783766" expanded="true" signature="3756:3907" placeholder="SELECT g.t_n..groupe..." />
               </folding>
             </state>
           </provider>
@@ -189,10 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fuel/app/vendor/iban/Iban.php" />
-        <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/Iban.php" />
-        <option value="$PROJECT_DIR$/fuel/app/vendor/Cranberry/MyValidation.php" />
-        <option value="$PROJECT_DIR$/fuel/app/vendor/Cranberry/MySanitarization.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/fin_formation.php" />
         <option value="$PROJECT_DIR$/../test.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -210,7 +265,6 @@
         <option value="$PROJECT_DIR$/fuel/app/classes/model/participant.php" />
         <option value="$PROJECT_DIR$/fuel/app/config/config.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/completion.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php" />
         <option value="$PROJECT_DIR$/fuel/app/config/development/db.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/vatlist_2013.xml" />
         <option value="$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_edit.php" />
@@ -224,8 +278,6 @@
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/pdf/paye.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/my/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/statistique/views/statistique/index.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
-        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/my/statistique.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/statistique/classes/controller/statistique.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/classes/controller/contrat.php" />
@@ -235,11 +287,18 @@
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/types_contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/statexcel.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/type/contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/administration/classes/controller/administration.php" />
+        <option value="$PROJECT_DIR$/Doc/Sphinx/all-about-me.rst" />
         <option value="$PROJECT_DIR$/Doc/Sphinx/index.rst" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/document/views/document/index.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/groupe.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestationForem.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
       </list>
     </option>
   </component>
@@ -301,6 +360,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -423,84 +483,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maitrepylos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maitrepylos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="excel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -527,7 +509,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -535,7 +547,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
+              <option name="myItemId" value="formulaire" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -561,7 +573,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -587,7 +607,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -599,11 +645,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="administration.php" />
+              <option name="myItemId" value="formulaire.php" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller_Administration" />
+              <option name="myItemId" value="Controller_Formulaire" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,25 +671,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="document" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -651,38 +683,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="document.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="type" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Controller_Document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -705,7 +715,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -738,11 +747,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fuel/app/modules/document/views/formulaire" />
       <recent name="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel" />
       <recent name="/run/media/gg/FLASHDRIVE/Formatux/Facture" />
       <recent name="$PROJECT_DIR$/fuel/app/modules/administration/views/administration" />
       <recent name="$PROJECT_DIR$/fuel/app/classes/model/type" />
-      <recent name="$PROJECT_DIR$/fuel/app/modules/administration/views/administration/partials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/fuel/app/vendor/maitrepylos" />
@@ -798,509 +807,766 @@
       <changelist id="bc3bfbb1-711a-454e-9ba2-3c36509334bd" name="Failed commit: Default (2)" comment="Première RC &#10;" />
       <changelist id="88d7aec6-4765-4da8-80b6-13b2c24cb892" name="Failed commit: Default (3)" comment="Ajout des documents Pdf" />
       <created>1339786290930</created>
+      <option name="number" value="Default" />
       <updated>1339786290930</updated>
     </task>
     <task id="LOCAL-00001" summary="Modification du 16 juin">
       <created>1339863339529</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1339863339529</updated>
     </task>
     <task id="LOCAL-00002" summary="Modification du 28 juin">
       <created>1340910995951</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1340910995952</updated>
     </task>
     <task id="LOCAL-00003" summary="Modification du 29 juin">
       <created>1340971877952</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1340971877952</updated>
     </task>
     <task id="LOCAL-00004" summary="Modification du 29 juin">
       <created>1341592828879</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1341592828879</updated>
     </task>
     <task id="LOCAL-00005" summary="Modification du 5 Juillet">
       <created>1341592934980</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1341592934980</updated>
     </task>
     <task id="LOCAL-00006" summary="Ajout du tableau le 8 juillet">
       <created>1341749828436</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1341749828436</updated>
     </task>
     <task id="LOCAL-00007" summary="Finalisation des tableaux et insertion des heures.">
       <created>1343742675320</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1343742675320</updated>
     </task>
     <task id="LOCAL-00008" summary="Installation package Fpdf">
       <created>1344936964562</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1344936964562</updated>
     </task>
     <task id="LOCAL-00009" summary="Installation SplFixedArray">
       <created>1344970283176</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1344970283176</updated>
     </task>
     <task id="LOCAL-00010" summary="Mise à jour base de données">
       <created>1345452739160</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1345452739160</updated>
     </task>
     <task id="LOCAL-00011" summary="Mise à jour pour récupération">
       <created>1345484886427</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1345484886427</updated>
     </task>
     <task id="LOCAL-00012" summary="Mise à jour pour reprise de Anne-Lise">
       <created>1345749796869</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1345749796869</updated>
     </task>
     <task id="LOCAL-00013" summary="De nouveau fichier non pusché">
       <created>1345750608470</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1345750608470</updated>
     </task>
     <task id="LOCAL-00014" summary="Push valide heures">
       <created>1346009098257</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1346009098257</updated>
     </task>
     <task id="LOCAL-00015" summary="Push du 28/08/2012">
       <created>1346179146503</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
       <updated>1346179146503</updated>
     </task>
     <task id="LOCAL-00016" summary="Gestion heure en test.&#10;">
       <created>1346259869434</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
       <updated>1346259869434</updated>
     </task>
     <task id="LOCAL-00017" summary="Gestion heure en test la suite.&#10;">
       <created>1346421537828</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
       <updated>1346421537828</updated>
     </task>
     <task id="LOCAL-00018" summary="Mise à jour de 02 09 2012&#10;">
       <created>1346587286407</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
       <updated>1346587286407</updated>
     </task>
     <task id="LOCAL-00019" summary="Modification suite à l'installation de Bootstrap Twitter&#10;">
       <created>1346684396505</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
       <updated>1346684396505</updated>
     </task>
     <task id="LOCAL-00020" summary="Modification suite à l'installation de Bootstrap Twitter&#10;">
       <created>1346696889413</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
       <updated>1346696889413</updated>
     </task>
     <task id="LOCAL-00021" summary="Première RC &#10;">
       <created>1347466005396</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
       <updated>1347466005396</updated>
     </task>
     <task id="LOCAL-00022" summary="Modification premier test François 12/09/2012">
       <created>1347467774944</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
       <updated>1347467774944</updated>
     </task>
     <task id="LOCAL-00023" summary="Migration de données.">
       <created>1348106170666</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
       <updated>1348106170666</updated>
     </task>
     <task id="LOCAL-00024" summary="Modification Tableau pour rester sur la date de modification et non la date du jour">
       <created>1365537271358</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
       <updated>1365537271358</updated>
     </task>
     <task id="LOCAL-00025" summary="Modification demandé par le client ce 10/04/2013">
       <created>1365617842456</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
       <updated>1365617842456</updated>
     </task>
     <task id="LOCAL-00026" summary="Modification le 10/04/2013 notamment la gestion des groupes/model pour correspndre au champs de la db">
       <created>1365714980912</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
       <updated>1365714980912</updated>
     </task>
     <task id="LOCAL-00027" summary="Mise à jour du 13/04/2013">
       <created>1365887439085</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
       <updated>1365887439085</updated>
     </task>
     <task id="LOCAL-00028" summary="Mise à jour du 14/04/2013">
       <created>1365966715509</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
       <updated>1365966715509</updated>
     </task>
     <task id="LOCAL-00029" summary="Mise à jour du 20/04/2013">
       <created>1366458489838</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
       <updated>1366458489838</updated>
     </task>
     <task id="LOCAL-00030" summary="Modificaton prestation 21042013">
       <created>1366549358908</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
       <updated>1366549358908</updated>
     </task>
     <task id="LOCAL-00031" summary="Modificaton prestation 21042013">
       <created>1366549437726</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
       <updated>1366549437726</updated>
     </task>
     <task id="LOCAL-00032" summary="Modificaton prestation 21042013(2)">
       <created>1366557289303</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
       <updated>1366557289303</updated>
     </task>
     <task id="LOCAL-00033" summary="Modificaton prestation 21042013(3)">
       <created>1366570637968</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
       <updated>1366570637968</updated>
     </task>
     <task id="LOCAL-00034" summary="Modificaton  02052013">
       <created>1367493791165</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
       <updated>1367493791165</updated>
     </task>
     <task id="LOCAL-00035" summary="Comit contrat 03052013">
       <created>1367609518042</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
       <updated>1367609518043</updated>
     </task>
     <task id="LOCAL-00036" summary="Tache 81">
       <created>1367763952920</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
       <updated>1367763952920</updated>
     </task>
     <task id="LOCAL-00037" summary="Commit 05/05/2013(2)">
       <created>1367784197392</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
       <updated>1367784197392</updated>
     </task>
     <task id="LOCAL-00038" summary="Commit 12/05/2013 MaitrePylos">
       <created>1368362406281</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
       <updated>1368362406281</updated>
     </task>
     <task id="LOCAL-00039" summary="Commit 12/05/2013 MaitrePylos (2)">
       <created>1368385330724</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
       <updated>1368385330724</updated>
     </task>
     <task id="LOCAL-00040" summary="Commit 13/05/2013 MaitrePylos (1)">
       <created>1368430209462</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
       <updated>1368430209462</updated>
     </task>
     <task id="LOCAL-00041" summary="Commit 13/05/2013 MaitrePylos (2) - Supression code Cedefop">
       <created>1368434761584</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
       <updated>1368434761584</updated>
     </task>
     <task id="LOCAL-00042" summary="Commit 13/05/2013 MaitrePylos (3) - Modification des redirection lors de la connexion">
       <created>1368444971415</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
       <updated>1368444971415</updated>
     </task>
     <task id="LOCAL-00043" summary="Commit 13/05/2013 MaitrePylos (4) - StatExcel">
       <created>1368449361885</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
       <updated>1368449361885</updated>
     </task>
     <task id="LOCAL-00044" summary="Commit 13/05/2013 MaitrePylos (5) - DateFinContratPrevul">
       <created>1368461719033</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
       <updated>1368461719033</updated>
     </task>
     <task id="LOCAL-00045" summary="Commit 13/05/2013 MaitrePylos (6)">
       <created>1368471963546</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
       <updated>1368471963546</updated>
     </task>
     <task id="LOCAL-00046" summary="Commit 13/05/2013 MaitrePylos (6) - Effet de bord Contrat">
       <created>1368473418778</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
       <updated>1368473418778</updated>
     </task>
     <task id="LOCAL-00047" summary="Commit 20/05/2013 MaitrePylos (6) - Fin de Contrat">
       <created>1369038665801</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
       <updated>1369038665801</updated>
     </task>
     <task id="LOCAL-00048" summary="Commit 20/05/2013 MaitrePylos (6) - Fin de Formation">
       <created>1369046164247</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
       <updated>1369046164247</updated>
     </task>
     <task id="LOCAL-00049" summary="Commit 21/05/2013 MaitrePylos (1) - Mise à jour des underscores">
       <created>1369126041643</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
       <updated>1369126041643</updated>
     </task>
     <task id="LOCAL-00050" summary="Commit 24/05/2013 MaitrePylos (1) - Passage après mise à jour de la DB. Mise à jour des position à générer automatiquement.">
       <created>1369403875372</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
       <updated>1369403875372</updated>
     </task>
     <task id="LOCAL-00051" summary="Commit 24/05/2013 MaitrePylos () - Passage après mise à jour de la DB. Mise à jour des position à générer automatiquement.">
       <created>1369420803165</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
       <updated>1369420803165</updated>
     </task>
     <task id="LOCAL-00052" summary="Commit 26/05/2013 MaitrePylos () - Passage après mise à jour de la DB. Mise à jour des position à générer automatiquement.">
       <created>1369568662187</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
       <updated>1369568662187</updated>
     </task>
     <task id="LOCAL-00053" summary="Commit 28/05/2013 MaitrePylos () - L2">
       <created>1369771606509</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
       <updated>1369771606509</updated>
     </task>
     <task id="LOCAL-00054" summary="Commit 31/05/2013 MaitrePylos () - Bouton Formateurs">
       <created>1369986321886</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
       <updated>1369986321886</updated>
     </task>
     <task id="LOCAL-00055" summary="Commit 10/06/2013 MaitrePylos () - Ajouts tables Filiere-localisation-agréments">
       <created>1370890607570</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
       <updated>1370890607570</updated>
     </task>
     <task id="LOCAL-00056" summary="Commit 11/06/2013 MaitrePylos () - Supression agrement model centre">
       <created>1370976046996</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
       <updated>1370976046996</updated>
     </task>
     <task id="LOCAL-00057" summary="Commit 11/06/2013 MaitrePylos () - Changement titre dans centre">
       <created>1370976434937</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
       <updated>1370976434937</updated>
     </task>
     <task id="LOCAL-00058" summary="Commit 15/06/2013 MaitrePylos fin_formation document">
       <created>1371280645606</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
       <updated>1371280645606</updated>
     </task>
     <task id="LOCAL-00059" summary="Commit 15/06/2013 MaitrePylos Mis à jour DB">
       <created>1371280925134</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
       <updated>1371280925134</updated>
     </task>
     <task id="LOCAL-00060" summary="Commit 19/06/2013 MaitrePylos Mis à jour">
       <created>1371676009167</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
       <updated>1371676009167</updated>
     </task>
     <task id="LOCAL-00061" summary="Commit 20/06/2013 MaitrePylos Mis à jour">
       <created>1371758603766</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
       <updated>1371758603766</updated>
     </task>
     <task id="LOCAL-00062" summary="Commit 23/06/2013 Between sur vérification date pour les contrats">
       <created>1372015994419</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
       <updated>1372015994419</updated>
     </task>
     <task id="LOCAL-00063" summary="Commit 23/06/2013 Between sur vérification date pour les contrats">
       <created>1372016002893</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
       <updated>1372016002893</updated>
     </task>
     <task id="LOCAL-00064" summary="Commit 27/06/2013 Lise à jour">
       <created>1372366573020</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
       <updated>1372366573020</updated>
     </task>
     <task id="LOCAL-00065" summary="Commit 27/06/2013 Mise à jour modifier fin de formation">
       <created>1372367763566</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
       <updated>1372367763566</updated>
     </task>
     <task id="LOCAL-00066" summary="Commit 29/06/2013 Mise à jour modifier fin de formation pour Anne-Lise">
       <created>1372492510635</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
       <updated>1372492510635</updated>
     </task>
     <task id="LOCAL-00067" summary="Commit 08/07/2013 Mise à jour suite Flyspray">
       <created>1373308695173</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
       <updated>1373308695173</updated>
     </task>
     <task id="LOCAL-00068" summary="Commit 10/07/2013 Mise à jour test commit">
       <created>1373440911608</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
       <updated>1373440911608</updated>
     </task>
     <task id="LOCAL-00069" summary="Commit 24/07/2013 Mise à jour.">
       <created>1374668381509</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
       <updated>1374668381509</updated>
     </task>
     <task id="LOCAL-00070" summary=" Commit 24/07/2013 Mise à jour 2.">
       <created>1374693728587</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
       <updated>1374693728588</updated>
     </task>
     <task id="LOCAL-00071" summary=" Commit 19/08/2013 Mise à jour.">
       <created>1376928398274</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
       <updated>1376928398274</updated>
     </task>
     <task id="LOCAL-00072" summary=" Commit 23/08/2013 Mise à jour.">
       <created>1377273015584</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
       <updated>1377273015584</updated>
     </task>
     <task id="LOCAL-00073" summary=" Commit 28/08/2013 Mise à jour.">
       <created>1377713257115</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
       <updated>1377713257115</updated>
     </task>
     <task id="LOCAL-00074" summary=" Commit 03/09/2013 Mise à jour.">
       <created>1378214032158</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
       <updated>1378214032158</updated>
     </task>
     <task id="LOCAL-00075" summary=" Commit 03/09/2013 Mise à jour(2).">
       <created>1378215396429</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
       <updated>1378215396429</updated>
     </task>
     <task id="LOCAL-00076" summary=" Commit 19/09/2013 Mise à jour.">
       <created>1379689688250</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
       <updated>1379689688250</updated>
     </task>
     <task id="LOCAL-00077" summary=" Commit 19/09/2013 Mise à jour.">
       <created>1379855321203</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
       <updated>1379855321203</updated>
     </task>
     <task id="LOCAL-00078" summary=" Commit 08/10/2013 Intégration données Gesta1 dans Gesta3.">
       <created>1381266261624</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
       <updated>1381266261624</updated>
     </task>
     <task id="LOCAL-00079" summary=" Commit 20/10/2013 Mise à jour suite intégration Gesta1-&gt;Gesta3.">
       <created>1382293976077</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
       <updated>1382293976077</updated>
     </task>
     <task id="LOCAL-00080" summary=" Commit 20/10/2013 Mise à jour trimestrielle.">
       <created>1382299973738</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
       <updated>1382299973738</updated>
     </task>
     <task id="LOCAL-00081" summary=" Commit 22/10/2013 Modification trimestrielle.">
       <created>1382468453855</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
       <updated>1382468453855</updated>
     </task>
     <task id="LOCAL-00082" summary=" Commit 22/10/2013 correction de flyspray.">
       <created>1382470873611</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
       <updated>1382470873611</updated>
     </task>
     <task id="LOCAL-00083" summary=" Commit 22/10/2013 correction de flyspray 2.">
       <created>1382472103157</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
       <updated>1382472103157</updated>
     </task>
     <task id="LOCAL-00084" summary=" Commit 24/10/2013 correction de flyspray.">
       <created>1382594739214</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
       <updated>1382594739214</updated>
     </task>
     <task id="LOCAL-00085" summary=" Commit 25/10/2013 correction de flyspray.">
       <created>1382644704898</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
       <updated>1382644704898</updated>
     </task>
     <task id="LOCAL-00086" summary=" Commit 29/10/2013 correction de flyspray.">
       <created>1382987526856</created>
+      <option name="number" value="00086" />
+      <option name="project" value="LOCAL" />
       <updated>1382987526856</updated>
     </task>
     <task id="LOCAL-00087" summary=" Commit 29/10/2013 correction de flyspray.">
       <created>1383078203929</created>
+      <option name="number" value="00087" />
+      <option name="project" value="LOCAL" />
       <updated>1383078203929</updated>
     </task>
     <task id="LOCAL-00088" summary=" Commit 04/11/2013 correction de flyspray.">
       <created>1383594519104</created>
+      <option name="number" value="00088" />
+      <option name="project" value="LOCAL" />
       <updated>1383594519104</updated>
     </task>
     <task id="LOCAL-00089" summary=" Commit 05/11/2013 Fiche de prestation">
       <created>1383686715393</created>
+      <option name="number" value="00089" />
+      <option name="project" value="LOCAL" />
       <updated>1383686715393</updated>
     </task>
     <task id="LOCAL-00090" summary=" Commit 05/11/2013 Fiche de prestation">
       <created>1383857180760</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
       <updated>1383857180760</updated>
     </task>
     <task id="LOCAL-00091" summary=" Commit 15/11/2013">
       <created>1384506000004</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
       <updated>1384506000004</updated>
     </task>
     <task id="LOCAL-00092" summary=" Commit 15/11/2013 (2)">
       <created>1384529933769</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
       <updated>1384529933769</updated>
     </task>
     <task id="LOCAL-00093" summary="Commit Git Pikacode">
       <created>1384799978989</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
       <updated>1384799978989</updated>
     </task>
     <task id="LOCAL-00094" summary="Commit Git Pikacode">
       <created>1384891859630</created>
+      <option name="number" value="00094" />
+      <option name="project" value="LOCAL" />
       <updated>1384891859630</updated>
     </task>
     <task id="LOCAL-00095" summary="Commit Git Pikacode">
       <created>1384891893698</created>
+      <option name="number" value="00095" />
+      <option name="project" value="LOCAL" />
       <updated>1384891893698</updated>
     </task>
     <task id="LOCAL-00096" summary="Commit Git Pikacode">
       <created>1384891953230</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
       <updated>1384891953230</updated>
     </task>
     <task id="LOCAL-00097" summary="Init Dépôt">
       <created>1385325630190</created>
+      <option name="number" value="00097" />
+      <option name="project" value="LOCAL" />
       <updated>1385325630190</updated>
     </task>
     <task id="LOCAL-00098" summary="Init Dépôt">
       <created>1385326138373</created>
+      <option name="number" value="00098" />
+      <option name="project" value="LOCAL" />
       <updated>1385326138373</updated>
     </task>
     <task id="LOCAL-00099" summary="Init Dépôt">
       <created>1385326246643</created>
+      <option name="number" value="00099" />
+      <option name="project" value="LOCAL" />
       <updated>1385326246644</updated>
     </task>
     <task id="LOCAL-00100" summary="Mise à jour 30/11/2013">
       <created>1385809806557</created>
+      <option name="number" value="00100" />
+      <option name="project" value="LOCAL" />
       <updated>1385809806557</updated>
     </task>
     <task id="LOCAL-00101" summary="Type diplome, menu vide">
       <created>1385812276059</created>
+      <option name="number" value="00101" />
+      <option name="project" value="LOCAL" />
       <updated>1385812276059</updated>
     </task>
     <task id="LOCAL-00102" summary="Type diplome, menu vide">
       <created>1386015777117</created>
+      <option name="number" value="00102" />
+      <option name="project" value="LOCAL" />
       <updated>1386015777118</updated>
     </task>
     <task id="LOCAL-00103" summary="Mise à jour du 04 décembre 2013">
       <created>1386190293968</created>
+      <option name="number" value="00103" />
+      <option name="project" value="LOCAL" />
       <updated>1386190293968</updated>
     </task>
     <task id="LOCAL-00104" summary="Mise à jour du 10 décembre 2013">
       <created>1386704602212</created>
+      <option name="number" value="00104" />
+      <option name="project" value="LOCAL" />
       <updated>1386704602213</updated>
     </task>
     <task id="LOCAL-00105" summary="Mise à jour du 17 décembre 2013">
       <created>1387352267602</created>
+      <option name="number" value="00105" />
+      <option name="project" value="LOCAL" />
       <updated>1387352267602</updated>
     </task>
     <task id="LOCAL-00106" summary="Mise à jour du 20 décembre 2013&#10;Calcul trimestrielle ok.">
       <created>1387560263864</created>
+      <option name="number" value="00106" />
+      <option name="project" value="LOCAL" />
       <updated>1387560263864</updated>
     </task>
     <task id="LOCAL-00107" summary="Mise à jour du nouvel An :)">
       <created>1388497365715</created>
+      <option name="number" value="00107" />
+      <option name="project" value="LOCAL" />
       <updated>1388497365715</updated>
     </task>
     <task id="LOCAL-00108" summary="Mise à jour du nouvel An :)">
       <created>1388787449925</created>
+      <option name="number" value="00108" />
+      <option name="project" value="LOCAL" />
       <updated>1388787449925</updated>
     </task>
     <task id="LOCAL-00109" summary="Mise à jour FS#180">
       <created>1389110625705</created>
+      <option name="number" value="00109" />
+      <option name="project" value="LOCAL" />
       <updated>1389110625705</updated>
     </task>
     <task id="LOCAL-00110" summary="Ajout gestionnaire de groupe 20/01/2014">
       <created>1390252135650</created>
+      <option name="number" value="00110" />
+      <option name="project" value="LOCAL" />
       <updated>1390252135651</updated>
     </task>
     <task id="LOCAL-00111" summary="Ajout menu déroulant dans contrat 28/01/2014&#10;">
       <created>1390892092916</created>
+      <option name="number" value="00111" />
+      <option name="project" value="LOCAL" />
       <updated>1390892092916</updated>
     </task>
     <task id="LOCAL-00112" summary="Mise à jour vers Fuel 1.7.1&#10;">
       <created>1391593730121</created>
+      <option name="number" value="00112" />
+      <option name="project" value="LOCAL" />
       <updated>1391593730121</updated>
     </task>
     <task id="LOCAL-00113" summary="Mise à jour vers Fuel 1.7.1&#10;">
       <created>1391594364626</created>
+      <option name="number" value="00113" />
+      <option name="project" value="LOCAL" />
       <updated>1391594364626</updated>
     </task>
     <task id="LOCAL-00114" summary="Remarques Flyspray&#10;">
       <created>1391945336980</created>
+      <option name="number" value="00114" />
+      <option name="project" value="LOCAL" />
       <updated>1391945336980</updated>
     </task>
     <task id="LOCAL-00115" summary="Mise en prod.&#10;">
       <created>1392575929209</created>
+      <option name="number" value="00115" />
+      <option name="project" value="LOCAL" />
       <updated>1392575929209</updated>
     </task>
     <task id="LOCAL-00116" summary="Mise en prod.&#10;">
       <created>1393957125028</created>
+      <option name="number" value="00116" />
+      <option name="project" value="LOCAL" />
       <updated>1393957125028</updated>
     </task>
     <task id="LOCAL-00117" summary="Modification C98&#10;">
       <created>1395693203232</created>
+      <option name="number" value="00117" />
+      <option name="project" value="LOCAL" />
       <updated>1395693203232</updated>
     </task>
     <task id="LOCAL-00118" summary="Modification suivant mise en Prod&#10;">
       <created>1396245707765</created>
+      <option name="number" value="00118" />
+      <option name="project" value="LOCAL" />
       <updated>1396245707765</updated>
     </task>
     <task id="LOCAL-00119" summary="Modification fiche de paye&#10;">
       <created>1396282412460</created>
+      <option name="number" value="00119" />
+      <option name="project" value="LOCAL" />
       <updated>1396282412460</updated>
     </task>
     <task id="LOCAL-00120" summary="Modification fiche de paye&#10;">
       <created>1396285560670</created>
+      <option name="number" value="00120" />
+      <option name="project" value="LOCAL" />
       <updated>1396285560670</updated>
     </task>
     <task id="LOCAL-00121" summary="Modification mise en prod le 03/04/2014&#10;">
       <created>1396467966247</created>
+      <option name="number" value="00121" />
+      <option name="project" value="LOCAL" />
       <updated>1396467966247</updated>
     </task>
     <task id="LOCAL-00122" summary="Modification mise en prod le 03/04/2014&#10;">
       <created>1396725574569</created>
+      <option name="number" value="00122" />
+      <option name="project" value="LOCAL" />
       <updated>1396725574569</updated>
     </task>
     <task id="LOCAL-00123" summary="Modification mise en prod le 03/04/2014&#10;">
       <created>1396725583255</created>
+      <option name="number" value="00123" />
+      <option name="project" value="LOCAL" />
       <updated>1396725583256</updated>
     </task>
     <task id="LOCAL-00124" summary="Modification mise en prod le 09/04/2014&#10;">
       <created>1397024105865</created>
+      <option name="number" value="00124" />
+      <option name="project" value="LOCAL" />
       <updated>1397024105866</updated>
     </task>
     <task id="LOCAL-00125" summary="Modification mise en prod le 15/04/2014&#10;">
       <created>1397589678875</created>
+      <option name="number" value="00125" />
+      <option name="project" value="LOCAL" />
       <updated>1397589678875</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Mise à jour Doc et i_forem&#10;">
+      <created>1397761947566</created>
+      <option name="number" value="00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1397761947566</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1325,22 +1591,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="27" width="1608" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70039946" sideWeight="0.48973042" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32669324" sideWeight="0.5346598" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32669324" sideWeight="0.5346598" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30457935" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30744544" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31129652" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6990679" sideWeight="0.5096277" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947807" sideWeight="0.4929215" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.21846712" sideWeight="0.67545074" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.21846712" sideWeight="0.67545074" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1362,17 +1628,17 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30457935" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6993737" sideWeight="0.5096277" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947807" sideWeight="0.4929215" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1996805" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889196" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889196" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1390,7 +1656,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value=" Commit 04/11/2013 correction de flyspray." />
     <MESSAGE value=" Commit 05/11/2013 Fiche de prestation" />
     <MESSAGE value=" Commit 15/11/2013" />
     <MESSAGE value=" Commit 15/11/2013 (2)" />
@@ -1415,7 +1680,8 @@
     <MESSAGE value="Modification mise en prod le 03/04/2014&#10;" />
     <MESSAGE value="Modification mise en prod le 09/04/2014&#10;" />
     <MESSAGE value="Modification mise en prod le 15/04/2014&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification mise en prod le 15/04/2014&#10;" />
+    <MESSAGE value="Mise à jour Doc et i_forem&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour Doc et i_forem&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1490,34 +1756,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/edit_contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.689655" vertical-offset="557" max-vertical-offset="1460">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/reactivation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_ajouter_adresse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/modules/participant/views/participant/partials/_form_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="940" max-vertical-offset="1820">
@@ -1536,13 +1774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="4480">
           <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="907">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1619,13 +1850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2800" max-vertical-offset="6260">
-          <caret line="140" column="45" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/ajouter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4140" max-vertical-offset="9240">
@@ -1673,20 +1897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="420">
           <caret line="6" column="97" selection-start-line="6" selection-start-column="97" selection-end-line="6" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10400" max-vertical-offset="13400">
-          <caret line="520" column="53" selection-start-line="520" selection-start-column="53" selection-end-line="520" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10674157" vertical-offset="4505" max-vertical-offset="5480">
-          <caret line="647" column="48" selection-start-line="647" selection-start-column="48" selection-end-line="647" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1801,7 +2011,7 @@
         <state vertical-scroll-proportion="0.11713031" vertical-offset="60" max-vertical-offset="1360">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
-            <element signature="e#101#2499#0" expanded="true" />
+            <element signature="e#101#2499#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1823,54 +2033,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17720" max-vertical-offset="18200">
+        <state vertical-scroll-proportion="0.29721814" vertical-offset="17517" max-vertical-offset="18200">
           <caret line="886" column="71" selection-start-line="886" selection-start-column="71" selection-end-line="886" selection-end-column="71" />
           <folding>
-            <marker date="1397588468307" expanded="true" signature="691:894" placeholder="SELECT count..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="691:941" placeholder="SELECT count..." />
-            <marker date="1397588468307" expanded="true" signature="2597:3239" placeholder="SELECT c.id_..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="3829:4171" placeholder="SELECT id_co..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="4926:5139" placeholder="SELECT id_co..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="5834:6261" placeholder="SELECT id_co..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="7138:7286" placeholder="INSERT INTO ..." />
-            <marker date="1397588468307" expanded="true" signature="9423:9640" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="9947:10005" placeholder="DELETE FROM ..." />
-            <marker date="1397588468307" expanded="true" signature="10252:10290" placeholder="DELETE FROM ..." />
-            <marker date="1397588468307" expanded="true" signature="10855:11039" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="11762:11942" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="12856:12973" placeholder="SELECT MIN(d..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="14857:15338" placeholder="SELECT h.id_..heures..." />
-            <marker date="1397588468307" expanded="true" signature="15715:15781" placeholder="SELECT i_sec..heures..." />
-            <marker date="1397588468307" expanded="true" signature="16437:16555" placeholder="UPDATE heure..." />
-            <marker date="1397588468307" expanded="true" signature="16957:17034" placeholder="INSERT INTO ..." />
-            <marker date="1397588468307" expanded="true" signature="17408:17527" placeholder="SELECT * FRO..ajout_deplacement..." />
-            <marker date="1397588468307" expanded="true" signature="18185:18266" placeholder="UPDATE ajout..." />
-            <marker date="1397588468307" expanded="true" signature="18727:18916" placeholder="SELECT t_mot..heures..." />
-            <marker date="1397588468307" expanded="true" signature="19323:19558" placeholder="SELECT t_mot..heures..." />
-            <marker date="1397588468307" expanded="true" signature="20167:20351" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="20795:20913" placeholder="SELECT MIN(d..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="21229:21354" placeholder="SELECT COUNT..valider_heure..." />
-            <marker date="1397588468307" expanded="true" signature="21599:21733" placeholder="SELECT i_sec..valider_heure..." />
-            <marker date="1397588468307" expanded="true" signature="22052:22127" placeholder="INSERT INTO ..." />
-            <marker date="1397588468307" expanded="true" signature="22341:22545" placeholder="UPDATE heure..." />
-            <marker date="1397588468307" expanded="true" signature="22787:22957" placeholder="SELECT count..heures..." />
-            <marker date="1397588468307" expanded="true" signature="23494:23896" placeholder="SELECT count..heures..." />
-            <marker date="1397588468307" expanded="true" signature="23803:23840" placeholder="-- AND t_moy..." />
-            <marker date="1397588468307" expanded="true" signature="24454:24590" placeholder="SELECT (IF(?..contrat..." />
-            <marker date="1397588468307" expanded="true" signature="25247:25419" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="26076:26246" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="26720:26890" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="27752:27934" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1397588468307" expanded="true" signature="28737:28854" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT count..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT count..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT c.id_..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT id_co..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT id_co..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT id_co..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT h.id_..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT i_sec..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="UPDATE heure..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ajout_deplacement..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="UPDATE ajout..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT t_mot..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT t_mot..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..valider_heure..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT i_sec..valider_heure..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="UPDATE heure..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT count..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT count..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="-- AND t_moy..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT (IF(?..contrat..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397588468307" expanded="true" signature="-1:-1" placeholder="SELECT MIN(d..contrat..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17360" max-vertical-offset="21080">
-          <caret line="868" column="33" selection-start-line="868" selection-start-column="33" selection-end-line="868" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1879,15 +2081,15 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="1520">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
-            <marker date="1397739477342" expanded="true" signature="501:551" placeholder="DELETE FROM ..." />
-            <marker date="1397739477342" expanded="true" signature="745:1171" placeholder="SELECT p.id_..contrat..." />
+            <marker date="1397739477342" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1397739477342" expanded="true" signature="-1:-1" placeholder="SELECT p.id_..contrat..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/modules/administration/views/administration/form_type_contrat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1280" max-vertical-offset="1780">
+        <state vertical-scroll-proportion="0.26793557" vertical-offset="1097" max-vertical-offset="1780">
           <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
           <folding />
         </state>
@@ -1901,11 +2103,196 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Doc/Sphinx/all-about-me.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63448274" vertical-offset="0" max-vertical-offset="725">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Doc/Sphinx/index.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77253217" vertical-offset="0" max-vertical-offset="840">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0014044944" vertical-offset="79" max-vertical-offset="880">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48636365" vertical-offset="359" max-vertical-offset="7640">
+          <caret line="372" column="0" selection-start-line="372" selection-start-column="0" selection-end-line="372" selection-end-column="0" />
+          <folding>
+            <element signature="e#12888#12925#0#PHP" expanded="true" />
+            <element signature="e#12930#15925#0#PHP" expanded="true" />
+            <element signature="e#25134#34952#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/groupe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.965517" vertical-offset="1304" max-vertical-offset="2360">
+          <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+          <folding>
+            <element signature="n#getNames#0;n#Model_Groupe#0;n#!!top" expanded="true" />
+            <element signature="n#getName#0;n#Model_Groupe#0;n#!!top" expanded="true" />
+            <marker date="1397938783766" expanded="true" signature="1952:2177" placeholder="SELECT DISTI..groupe..." />
+            <marker date="1397938783766" expanded="true" signature="2966:3232" placeholder="SELECT g.id_..groupe..." />
+            <marker date="1397938783766" expanded="true" signature="3756:3907" placeholder="SELECT g.t_n..groupe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="740">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/formulaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.103449" vertical-offset="2797" max-vertical-offset="3700">
+          <caret line="293" column="75" selection-start-line="293" selection-start-column="75" selection-end-line="293" selection-end-column="75" />
+          <folding>
+            <element signature="e#563#4786#0#PHP" expanded="true" />
+            <element signature="e#7912#8334#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/document/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.275862" vertical-offset="0" max-vertical-offset="440">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/views/formulaire/prestationForem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.137931" vertical-offset="0" max-vertical-offset="740">
+          <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.4827585" vertical-offset="14500" max-vertical-offset="16980">
+          <caret line="746" column="12" selection-start-line="746" selection-start-column="12" selection-end-line="746" selection-end-column="12" />
+          <folding>
+            <element signature="e#7#41#0#PHP" expanded="true" />
+            <element signature="e#98#138#0#PHP" expanded="true" />
+            <element signature="n#__construct#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#getParticipant#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#551#608#0#PHP" expanded="true" />
+            <element signature="n#getGroupe#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#1945#2164#0#PHP" expanded="true" />
+            <element signature="n#heuresMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#2681#2908#0#PHP" expanded="true" />
+            <element signature="n#getHeuresAEffectuer#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#3350#3636#0#PHP" expanded="true" />
+            <element signature="e#4360#4673#0#PHP" expanded="true" />
+            <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#5335#5579#0#PHP" expanded="true" />
+            <element signature="n#totalHeureMoisJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#6240#6488#0#PHP" expanded="true" />
+            <element signature="n#totalHeureMoisNonJustifier#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#7048#7378#0#PHP" expanded="true" />
+            <element signature="n#salaire#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#get_c98_solo#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#getC98FullLocalisation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#get_c98_full#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#11154#11230#0#PHP" expanded="true" />
+            <element signature="n#getVerifC98#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#get_filiere#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#12525#12573#0#PHP" expanded="true" />
+            <element signature="n#groupe_l1#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#nombreParticipantEntreDeuxDate#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#13754#14005#0#PHP" expanded="true" />
+            <element signature="n#calculHeuresMoisStatL2#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#fiche#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#15965#16166#0#PHP" expanded="true" />
+            <element signature="n#nombreAnnee#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#idEtatPretsation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationFormation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationFormationForem#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationStage#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationStageForem#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#ficheEtatPrestationMaladie#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#listeStagiaire#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#dateContrat#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="n#getAttestation#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <element signature="e#27585#27720#0#PHP" expanded="true" />
+            <element signature="n#nombresPrestations#0;n#Model_My_Document#0;n#!!top" expanded="true" />
+            <marker date="1397939233455" expanded="true" signature="280:393" placeholder="SELECT t_nom..participant..." />
+            <marker date="1397939233455" expanded="true" signature="673:1039" placeholder="SELECT g.t_n..contrat..." />
+            <marker date="1397939233455" expanded="true" signature="2261:2507" placeholder="SELECT i_sec..heures..." />
+            <marker date="1397939233455" expanded="true" signature="4778:5145" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397939233455" expanded="true" signature="5689:5958" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397939233455" expanded="true" signature="6601:6865" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1397939233455" expanded="true" signature="8031:8471" placeholder="SELECT t_nom..participant..." />
+            <marker date="1397939233455" expanded="true" signature="8789:9624" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="10053:10914" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="11299:12092" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="12386:12422" placeholder="SELECT id_fi..filiere..." />
+            <marker date="1397939233455" expanded="true" signature="16224:16299" placeholder="SELECT DISTI..heures_prestations..." />
+            <marker date="1397939233455" expanded="true" signature="16694:17006" placeholder="SELECT h.par..heures..." />
+            <marker date="1397939233455" expanded="true" signature="17645:18521" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="19023:19865" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="20361:21223" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="21693:22521" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="22997:23929" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="24414:25312" placeholder="SELECT p.t_n..participant..." />
+            <marker date="1397939233455" expanded="true" signature="26674:26789" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1397939233455" expanded="true" signature="27082:27408" placeholder="SELECT t_nom..participant..." />
+            <marker date="1397939233455" expanded="true" signature="27894:28101" placeholder="SELECT count..heures..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24242425" vertical-offset="12220" max-vertical-offset="14920">
+          <caret line="619" column="0" selection-start-line="619" selection-start-column="0" selection-end-line="619" selection-end-column="0" />
+          <folding>
+            <element signature="e#50#109#0#PHP" expanded="true" />
+            <element signature="e#230#478#0#PHP" expanded="true" />
+            <element signature="e#483#802#0#PHP" expanded="true" />
+            <element signature="e#809#994#0#PHP" expanded="true" />
+            <element signature="e#1000#1120#0#PHP" expanded="true" />
+            <element signature="e#1125#7407#0#PHP" expanded="true" />
+            <element signature="e#1422#1496#0#PHP" expanded="true" />
+            <element signature="e#2030#2089#0#PHP" expanded="true" />
+            <element signature="e#2313#2513#0#PHP" expanded="true" />
+            <element signature="e#2944#3018#0#PHP" expanded="true" />
+            <element signature="e#3161#3353#0#PHP" expanded="true" />
+            <element signature="e#4877#4950#0#PHP" expanded="true" />
+            <element signature="e#7414#7520#0#PHP" expanded="true" />
+            <element signature="e#7525#9215#0#PHP" expanded="true" />
+            <element signature="e#7876#7954#0#PHP" expanded="true" />
+            <element signature="e#9222#10918#0#PHP" expanded="true" />
+            <element signature="e#10924#15067#0#PHP" expanded="true" />
+            <element signature="e#11045#11108#0#PHP" expanded="true" />
+            <element signature="e#11264#11326#0#PHP" expanded="true" />
+            <element signature="e#11472#11520#0#PHP" expanded="true" />
+            <element signature="e#11637#11743#0#PHP" expanded="true" />
+            <element signature="e#11845#11924#0#PHP" expanded="true" />
+            <element signature="e#12169#12236#0#PHP" expanded="true" />
+            <element signature="e#12360#12447#0#PHP" expanded="true" />
+            <element signature="e#12646#12710#0#PHP" expanded="true" />
+            <element signature="e#12933#13020#0#PHP" expanded="true" />
+            <element signature="e#15073#15871#0#PHP" expanded="true" />
+            <element signature="e#15877#16766#0#PHP" expanded="true" />
+            <element signature="e#16772#19787#0#PHP" expanded="true" />
+            <element signature="e#22839#23795#0#PHP" expanded="true" />
+            <element signature="e#23801#24645#0#PHP" expanded="true" />
+            <element signature="e#24651#26018#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

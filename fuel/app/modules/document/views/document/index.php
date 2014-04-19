@@ -10,6 +10,7 @@
     <li><a href="document/formulaire/formation/1"> Contrat de formation professionnelle - Forem </a></li>
     <li><a href="document/formulaire/formation/2"> Fiche d&eacute;placement - Forem </a> </li>
     <li><a href="document/formulaire/prestation"> Etat de prestation - Forem </a></li>
+    <li><a href="document/formulaire/prestationForem"> Etat de prestation - Forem (F70bis administratif) </a></li>
     <li><a href="document/formulaire/inscription"> Demande d'attestations d'inscription au Forem </a></li>
 </ul>
 

@@ -282,6 +282,20 @@ class Controller_Formulaire extends \Controller_Main
 
     }
 
+    public function action_prestationForem()
+    {
+        $date = new \DateTime();
+        $this->data['date'] = $date->format('d-m-Y');
+        $date->add(new \DateInterval('P15D'));
+        $this->data['date2'] = $date->format('d-m-Y');
+        $this->data['groupe'] = \Model_groupe::getNamesForem();
+
+        $this->template->title = '';
+        $this->template->content = \View::forge('formulaire/prestationForem', $this->data);
+
+
+    }
+
     public function action_liste()
     {
 
