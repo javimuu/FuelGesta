@@ -47,17 +47,23 @@ return array(
 	 */
 	'groups' => array(
 		 -1   => array('name' => 'Bannis', 'roles' => array('banned')),
-		 0    => array('name' => 'Invités', 'roles' => array()),
-		 1    => array('name' => 'Autre', 'roles' => array('others')),
+		 //0    => array('name' => 'Invités', 'roles' => array()),
+		// 1    => array('name' => 'Autre', 'roles' => array('others')),
 		 50   => array('name' => 'Formateurs', 'roles' => array('others', 'formateurs')),
-		 70  => array('name' => 'Secrétaires', 'roles' => array('others', 'formateurs', 'secretaires')),	 
-		 100  => array('name' => 'Administrateurs', 'roles' => array('others', 'formateurs', 'secretaires', 'admin')),	 
+		 70  => array('name' => 'Gestionnaire', 'roles' => array('others', 'formateurs', 'gestionnaire')),
+		 100  => array('name' => 'Administrateurs', 'roles' => array('others', 'formateurs', 'gestionnaire', 'admin')),
 	),
 
 	/**
 	 * Roles as name => array(location => rights)
 	 */
 	'roles' => array(
+
+        'admin'=>array(
+            'Controller_Administration' => array(
+                true,
+            )
+        )
 		/**
 		 * Examples
 		 * ---

@@ -23,9 +23,12 @@ class Controller_Administration extends \Controller_Main
     {
         parent::before();
 
-        if (!\Auth::member(100)) {
+
+        if ($this->current_user == NULL) {
             \Session::set('direction', '/administration');
             \Response::redirect('users/login');
+        } else if (!\Auth::member(100)) {
+            \Response::redirect('users/no_rights'); #7F7F7F
         }
 
         $this->data['view_dir'] = $this->view_dir;
