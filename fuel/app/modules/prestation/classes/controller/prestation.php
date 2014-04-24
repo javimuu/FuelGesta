@@ -230,7 +230,7 @@ class Controller_Prestation extends \Controller_Main
         /**
          * Affichage des heures en boni ou négatif.
          */
-       // $total_heures_recup = $db->total_hours_recovery($id_participant, $date);
+        // $total_heures_recup = $db->total_hours_recovery($id_participant, $date);
         $total_heures_recup = $db->getHourRecup($id_participant, $date);
 
 
@@ -265,8 +265,10 @@ class Controller_Prestation extends \Controller_Main
         $this->data['participants_autocomplete'] = $participants_autocomplete;
         $this->data['total_heures_prester'] = $total_heures_mois;
         $this->data['prester'] = $prester;
-        $this->data['participant'] = \Session::get('nom') . ' - ' . ucfirst(\Maitrepylos\Utils::mois($date->format('m')))
+        $this->data['participant'] = \Session::get('nom');
+        $this->data['nomMois'] = ucfirst(\Maitrepylos\Utils::mois($date->format('m')))
             . ' ' . $date->format('Y');
+        $this->data['nom'] = \Session::get('nom');
 
         $this->data['control'] = count($control);
 
@@ -278,76 +280,164 @@ class Controller_Prestation extends \Controller_Main
             $time = new \Maitrepylos\Timetosec();
 
             $form_data = \Input::post();
+            $passe = false;
+            //Si on ne met pas d'heure alors on passe Null
+            if($form_data['heuresprester'] == ''){
+               // $form_data['heuresprester'] = null;
+                $passe = true;
+                //on récupère les heures à insérer
+                $heuresJour = $db->getHourDay($form_data['t_typecontrat']);
+            }
 
+            /**
+             * Séparation du motif et du Schéma
+             */
+            list ($nom, $schema) = explode(':', $form_data['motif']);
 
             $validate_date = new \Maitrepylos\Date($date->format('t'));
 
-            if ($validate_date->isValid($form_data['date'])) {
+            /**
+             * Vérification que l'heure passé est correcte
+             *
+             */
+            $val = $this->validation_heures();
 
-                /**
-                 * Vérification que l'heure passé est correcte
-                 *
-                 */
-                $val = $this->validation_heures();
+            if($val->run() || $passe = true) {
 
-                /**
-                 * Si l'heure est correcte on fait le traitement.
-                 */
-                if ($val->run()) {
-                    /**
-                     * Transformation de l'heure en secondes
-                     */
-                    $heuresprester = $time->StringToTime($form_data['heuresprester']);
 
-                    /**
-                     * Séparation du motif et du Schéma
-                     */
-                    list ($nom, $schema) = explode(':', $form_data['motif']);
-                    $range = \Maitrepylos\Utils::srange($form_data['date'][0] . '-' . $form_data['date'][1]);
-                    $count = count($range);
+                $heuresprester = null;
+
+                //si on prend le mois pour remplir tout automatiquement
+                if ($form_data['action'] === '3') {
+
+                    if ($val->run()) {
+                        /**
+                         * Transformation de l'heure en secondes
+                         */
+                        $heuresprester = $time->StringToTime($form_data['heuresprester']);
+                    }
+
+
+
+                    $dateMois = clone $date;
+                    $count = $dateMois->format('t');
+
 
                     for ($i = 0; $i < $count; $i++) {
+                        $nomJour = $dateMois->format('w');
 
-                        $date_insertion = \DateTime::createFromFormat('Y-m-d', $date->format('Y-m') . '-' . $range[$i]);
 
-                        //Si on modifie les heures, il faut d'abords les supprimer
-                        if (\Input::post('action') == 0 || (int)$heuresprester == 0) {
-                            $db->delete_heure($id_participant, $date_insertion->format('Y-m-d'));
+                        if ($heuresprester == null) {
+
+                            if ($nomJour !== '0' && $nomJour != '6') {
+                                $db->insertion_heures_prestation($id_participant
+                                    , $dateMois, $form_data['t_typecontrat'], $heuresJour[0][$nomJour], $nom, $schema);
+                                $this->_message[] = 'Insertion des heures pour la date  ' . $dateMois->format('d-m-Y');
+                                // continue;
+                            }
+                        } else {
+
                             if ((int)$heuresprester == 0) {
-                                $this->_message[] = 'Suppression des heures pour la date  ' . $date_insertion->format('d-m-Y');
-                                continue;
+
+                                $db->delete_heure($id_participant, $dateMois->format('Y-m-d'));
+
+                                $this->_message[] = 'Suppression pour la date  ' . $dateMois->format('d-m-Y');
+                                // continue;
+
+                            } else {
+                                if ($nomJour !== '0' && $nomJour != '6') {
+                                    $db->insertion_heures_prestation($id_participant
+                                        , $dateMois, $form_data['t_typecontrat'], $heuresprester, $nom, $schema);
+                                    $this->_message[] = 'Insertion des heures pour la date  ' . $dateMois->format('d-m-Y');
+                                    //   continue;
+
+                                }
+                            }
+
+                        }
+
+                        $dateMois->modify('+1 day');
+                    }
+
+
+                } elseif ($validate_date->isValid($form_data['date'])) {
+
+
+
+                        /**
+                         * Transformation de l'heure en secondes
+                         */
+                        $heuresprester = $time->StringToTime($form_data['heuresprester']);
+
+
+                        $range = \Maitrepylos\Utils::srange($form_data['date'][0] . '-' . $form_data['date'][1]);
+                        $count = count($range);
+
+                        for ($i = 0; $i < $count; $i++) {
+
+                            $date_insertion = \DateTime::createFromFormat('Y-m-d', $date->format('Y-m') . '-' . $range[$i]);
+
+                            //Si on modifie les heures, il faut d'abords les supprimer
+                            if (\Input::post('action') == 0 || ((int)$heuresprester == 0  && $passe == false)) {
+                                $db->delete_heure($id_participant, $date_insertion->format('Y-m-d'));
+                                if ((int)$heuresprester == 0) {
+                                    $this->_message[] = 'Suppression des heures pour la date  ' . $date_insertion->format('d-m-Y');
+                                    if($passe == false) {
+                                        continue;
+                                    }
+                                }
+                            }
+                            if($passe == false) {
+                                if ($db->insertion_heures_prestation($id_participant
+                                        , $date_insertion, $form_data['t_typecontrat'], $heuresprester, $nom, $schema) === false
+                                ) {
+                                    $this->_message[] = 'Pas de contrat en date du ' . $date_insertion->format('d-m-Y');
+                                } else {
+                                    \Session::set_flash('success', array('Les heures ont été introduites'));
+                                }
+                            }else{
+
+                                $heuresJour;
+                                $nomJour = $date_insertion->format('w');
+
+                                if($heuresJour[0][$nomJour] != 0) {
+
+                                    if ($db->insertion_heures_prestation($id_participant
+                                            , $date_insertion, $form_data['t_typecontrat'], $heuresJour[0][$nomJour], $nom, $schema) === false
+                                    ) {
+                                        $this->_message[] = 'Pas de contrat en date du ' . $date_insertion->format('d-m-Y');
+                                    } else {
+                                        \Session::set_flash('success', array('Les heures ont été introduites'));
+                                    }
+                                }
                             }
                         }
 
-                        if ($db->insertion_heures_prestation($id_participant
-                                , $date_insertion, $form_data['t_typecontrat'], $heuresprester, $nom, $schema) === false
-                        ) {
-                            $this->_message[] = 'Pas de contrat en date du ' . $date_insertion->format('d-m-Y');
-                        } else {
-                            \Session::set_flash('success', array('Les heures ont été introduites'));
-                        }
-                    }
 
                 } else {
+                    /**
+                     * Gestion des messages d'erreur du au mauvais passage de date.
+                     */
+                    foreach ($validate_date->get_message() as $message) {
 
-
-                    $this->_message[] = $val->show_errors();
+                        $this->_message[] = $message;
+                    }
                 }
-            } else {
-                /**
-                 * Gestion des messages d'erreur du au mauvais passage de date.
-                 */
-                foreach ($validate_date->get_message() as $message) {
+                if (count($this->_message) != 0) {
 
-                    $this->_message[] = $message;
+                    \Session::set_flash('error', $this->_message);
                 }
-            }
-            if (count($this->_message) != 0) {
-
+            }else{
+                $this->_message[] = $val->show_errors();
+                $this->_message[] = 'l\'heure est incorecte';
                 \Session::set_flash('error', $this->_message);
+
             }
-            \Session::set('formdata', $form_data);
-            \Response::redirect('prestation/modifier_participant/');
+
+                \Session::set('formdata', $form_data);
+                \Response::redirect('prestation/modifier_participant/');
+
+
 
 
         }
@@ -360,6 +450,7 @@ class Controller_Prestation extends \Controller_Main
 
         $this->template->title = 'Gestion des heures';
         $this->template->content = \View::forge('prestation/fiche', $this->data);
+        //$this->template->content = \View::forge('test', $this->data);
 //        } else {
 //            $msg[] = 'Vous avez fait une mauvaise manipulation !';
 //            \Session::set_flash('error', $msg);

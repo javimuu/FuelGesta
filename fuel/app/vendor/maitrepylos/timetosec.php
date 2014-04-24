@@ -68,7 +68,9 @@ class Timetosec {
      */
     public function StringToTime($string){
 
-
+        if($string == ''){
+            return null;
+        }
         $tiret = null;
         $caractere = $string[0];
         if($caractere =='-'){

@@ -758,6 +758,36 @@ class Model_My_Prestation extends \Maitrepylos\Db {
     }
 
     /**
+     * Fonction retournant le nombres d'heures à effectuer par un groupe
+     * les 'as' c'est pour adapté facilement aux objets Datetime::format('w')
+     * @param $idContrat
+     * @return mixed
+     */
+    public function getHourDay($idContrat){
+
+        $sql = "
+        SELECT
+        i_lundi as '1',
+        i_mardi as '2',
+        i_mercredi as '3',
+        i_jeudi as '4',
+        i_vendredi as '5',
+        i_samedi as '6',
+        i_dimanche as '0'
+        FROM contrat c
+        INNER JOIN groupe g
+        ON c.groupe_id = g.id_groupe
+        WHERE c.id_contrat =  ?
+
+        ";
+        $req = $this->_db->prepare($sql);
+        $req->execute(array($idContrat));
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+
+
+    }
+
+    /**
      * Fonction retournant le nombres de secondes de récupérations sur un mois donné.
      * @param $id
      * @param Datetime $date

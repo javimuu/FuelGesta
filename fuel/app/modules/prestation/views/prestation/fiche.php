@@ -33,7 +33,29 @@ $date = \Session::get('date_prestation');
 
 
     <div class="span8" style="font-size: 16px">Gestion des heures de <?php echo Html::anchor('participant/modifier/' .
-        $id_participant, $participant) ?></div>
+            $id_participant, $participant) ?>
+
+        <?php
+        $datePlus = clone $date;
+        $dateMoins = clone $date;
+
+        $datePlus->modify('+1 month');
+        $dateMoins->modify('-1 month');
+        ?>
+        <a href="
+    <?php
+        echo Uri::create('prestation/change_participant_fiche/' . $nom . '/' . $id_participant . '/' . $dateMoins->format('Y') . '/' . $dateMoins->format('m'))
+        ?>".><i class="icon-backward"></i></a>
+
+        <?php echo $nomMois; ?>
+
+        <a href="
+    <?php
+        echo Uri::create('prestation/change_participant_fiche/' . $nom . '/' . $id_participant . '/' . $datePlus->format('Y') . '/' . $datePlus->format('m'))
+        ?>".><i class="icon-forward"></i></a>
+
+
+    </div>
 
 
     <div class="span4">
@@ -101,40 +123,42 @@ $date = \Session::get('date_prestation');
 
         <?php if ($control === 0): ?>
 
-            <?php echo Form::open(array('name' => 'ajout', 'class' => 'form_heures')); ?>
+        <?php echo Form::open(array('name' => 'ajout', 'class' => 'form_heures')); ?>
 
-            <strong>Modifieur</strong> DU
-            <?php echo Form::input('date[]', isset($modifieur->date1) ? $modifieur->date1 : '', array('size' => '2', 'id' => "date")) ?>
-            AU
-            <?php echo Form::input('date[]', isset($modifieur->date2) ? $modifieur->date2 : '', array('size' => '2')) ?>
-            <strong>Motif</strong>
-            <?php echo Form::select('motif', isset($modifieur->motif) ? $modifieur->motif : '', $motifs) ?>
-            <strong>Heures</strong>
-            <?php echo Form::input('heuresprester', isset($modifieur->heureprester) ? $modifieur->heureprester : '', array('size' => '5')) ?>
+        <strong>Modifieur</strong> DU
+        <?php echo Form::input('date[]', isset($modifieur->date1) ? $modifieur->date1 : '', array('size' => '2', 'id' => "date")) ?>
+        AU
+        <?php echo Form::input('date[]', isset($modifieur->date2) ? $modifieur->date2 : '', array('size' => '2')) ?>
+        <strong>Motif</strong>
+        <?php echo Form::select('motif', isset($modifieur->motif) ? $modifieur->motif : '', $motifs) ?>
+        <strong>Heures</strong>
+        <?php echo Form::input('heuresprester', isset($modifieur->heureprester) ? $modifieur->heureprester : '', array('size' => '5')) ?>
+        <?php echo Form::radio('action', '3') ?>
+        <?php echo Form::label('Remplir le mois', 'action'); ?>
 
-            <p>
+        <p>
 
-                <?php echo Form::radio('action', '1', array('checked' => 'checked')) ?>
-                <?php echo Form::label('Ajouter', 'action'); ?>
+            <?php echo Form::radio('action', '1', array('checked' => 'checked')) ?>
+            <?php echo Form::label('Ajouter', 'action'); ?>
 
-                <?php echo Form::radio('action', '0') ?>
-                <?php echo Form::label('Remplacer', 'action'); ?>
+            <?php echo Form::radio('action', '0') ?>
+            <?php echo Form::label('Remplacer', 'action'); ?>
 
-                <?php // echo Form::checkbox('heures_formateurs', '1') ?>
-                <?php // echo Form::label('Heures formateurs', 'heures_formateurs'); ?>
+            <?php // echo Form::checkbox('heures_formateurs', '1') ?>
+            <?php // echo Form::label('Heures formateurs', 'heures_formateurs'); ?>
 
-                <?php echo Form::select('t_typecontrat', '', $contrats) ?>
-                <?php echo Form::label('Contrat', 't_typecontrat'); ?>
-                <?php echo Form::submit('submit_choix', 'Appliquer', array('class' => 'btn btn-success btn-mini')); ?>
-            </p>
-            <?php echo Form::close(); ?>
-            <div>
+            <?php echo Form::select('t_typecontrat', '', $contrats) ?>
+            <?php echo Form::label('Contrat', 't_typecontrat'); ?>
+            <?php echo Form::submit('submit_choix', 'Appliquer', array('class' => 'btn btn-success btn-mini')); ?>
+        </p>
+        <?php echo Form::close(); ?>
+        <div>
 
-                <?php echo Html::anchor('prestation/est_valide', '<i class="icon-ok icon-white"></i> Valider le mois',
-                    array('class' => 'btn btn-success')) ?>
-                <?php echo Html::anchor('prestation/est_valide_formateur', '<i class="icon-user icon-white"></i>Valider les heures formateurs',
-                    array('class' => 'btn btn-info')) ?>
-            </div>
+            <?php echo Html::anchor('prestation/est_valide', '<i class="icon-ok icon-white"></i> Valider le mois',
+                array('class' => 'btn btn-success')) ?>
+            <?php echo Html::anchor('prestation/est_valide_formateur', '<i class="icon-user icon-white"></i>Valider les heures formateurs',
+                array('class' => 'btn btn-info')) ?>
+        </div>
     </div>
     <div class="span4">
 
@@ -148,22 +172,22 @@ $date = \Session::get('date_prestation');
 
         <?php echo Form::close(); ?>
     </div>
-        <?php else: ?>
-            <div>
-                <h2>Le mois a &eacute;t&eacute; valid&eacute;.</h2>
+    <?php else: ?>
+    <div>
+        <h2>Le mois a &eacute;t&eacute; valid&eacute;.</h2>
 
-                <h2>Vous pouvez modifier en cliquant sur le bouton.</h2>
+        <h2>Vous pouvez modifier en cliquant sur le bouton.</h2>
 
-                <h2>ATTENTION, il faudra re-valider!!!</h2>
-                <?php echo Html::anchor('prestation/supprime_valide', '<i class="icon-hand-left icon-white"></i> Accéder',
-                    array('class' => 'btn btn-danger')) ?>
-                <?php echo \Fuel\Core\Html::anchor('document/fichepaye/' . $prester[1]['id_participant'] . '/' . $prester[1]['date'], '<i class="icon-print icon-white"></i> Impression',
-                    array('class' => 'btn btn-info')) ?>
+        <h2>ATTENTION, il faudra re-valider!!!</h2>
+        <?php echo Html::anchor('prestation/supprime_valide', '<i class="icon-hand-left icon-white"></i> Accéder',
+            array('class' => 'btn btn-danger')) ?>
+        <?php echo \Fuel\Core\Html::anchor('document/fichepaye/' . $prester[1]['id_participant'] . '/' . $prester[1]['date'], '<i class="icon-print icon-white"></i> Impression',
+            array('class' => 'btn btn-info')) ?>
 
-            </div>
+    </div>
 </div>
 
-        <?php endif; ?>
+<?php endif; ?>
 
 
 
@@ -241,16 +265,16 @@ foreach ($prester as $value):
         <td><?php echo $value[0]['dateFormater'] ?></td>
         <td style="color: <?php echo $color ?>"><b><?php echo $value[0]['i_secondes'] ?></b></td>
 
-        <?php if($control == 0):?>
-        <td style="text-align: center">
-            <?php if ($value[0]['i_secondes'] !== '00:00:00') {
-                echo Html::anchor('prestation/supprimer/' . $value[0]['participant_id'] . '/' . $value[0]['d_date'], '<i class="icon-remove-sign icon-white"></i>'
-                    , array('onclick' => "return confirm('Etes-vous sûr de vouloir supprimer ces heures ?')", 'class' => "btn btn-mini btn-danger"));
-            }
-            ?></td>
-    <?php else: ?>
-    <td style="text-align: center"></td>
-    <?php endif; ?>
+        <?php if ($control == 0): ?>
+            <td style="text-align: center">
+                <?php if ($value[0]['i_secondes'] !== '00:00:00') {
+                    echo Html::anchor('prestation/supprimer/' . $value[0]['participant_id'] . '/' . $value[0]['d_date'], '<i class="icon-remove-sign icon-white"></i>'
+                        , array('onclick' => "return confirm('Etes-vous sûr de vouloir supprimer ces heures ?')", 'class' => "btn btn-mini btn-danger"));
+                }
+                ?></td>
+        <?php else: ?>
+            <td style="text-align: center"></td>
+        <?php endif; ?>
     </tr>
     <?php $i++ ?>
 <?php endforeach; ?>
