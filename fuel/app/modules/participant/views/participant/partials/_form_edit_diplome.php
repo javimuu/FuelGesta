@@ -35,7 +35,7 @@
 <div class="control-group">
     <?php echo Form::label('Date fin étude', 'd_fin_etude', array('class' => 'control-label')); ?>
     <div class="controls">
-        <?php echo Form::input('d_fin_etude', Input::post('d_fin_etude', isset($participant) ? ($participant->d_fin_etude != NULL) ? date('d-m-Y', strtotime($participant->d_fin_etude)) : '' : '')); ?>
+        <?php echo Form::input('d_fin_etude', Input::post('d_fin_etude', isset($participant) ? ($participant->d_fin_etude != NULL) ? date('d/m/Y', strtotime($participant->d_fin_etude)) : '' : '')); ?>
     </div>
 </div>
 <div class="control-group">
