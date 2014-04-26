@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" afterPath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
@@ -60,7 +59,7 @@
       <file leaf-file-name="prestation.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42424244" vertical-offset="2040" max-vertical-offset="23080">
+            <state vertical-scroll-proportion="2.3404255" vertical-offset="780" max-vertical-offset="23080">
               <caret line="116" column="64" selection-start-line="116" selection-start-column="64" selection-end-line="116" selection-end-column="64" />
               <folding>
                 <element signature="e#30#50#0#PHP" expanded="true" />
@@ -1778,7 +1777,13 @@
       <option name="project" value="LOCAL" />
       <updated>1398370377967</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Mise à jour modifieur sur le mois">
+      <created>1398538437176</created>
+      <option name="number" value="00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1398538437176</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1805,12 +1810,13 @@
     <frame x="-4" y="27" width="1608" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70039946" sideWeight="0.48973042" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32669324" sideWeight="0.5346598" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30457935" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17609392" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08344031" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08344031" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.69832987" sideWeight="0.5096277" order="8" side_tool="true" content_ui="tabs" />
@@ -1823,7 +1829,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889196" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1844,7 +1849,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value=" Commit 05/11/2013 Fiche de prestation" />
     <MESSAGE value=" Commit 15/11/2013" />
     <MESSAGE value=" Commit 15/11/2013 (2)" />
     <MESSAGE value="Commit Git Pikacode" />
@@ -1869,7 +1873,8 @@
     <MESSAGE value="Modification mise en prod le 09/04/2014&#10;" />
     <MESSAGE value="Modification mise en prod le 15/04/2014&#10;" />
     <MESSAGE value="Mise à jour Doc et i_forem&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour Doc et i_forem&#10;" />
+    <MESSAGE value="Mise à jour modifieur sur le mois" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour modifieur sur le mois" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2378,7 +2383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42424244" vertical-offset="2040" max-vertical-offset="23080">
+        <state vertical-scroll-proportion="2.3404255" vertical-offset="780" max-vertical-offset="23080">
           <caret line="116" column="64" selection-start-line="116" selection-start-column="64" selection-end-line="116" selection-end-column="64" />
           <folding>
             <element signature="e#30#50#0#PHP" expanded="true" />
