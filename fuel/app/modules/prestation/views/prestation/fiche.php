@@ -37,11 +37,20 @@ $date = \Session::get('date_prestation');
 
         <?php
         $datePlus = clone $date;
+        $datePlusAn = clone $date;
         $dateMoins = clone $date;
+        $dateMoinsAn = clone $date;
 
         $datePlus->modify('+1 month');
+        $datePlusAn->modify('+1 year');
         $dateMoins->modify('-1 month');
+        $dateMoinsAn->modify('-1 year');
         ?>
+        <a href="
+    <?php
+        echo Uri::create('prestation/change_participant_fiche/' . $nom . '/' . $id_participant . '/' . $dateMoinsAn->format('Y') . '/' . $dateMoinsAn->format('m'))
+        ?>".><i class=" icon-fast-backward"></i></a>
+
         <a href="
     <?php
         echo Uri::create('prestation/change_participant_fiche/' . $nom . '/' . $id_participant . '/' . $dateMoins->format('Y') . '/' . $dateMoins->format('m'))
@@ -54,11 +63,16 @@ $date = \Session::get('date_prestation');
         echo Uri::create('prestation/change_participant_fiche/' . $nom . '/' . $id_participant . '/' . $datePlus->format('Y') . '/' . $datePlus->format('m'))
         ?>".><i class="icon-forward"></i></a>
 
+        <a href="
+    <?php
+        echo Uri::create('prestation/change_participant_fiche/' . $nom . '/' . $id_participant . '/' . $datePlusAn->format('Y') . '/' . $datePlusAn->format('m'))
+        ?>".><i class="icon-fast-forward"></i></a>
+
 
     </div>
 
 
-    <div class="span4">
+    <div class="row-fluid">
 
 
         <?php echo Form::label('Autre participant', 'participant'); ?>
@@ -71,34 +85,34 @@ $date = \Session::get('date_prestation');
         <?php echo Form::close(); ?>
     </div>
 </div>
-
-<div class="row-fluid">
-
-
-    <?php echo Form::open(array('action' => 'prestation/change_participant', 'class' => 'form_heures right')); ?>
-    <?php echo Form::label('Autre mois'); ?>
-    <?php echo Form::select('mois', null, array(
-        '01' => 'Janvier',
-        '02' => 'Février',
-        '03' => 'Mars',
-        '04' => 'Avril',
-        '05' => 'Mai',
-        '06' => 'Juin',
-        '07' => 'Juillet',
-        '08' => 'Aout',
-        '09' => 'Septembre',
-        '10' => 'Octobre',
-        '11' => 'Novembre',
-        '12' => 'Décembre'
-    )); ?>
-    <?php echo Form::select('annee', $date->format('Y'), $annee) ?>
-    <?php echo Form::hidden('idparticipant', $id_participant); ?>
-    <?php //echo Form::hidden('annee',$date->format('Y')); ?>
-
-    <?php echo Form::submit('submit_choix', 'Suivant', array('class' => 'btn btn-success btn-mini')); ?>
-    <?php echo Form::close(); ?>
-
-</div>
+<?php //suppression du code suite au remplcement par un système d'image pour avancer vers 1 mois ou 1 an ?>
+<!--<div class="row-fluid">-->
+<!---->
+<!---->
+<!--    --><?php //echo Form::open(array('action' => 'prestation/change_participant', 'class' => 'form_heures right')); ?>
+<!--    --><?php //echo Form::label('Autre mois'); ?>
+<!--    --><?php //echo Form::select('mois', null, array(
+//        '01' => 'Janvier',
+//        '02' => 'Février',
+//        '03' => 'Mars',
+//        '04' => 'Avril',
+//        '05' => 'Mai',
+//        '06' => 'Juin',
+//        '07' => 'Juillet',
+//        '08' => 'Aout',
+//        '09' => 'Septembre',
+//        '10' => 'Octobre',
+//        '11' => 'Novembre',
+//        '12' => 'Décembre'
+//    )); ?>
+<!--    --><?php //echo Form::select('annee', $date->format('Y'), $annee) ?>
+<!--    --><?php //echo Form::hidden('idparticipant', $id_participant); ?>
+<!--    --><?php ////echo Form::hidden('annee',$date->format('Y')); ?>
+<!---->
+<!--    --><?php //echo Form::submit('submit_choix', 'Suivant', array('class' => 'btn btn-success btn-mini')); ?>
+<!--    --><?php //echo Form::close(); ?>
+<!---->
+<!--</div>-->
 
 
 <table class="table table-striped table-top">
