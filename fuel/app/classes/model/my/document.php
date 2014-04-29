@@ -775,16 +775,17 @@ class Model_My_Document extends \Maitrepylos\db
             AND h.t_schema NOT IN ('+','@','$','-','=','#')
             AND c.d_date_fin_contrat_prevu >= ?
             AND c.d_date_debut_contrat<= ?
-            AND p.id_participant NOT IN ($id)
+            AND tc.i_forem = 1
+            AND p.id_participant NOT IN (?)
             GROUP BY p.id_participant";
-
         $req = $this->_db->prepare($sql);
         $req->execute(array(
             $groupe,
             $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
-            $date_debut->format('Y-m-d')
+            $date_debut->format('Y-m-d'),
+            $id
         ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
 
