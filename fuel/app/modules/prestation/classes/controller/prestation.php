@@ -155,14 +155,23 @@ class Controller_Prestation extends \Controller_Main
     public function action_change_participant_fiche($nom, $id_participant, $annee, $mois)
     {
 
-        \Session::set('nom', $nom);
-        \Session::set('idparticipant', $id_participant);
+
         /**
          *
          * Création de la date du mois que l'on va travailler et mise en session de celle-ci
          */
         $date = new \DateTime();
         $date->setDate($annee, $mois, '01');
+
+        //on Vérifie que l'on peut introduire des heures
+        $prestation_db = new \Model_My_Prestation();
+        if ($prestation_db->verif_contrat($id_participant, $date) === false) {
+            $msg[] = 'Le participant n\a pas de contrat à cette période';
+            \Session::set_flash('error', $msg);
+            \Response::redirect('prestation/modifier_participant/');
+        }
+        \Session::set('nom', $nom);
+        \Session::set('idparticipant', $id_participant);
         \Session::set('date_prestation', $date);
         \Response::redirect('prestation/modifier_participant/');
     }
@@ -404,7 +413,7 @@ class Controller_Prestation extends \Controller_Main
                             }
                         } else {
 
-                            $heuresJour;
+                            //$heuresJour;
                             $nomJour = $date_insertion->format('w');
 
                             if ($heuresJour[0][$nomJour] != 0) {

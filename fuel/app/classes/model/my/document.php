@@ -519,7 +519,39 @@ class Model_My_Document extends \Maitrepylos\db
                AND c.groupe_id = ?
                WHERE h.d_date BETWEEN ? AND ?
                AND h.t_schema IN ('+','@','$','-','=')
+               GROUP BY h.participant_id ";
 
+        $req = $this->_db->prepare($sql);
+        $req->execute(array(
+            $groupe,
+            $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d')
+        ));
+//        $req->execute(array(
+//            $groupe,
+//            $date_debut->format('Y-m-d'),
+//            $date_fin->format('Y-m-d'),
+//            $date_fin->format('Y-m-d'),
+//            $date_debut->format('Y-m-d')
+//        ));
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function idEtatPretsationForem($groupe, \DateTime $date_debut, \DateTime $date_fin)
+    {
+        //lignes supprimer pour améliorations du systèmes
+        //   AND c . d_date_fin_contrat_prevu >= ?
+        //   AND c . d_date_debut_contrat <= ?
+        $sql = "SELECT h.participant_id
+               FROM heures h
+               INNER JOIN contrat c
+               ON c.id_contrat = h.contrat_id
+               AND c.groupe_id = ?
+               INNER JOIN type_contrat tc
+               ON c.type_contrat_id = tc.id_type_contrat
+               WHERE h.d_date BETWEEN ? AND ?
+               AND h.t_schema IN ('+','@','$','-','=')
+               AND tc.i_forem = 1
                GROUP BY h.participant_id ";
 
         $req = $this->_db->prepare($sql);

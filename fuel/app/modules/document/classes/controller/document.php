@@ -345,7 +345,7 @@ class Controller_Document extends \Controller_Main
 
 
         /**
-         * On remmane le resultat sur un seul array
+         * On rammène le resultat sur un seul array
          */
         foreach ($id_participant as $value) {
             $participant_id[] = $value['participant_id'];
@@ -572,7 +572,7 @@ class Controller_Document extends \Controller_Main
 
         $date = \DateTime::createFromFormat('d-m-Y', $formData['date']);
         $date2 = \DateTime::createFromFormat('d-m-Y', $formData['date2']);
-        $id = $db->idEtatPretsation($formData['groupe'], $date, $date2);
+        $id = $db->idEtatPretsationForem($formData['groupe'], $date, $date2);
 
         if ($id == null) {
 
