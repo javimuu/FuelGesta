@@ -143,8 +143,9 @@ class L2
 
 
         $pdf->Text(14,270,utf8_decode('Certifié sincère et exact'));
-        $pdf->Text(96,270,utf8_decode('Nom du responsable de l\'organisme :'));
+        $pdf->Text(96,270,utf8_decode('Nom du responsable de l\'organisme :'. $formData['centre'][0]['t_responsable'].' - '. $formData['centre'][0]['t_statut']));
         $pdf->Text(14,275,utf8_decode('Le '.date('d/m/Y')));
+        $pdf->Text(96,275,utf8_decode('Signature'));
 
 
         $pdf->SetXY(14,270);
