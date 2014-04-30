@@ -625,7 +625,7 @@ class Controller_Document extends \Controller_Main
         $formData['rows'] = \SplFixedArray::fromArray($recup);
         $formData['rows']->setSize($formData['count'] * 11);
 
-      //   \Debug::dump($centre);
+     //    \Debug::dump($recup);
         \Maitrepylos\Pdf\Etatprestation::pdf($formData);
 
         $this->template->title = 'Gestion des documents';

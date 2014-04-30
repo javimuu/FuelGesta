@@ -290,8 +290,10 @@ class Controller_Statistique extends \Controller_Main
         /**
          * Récupération des contrat par filière et par dérogation
          */
-        $formData['annexe1'][1] = $db->getCountContratgroupe($date);
-        $formData['annexe1'][2] = $db->getCountContratgroupeDerogation($date);
+        //$formData['annexe1'][1] = $db->getCountContratgroupe($date);
+        $formData['annexe1'][1] = $db->getCountContratFiliere($date);
+        $formData['annexe1'][2] = $db->getCountContratFiliereDerogation($date);
+        //$formData['annexe1'][2] = $db->getCountContratgroupeDerogation($date);
         $formData['xml'] = \Model_Centre::find('first');
 
         $count = count($formData['annexe1'][1]);

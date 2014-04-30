@@ -23,7 +23,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
      * @return boolean
      */
     public function verif_contrat($id, \DateTime $date) {
-        $format = $date->format('Y') . '-' . $date->format('m') . '-' . $date->format('t');
+      //  $format = $date->format('Y-m-t');
         //$date = new \DateTime('2012-02-29');
         $sql = "SELECT count(participant_id) as compteur
                 FROM contrat
@@ -32,7 +32,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
                 UNION
                 SELECT 0 ";
         $req = $this->_db->prepare($sql);
-        $req->execute(array($id, $format,$format));
+        $req->execute(array($id, $date->format('Y-m-t'),$date->format('Y-m-d')));
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
 
         if ($result[0]['compteur'] > 0) {

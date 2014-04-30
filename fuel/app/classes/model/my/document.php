@@ -598,8 +598,8 @@ class Model_My_Document extends \Maitrepylos\db
             $groupe,
             $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
             $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
             $id
         ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
@@ -633,8 +633,8 @@ class Model_My_Document extends \Maitrepylos\db
             $groupe,
             $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
             $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
             $id
         ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
@@ -668,8 +668,8 @@ class Model_My_Document extends \Maitrepylos\db
         $req->execute(array(
             $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
             $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
             $id
         ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
@@ -703,8 +703,8 @@ class Model_My_Document extends \Maitrepylos\db
         $req->execute(array(
             $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
             $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
             $id
         ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
@@ -744,8 +744,8 @@ class Model_My_Document extends \Maitrepylos\db
             $groupe,
             $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
+            $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
-            $date_debut->format('Y-m-d')
         ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
 
@@ -783,8 +783,8 @@ class Model_My_Document extends \Maitrepylos\db
             $groupe,
             $date_debut->format('Y-m-d'),
             $date_fin->format('Y-m-d'),
-            $date_fin->format('Y-m-d'),
             $date_debut->format('Y-m-d'),
+            $date_fin->format('Y-m-d'),
             $id
         ));
         return $req->fetchAll(PDO::FETCH_ASSOC);
