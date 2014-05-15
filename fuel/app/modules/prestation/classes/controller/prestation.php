@@ -718,7 +718,7 @@ class Controller_Prestation extends \Controller_Main
         /**
          * Template
          */
-        $tab = $this->template_heure($id);
+        $tab = $this->template_heure($id,$date);
         $this->data['motifs'] = $tab['motifs'];
         $this->data['contrats'] = $tab['contrats'];
         $this->data['date'] = $date->format('Y-m-d');
@@ -783,12 +783,15 @@ class Controller_Prestation extends \Controller_Main
     }
 
 
-    public function template_heure($id_participant)
+    public function template_heure($id_participant,$date=null)
     {
-        $date = \Session::get('date_prestation');
+
+        if($date==null) {
+            $date = \Session::get('date_prestation');
+        }
 
         /**
-         * Mise en place du template pour la gestions des heures du partiicpant.
+         * Mise en place du template pour la gestions des heures du participant.
          */
         //$motifs = \Cranberry\MyXML::getActivites();
 

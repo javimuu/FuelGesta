@@ -808,6 +808,8 @@ class Model_My_Document extends \Maitrepylos\db
         INNER JOIN type_contrat tc
         ON tc.id_type_contrat = c.type_contrat_id
         WHERE d_date_fin_contrat_prevu >= CURRENT_DATE
+        AND a.t_courrier = 1
+
 
                 ";
 

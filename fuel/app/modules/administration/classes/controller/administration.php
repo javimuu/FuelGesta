@@ -306,7 +306,7 @@ class Controller_Administration extends \Controller_Main
             if ($val->run()) {
                 $centre = \Model_Localisation::get_localisation_names(\Input::post('localisation_id'));
                 // On forge un objet Groupe
-                $nom_groupe = trim(\Cranberry\MySanitarization::ucFirstAndToLower(\Cranberry\MySanitarization::filterAlpha(
+                $nom_groupe = trim(\Cranberry\MySanitarization::ucFirstAndToLower(\Cranberry\MySanitarization::stripAccents(
                         \Input::post('t_nom')))) . '-' . trim($centre[0]['t_lieu']);
                 $groupe = \Model_Groupe::forge(array(
                     't_nom' => $nom_groupe,
@@ -326,7 +326,7 @@ class Controller_Administration extends \Controller_Main
                 // On sauvegarde
                 if ($groupe->save()) {
 
-                    //si le groupe est créé on crée les gestionnaires, pour la gestions de sheures au niveau tableau.
+                    //si le groupe est créé on crée les gestionnaires, pour la gestions des heures au niveau tableau.
                     $gestion = \Input::post('gestion');
 
                     foreach ($gestion as $value) {
