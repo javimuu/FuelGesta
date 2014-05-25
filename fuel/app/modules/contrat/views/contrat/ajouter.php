@@ -368,7 +368,7 @@ $mois = date('m');
 
                 <?php echo Form::label('Moyen de transport*', 't_moyen_transport', array('class' => 'control-label')); ?>
 
-                <?php echo Form::select('t_moyen_transport', Input::post('t_moyen_transport', isset($contrat) ? $contrat->t_moyen_transport : ''), array('' => '', 'TEC' => 'Transports en commun', 'Voiture/scooter/vélo' => 'Voiture/scooter/vélo', 'Rien' => 'Rien')); ?>
+                <?php echo Form::select('t_moyen_transport', Input::post('t_moyen_transport', isset($contrat) ? $contrat->t_moyen_transport : ''), array('' => '', 'TEC' => 'Transports en commun', 'Voiture/scooter' => 'Voiture/scooter', 'Rien' => 'Rien')); ?>
 
             </td>
         </tr>

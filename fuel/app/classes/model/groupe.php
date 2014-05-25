@@ -156,11 +156,11 @@ class Model_Groupe extends Model
 
         $val->add_callable('\MaitrePylos\Validation');
         $val->add_field('t_nom', 'Nom', 'required');
-        $val->add_field('i_lundi', 'Lundi', 'bland_hour|no_hour|min_hour');
-        $val->add_field('i_mardi', 'Mardi', 'bland_hour|no_hour|min_hour');
-        $val->add_field('i_mercredi', 'Mercredi', 'bland_hour|no_hour|min_hour');
-        $val->add_field('i_jeudi', 'Jeudi', 'bland_hour|no_hour|min_hour');
-        $val->add_field('i_vendredi', 'Vendredi', 'bland_hour|no_hour|min_hour');
+        $val->add_field('i_lundi', 'Lundi', 'bland_hour');
+        $val->add_field('i_mardi', 'Mardi', 'bland_hour');
+        $val->add_field('i_mercredi', 'Mercredi', 'bland_hour');
+        $val->add_field('i_jeudi', 'Jeudi', 'bland_hour');
+        $val->add_field('i_vendredi', 'Vendredi', 'bland_hour');
         $val->add_field('i_samedi', 'Samedi', 'bland_hour');
         $val->add_field('i_dimanche', 'Dimanche', 'bland_hour');
 

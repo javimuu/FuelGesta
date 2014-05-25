@@ -193,7 +193,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
                 AND c.d_date_debut_contrat <= ?
                 AND c.d_date_fin_contrat_prevu >= ? ";
         $req = $this->_db->prepare($sql);
-        $req->execute(array($id,$date->format('Y-m-t'), $date->format('Y-m-d')));
+        $req->execute(array($id,$date->format('Y-m-d'), $date->format('Y-m-d')));
         return $req->fetchAll(PDO::FETCH_ASSOC);
         //return $this->_db->fetchAll($sql, array($id));
     }
@@ -210,23 +210,24 @@ class Model_My_Prestation extends \Maitrepylos\Db {
   public function insertHeures($date, $heures, $motif, $schema, $id_participant, $idcontrat = 0, $rw = 0, $formateur = 0) {
      
  
-        $rows = array(
-            $date,
-            $heures,
-            $motif,
-            $schema,
-            $id_participant,
-            $idcontrat,
-            $formateur,
-            $rw,
-            \Session::get('id_login')
-        );
+      if($heures > 0) {
+          $rows = array(
+              $date,
+              $heures,
+              $motif,
+              $schema,
+              $id_participant,
+              $idcontrat,
+              $formateur,
+              $rw,
+              \Session::get('id_login')
+          );
 
-        $sql = "INSERT INTO heures (d_date,i_secondes,t_motif,t_schema, participant_id,contrat_id,formateur,subside,login_id)
+          $sql = "INSERT INTO heures (d_date,i_secondes,t_motif,t_schema, participant_id,contrat_id,formateur,subside,login_id)
             VALUES (?,?,?,?,?,?,?,?,?)";
-        $req = $this->_db->prepare($sql);
-        $req->execute($rows);
-
+          $req = $this->_db->prepare($sql);
+          $req->execute($rows);
+      }
         
         //$req = $this->_db->prepare($sql);
        // $req->execute($rows);

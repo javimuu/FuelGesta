@@ -337,7 +337,7 @@ class Controller_Prestation extends \Controller_Main
 
                         if ($heuresprester == null) {
 
-                            if ($nomJour !== '0' && $nomJour != '6') {
+
                                 if ($db->insertion_heures_prestation($id_participant
                                         , $dateMois, $form_data['t_typecontrat'], $heuresJour[0][$nomJour], $nom, $schema) == false
                                 ) {
@@ -347,7 +347,7 @@ class Controller_Prestation extends \Controller_Main
                                     $this->_message[] = 'Insertion des heures pour la date  ' . $dateMois->format('d-m-Y');
                                 }
                                 // continue;
-                            }
+
                         } else {
 
                             if ((int)$heuresprester == 0) {
@@ -358,7 +358,7 @@ class Controller_Prestation extends \Controller_Main
                                 // continue;
 
                             } else {
-                                if ($nomJour !== '0' && $nomJour != '6') {
+
                                     if ($db->insertion_heures_prestation($id_participant
                                             , $dateMois, $form_data['t_typecontrat'], $heuresprester, $nom, $schema) == false)
                                     {
@@ -368,7 +368,7 @@ class Controller_Prestation extends \Controller_Main
                                     }
                                     //   continue;
 
-                                }
+
                             }
 
                         }
