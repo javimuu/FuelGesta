@@ -239,23 +239,44 @@ class Model_My_Document extends \Maitrepylos\db
      */
     public function salaire($heure_mois, $heure_prester, $tarif)
     {
-        $sql = "
 
-            SELECT
-              CASE
-                WHEN (?)<(?) THEN ROUND((((?/3600) * (?))),2)
-                ELSE ROUND(((?/3600)*(?)),2)
-              END
-                    AS total ";
+
+
+//        $sql = "
+//
+//            SELECT
+//              CASE
+//                WHEN (?)<(?) THEN ROUND((((?/3600) * (?))),2)
+//                ELSE ROUND(((?/3600)*(?)),2)
+//              END
+//                    AS total ";
+
+//        $req->execute(array(
+//            $heure_mois,
+//            $heure_prester,
+//            $heure_mois,
+//            $tarif,
+//            $heure_prester,
+//            $tarif
+//        ));
+
+        $sql = 'SELECT ROUND(?/3600,2) * ? as total';
         $req = $this->_db->prepare($sql);
-        $req->execute(array(
-            $heure_mois,
-            $heure_prester,
-            $heure_mois,
-            $tarif,
-            $heure_prester,
-            $tarif
-        ));
+
+        if($heure_mois < $heure_prester){
+
+            $req->execute(array(
+                $heure_mois,
+                $tarif
+            ));
+
+        }else{
+            $req->execute(array(
+                $heure_prester,
+                $tarif
+            ));
+        }
+
         $r = $req->fetch(PDO::FETCH_ASSOC);
         return $r['total'];
     }
