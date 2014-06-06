@@ -339,7 +339,7 @@ class Controller_Prestation extends \Controller_Main
 
 
                                 if ($db->insertion_heures_prestation($id_participant
-                                        , $dateMois, $form_data['t_typecontrat'], $heuresJour[0][$nomJour], $nom, $schema) == false
+                                        , $dateMois, $form_data['t_typecontrat'], $heuresJour[0][$nomJour], $nom, $schema) === false
                                 ) {
 
                                     $this->_message[] = 'Pas de contrat en date du ' . $dateMois->format('d-m-Y');
@@ -854,6 +854,9 @@ class Controller_Prestation extends \Controller_Main
         //Si d'autres mois ne sont pas valider on l'affiche
 
         //on récupère la date du premier contrat
+        /**
+         * @todo Attention nous avons modifier pour éviter de devoir valider les contrats terminé, mais il faut reprendre ce bout de code.
+         */
         $date_premier_contrat = $db->get_date_first_contrat($id);
         $date_premier_contrat->setDate($date_premier_contrat->format('Y'), $date_premier_contrat->format('m'), 01);
         //$date_premier_contrat_bis = clone $date_premier_contrat;

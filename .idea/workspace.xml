@@ -8,22 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/ISO13616.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/COMEDY-OF-ERRORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/HACKING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/IBAN_Registry.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/REGISTRY-URL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/TODO" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/utils/convert-registry.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/iban.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/mistranscriptions.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/utils/ootest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/php-iban.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/registry.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/utils/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/IBAN_Registry.txt" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/IBAN_Registry.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" afterPath="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" afterPath="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
@@ -103,12 +90,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="prestation.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="16180" max-vertical-offset="23320">
-              <caret line="809" column="29" selection-start-line="809" selection-start-column="29" selection-end-line="809" selection-end-column="29" />
-              <folding />
+            <state vertical-scroll-proportion="0.42401215" vertical-offset="12761" max-vertical-offset="18940">
+              <caret line="857" column="138" selection-start-line="857" selection-start-column="138" selection-end-line="857" selection-end-column="138" />
+              <folding>
+                <element signature="e#6328#17323#0#PHP" expanded="true" />
+                <element signature="e#9670#9746#0#PHP" expanded="true" />
+                <element signature="e#10262#10329#0#PHP" expanded="true" />
+                <element signature="e#13258#13346#0#PHP" expanded="true" />
+                <element signature="e#17371#20366#0#PHP" expanded="true" />
+                <element signature="e#20449#20916#0#PHP" expanded="true" />
+                <element signature="e#20922#21125#0#PHP" expanded="true" />
+                <element signature="e#21131#21368#0#PHP" expanded="true" />
+                <element signature="e#21374#21750#0#PHP" expanded="true" />
+                <element signature="e#21756#24364#0#PHP" expanded="true" />
+                <element signature="e#24370#26879#0#PHP" expanded="true" />
+                <element signature="e#26886#27321#0#PHP" expanded="true" />
+                <element signature="e#27328#28317#0#PHP" expanded="true" />
+                <element signature="e#28324#29424#0#PHP" expanded="true" />
+                <element signature="e#33591#33859#0#PHP" expanded="true" />
+                <element signature="e#39620#40003#0#PHP" expanded="true" />
+                <element signature="e#40139#40355#0#PHP" expanded="true" />
+                <element signature="e#40361#40785#0#PHP" expanded="true" />
+                <element signature="e#40791#41414#0#PHP" expanded="true" />
+                <element signature="e#41420#41726#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,81 +124,52 @@
       <file leaf-file-name="prestation.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.586207" vertical-offset="624" max-vertical-offset="13900">
-              <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
+            <state vertical-scroll-proportion="-11.068966" vertical-offset="2519" max-vertical-offset="4300">
+              <caret line="595" column="38" selection-start-line="595" selection-start-column="38" selection-end-line="595" selection-end-column="38" />
               <folding>
+                <element signature="n#insertion_heures_prestation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+                <element signature="n#get_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
                 <element signature="n#select_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#insertHeures#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_time_worked#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_worked#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#delete_heure#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#delete_heure_details#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#total_hours_month#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#total_hours_month_noRecup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#total_hours_recovery#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_details#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_hours#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#update_hours#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#ajout_deplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#getAjoutDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#update_ajout_deplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_recapitulatif#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_absent#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#total_hours_month_valid#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
                 <element signature="n#get_date_first_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
                 <element signature="n#verifieValide#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_valide#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#valider#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#update_formateur#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#verifie_formateur#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#get_jours_deplacememnt#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#getDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#getHeureTotalFormation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#total_heures_recup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#getHourDay#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#getHeuresRecupMois#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#total_full_heures_mois#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#subTime#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#getHourRecup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <element signature="n#validateAjoutDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-                <marker date="1400680424401" expanded="true" signature="643:893" placeholder="SELECT count..." />
-                <marker date="1400680424401" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="2579:3221" placeholder="SELECT c.id_..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="3811:4153" placeholder="SELECT id_co..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="4908:5121" placeholder="SELECT id_co..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="5816:6243" placeholder="SELECT id_co..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="7168:7316" placeholder="INSERT INTO ..." />
-                <marker date="1400680424401" expanded="true" signature="9464:9681" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="9988:10046" placeholder="DELETE FROM ..." />
-                <marker date="1400680424401" expanded="true" signature="10293:10331" placeholder="DELETE FROM ..." />
-                <marker date="1400680424401" expanded="true" signature="10896:11080" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="11803:11983" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="12897:13014" placeholder="SELECT MIN(d..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="14898:15379" placeholder="SELECT h.id_..heures..." />
-                <marker date="1400680424401" expanded="true" signature="15756:15822" placeholder="SELECT i_sec..heures..." />
-                <marker date="1400680424401" expanded="true" signature="16478:16596" placeholder="UPDATE heure..." />
-                <marker date="1400680424401" expanded="true" signature="16998:17075" placeholder="INSERT INTO ..." />
-                <marker date="1400680424401" expanded="true" signature="17449:17568" placeholder="SELECT * FRO..ajout_deplacement..." />
-                <marker date="1400680424401" expanded="true" signature="18226:18307" placeholder="UPDATE ajout..." />
-                <marker date="1400680424401" expanded="true" signature="18768:18957" placeholder="SELECT t_mot..heures..." />
-                <marker date="1400680424401" expanded="true" signature="19364:19599" placeholder="SELECT t_mot..heures..." />
-                <marker date="1400680424401" expanded="true" signature="20208:20392" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="20836:20954" placeholder="SELECT MIN(d..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="21270:21395" placeholder="SELECT COUNT..valider_heure..." />
-                <marker date="1400680424401" expanded="true" signature="21640:21774" placeholder="SELECT i_sec..valider_heure..." />
-                <marker date="1400680424401" expanded="true" signature="22093:22168" placeholder="INSERT INTO ..." />
-                <marker date="1400680424401" expanded="true" signature="22382:22586" placeholder="UPDATE heure..." />
-                <marker date="1400680424401" expanded="true" signature="22828:22998" placeholder="SELECT count..heures..." />
-                <marker date="1400680424401" expanded="true" signature="23535:23937" placeholder="SELECT count..heures..." />
-                <marker date="1400680424401" expanded="true" signature="23844:23881" placeholder="-- AND t_moy..." />
-                <marker date="1400680424401" expanded="true" signature="24495:24631" placeholder="SELECT (IF(?..contrat..." />
-                <marker date="1400680424401" expanded="true" signature="25288:25460" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="26117:26287" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="26776:27079" placeholder="SELECT i_lun..." />
-                <marker date="1400680424401" expanded="true" signature="27502:27672" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="28534:28716" placeholder="SELECT SUM(i..heures..." />
-                <marker date="1400680424401" expanded="true" signature="29519:29636" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="643:893" placeholder="SELECT count..." />
+                <marker date="1402037326028" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="2579:3221" placeholder="SELECT c.id_..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="3811:4153" placeholder="SELECT id_co..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="4908:5121" placeholder="SELECT id_co..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="5816:6243" placeholder="SELECT id_co..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="7168:7316" placeholder="INSERT INTO ..." />
+                <marker date="1402037326028" expanded="true" signature="9464:9681" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="9988:10046" placeholder="DELETE FROM ..." />
+                <marker date="1402037326028" expanded="true" signature="10293:10331" placeholder="DELETE FROM ..." />
+                <marker date="1402037326028" expanded="true" signature="10896:11080" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="11803:11983" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="12897:13014" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="14898:15379" placeholder="SELECT h.id_..heures..." />
+                <marker date="1402037326028" expanded="true" signature="15756:15822" placeholder="SELECT i_sec..heures..." />
+                <marker date="1402037326028" expanded="true" signature="16478:16596" placeholder="UPDATE heure..." />
+                <marker date="1402037326028" expanded="true" signature="16998:17075" placeholder="INSERT INTO ..." />
+                <marker date="1402037326028" expanded="true" signature="17449:17568" placeholder="SELECT * FRO..ajout_deplacement..." />
+                <marker date="1402037326028" expanded="true" signature="18226:18307" placeholder="UPDATE ajout..." />
+                <marker date="1402037326028" expanded="true" signature="18768:18957" placeholder="SELECT t_mot..heures..." />
+                <marker date="1402037326028" expanded="true" signature="19364:19599" placeholder="SELECT t_mot..heures..." />
+                <marker date="1402037326028" expanded="true" signature="20208:20392" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="20991:21152" placeholder="SELECT MIN(d..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="21468:21593" placeholder="SELECT COUNT..valider_heure..." />
+                <marker date="1402037326028" expanded="true" signature="21838:21972" placeholder="SELECT i_sec..valider_heure..." />
+                <marker date="1402037326028" expanded="true" signature="22291:22366" placeholder="INSERT INTO ..." />
+                <marker date="1402037326028" expanded="true" signature="22580:22784" placeholder="UPDATE heure..." />
+                <marker date="1402037326028" expanded="true" signature="23026:23196" placeholder="SELECT count..heures..." />
+                <marker date="1402037326028" expanded="true" signature="23733:24135" placeholder="SELECT count..heures..." />
+                <marker date="1402037326028" expanded="true" signature="24042:24079" placeholder="-- AND t_moy..." />
+                <marker date="1402037326028" expanded="true" signature="24693:24829" placeholder="SELECT (IF(?..contrat..." />
+                <marker date="1402037326028" expanded="true" signature="25486:25658" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="26315:26485" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="26974:27277" placeholder="SELECT i_lun..." />
+                <marker date="1402037326028" expanded="true" signature="27700:27870" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="28732:28914" placeholder="SELECT SUM(i..heures..." />
+                <marker date="1402037326028" expanded="true" signature="29717:29834" placeholder="SELECT MIN(d..contrat..." />
               </folding>
             </state>
           </provider>
@@ -233,7 +212,7 @@
       <file leaf-file-name="validation.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-40.0" vertical-offset="0" max-vertical-offset="1540">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5700" max-vertical-offset="6080">
               <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
               <folding />
             </state>
@@ -243,25 +222,21 @@
       <file leaf-file-name="heure.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/gestion/heure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1660">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2200">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#457#2789#0#PHP" expanded="true" />
                 <marker date="1391590013325" expanded="true" signature="1740:2261" placeholder="SELECT `$nom..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="document.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="document.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72727275" vertical-offset="2380" max-vertical-offset="5640">
-              <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-              <folding>
-                <element signature="e#16772#19787#0#PHP" expanded="true" />
-                <element signature="e#22841#23797#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="3480" max-vertical-offset="14920">
+              <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -269,11 +244,9 @@
       <file leaf-file-name="document.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.827586" vertical-offset="1320" max-vertical-offset="3560">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5240" max-vertical-offset="18100">
               <caret line="262" column="53" selection-start-line="262" selection-start-column="53" selection-end-line="262" selection-end-column="53" />
               <folding>
-                <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
-                <element signature="n#listeStagiaire#0;n#Model_My_Document#0;n#!!top" expanded="true" />
                 <marker date="1401875906876" expanded="true" signature="280:393" placeholder="SELECT t_nom..participant..." />
                 <marker date="1401875906876" expanded="true" signature="673:1039" placeholder="SELECT g.t_n..contrat..." />
                 <marker date="1401875906876" expanded="true" signature="2261:2507" placeholder="SELECT i_sec..heures..." />
@@ -386,10 +359,10 @@
         <option value="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/excel/stagiaire.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/contrat/views/contrat/ajouter.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/groupe.php" />
-        <option value="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
-        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
         <option value="$PROJECT_DIR$/fuel/app/classes/model/my/document.php" />
         <option value="$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php" />
+        <option value="$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php" />
+        <option value="$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php" />
       </list>
     </option>
   </component>
@@ -750,82 +723,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="document" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="document" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuelGesta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fuel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="document" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="document.php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller_Document" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1798,7 +1695,13 @@
       <option name="project" value="LOCAL" />
       <updated>1401033191234</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Mise à jour 05/06/2014 Bug calcul prestatio maladie">
+      <created>1401876043740</created>
+      <option name="number" value="00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1401876043741</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1830,7 +1733,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30457935" sideWeight="0.71151775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17571884" sideWeight="0.67496544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24197689" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24839538" sideWeight="0.6721763" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.6714922" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32490012" sideWeight="0.46534017" order="8" side_tool="true" content_ui="tabs" />
@@ -1888,7 +1791,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Type diplome, menu vide" />
     <MESSAGE value="Mise à jour du 04 décembre 2013" />
     <MESSAGE value="Mise à jour du 10 décembre 2013" />
     <MESSAGE value="Mise à jour du 17 décembre 2013" />
@@ -1913,7 +1815,8 @@
     <MESSAGE value="Mise à jour document L2" />
     <MESSAGE value="Mise à jour 14/05/2014" />
     <MESSAGE value="Mise à jour 25/05/2014" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour 25/05/2014" />
+    <MESSAGE value="Mise à jour 05/06/2014 Bug calcul prestatio maladie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour 05/06/2014 Bug calcul prestatio maladie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1954,7 +1857,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php</url>
-          <line>840</line>
+          <line>844</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -2219,23 +2122,23 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/e8cb33fe/24e785bc-6b65-40d5-9b08-956b4564294c/gesta8..groupe">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e8cb33fe/24e785bc-6b65-40d5-9b08-956b4564294c/gesta8..adresse">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e8cb33fe/24e785bc-6b65-40d5-9b08-956b4564294c/gesta8..adresse">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="500">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/vendor/Cranberry/MySanitarization.php">
@@ -2272,7 +2175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2880" max-vertical-offset="3220">
           <caret line="144" column="42" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2280,7 +2182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="9200">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2288,7 +2189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7480" max-vertical-offset="9240">
           <caret line="374" column="13" selection-start-line="374" selection-start-column="13" selection-end-line="374" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2328,98 +2228,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="16180" max-vertical-offset="23320">
-          <caret line="809" column="29" selection-start-line="809" selection-start-column="29" selection-end-line="809" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.586207" vertical-offset="624" max-vertical-offset="13900">
-          <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
-          <folding>
-            <element signature="n#select_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#insertHeures#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_time_worked#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_worked#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#delete_heure#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#delete_heure_details#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#total_hours_month#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#total_hours_month_noRecup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#total_hours_recovery#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_details#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_hours#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#update_hours#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#ajout_deplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#getAjoutDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#update_ajout_deplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_recapitulatif#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_absent#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#total_hours_month_valid#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_date_first_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#verifieValide#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_valide#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#valider#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#update_formateur#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#verifie_formateur#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#get_jours_deplacememnt#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#getDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#getHeureTotalFormation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#total_heures_recup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#getHourDay#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#getHeuresRecupMois#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#total_full_heures_mois#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#subTime#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#getHourRecup#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <element signature="n#validateAjoutDeplacement#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
-            <marker date="1400680424401" expanded="true" signature="643:893" placeholder="SELECT count..." />
-            <marker date="1400680424401" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="2579:3221" placeholder="SELECT c.id_..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="3811:4153" placeholder="SELECT id_co..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="4908:5121" placeholder="SELECT id_co..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="5816:6243" placeholder="SELECT id_co..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="7168:7316" placeholder="INSERT INTO ..." />
-            <marker date="1400680424401" expanded="true" signature="9464:9681" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="9988:10046" placeholder="DELETE FROM ..." />
-            <marker date="1400680424401" expanded="true" signature="10293:10331" placeholder="DELETE FROM ..." />
-            <marker date="1400680424401" expanded="true" signature="10896:11080" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="11803:11983" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="12897:13014" placeholder="SELECT MIN(d..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="14898:15379" placeholder="SELECT h.id_..heures..." />
-            <marker date="1400680424401" expanded="true" signature="15756:15822" placeholder="SELECT i_sec..heures..." />
-            <marker date="1400680424401" expanded="true" signature="16478:16596" placeholder="UPDATE heure..." />
-            <marker date="1400680424401" expanded="true" signature="16998:17075" placeholder="INSERT INTO ..." />
-            <marker date="1400680424401" expanded="true" signature="17449:17568" placeholder="SELECT * FRO..ajout_deplacement..." />
-            <marker date="1400680424401" expanded="true" signature="18226:18307" placeholder="UPDATE ajout..." />
-            <marker date="1400680424401" expanded="true" signature="18768:18957" placeholder="SELECT t_mot..heures..." />
-            <marker date="1400680424401" expanded="true" signature="19364:19599" placeholder="SELECT t_mot..heures..." />
-            <marker date="1400680424401" expanded="true" signature="20208:20392" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="20836:20954" placeholder="SELECT MIN(d..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="21270:21395" placeholder="SELECT COUNT..valider_heure..." />
-            <marker date="1400680424401" expanded="true" signature="21640:21774" placeholder="SELECT i_sec..valider_heure..." />
-            <marker date="1400680424401" expanded="true" signature="22093:22168" placeholder="INSERT INTO ..." />
-            <marker date="1400680424401" expanded="true" signature="22382:22586" placeholder="UPDATE heure..." />
-            <marker date="1400680424401" expanded="true" signature="22828:22998" placeholder="SELECT count..heures..." />
-            <marker date="1400680424401" expanded="true" signature="23535:23937" placeholder="SELECT count..heures..." />
-            <marker date="1400680424401" expanded="true" signature="23844:23881" placeholder="-- AND t_moy..." />
-            <marker date="1400680424401" expanded="true" signature="24495:24631" placeholder="SELECT (IF(?..contrat..." />
-            <marker date="1400680424401" expanded="true" signature="25288:25460" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="26117:26287" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="26776:27079" placeholder="SELECT i_lun..." />
-            <marker date="1400680424401" expanded="true" signature="27502:27672" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="28534:28716" placeholder="SELECT SUM(i..heures..." />
-            <marker date="1400680424401" expanded="true" signature="29519:29636" placeholder="SELECT MIN(d..contrat..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/vendor/maitrepylos/validation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-40.0" vertical-offset="0" max-vertical-offset="1540">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5700" max-vertical-offset="6080">
           <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
           <folding />
         </state>
@@ -2430,7 +2241,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#457#2789#0#PHP" expanded="true" />
             <marker date="1391590013325" expanded="true" signature="1740:2261" placeholder="SELECT `$nom..." />
           </folding>
         </state>
@@ -2438,11 +2248,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/document.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.827586" vertical-offset="1320" max-vertical-offset="3560">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5240" max-vertical-offset="18100">
           <caret line="262" column="53" selection-start-line="262" selection-start-column="53" selection-end-line="262" selection-end-column="53" />
           <folding>
-            <element signature="n#totalHeureMois#0;n#Model_My_Document#0;n#!!top" expanded="true" />
-            <element signature="n#listeStagiaire#0;n#Model_My_Document#0;n#!!top" expanded="true" />
             <marker date="1401875906876" expanded="true" signature="280:393" placeholder="SELECT t_nom..participant..." />
             <marker date="1401875906876" expanded="true" signature="673:1039" placeholder="SELECT g.t_n..contrat..." />
             <marker date="1401875906876" expanded="true" signature="2261:2507" placeholder="SELECT i_sec..heures..." />
@@ -2472,11 +2280,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/modules/document/classes/controller/document.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72727275" vertical-offset="2380" max-vertical-offset="5640">
-          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3480" max-vertical-offset="14920">
+          <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/classes/model/my/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.068966" vertical-offset="2519" max-vertical-offset="4300">
+          <caret line="595" column="38" selection-start-line="595" selection-start-column="38" selection-end-line="595" selection-end-column="38" />
           <folding>
-            <element signature="e#16772#19787#0#PHP" expanded="true" />
-            <element signature="e#22841#23797#0#PHP" expanded="true" />
+            <element signature="n#insertion_heures_prestation#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="n#get_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="n#select_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="n#get_date_first_contrat#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <element signature="n#verifieValide#0;n#Model_My_Prestation#0;n#!!top" expanded="true" />
+            <marker date="1402037326028" expanded="true" signature="643:893" placeholder="SELECT count..." />
+            <marker date="1402037326028" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="643:846" placeholder="SELECT count..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="2579:3221" placeholder="SELECT c.id_..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="3811:4153" placeholder="SELECT id_co..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="4908:5121" placeholder="SELECT id_co..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="5816:6243" placeholder="SELECT id_co..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="7168:7316" placeholder="INSERT INTO ..." />
+            <marker date="1402037326028" expanded="true" signature="9464:9681" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="9988:10046" placeholder="DELETE FROM ..." />
+            <marker date="1402037326028" expanded="true" signature="10293:10331" placeholder="DELETE FROM ..." />
+            <marker date="1402037326028" expanded="true" signature="10896:11080" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="11803:11983" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="12897:13014" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="14898:15379" placeholder="SELECT h.id_..heures..." />
+            <marker date="1402037326028" expanded="true" signature="15756:15822" placeholder="SELECT i_sec..heures..." />
+            <marker date="1402037326028" expanded="true" signature="16478:16596" placeholder="UPDATE heure..." />
+            <marker date="1402037326028" expanded="true" signature="16998:17075" placeholder="INSERT INTO ..." />
+            <marker date="1402037326028" expanded="true" signature="17449:17568" placeholder="SELECT * FRO..ajout_deplacement..." />
+            <marker date="1402037326028" expanded="true" signature="18226:18307" placeholder="UPDATE ajout..." />
+            <marker date="1402037326028" expanded="true" signature="18768:18957" placeholder="SELECT t_mot..heures..." />
+            <marker date="1402037326028" expanded="true" signature="19364:19599" placeholder="SELECT t_mot..heures..." />
+            <marker date="1402037326028" expanded="true" signature="20208:20392" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="20991:21152" placeholder="SELECT MIN(d..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="21468:21593" placeholder="SELECT COUNT..valider_heure..." />
+            <marker date="1402037326028" expanded="true" signature="21838:21972" placeholder="SELECT i_sec..valider_heure..." />
+            <marker date="1402037326028" expanded="true" signature="22291:22366" placeholder="INSERT INTO ..." />
+            <marker date="1402037326028" expanded="true" signature="22580:22784" placeholder="UPDATE heure..." />
+            <marker date="1402037326028" expanded="true" signature="23026:23196" placeholder="SELECT count..heures..." />
+            <marker date="1402037326028" expanded="true" signature="23733:24135" placeholder="SELECT count..heures..." />
+            <marker date="1402037326028" expanded="true" signature="24042:24079" placeholder="-- AND t_moy..." />
+            <marker date="1402037326028" expanded="true" signature="24693:24829" placeholder="SELECT (IF(?..contrat..." />
+            <marker date="1402037326028" expanded="true" signature="25486:25658" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="26315:26485" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="26974:27277" placeholder="SELECT i_lun..." />
+            <marker date="1402037326028" expanded="true" signature="27700:27870" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="28732:28914" placeholder="SELECT SUM(i..heures..." />
+            <marker date="1402037326028" expanded="true" signature="29717:29834" placeholder="SELECT MIN(d..contrat..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuel/app/modules/prestation/classes/controller/prestation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42401215" vertical-offset="12761" max-vertical-offset="18940">
+          <caret line="857" column="138" selection-start-line="857" selection-start-column="138" selection-end-line="857" selection-end-column="138" />
+          <folding>
+            <element signature="e#6328#17323#0#PHP" expanded="true" />
+            <element signature="e#9670#9746#0#PHP" expanded="true" />
+            <element signature="e#10262#10329#0#PHP" expanded="true" />
+            <element signature="e#13258#13346#0#PHP" expanded="true" />
+            <element signature="e#17371#20366#0#PHP" expanded="true" />
+            <element signature="e#20449#20916#0#PHP" expanded="true" />
+            <element signature="e#20922#21125#0#PHP" expanded="true" />
+            <element signature="e#21131#21368#0#PHP" expanded="true" />
+            <element signature="e#21374#21750#0#PHP" expanded="true" />
+            <element signature="e#21756#24364#0#PHP" expanded="true" />
+            <element signature="e#24370#26879#0#PHP" expanded="true" />
+            <element signature="e#26886#27321#0#PHP" expanded="true" />
+            <element signature="e#27328#28317#0#PHP" expanded="true" />
+            <element signature="e#28324#29424#0#PHP" expanded="true" />
+            <element signature="e#33591#33859#0#PHP" expanded="true" />
+            <element signature="e#39620#40003#0#PHP" expanded="true" />
+            <element signature="e#40139#40355#0#PHP" expanded="true" />
+            <element signature="e#40361#40785#0#PHP" expanded="true" />
+            <element signature="e#40791#41414#0#PHP" expanded="true" />
+            <element signature="e#41420#41726#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

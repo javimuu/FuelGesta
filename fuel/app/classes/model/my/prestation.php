@@ -588,16 +588,20 @@ class Model_My_Prestation extends \Maitrepylos\Db {
     }
 
     /**
-     * Function retournant la date du premier contrat
+     * Fonction retournant la date du premier contrat
      * @param id id du participant
      * @return \Datetime
+     *
+     * @todo Au 06/06/2014 j'ai ajouter le ligne 'AND d_date_fin_contrat IS NULL', a retravailler rapidement
+     * pour éviter les effets de bords
      */
     public function get_date_first_contrat($id) {
 
         $sql = '
             SELECT MIN(d_date_debut_contrat) as d_date_debut_contrat
             FROM contrat
-            WHERE participant_id = ?';
+            WHERE participant_id = ?
+            AND d_date_fin_contrat IS NULL';
         $req = $this->_db->prepare($sql);
         $req->execute(array($id));
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
