@@ -50,10 +50,10 @@ class Finformation
         $pdf->SetXY(15, 45);
         $pdf->Cell(0, 5, 'FIN DE FORMATION', 0, 0, 'C');
         $pdf->SetFont('Arial', '', 14);
-        $pdf->Text(25, 65, 'Stagiare : ' . $participant->t_nom . ' ' . $participant->t_prenom);
-        $pdf->Text(100, 65, utf8_decode('N° RN :' . $participant->t_registre_national));
+        $pdf->Text(25, 65, 'Stagaire : ' . $participant->t_nom . ' ' . $participant->t_prenom);
+        $pdf->Text(135, 65, utf8_decode('N° RN :' . $participant->t_registre_national));
     //    foreach ($participant->adresses as $value) {
-            $pdf->Text(25, 73, 'Adresse : ' . $participant->t_nom_rue . ' ' . $participant->t_code_postal . ' ' . $participant->t_commune);
+            $pdf->Text(25, 73, 'Adresse : ' . utf8_decode($participant->t_nom_rue) . ' ' . $participant->t_code_postal . ' ' . utf8_decode($participant->t_commune));
       //  }
         $pdf->Text(25, 81, utf8_decode('Filière de formation : '.$contrat->t_nom));
         $pdf->Text(25, 89, utf8_decode('Date d\'entrée en formation : '.\Maitrepylos\Date::db_to_date($contrat->d_date_debut_contrat)));

@@ -465,13 +465,11 @@ class Controller_Participant extends \Controller_Main
         if (\Input::method() == 'POST') {
             // Validation du contact
             $val = \Model_Contact::validate('create');
-            $val->add_field('t_telephone', 'Téléphone', 'required|numeric_between[9,10]');
-            $val->set_message('numeric_between', 'Le champ :label doit faire au moins :param:1 caractères et maximum :param:2.');
 
             // Validation de l'adresse liée au contact
-            //$val_adresse = \Model_Adresse::validate('create_adresse');
+            $val_adresse = \Model_Adresse::validateContact('create_adresse');
 
-            if ($val->run()){ //& $val_adresse->run()) {
+            if ($val->run() & $val_adresse->run()) {
                 $cb = \Input::post('t_cb_type');
                 if (!empty($cb))
                     $cb = implode(',', \Input::post('t_cb_type'));
@@ -543,7 +541,7 @@ class Controller_Participant extends \Controller_Main
             $val = \Model_Contact::validate('create');
 
             // Validation de l'adresse
-            $val_adresse = \Model_Adresse::validate('create_adresse');
+            $val_adresse = \Model_Adresse::validateContact('create_adresse');
 
             if ($val->run() & $val_adresse->run()) {
                 $cb = \Input::post('t_cb_type');

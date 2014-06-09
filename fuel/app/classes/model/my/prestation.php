@@ -193,7 +193,7 @@ class Model_My_Prestation extends \Maitrepylos\Db {
                 AND c.d_date_debut_contrat <= ?
                 AND c.d_date_fin_contrat_prevu >= ? ";
         $req = $this->_db->prepare($sql);
-        $req->execute(array($id,$date->format('Y-m-d'), $date->format('Y-m-d')));
+        $req->execute(array($id,$date->format('Y-m-t'), $date->format('Y-m-d')));
         return $req->fetchAll(PDO::FETCH_ASSOC);
         //return $this->_db->fetchAll($sql, array($id));
     }

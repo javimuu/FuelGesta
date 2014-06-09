@@ -81,9 +81,9 @@ class Paye
                     $pdf->SetXY(25, $y);
                     $pdf->Cell(20, 5, $formData[$z]['rows'][$a]['d_date'], 1);
                     $pdf->SetXY(45, $y);
-                    $pdf->Cell(40, 5, $presence, 1, '', 'C');
+                    $pdf->Cell(40, 5, ($presence=='00:00')?'':$presence, 1, '', 'C');
                     $pdf->SetXY(85, $y);
-                    $pdf->Cell(55, 5, $absence, 1, '', 'C');
+                    $pdf->Cell(55, 5, ($absence=='00:00')?'':$absence, 1, '', 'C');
                     $pdf->SetXY(140, $y);
                     $pdf->Cell(45, 5, utf8_decode($formData[$z]['rows'][$a]['t_motif']), 1, '', 'C');
                     $y = $y + 5;

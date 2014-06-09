@@ -69,6 +69,25 @@ class Model_Adresse extends Orm\Model
         return $val;
     }
 
+    public static function validateContact($factory)
+    {
+        $val = Validation::forge($factory);
+        $val->add_field('t_code_postal', 'Code postal', 'exact_length[4]');
+        $val->add_field('t_email', 'Email', 'valid_email');
+        $val->add_field('t_nom_rue', 'Nom de rue', 'required');
+        $val->add_field('t_code_postal', 'Code postal', 'required');
+        $val->add_field('t_commune', 'Commune', 'required');
+
+
+        $val->set_message('required', 'Veuillez remplir le champ :label.');
+        $val->set_message('min_length', 'Le champ :label doit faire au moins :param:1 caractères.');
+        $val->set_message('max_length', 'Le champ :label doit faire au plus :param:1 caractères.');
+        $val->set_message('exact_length', 'Le champ :label doit compter exactement :param:1 caractères.');
+        $val->set_message('valid_string', 'Le champ :label ne doit contenir que des chiffres.');
+
+        return $val;
+    }
+
     /**
      * Méthode mettant à 0 le champ t_courrier dans la table adresse,
      * selon un id_participant et un id_adresse.
