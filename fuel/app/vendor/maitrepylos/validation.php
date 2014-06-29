@@ -172,6 +172,20 @@ class Validation
 
     }
 
+    public static function _validation_activite($value){
+
+        $t = array('+','@','=','/','%','*','-','$','#');
+
+        if(in_array($value,$t)){
+           return true;
+
+        }
+
+        return false;
+
+
+    }
+
     public static function _validation_iban($iban)
     {
         /*Régles de validation par pays*/

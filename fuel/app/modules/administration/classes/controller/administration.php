@@ -1318,14 +1318,18 @@ class Controller_Administration extends \Controller_Main
             if ($val->run()) {
                 // On ajoute l'item dans le xml
                 $db = new \Model_My_Activite();
-                $db->add_activite(\Input::post('t_nom'), \Input::post('t_schema'));
+                $db->add_activite(\Input::post('t_nom'), \Input::post('t_schema'),\Input::post('i_active'));
                 \Response::redirect($this->view_dir . 'liste_activites');
             } else {
                 $message[] = $val->show_errors();
                 \Session::set_flash('error', $message);
             }
         }
-
+        $objet = new \stdClass();
+        $objet->i_active = 1;
+        $objet->t_nom = '';
+        $objet->t_schema = '';
+        $this->data['activite'] = $objet;
         $this->template->title = 'Administration - Gestion des activités';
         $this->template->content = \View::forge($this->view_dir . 'ajouter_activite', $this->data);
     }
@@ -1356,8 +1360,11 @@ class Controller_Administration extends \Controller_Main
 
             if ($val->run()) {
 
+
+
                 $activite->t_nom = \Input::post('t_nom');
                 $activite->t_schema = \Input::post('t_schema');
+                $activite->i_active = \Input::post('i_active',0);
 
 
                 // On save si c'est bon
@@ -1365,6 +1372,7 @@ class Controller_Administration extends \Controller_Main
                     $message[] = 'L\'activité a bien été modifié.';
                     \Session::set_flash('success', $message);
                     \Response::redirect($this->view_dir . 'liste_activites');
+
                 } else // sinon on affiche les erreurs
                 {
 

@@ -31,16 +31,16 @@ class Model_My_Activite extends \Maitrepylos\Db
 
     }
 
-    public function add_activite($nom,$schema){
+    public function add_activite($nom,$schema,$active){
 
         $sql = 'SELECT (MAX(i_position) + 1) AS number  FROM activite';
         $req = $this->_db->query($sql);
         
         
         $count = $req->fetchAll();
-        $sql = 'INSERT activite (t_nom,t_schema,i_position) VALUES(?,?,?)';
+        $sql = 'INSERT activite (t_nom,t_schema,i_active,i_position) VALUES(?,?,?,?)';
         $req = $this->_db->prepare($sql);
-        $req->execute(array($nom,$schema,$count[0]['number']));
+        $req->execute(array($nom,$schema,$active,$count[0]['number']));
 
        // $this->_db->insert('activite',array('t_nom'=>$nom,'t_schema'=>$schema,'i_position'=>$count[0]['number']));
 

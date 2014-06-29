@@ -17,6 +17,12 @@
         <?php echo Form::input('t_schema', Input::post('valeur', isset($activite) ? $activite->t_schema : '')); ?>
         </div>
     </div>
+    <div class="control-group">
+        <?php echo Form::label('Activer', 'i_active', array('class' => 'control-label')); ?>
+        <div class="controls">
+        <?php echo Form::checkbox('i_active', '1',($activite->i_active == '1'?true:false)) ?>
+        </div>
+    </div>
 
 </fieldset>
 

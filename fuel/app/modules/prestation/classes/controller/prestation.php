@@ -795,7 +795,10 @@ class Controller_Prestation extends \Controller_Main
          */
         //$motifs = \Cranberry\MyXML::getActivites();
 
-        $motifs = \Model_Activite::find('all', array('order_by' => array('i_position' => 'asc')));
+        $motifs = \Model_Activite::find('all', array('where' =>
+            array(
+                array('i_active', 1)),
+            'order_by' => array('i_position' => 'asc')));
 
         $select_motifs = array();
         foreach ($motifs as $value) {
