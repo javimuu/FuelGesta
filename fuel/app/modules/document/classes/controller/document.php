@@ -311,6 +311,8 @@ class Controller_Document extends \Controller_Main
         $db = new \Model_My_Document();
         $formData = \Input::post();
 
+
+
         /**
          * Récupère les informations de filière
          */
@@ -329,8 +331,9 @@ class Controller_Document extends \Controller_Main
          * On instancie une date
          */
         $date = \DateTime::createFromFormat('Y-m-d', $formData['annee'] . '-' . $formData['mois'] . '-01');
+
         /**
-         * Onrécupère le nombres de participant entre deux dates pour une filière données.
+         * On récupère le nombres de participant entre deux dates pour une filière données.
          */
         $id_participant = $db->nombreParticipantEntreDeuxDate($date, $filiere->id_filiere);
 
@@ -363,10 +366,12 @@ class Controller_Document extends \Controller_Main
         $stage = 0;
         $assimile = 0;
 
+        $dateBoucle = clone $date;
+
         /**
          * On boucle sur tout les jours du mois.
          */
-        for ($d = 0; $d < $date->format('t'); $d++) {
+        for ($d = 0; $d < $dateBoucle->format('t'); $d++) {
             $eft_jours = 0;
             $gratuit_jours = 0;
             $payant_jours = 0;
@@ -416,6 +421,7 @@ class Controller_Document extends \Controller_Main
         $formData['assimile'] = $assimile;
 
         \Maitrepylos\Pdf\L2::pdf($formData);
+
 
 
         $this->template->title = 'Gestion des documents';

@@ -446,7 +446,7 @@ class Model_My_Document extends \Maitrepylos\db
     public function nombreParticipantEntreDeuxDate(\DateTime $date, $codeCedefop)
     {
 
-        $date2 = $date->format('Y-m-') . $date->format('t');
+        $date2 = $date->format('Y-m-t');
         $sql = 'SELECT DISTINCT(h.participant_id) ';
         $sql .= 'FROM heures h ';
         $sql .= 'INNER JOIN contrat c ';

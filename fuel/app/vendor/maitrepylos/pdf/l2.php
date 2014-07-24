@@ -116,15 +116,15 @@ class L2
             //$pdf->SetXY($x+17,$y);
             //$pdf->Cell(20,5,$formData['jours'][$i]->participant,1);
             $pdf->SetXY($x+22,$y);
-            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['eft']),1);
+            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['eft'],true),1);
             $pdf->SetXY($x+52,$y);
-            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['gratuit']),1);//gratuit
+            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['gratuit'],true),1);//gratuit
             $pdf->SetXY($x+82,$y);
-            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['payant']),1);
+            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['payant'], true),1);
             $pdf->SetXY($x+112,$y);
-            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['stage']),1);
+            $pdf->Cell(30,5,$time->TimeToString($formData['jours'][$i]['stage'], true),1);
             $pdf->SetXY($x+142,$y);
-            $pdf->Cell(25,5,$time->TimeToString($formData['jours'][$i]['assimile']),1);
+            $pdf->Cell(25,5,$time->TimeToString($formData['jours'][$i]['assimile'], true),1);
 
 
         }
