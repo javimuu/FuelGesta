@@ -443,6 +443,12 @@ class Model_My_Document extends \Maitrepylos\db
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * @param DateTime $date
+     * @param $codeCedefop
+     * @return mixed
+     * Le 25/07/2014 ajout de la ligne "AND c.id_contrat = h.contrat_id" pour différencier les types de contrat
+     */
     public function nombreParticipantEntreDeuxDate(\DateTime $date, $codeCedefop)
     {
 
@@ -452,7 +458,8 @@ class Model_My_Document extends \Maitrepylos\db
         $sql .= 'INNER JOIN contrat c ';
         $sql .= 'ON c.participant_id = h.participant_id ';
         $sql .= 'AND c.groupe_id IN (SELECT id_groupe FROM groupe WHERE filiere_id = ?) ';
-        $sql .= 'WHERE d_date BETWEEN ? AND ?    ';
+        $sql .= 'WHERE d_date BETWEEN ? AND ? ';
+        $sql .= 'AND c.id_contrat = h.contrat_id';
 
         $req = $this->_db->prepare($sql);
         $req->execute(array($codeCedefop, $date->format('Y-m-d'), $date2));
