@@ -353,10 +353,11 @@ class Controller_Statistique extends \Controller_Main
 
                 /**
                  * Calcul des heures éffectuées l'année précédente
+                 * 25/07/2014, supression des heures assimilable.
                  */
 
                 $formData['filiere'][$filieres['t_nom']][$i]['precedente'] =
-                    $db->getHeuresPrecedente($formData['filiere'][$filieres['t_nom']][$i]['participant_id'], $date, "'+','$','@','#','/','='");
+                    $db->getHeuresPrecedente($formData['filiere'][$filieres['t_nom']][$i]['participant_id'], $date, "'+','$','@','#','='");
                 /**
                  * Récupération des informations du stagiaire
                  */

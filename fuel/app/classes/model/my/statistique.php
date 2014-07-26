@@ -403,9 +403,14 @@ class Model_My_Statistique extends \Maitrepylos\db {
         $sql = "
                 SELECT SUM(h.i_secondes) AS iSum
                 FROM heures AS h
+                INNER JOIN contrat c
+                ON c.id_contrat = h.contrat_id
+                INNER JOIN type_contrat tc
+                ON tc.id_type_contrat = c.type_contrat_id
                 WHERE h.participant_id = ?
                 AND EXTRACT(YEAR FROM h.d_date) < ?
-                AND h.t_schema IN ($schema) ";
+                AND h.t_schema IN ($schema)
+                AND tc.subside_id != 4 ";
 
         $r = $this->_db->prepare($sql);
         $r->execute(array($idParticipant,$date->format('Y')));
