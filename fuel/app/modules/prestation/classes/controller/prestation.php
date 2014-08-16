@@ -861,7 +861,14 @@ class Controller_Prestation extends \Controller_Main
          * @todo Attention nous avons modifier pour éviter de devoir valider les contrats terminé, mais il faut reprendre ce bout de code.
          */
         $date_premier_contrat = $db->get_date_first_contrat($id);
-        $date_premier_contrat->setDate($date_premier_contrat->format('Y'), $date_premier_contrat->format('m'), 01);
+        if(is_object($date_premier_contrat)){
+            $date_premier_contrat->setDate($date_premier_contrat->format('Y'), $date_premier_contrat->format('m'), 01);
+        }else{
+            $message[] = 'Les contrats de ce stagiaire sont tous terminées, veuillez d\'abord rouvrir un contrat';
+            \Session::set_flash('error', $message);
+            \Response::redirect('contrat/ajouter/'.$id);
+
+        }
         //$date_premier_contrat_bis = clone $date_premier_contrat;
         $interval_mois = \Maitrepylos\Date::nbMois($date_prestation, $date_premier_contrat);
 
