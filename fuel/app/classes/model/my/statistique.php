@@ -76,7 +76,7 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
         $result = $this->_db->prepare($sql);
         $result->execute(array($date->format('Y-m-d'),
-            $date->format('Y-m-') . $date->format('t'),
+            $date->format('Y-m-t'),
             $groupe));
         return $result->fetchAll(PDO::FETCH_ASSOC);
 //
@@ -104,6 +104,7 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
     /**
      * Calcul des heures pour la gestions des stat L3
+     * @todo tout comme le trimestrielle RW j'ai modifié la ligne $sql .= 'AND h . subside = 1';
      * @param $id_participant
      * @param $schema
      * @param DateTime $date
@@ -121,10 +122,12 @@ class Model_My_Statistique extends \Maitrepylos\db {
         $sql .= 'FROM heures h ';
         $sql .= 'INNER JOIN contrat c ';
         $sql .= 'ON h . contrat_id = c . id_contrat ';
+        $sql .= 'INNER JOIN type_contrat tc ';
+        $sql .= 'ON c . type_contrat_id = tc . id_type_contrat ';
         $sql .= 'WHERE h.participant_id = ? ';
         $sql .= 'AND EXTRACT(YEAR_MONTH FROM d_date) = ? ';
         $sql .= 'AND h . t_schema IN (' . $schema . ') ';
-        $sql .= 'AND h . subside = 1';
+        $sql .= 'AND tc.subside_id = 1';
         $result = $this->_db->prepare($sql);
         $result->execute(array($id_participant, $date->format('Ym')));
         return $result->fetchAll(PDO::FETCH_ASSOC);
@@ -453,6 +456,7 @@ class Model_My_Statistique extends \Maitrepylos\db {
 
     /**
      * Calcul le nombres d'heures éffectuè au total par les participant et par filière
+     * @todo supression le 18/08/2014 de la ligne h.subside_id = 1 et remplacer par celle-ci tc.subside_id = 1 à vérifier pq gestion commective est à 0 ?
      * @param $annee
      * @param $idFiliere
      * @param $schema
@@ -464,12 +468,14 @@ class Model_My_Statistique extends \Maitrepylos\db {
                 FROM contrat c
                 INNER JOIN heures h
                 ON h.contrat_id = c.id_contrat
+                INNER JOIN type_contrat tc
+                ON c . type_contrat_id = tc . id_type_contrat
                 INNER JOIN groupe g
                 ON g.id_groupe = c.groupe_id
                 WHERE EXTRACT(YEAR_MONTH FROM h.d_date) = ?
                 AND h.t_schema IN ($schema)
                 AND g.filiere_id = ?
-                AND h.subside = 1
+                AND tc.subside_id = 1
                  ";
 
         $r = $this->_db->prepare($sql);
