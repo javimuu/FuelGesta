@@ -128,7 +128,7 @@
         </div>
 
         <div id="footer">
-            <div class="pull-center"><a href="">Gesta v3.0</a> &#169; Ateliers de Pontaury</div>
+            <div class="pull-center"><a href="">Gesta v3.0</a> &#169; <a href="http://formatux.be" target="_blank">Formatux</a></div>
 	</div>
 
         <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
