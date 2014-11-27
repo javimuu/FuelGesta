@@ -8,15 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f984d-4de7-4953-b84e-d54c8a35f2f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/environment.pickle" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/index.doctree" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/doctrees/index.doctree" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/IBAN_Registry.txt" afterPath="$PROJECT_DIR$/fuel/app/vendor/maitrepylos/iban/docs/IBAN_Registry.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/html/index.html" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/index.rst" afterPath="$PROJECT_DIR$/Doc/Sphinx/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_sources/index.txt" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/_sources/index.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Doc/Sphinx/_build/html/searchindex.js" afterPath="$PROJECT_DIR$/Doc/Sphinx/_build/html/searchindex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuel/app/views/template.php" afterPath="$PROJECT_DIR$/fuel/app/views/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ddc8121f-3d46-4124-b3c8-00e80fd942d2" name="Failed commit: Default" comment="Push du 28/08/2012" />
@@ -64,8 +56,8 @@
       <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fuel/app/views/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23753665" vertical-offset="2318" max-vertical-offset="3000">
-              <caret line="130" column="113" selection-start-line="130" selection-start-column="113" selection-end-line="130" selection-end-column="113" />
+            <state vertical-scroll-proportion="0.44411764" vertical-offset="2318" max-vertical-offset="3000">
+              <caret line="137" column="54" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
               <folding>
                 <element signature="e#1655#1833#0#HTML" expanded="true" />
               </folding>
@@ -1408,7 +1400,13 @@
       <option name="project" value="LOCAL" />
       <updated>1408391871933</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="Mise à jour copiryght formatux">
+      <created>1417088632244</created>
+      <option name="number" value="00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1417088632244</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1435,6 +1433,7 @@
     <frame x="-4" y="28" width="1608" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70039946" sideWeight="0.48973042" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32490012" sideWeight="0.5346598" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1453,7 +1452,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28656125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822134" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1499,7 +1497,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Ajout menu déroulant dans contrat 28/01/2014&#10;" />
     <MESSAGE value="Mise à jour vers Fuel 1.7.1&#10;" />
     <MESSAGE value="Remarques Flyspray&#10;" />
     <MESSAGE value="Mise en prod.&#10;" />
@@ -1524,7 +1521,8 @@
     <MESSAGE value="Mise à jour 25/07/2014 Modification des l2 suite à un problème de contrats" />
     <MESSAGE value="Mise à jour 16/08/2014 Modification messages erreur sur double contrats" />
     <MESSAGE value="Mise à jour 18/08/2014 Gestion des heures Rw L2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour 18/08/2014 Gestion des heures Rw L2" />
+    <MESSAGE value="Mise à jour copiryght formatux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour copiryght formatux" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2025,8 +2023,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fuel/app/views/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23753665" vertical-offset="2318" max-vertical-offset="3000">
-          <caret line="130" column="113" selection-start-line="130" selection-start-column="113" selection-end-line="130" selection-end-column="113" />
+        <state vertical-scroll-proportion="0.44411764" vertical-offset="2318" max-vertical-offset="3000">
+          <caret line="137" column="54" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
           <folding>
             <element signature="e#1655#1833#0#HTML" expanded="true" />
           </folding>
